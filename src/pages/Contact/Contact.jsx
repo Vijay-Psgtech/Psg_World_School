@@ -25,11 +25,11 @@ const Contact = () => {
             <div className="flex items-start gap-4">
               <FiMapPin className="text-pink-500 text-2xl mt-1" />
               <div>
-                <h4 className="font-bold text-gray-800 mb-1">PSG World School</h4>
+                <h4 className="font-bold text-gray-800 mb-1">
+                  PSG World School
+                </h4>
                 <p className="text-gray-600">
-                    Avinashi Road
-                    Peelamedu Coimbatore,
-                    Tamilnadu, India-641004
+                  Avinashi Road Peelamedu Coimbatore, Tamilnadu, India-641004
                 </p>
               </div>
             </div>
@@ -58,13 +58,26 @@ const Contact = () => {
           </p>
           <div className="text-gray-700 space-y-4 mb-8">
             <p>
-              At PSG World School, education goes beyond books and exams. Our classrooms spark curiosity, creativity, and collaboration, embracing each child’s unique learning style and pace. We blend technology with teaching to prepare students for a digital future, while our value-based approach builds empathy, integrity, and social awareness.
+              At PSG World School, education goes beyond books and exams. Our
+              classrooms spark curiosity, creativity, and collaboration,
+              embracing each child’s unique learning style and pace. We blend
+              technology with teaching to prepare students for a digital future,
+              while our value-based approach builds empathy, integrity, and
+              social awareness.
             </p>
             <p>
-              Our educators are lifelong learners, continuously upskilled to meet evolving academic and emotional needs. We balance academic rigour with enriching co-curricular activities, nurturing.
+              Our educators are lifelong learners, continuously upskilled to
+              meet evolving academic and emotional needs. We balance academic
+              rigour with enriching co-curricular activities, nurturing.
             </p>
             <p>
-              From leadership and communication to emotional intelligence and digital literacy, we empower students with vital life skills. Student well-being is central, supported by mindfulness, fitness, and community service. With consistent academic results, global exposure, and strong parent-school partnerships, PSG World School shapes not just successful learners, but responsible citizens and compassionate individuals—ready for life, not just exams.
+              From leadership and communication to emotional intelligence and
+              digital literacy, we empower students with vital life skills.
+              Student well-being is central, supported by mindfulness, fitness,
+              and community service. With consistent academic results, global
+              exposure, and strong parent-school partnerships, PSG World School
+              shapes not just successful learners, but responsible citizens and
+              compassionate individuals—ready for life, not just exams.
             </p>
           </div>
           <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-8 py-4 rounded-lg shadow transition w-full md:w-auto">

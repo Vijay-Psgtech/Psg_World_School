@@ -1,7 +1,7 @@
 import React from "react";
 import BgImg from "../../assets/images/banner.png";
 import { motion } from "framer-motion";
-import { fadeIn } from '../../utils/Variants';
+import { fadeIn } from "../../utils/Variants";
 
 const testimonials = [
   {
@@ -31,19 +31,21 @@ const Testimonial = () => {
 
       {/* Content */}
       <div className="relative z-10 w-full flex flex-col items-center">
-        <motion.h2 
+        <motion.h2
           variants={fadeIn("down")}
           initial="hidden"
           whileInView="show"
-          className="text-5xl font-bold text-white text-center mb-12 tracking-wide">
+          className="text-5xl font-bold text-white text-center mb-12 tracking-wide"
+        >
           Testimonials
         </motion.h2>
 
-        <motion.div 
+        <motion.div
           variants={fadeIn("up")}
           initial="hidden"
           whileInView="show"
-          className="flex flex-col md:flex-row gap-8 justify-center items-stretch w-full px-4 md:px-12">
+          className="flex flex-col md:flex-row gap-8 justify-center items-stretch w-full px-4 md:px-12"
+        >
           {testimonials.map((item, idx) => (
             <div
               key={idx}

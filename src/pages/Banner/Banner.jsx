@@ -13,11 +13,12 @@ function Banner() {
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/60 z-5" />
       {/* Banner Content - Left Side */}
-      <motion.div 
+      <motion.div
         initial={{ x: -100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 1 }}
-        className="absolute inset-0 flex flex-col justify-center items-start z-20 text-left px-4 md:px-16 lg:px-24">
+        className="absolute inset-0 flex flex-col justify-center items-start z-20 text-left px-4 md:px-16 lg:px-24"
+      >
         <p className="text-xl font-bold md:text-2xl text-white/80 mb-8 max-w-lg">
           PSG World School nurtures young minds to become leaders of tomorrow.
           Join a vibrant community focused on holistic development, innovation,

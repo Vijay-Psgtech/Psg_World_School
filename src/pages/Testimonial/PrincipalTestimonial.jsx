@@ -2,7 +2,7 @@ import React from "react";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 import TestimonialImg from "../../assets/images/trustee.png";
 import { motion } from "framer-motion";
-import { fadeIn, TextZoomIn } from '../../utils/Variants';
+import { fadeIn, TextZoomIn } from "../../utils/Variants";
 
 function PrincipalTestimonial() {
   return (
@@ -30,19 +30,24 @@ function PrincipalTestimonial() {
         {/* Right Content */}
         <div className="relative bg-white rounded-2xl shadow-xl p-8 md:p-12 w-full md:w-1/2 max-w-2xl">
           <FaQuoteRight className="absolute top-6 right-6 text-blue-300 text-4xl opacity-50" />
-          <motion.p 
+          <motion.p
             variants={TextZoomIn()}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="text-lg md:text-xl text-gray-700 leading-relaxed mb-8">
-            At <span className="font-semibold text-blue-700">PSG World School</span>, 
-            we believe in nurturing every child’s unique potential through holistic education. 
-            Our dedicated faculty, modern facilities, and innovative curriculum empower students 
-            to become confident, responsible, and compassionate individuals. 
-            We strive to create a vibrant learning environment that encourages curiosity, 
-            creativity, and lifelong learning. Together, we are shaping future leaders who will 
-            make a positive impact on society.
+            className="text-lg md:text-xl text-gray-700 leading-relaxed mb-8"
+          >
+            At{" "}
+            <span className="font-semibold text-blue-700">
+              PSG World School
+            </span>
+            , we believe in nurturing every child’s unique potential through
+            holistic education. Our dedicated faculty, modern facilities, and
+            innovative curriculum empower students to become confident,
+            responsible, and compassionate individuals. We strive to create a
+            vibrant learning environment that encourages curiosity, creativity,
+            and lifelong learning. Together, we are shaping future leaders who
+            will make a positive impact on society.
           </motion.p>
           <span className="block text-blue-700 font-semibold text-right text-lg">
             – Principal

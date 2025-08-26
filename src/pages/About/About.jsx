@@ -8,7 +8,7 @@ import AboutBanner from "../../assets/images/banner-bg2.png";
 import AboutBanner2 from "../../assets/images/banner-bg3.png";
 import StudentImg1 from "../../assets/images/student1.jpg";
 import CBSE from "../../assets/images/cbse.png";
-import NIOS from "../../assets/images/nios.png"; 
+import NIOS from "../../assets/images/nios.png";
 
 // Simple animation variants
 const fadeInUp = {
@@ -87,13 +87,16 @@ const About = () => {
           </div>
           <div>
             <p className="text-gray-700 leading-relaxed text-justify">
-              At PSG Global @ Coimbatore, we believe that true education goes beyond textbooks.
-              It is about igniting curiosity, inspiring purpose, and transforming young learners
-              into confident World School citizens. Aligned with the PSG motto — Ignite, Inspire,
-              Transform — our academic program is thoughtfully designed to shape not just minds,
-              but also values, creativity, and resilience. Powered by Veranda K-12, we bring
-              together academic rigour, real-world application, future-ready skills, and
-              personal well-being — creating a holistic educational journey for every child.
+              At PSG Global @ Coimbatore, we believe that true education goes
+              beyond textbooks. It is about igniting curiosity, inspiring
+              purpose, and transforming young learners into confident World
+              School citizens. Aligned with the PSG motto — Ignite, Inspire,
+              Transform — our academic program is thoughtfully designed to shape
+              not just minds, but also values, creativity, and resilience.
+              Powered by Veranda K-12, we bring together academic rigour,
+              real-world application, future-ready skills, and personal
+              well-being — creating a holistic educational journey for every
+              child.
             </p>
           </div>
         </div>
@@ -120,13 +123,14 @@ const About = () => {
       >
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-emerald-700 font-semibold text-lg mb-6">
-            “Provide every child a nurturing, inclusive space to build confidence,
-            emotional intelligence, and lifelong real-world skills”
+            “Provide every child a nurturing, inclusive space to build
+            confidence, emotional intelligence, and lifelong real-world skills”
           </p>
           <p className="text-gray-700 leading-relaxed text-justify">
-            We nurture future–ready leaders and World School citizens equipped to embrace and
-            overcome the challenges of a dynamic world — through a value-enriched
-            curriculum balancing physical, intellectual, and emotional development.
+            We nurture future–ready leaders and World School citizens equipped
+            to embrace and overcome the challenges of a dynamic world — through
+            a value-enriched curriculum balancing physical, intellectual, and
+            emotional development.
           </p>
         </div>
       </motion.section>
@@ -164,15 +168,21 @@ const About = () => {
             </h2>
             <div className="space-y-5 text-gray-700 leading-relaxed">
               <p>
-                <span className="font-semibold text-emerald-700">Whole Child Focus – </span>
+                <span className="font-semibold text-emerald-700">
+                  Whole Child Focus –{" "}
+                </span>
                 intellectual, emotional, physical, and ethical growth.
               </p>
               <p>
-                <span className="font-semibold text-emerald-700">Transformational Learning – </span>
+                <span className="font-semibold text-emerald-700">
+                  Transformational Learning –{" "}
+                </span>
                 inquiry, problem-solving, collaboration, reflection.
               </p>
               <p>
-                <span className="font-semibold text-emerald-700">Global Citizenship – </span>
+                <span className="font-semibold text-emerald-700">
+                  Global Citizenship –{" "}
+                </span>
                 empathy, values, and worldwide readiness.
               </p>
             </div>
@@ -189,13 +199,24 @@ const About = () => {
         className="py-20 px-6 bg-grey"
       >
         <div className="max-w-6xl mx-auto text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">Our Core Values</h2>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
+            Our Core Values
+          </h2>
         </div>
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
           {[
-            { t: "Excellence", d: "We aim for the highest standards across academics, activities, and character." },
-            { t: "Integrity", d: "Honesty, transparency, and accountability guide our actions and relationships." },
-            { t: "Respect & Empathy", d: "An inclusive culture built on kindness, dignity, and understanding." },
+            {
+              t: "Excellence",
+              d: "We aim for the highest standards across academics, activities, and character.",
+            },
+            {
+              t: "Integrity",
+              d: "Honesty, transparency, and accountability guide our actions and relationships.",
+            },
+            {
+              t: "Respect & Empathy",
+              d: "An inclusive culture built on kindness, dignity, and understanding.",
+            },
           ].map((v, i) => (
             <motion.div
               key={i}
@@ -203,7 +224,9 @@ const About = () => {
               className="p-8 rounded-2xl bg-gradient-to-br from-emerald-50 to-white shadow-lg hover:shadow-2xl transition"
               whileHover={{ scale: 1.03 }}
             >
-              <h3 className="text-xl font-semibold text-emerald-700 mb-3">{v.t}</h3>
+              <h3 className="text-xl font-semibold text-emerald-700 mb-3">
+                {v.t}
+              </h3>
               <p className="text-gray-600">{v.d}</p>
             </motion.div>
           ))}
@@ -222,10 +245,13 @@ const About = () => {
         <div className="absolute -bottom-12 -right-16 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
 
         <div className="relative max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-extrabold mb-6">Our Mission</h2>
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-6">
+            Our Mission
+          </h2>
           <p className="text-lg md:text-xl leading-relaxed max-w-3xl mx-auto text-emerald-50">
-            To inspire learners to be happy, healthy, responsible World School citizens — and to
-            attract, develop, and retain exceptional educators who bring this mission to life.
+            To inspire learners to be happy, healthy, responsible World School
+            citizens — and to attract, develop, and retain exceptional educators
+            who bring this mission to life.
           </p>
         </div>
       </motion.section>
@@ -266,7 +292,9 @@ const About = () => {
                 <li>Whole-child development with emotional & ethical focus</li>
                 <li>Student voice & real-life leadership opportunities</li>
                 <li>Safe, supportive environment with trained counselors</li>
-                <li>Diversity, culture, World School awareness & community service</li>
+                <li>
+                  Diversity, culture, World School awareness & community service
+                </li>
                 <li>Hands-on learning: projects, fieldwork & labs</li>
                 <li>Community engagement & social responsibility</li>
               </ul>
@@ -287,100 +315,104 @@ const About = () => {
           <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-6">
             A Proud Part of the PSG Group of Schools
           </h2>
-        <p className="text-gray-700 leading-relaxed max-w-4xl mx-auto">
-            PSG Global is a respected name across India. Being part of this group provides a strong academic
-            foundation, collaborative growth, and continuous innovation — enriching every learner’s experience.
+          <p className="text-gray-700 leading-relaxed max-w-4xl mx-auto">
+            PSG Global is a respected name across India. Being part of this
+            group provides a strong academic foundation, collaborative growth,
+            and continuous innovation — enriching every learner’s experience.
           </p>
         </div>
       </motion.section>
 
       {/* PRINCIPAL'S DESK — Parallax & Rich Card */}
       <section
-  className="relative py-24 px-6 text-white bg-fixed bg-cover bg-center overflow-hidden"
-  style={{ backgroundImage: `url(${AboutBanner2})` }}
->
-  {/* Animated Gradient Overlay */}
-  <div className="absolute inset-0 bg-gradient-to-r from-emerald-900/80 via-gray-900/70 to-teal-800/80 animate-gradient-x"></div>
-
-  <div className="relative max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-    {/* Principal Image Card */}
-    <motion.div
-      variants={fadeInUp}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true }}
-      whileHover={{ scale: 1.05, rotate: 1 }}
-      transition={{ type: "spring", stiffness: 120 }}
-      className="bg-white/90 backdrop-blur-md rounded-3xl shadow-2xl p-3 hover:shadow-[0_25px_80px_rgba(0,0,0,0.55)] transition"
-    >
-      <motion.img
-        src={StudentImg1}
-        alt="Principal"
-        className="rounded-2xl object-cover w-full h-[420px]" 
-        initial={{ opacity: 0, scale: 0.9 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-      />
-    </motion.div>
-
-    {/* Principal Message */}
-    <motion.div
-      variants={fadeInUp}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true }}
-      className="space-y-6"
-    >
-      <motion.h2
-        initial={{ opacity: 0, x: 50 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8 }}
-        className="text-3xl md:text-4xl font-extrabold drop-shadow"
+        className="relative py-24 px-6 text-white bg-fixed bg-cover bg-center overflow-hidden"
+        style={{ backgroundImage: `url(${AboutBanner2})` }}
       >
-        From the Principal’s Desk
-      </motion.h2>
+        {/* Animated Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-emerald-900/80 via-gray-900/70 to-teal-800/80 animate-gradient-x"></div>
 
-      <motion.p
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.3, duration: 0.8 }}
-        className="italic text-emerald-200 font-medium"
-      >
-        “Education is not the filling of a pail, but the lighting of a fire.”
-      </motion.p>
+        <div className="relative max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+          {/* Principal Image Card */}
+          <motion.div
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.05, rotate: 1 }}
+            transition={{ type: "spring", stiffness: 120 }}
+            className="bg-white/90 backdrop-blur-md rounded-3xl shadow-2xl p-3 hover:shadow-[0_25px_80px_rgba(0,0,0,0.55)] transition"
+          >
+            <motion.img
+              src={StudentImg1}
+              alt="Principal"
+              className="rounded-2xl object-cover w-full h-[420px]"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            />
+          </motion.div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.4, duration: 1 }}
-        className="bg-white/10 p-6 rounded-2xl backdrop-blur-sm shadow-lg hover:bg-white/20 transition"
-      >
-        <p className="text-emerald-50 leading-relaxed text-justify">
-          At PSG Global Coimbatore, true education begins with curiosity. We nurture young
-          minds with compassion, creativity, and confidence — building strong character and
-          life skills. Every learner is unique, and we help them discover and celebrate their
-          individuality.
-        </p>
-        <p className="text-emerald-50 leading-relaxed text-justify mt-4">
-          Through holistic experiences, we prepare students for challenges in and beyond
-          classrooms. Respect for self, others, and the environment is woven into our culture
-          — creating a safe, joyful, and inclusive environment where every child thrives.
-        </p>
-      </motion.div>
+          {/* Principal Message */}
+          <motion.div
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="space-y-6"
+          >
+            <motion.h2
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-3xl md:text-4xl font-extrabold drop-shadow"
+            >
+              From the Principal’s Desk
+            </motion.h2>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.6, duration: 0.8 }}
-        className="pt-2"
-      >
-        <p className="font-semibold text-emerald-200">
-          — Principal, PSG Global @ Coimbatore
-        </p>
-      </motion.div>
-    </motion.div>
-  </div>
-</section>
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.3, duration: 0.8 }}
+              className="italic text-emerald-200 font-medium"
+            >
+              “Education is not the filling of a pail, but the lighting of a
+              fire.”
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 1 }}
+              className="bg-white/10 p-6 rounded-2xl backdrop-blur-sm shadow-lg hover:bg-white/20 transition"
+            >
+              <p className="text-emerald-50 leading-relaxed text-justify">
+                At PSG Global Coimbatore, true education begins with curiosity.
+                We nurture young minds with compassion, creativity, and
+                confidence — building strong character and life skills. Every
+                learner is unique, and we help them discover and celebrate their
+                individuality.
+              </p>
+              <p className="text-emerald-50 leading-relaxed text-justify mt-4">
+                Through holistic experiences, we prepare students for challenges
+                in and beyond classrooms. Respect for self, others, and the
+                environment is woven into our culture — creating a safe, joyful,
+                and inclusive environment where every child thrives.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.6, duration: 0.8 }}
+              className="pt-2"
+            >
+              <p className="font-semibold text-emerald-200">
+                — Principal, PSG Global @ Coimbatore
+              </p>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
 
       {/* Leadership Philosophy */}
       <motion.section
@@ -395,12 +427,14 @@ const About = () => {
             Our Leadership Philosophy
           </h2>
           <p className="text-gray-700 leading-relaxed max-w-4xl mx-auto mb-6">
-            Our leadership models lifelong learning, collaboration, and a deep commitment to every student’s
-            potential — co-creating a thriving school culture with faculty, parents, and community.
+            Our leadership models lifelong learning, collaboration, and a deep
+            commitment to every student’s potential — co-creating a thriving
+            school culture with faculty, parents, and community.
           </p>
           <p className="text-gray-700 leading-relaxed max-w-4xl mx-auto">
-            PSG Global School in Coimbatore offers an advanced academic curriculum and the freedom to personalise
-            learning — helping students stand out with confidence and purpose.
+            PSG Global School in Coimbatore offers an advanced academic
+            curriculum and the freedom to personalise learning — helping
+            students stand out with confidence and purpose.
           </p>
         </div>
       </motion.section>
@@ -414,7 +448,9 @@ const About = () => {
         className="py-20 px-6 bg-gradient-to-r from-emerald-50 via-white to-teal-100"
       >
         <div className="max-w-6xl mx-auto text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">Our Affiliations</h2>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
+            Our Affiliations
+          </h2>
         </div>
 
         <div className="grid md:grid-cols-4 gap-10 max-w-9xl mx-auto">
@@ -425,7 +461,8 @@ const About = () => {
             <img src={CBSE} alt="CBSE" className="w-40 mx-auto mb-5" />
             <h3 className="text-xl font-semibold text-emerald-700">CBSE</h3>
             <p className="text-gray-600 mt-3">
-              Robust academic framework balancing knowledge with 21st-century skills and holistic development.
+              Robust academic framework balancing knowledge with 21st-century
+              skills and holistic development.
             </p>
           </motion.div>
 
@@ -436,7 +473,8 @@ const About = () => {
             <img src={NIOS} alt="NIOS" className="w-40 mx-auto mb-5" />
             <h3 className="text-xl font-semibold text-emerald-700">NIOS</h3>
             <p className="text-gray-600 mt-3">
-              Flexible academic pathways that support diverse needs while maintaining high standards.
+              Flexible academic pathways that support diverse needs while
+              maintaining high standards.
             </p>
           </motion.div>
           <motion.div
@@ -446,7 +484,8 @@ const About = () => {
             <img src={NIOS} alt="NIOS" className="w-40 mx-auto mb-5" />
             <h3 className="text-xl font-semibold text-emerald-700">NIOS</h3>
             <p className="text-gray-600 mt-3">
-              Flexible academic pathways that support diverse needs while maintaining high standards.
+              Flexible academic pathways that support diverse needs while
+              maintaining high standards.
             </p>
           </motion.div>
           <motion.div
@@ -456,7 +495,8 @@ const About = () => {
             <img src={CBSE} alt="NIOS" className="w-40 mx-auto mb-5" />
             <h3 className="text-xl font-semibold text-emerald-700">NIOS</h3>
             <p className="text-gray-600 mt-3">
-              Flexible academic pathways that support diverse needs while maintaining high standards.
+              Flexible academic pathways that support diverse needs while
+              maintaining high standards.
             </p>
           </motion.div>
         </div>
@@ -466,4 +506,3 @@ const About = () => {
 };
 
 export default About;
-

@@ -11,7 +11,7 @@ export const fadeIn = (direction, offset = 40) => {
       transition: {
         type: "tween",
         duration: 1,
-        ease: "easeOut", 
+        ease: "easeOut",
       },
     },
   };
