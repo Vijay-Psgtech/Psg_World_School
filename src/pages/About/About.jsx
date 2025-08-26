@@ -42,7 +42,7 @@ const About = () => {
         className="relative h-[90vh] flex items-end justify-center bg-fixed bg-cover bg-center"
         style={{ backgroundImage: `url(${AboutBanner})` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+        <div className="absolute inset-0 bg-black/60"></div>
         <motion.div
           initial={{ y: 60, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}

@@ -50,7 +50,7 @@ export default function Academics() {
           alt="About Banner"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <di v className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></di>
+        <di v className="absolute inset-0 bg-black/60"></di>
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -371,7 +371,7 @@ export default function Academics() {
       className="relative py-24 px-6 bg-fixed bg-center bg-cover"
       style={{
         backgroundImage:
-          "url('src/Images/banner-bg4.jpg')",
+          "url('src/assets/images/banner-bg6.png')",
       }}
     >
       {/* Overlay for readability */}

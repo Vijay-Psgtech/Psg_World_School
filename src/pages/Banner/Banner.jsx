@@ -3,7 +3,7 @@ import BannerImg from "../../assets/images/banner.png";
 
 function Banner() {
   return (
-    <div className="relative h-[600px] lg:h-[650px]">
+    <div className="relative h-[600px] lg:h-[700px]">
       {/* Banner Image */}
       <div
         className="absolute inset-0 w-full h-full bg-fixed bg-center bg-cover z-0"
