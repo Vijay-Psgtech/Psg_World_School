@@ -1,5 +1,7 @@
 import React from "react";
 import BgImg from "../../assets/images/banner.png";
+import { motion } from "framer-motion";
+import { fadeIn } from '../../utils/Variants';
 
 const testimonials = [
   {
@@ -24,15 +26,24 @@ const Testimonial = () => {
       ></div>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/60 z-0" />
+      {/* <div className="absolute inset-0 bg-black/60 z-0" /> */}
+      <div className="absolute inset-0 bg-gradient-to-r from-gray-400/80 via-gray-400/70 to-gray-400/80"></div>
 
       {/* Content */}
       <div className="relative z-10 w-full flex flex-col items-center">
-        <h2 className="text-5xl font-bold text-white text-center mb-12 tracking-wide">
+        <motion.h2 
+          variants={fadeIn("down")}
+          initial="hidden"
+          whileInView="show"
+          className="text-5xl font-bold text-white text-center mb-12 tracking-wide">
           Testimonials
-        </h2>
+        </motion.h2>
 
-        <div className="flex flex-col md:flex-row gap-8 justify-center items-stretch w-full px-4 md:px-12">
+        <motion.div 
+          variants={fadeIn("up")}
+          initial="hidden"
+          whileInView="show"
+          className="flex flex-col md:flex-row gap-8 justify-center items-stretch w-full px-4 md:px-12">
           {testimonials.map((item, idx) => (
             <div
               key={idx}
@@ -44,7 +55,7 @@ const Testimonial = () => {
               <p className="font-bold text-gray-800">- {item.author}</p>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

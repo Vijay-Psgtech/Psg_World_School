@@ -1,22 +1,52 @@
-import React from "react";
+import React, { useRef } from "react";
 import GlanceImg from "../../assets/images/glance.jpg";
+import { useInView } from "react-intersection-observer";
+import { useEffect, useState } from "react";
 
 const stats = [
-  { value: "10+", label: "Years of Legacy" },
-  { value: "6000+", label: "Students Across India" },
-  { value: "6+", label: "Campuses Across India" },
-  { value: "100%", label: "Results in 12th Exams" },
-  { value: "100%", label: "Results in 10th Exam" },
-  { value: "350+", label: "Highly-Qualified Teachers" },
+  { value: 10, suffix: "+", label: "Years of Legacy" },
+  { value: 6000, suffix: "+", label: "Students Across India" },
+  { value: 6, suffix: "+", label: "Campuses Across India" },
+  { value: 100, suffix: "%", label: "Results in 12th Exams" },
+  { value: 100, suffix: "%", label: "Results in 10th Exam" },
+  { value: 350, suffix: "+", label: "Highly-Qualified Teachers" },
 ];
 
-function NumbersGlance() {
+function StatCounter({ value, suffix, inView }) {
+  const [count, setCount] = useState(0);
+  useEffect(() => {
+    if (!inView) return;
+    let start = 0;
+    const duration = 1200;
+    const increment = value / (duration / 16);
+    const timer = setInterval(() => {
+      start += increment;
+      if (start >= value) {
+        setCount(value);
+        clearInterval(timer);
+      } else {
+        setCount(Math.floor(start));
+      }
+    }, 16);
+    return () => clearInterval(timer);
+  }, [inView, value]);
   return (
-    <section className="relative w-full bg-gray-100 py-10">
+    <span className="text-2xl font-bold mb-1">
+      {count}
+      {suffix}
+    </span>
+  );
+}
+
+function NumbersGlance() {
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
+
+  return (
+    <section className="relative w-full bg-gray-100 py-10" ref={ref}>
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full">
         <img
-          src={GlanceImg} 
+          src={GlanceImg}
           alt="Library Background"
           className="w-full h-full object-cover"
         />
@@ -36,7 +66,7 @@ function NumbersGlance() {
         <div className="md:w-1/2 w-full grid grid-cols-2 md:grid-cols-3 gap-y-8 gap-x-6 text-white">
           {stats.map((stat, idx) => (
             <div key={idx} className="flex flex-col items-start border-l border-white pl-4">
-              <span className="text-2xl font-bold mb-1">{stat.value}</span>
+              <StatCounter value={stat.value} suffix={stat.suffix} inView={inView} />
               <span className="text-md">{stat.label}</span>
             </div>
           ))}
