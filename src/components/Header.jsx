@@ -98,16 +98,11 @@ function Header() {
         <div className="hidden md:flex items-center gap-4">
           <a
             href="/login"
-            className="text-white hover:text-yellow-400 transition font-medium"
+            className="bg-blue-700 text-white px-5 py-2 rounded-lg shadow hover:bg-yellow-500 transition font-semibold"
           >
             Login
           </a>
-          <a
-            href="/register"
-            className="bg-blue-700 text-white px-5 py-2 rounded-full shadow hover:bg-yellow-500 transition font-semibold"
-          >
-            Register
-          </a>
+          <div className="hidden sm:block"></div>
         </div>
         {/* Mobile Menu Icon */}
         <div className="md:hidden z-30">
@@ -199,15 +194,6 @@ function Header() {
                 onClick={() => setMenuOpen(false)}
               >
                 Login
-              </a>
-            </li>
-            <li>
-              <a
-                href="/register"
-                className="bg-yellow-400 text-blue-900 px-5 py-2 rounded-full shadow hover:bg-yellow-500 transition font-semibold text-center block"
-                onClick={() => setMenuOpen(false)}
-              >
-                Register
               </a>
             </li>
           </ul>

@@ -145,6 +145,7 @@ const About = () => {
                   src={StudentImg1}
                   alt="Student 1"
                   className="rounded-2xl shadow-xl object-cover w-full h-[420px]"
+                  loading="lazy"
                 />
               </div>
               <div>
@@ -152,6 +153,7 @@ const About = () => {
                   src={StudentImg1}
                   alt="Student 2"
                   className="rounded-2xl shadow-xl object-cover w-full h-[420px]"
+                  loading="lazy"
                 />
               </div>
             </Slider>
@@ -346,6 +348,7 @@ const About = () => {
               src={StudentImg1}
               alt="Principal"
               className="rounded-2xl object-cover w-full h-[420px]"
+              loading="lazy"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
@@ -458,7 +461,7 @@ const About = () => {
             whileHover={{ scale: 1.04 }}
             className="bg-white rounded-2xl shadow-xl p-8 border border-emerald-100 transition"
           >
-            <img src={CBSE} alt="CBSE" className="w-40 mx-auto mb-5" />
+            <img src={CBSE} alt="CBSE" className="w-40 mx-auto mb-5" loading="lazy" />
             <h3 className="text-xl font-semibold text-emerald-700">CBSE</h3>
             <p className="text-gray-600 mt-3">
               Robust academic framework balancing knowledge with 21st-century
@@ -470,7 +473,7 @@ const About = () => {
             whileHover={{ scale: 1.04 }}
             className="bg-white rounded-2xl shadow-xl p-8 border border-teal-100 transition"
           >
-            <img src={NIOS} alt="NIOS" className="w-40 mx-auto mb-5" />
+            <img src={NIOS} alt="NIOS" className="w-40 mx-auto mb-5" loading="lazy" />
             <h3 className="text-xl font-semibold text-emerald-700">NIOS</h3>
             <p className="text-gray-600 mt-3">
               Flexible academic pathways that support diverse needs while
@@ -481,7 +484,7 @@ const About = () => {
             whileHover={{ scale: 1.04 }}
             className="bg-white rounded-2xl shadow-xl p-8 border border-teal-100 transition"
           >
-            <img src={NIOS} alt="NIOS" className="w-40 mx-auto mb-5" />
+            <img src={NIOS} alt="NIOS" className="w-40 mx-auto mb-5" loading="lazy" />
             <h3 className="text-xl font-semibold text-emerald-700">NIOS</h3>
             <p className="text-gray-600 mt-3">
               Flexible academic pathways that support diverse needs while
@@ -492,7 +495,7 @@ const About = () => {
             whileHover={{ scale: 1.04 }}
             className="bg-white rounded-2xl shadow-xl p-8 border border-teal-100 transition"
           >
-            <img src={CBSE} alt="NIOS" className="w-40 mx-auto mb-5" />
+            <img src={CBSE} alt="NIOS" className="w-40 mx-auto mb-5" loading="lazy" />
             <h3 className="text-xl font-semibold text-emerald-700">NIOS</h3>
             <p className="text-gray-600 mt-3">
               Flexible academic pathways that support diverse needs while

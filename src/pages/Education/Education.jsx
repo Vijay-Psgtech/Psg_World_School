@@ -87,6 +87,7 @@ function Education() {
                       src={item.image}
                       alt={item.title}
                       className="w-full h-[400px] object-cover rounded-lg"
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                     <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
