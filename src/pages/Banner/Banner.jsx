@@ -13,7 +13,7 @@ function Banner() {
       ></div>
 
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-blue-900/40 to-transparent z-10" />
+      <div className="absolute inset-0 bg-blue-950/24 to-transparent"></div>
 
       {/* Content */}
       <motion.div
