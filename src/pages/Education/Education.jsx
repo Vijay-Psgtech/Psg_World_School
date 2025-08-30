@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import pypImg from "../../assets/images/students/pyp.jpg";
 import mypImg from "../../assets/images/students/myp.jpg";
 import dpImg from "../../assets/images/students/dp.jpg";
-import cpImg from "../../assets/images/students/dp.jpg";
+import cpImg from "../../assets/images/students/cp.jpg";
 import { motion } from "framer-motion";
 import { Plus, X } from "lucide-react";
 
