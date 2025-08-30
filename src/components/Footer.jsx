@@ -1,169 +1,92 @@
 import React from "react";
-import { FiPhone, FiMail } from "react-icons/fi";
-import { FaInstagram, FaYoutube } from "react-icons/fa";
+import { Mail, Phone, MapPin } from "lucide-react";
+import {
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+  FaFacebookF,
+} from "react-icons/fa";
+
+import ibLogo from "../assets/images/logos/bit_lg.png";
+import cisLogo from "../assets/images/logos/iit_lg.png";
+import rsLogo from "../assets/images/logos/mp_lg.png";
+import ecoLogo from "../assets/images/logos/vit_lg.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-slate-200 pt-10 pb-4 text-gray-700">
-      <div className="container mx-auto px-4 md:px-8 flex flex-col md:flex-row gap-8 md:gap-0 justify-between items-start">
-        {/* Logo & Registered Office */}
-        <div className="flex flex-col md:flex-row gap-8 items-start md:w-2/5">
-          <img
-            src="/Logo.png"
-            alt="PSG World Logo"
-            className="w-40 h-auto mb-4 md:mb-0"
-          />
-          <div>
-            <h4 className="font-bold mb-2">Registered Office</h4>
-            <p className="mb-2">
-              Avinashi Road
-              <br />
-              Peelamedu Coimbatore,
-              <br />
-              Tamilnadu, India-641004
-            </p>
-            <div className="flex items-center gap-2 mb-1">
-              <FiPhone className="text-blue-500" />
-              <a
-                href="tel:04224344522"
-                className="text-blue-600 hover:underline"
-              >
-                0422 4344522
-              </a>
-            </div>
-            <div className="flex items-center gap-2 mb-1">
-              <FiPhone className="text-blue-500" />
-              <a
-                href="tel:04224344220"
-                className="text-blue-600 hover:underline"
-              >
-                0422 4344220
-              </a>
-            </div>
-            <div className="flex items-center gap-2">
-              <FiMail className="text-blue-500" />
-              <a
-                href="mailto:info@bvmglobal.org"
-                className="text-blue-600 hover:underline"
-              >
-                info@bvmglobal.org
-              </a>
-            </div>
+    <footer className="bg-[#112a55] text-white pt-12 pb-6 px-6 md:px-16">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 border-b border-gray-700 pb-10">
+        {/* Address */}
+        <div>
+          <h3 className="text-xl font-semibold text-gold mb-4">
+            Contact Us
+          </h3>
+          <p className="flex items-start gap-3 mb-3 text-gray-300">
+            <MapPin className="w-5 h-5 text-gold mt-1" />
+            PSG World School, S.F. No. 472, Civil Aerodrome Post,
+            <br />
+            Coimbatore, Tamil Nadu – 641014
+          </p>
+          <p className="flex items-center gap-3 mb-2 text-gray-300">
+            <Mail className="w-5 h-5 text-gold" />
+            admissions@psgworldschool.ac.in
+          </p>
+          <p className="flex items-center gap-3 text-gray-300">
+            <Phone className="w-5 h-5 text-gold" />
+            +91 XXXXX XXXXX
+          </p>
+        </div>
+
+        {/* Social Media */}
+        <div>
+          <h3 className="text-xl font-semibold text-gold mb-4">
+            Connect With Us
+          </h3>
+          <div className="flex gap-4">
+            <a
+              href="#"
+              className="p-3 bg-white/10 rounded-full hover:bg-gold hover:text-[#0A1A2F] transition"
+            >
+              <FaInstagram size={18} />
+            </a>
+            <a
+              href="#"
+              className="p-3 bg-white/10 rounded-full hover:bg-gold hover:text-[#0A1A2F] transition"
+            >
+              <FaLinkedin size={18} />
+            </a>
+            <a
+              href="#"
+              className="p-3 bg-white/10 rounded-full hover:bg-gold hover:text-[#0A1A2F] transition"
+            >
+              <FaTwitter size={18} />
+            </a>
+            <a
+              href="#"
+              className="p-3 bg-white/10 rounded-full hover:bg-gold hover:text-[#0A1A2F] transition"
+            >
+              <FaFacebookF size={18} />
+            </a>
           </div>
         </div>
-        {/* Footer Links */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 w-full md:w-3/5">
-          <div>
-            <h4 className="font-bold mb-2">Who We Are</h4>
-            <ul className="space-y-1">
-              <li>
-                <a href="/about" className="hover:underline">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="/academics" className="hover:underline">
-                  Academics
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-bold mb-2">What We Do</h4>
-            <ul className="space-y-1">
-              <li>
-                <a href="/programmes" className="hover:underline">
-                  Our Programmes
-                </a>
-              </li>
-              <li>
-                <a href="/facilities" className="hover:underline">
-                  Facilities
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-bold mb-2">Get Involved</h4>
-            <ul className="space-y-1">
-              <li>
-                <a href="/gallery" className="hover:underline">
-                  Gallery
-                </a>
-              </li>
-              <li>
-                <a href="/news" className="hover:underline">
-                  Careers & News
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-bold mb-2">Legal</h4>
-            <ul className="space-y-1">
-              <li>
-                <a href="/mandatory-disclosure" className="hover:underline">
-                  Mandatory Disclosure
-                </a>
-              </li>
-              <li>
-                <a href="/organisational-policy" className="hover:underline">
-                  Organisational Policy
-                </a>
-              </li>
-              <li className="mt-2 font-bold">Contact</li>
-              <li>
-                <a href="/contact" className="hover:underline">
-                  Contact Us
-                </a>
-              </li>
-              <li>
-                <a href="/admissions" className="hover:underline">
-                  Admissions
-                </a>
-              </li>
-            </ul>
+
+        {/* Accreditation Logos */}
+        <div>
+          <h3 className="text-xl font-semibold text-gold mb-4">
+            Accreditations
+          </h3>
+          <div className="flex flex-wrap items-center gap-4">
+            <img src={ibLogo} alt="IB" className="h-10 object-contain" />
+            <img src={cisLogo} alt="CIS" className="h-10 object-contain" />
+            <img src={rsLogo} alt="Round Square" className="h-10 object-contain" />
+            <img src={ecoLogo} alt="Eco Schools" className="h-10 object-contain" />
           </div>
         </div>
       </div>
-      {/* Divider */}
-      <hr className="my-8" />
-      {/* Bottom Bar */}
-      <div className="container mx-auto px-4 md:px-8 flex flex-col md:flex-row justify-between items-center text-sm">
-        <div className="mb-2 md:mb-0">
-          PSG World School © 2025 • All Rights Reserved
-        </div>
-        <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-6">
-          <span>
-            <a href="/terms" className="hover:underline">
-              Terms & Conditions
-            </a>{" "}
-            |{" "}
-            <a href="/privacy" className="hover:underline">
-              Privacy Policy
-            </a>{" "}
-            |{" "}
-            <a href="/terms-of-use" className="hover:underline">
-              Terms of Use
-            </a>
-          </span>
-          <span className="flex gap-4 mt-2 md:mt-0">
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaInstagram className="text-blue-500 text-2xl hover:text-blue-700" />
-            </a>
-            <a
-              href="https://youtube.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaYoutube className="text-blue-500 text-2xl hover:text-blue-700" />
-            </a>
-          </span>
-        </div>
+
+      {/* Bottom Note */}
+      <div className="text-center text-gray-400 mt-6 text-sm">
+        © {new Date().getFullYear()} PSG World School. All rights reserved.
       </div>
     </footer>
   );

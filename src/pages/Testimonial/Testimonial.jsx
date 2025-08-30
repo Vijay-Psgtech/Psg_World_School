@@ -14,6 +14,11 @@ const testimonials = [
       '"The holistic approach at PSG World School has brought out the best in my child, academically and beyond."',
     author: "Parent of Grade 11 Student",
   },
+  {
+    quote:
+      '"As an educator, I am impressed by PSG World School’s commitment to nurturing curious and confident learners."',
+    author: "Faculty Member",
+  },
 ];
 
 const Testimonial = () => {
@@ -26,8 +31,8 @@ const Testimonial = () => {
       ></div>
 
       {/* Overlay */}
-      {/* <div className="absolute inset-0 bg-black/60 z-0" /> */}
-      <div className="absolute inset-0 bg-gradient-to-r from-gray-400/80 via-gray-400/70 to-gray-400/80"></div>
+      <div className="absolute inset-0 bg-black/60 z-0" />
+      {/* <div className="absolute inset-0 bg-gradient-to-r from-blue-400/80 via-blue-400/30 to-blue-400/80"></div> */}
 
       {/* Content */}
       <div className="relative z-10 w-full flex flex-col items-center">
@@ -37,7 +42,7 @@ const Testimonial = () => {
           whileInView="show"
           className="text-5xl font-bold text-white text-center mb-12 tracking-wide"
         >
-          Testimonials
+          Testimonials 
         </motion.h2>
 
         <motion.div

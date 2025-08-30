@@ -4,6 +4,7 @@ import Campus1 from "../../assets/images/campus/campus1.jpg";
 import Campus2 from "../../assets/images/campus/campus2.jpg";
 import Campus3 from "../../assets/images/campus/campus3.jpg";
 import Campus4 from "../../assets/images/campus/campus4.jpg";
+import { Link } from "react-router-dom";
 
 const NewsData = [
   {
@@ -106,12 +107,15 @@ const News = () => {
                   <p className="text-gray-600 text-sm leading-relaxed line-clamp-3">
                     {item.desc}
                   </p>
-                  <a
-                    href="#"
-                    className="mt-4 block text-blue-700 font-semibold text-right hover:underline"
+                  <Link to={`/news/${encodeURIComponent(item.title)}`}
+                    state={{ newsItem: item }}
                   >
-                    Read More →
-                  </a>
+                    <p
+                      className="mt-4 block text-blue-700 font-semibold text-right hover:underline"
+                    >
+                      Read More →
+                  </p>
+                  </Link>
                 </div>
               </div>
             ))}

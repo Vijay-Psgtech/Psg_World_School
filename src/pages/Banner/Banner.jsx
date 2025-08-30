@@ -1,41 +1,63 @@
 import React from "react";
-import BannerImg from "../../assets/images/banner.png";
+import BannerImg from "../../assets/images/building1.png";
 import { motion } from "framer-motion";
+import { FaPhone } from "react-icons/fa";
 
 function Banner() {
   return (
-    <div className="relative h-[600px] lg:h-[720px]">
-      {/* Banner Image */}
+    <div className="relative h-[580px] md:h-[650px] lg:h-[720px] font-sans">
+      {/* Background Image */}
       <div
-        className="absolute inset-0 w-full h-full bg-fixed bg-center bg-cover z-0"
+        className="absolute inset-0 w-full h-full bg-cover bg-center z-0"
         style={{ backgroundImage: `url(${BannerImg})` }}
       ></div>
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/60 z-5" />
-      {/* Banner Content - Left Side */}
+
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-blue-900/40 to-transparent z-10" />
+
+      {/* Content */}
       <motion.div
-        initial={{ x: -100, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
+        initial={{ y: 50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1 }}
-        className="absolute inset-0 flex flex-col justify-center items-start z-20 text-left px-4 md:px-16 lg:px-24"
+        className="relative z-20 h-full flex flex-col justify-center px-6 md:px-16 lg:px-24"
       >
-        <p className="text-xl font-bold md:text-2xl text-white/80 mb-8 max-w-lg">
-          PSG World School nurtures young minds to become leaders of tomorrow.
-          Join a vibrant community focused on holistic development, innovation,
-          and lifelong learning.
+        {/* Tagline */}
+        <h2 className="text-xl md:text-2xl font-serif text-[#D4AF37] mb-4 tracking-wide text-center md:text-left">
+          Empowering Young Minds to Lead with Purpose
+        </h2>
+
+        {/* Main Text */}
+        <p className="text-lg md:text-xl lg:text-2xl text-white/90 leading-relaxed max-w-2xl font-light mb-10 text-center md:text-left">
+          Discover a world-class learning environment where curiosity meets opportunity. 
+          Our IB curriculum, global standards, and nurturing faculty empower every student 
+          to excel academically and grow as compassionate leaders.
         </p>
-        <div className="flex gap-4">
-          <a
-            href="#admission-enquiry"
-            className="bg-yellow-500 text-white px-8 py-3 rounded-md font-semibold shadow-lg hover:bg-yellow-600 transition"
-          >
-            Admission Enquiry
-          </a>
+
+        {/* Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4">
+          {/* Primary */}
           <a
             href="#"
-            className="bg-blue-600 text-white px-8 py-3 rounded-md font-semibold shadow-lg hover:bg-blue-700 transition"
+            className="bg-[#1E3A8A] text-white px-6 py-3 rounded-full font-medium shadow-md hover:bg-[#1D4ED8] transition"
           >
-            Explore More
+            Explore IB Journey <span className="ml-2">➔</span>
+          </a>
+
+          {/* Secondary */}
+          <a
+            href="#"
+            className="bg-[#D4AF37] text-blue-900 px-6 py-3 rounded-full font-medium shadow-md hover:bg-yellow-500 transition"
+          >
+            Book a Campus Visit <FaPhone className="inline ml-2" />
+          </a>
+
+          {/* Outline */}
+          <a
+            href="#"
+            className="bg-transparent text-white border border-white px-6 py-3 rounded-full font-medium shadow-md hover:bg-white/10 transition"
+          >
+            Admissions 2026–27 Open <span className="ml-2">➔</span>
           </a>
         </div>
       </motion.div>

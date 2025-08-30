@@ -58,12 +58,7 @@ const Contact = () => {
           </p>
           <div className="text-gray-700 space-y-4 mb-8">
             <p>
-              At PSG World School, education goes beyond books and exams. Our
-              classrooms spark curiosity, creativity, and collaboration,
-              embracing each child’s unique learning style and pace. We blend
-              technology with teaching to prepare students for a digital future,
-              while our value-based approach builds empathy, integrity, and
-              social awareness.
+              Our admissions process is transparent, inclusive, and student-centered. We seek learners who are curious, open-minded, and ready to embrace the challenge of IB learning.
             </p>
             <p>
               Our educators are lifelong learners, continuously upskilled to

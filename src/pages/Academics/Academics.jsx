@@ -48,7 +48,7 @@ export default function Academics() {
           alt="About Banner"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <di v className="absolute inset-0 bg-black/60"></di>
+        <div className="absolute inset-0 bg-black/60"></div>
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
