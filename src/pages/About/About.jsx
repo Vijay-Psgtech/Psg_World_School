@@ -1,503 +1,199 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Slider from "react-slick"; // Carousel
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import AboutBanner from "../../assets/images/a4.png";
+import AboutBanner2 from "../../assets/images/a1.png";
 
-import AboutBanner from "../../assets/images/banner-bg2.png";
-import AboutBanner2 from "../../assets/images/banner-bg3.png";
-import StudentImg1 from "../../assets/images/student1.jpg";
-import CBSE from "../../assets/images/cbse.png";
-import NIOS from "../../assets/images/nios.png";
-
-// Simple animation variants
+// Animation Variants
 const fadeInUp = {
-  hidden: { opacity: 0, y: 60 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.9 } },
+  hidden: { opacity: 0, y: 40 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.7 } },
 };
-
 const containerStagger = {
   hidden: {},
   show: { transition: { staggerChildren: 0.25 } },
 };
 
 const About = () => {
-  // Carousel settings
-  const sliderSettings = {
-    dots: true,
-    infinite: true,
-    speed: 800,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3500,
-    arrows: false,
-    pauseOnHover: true,
-  };
-
   return (
-    <div className="w-full font-sans text-gray-800">
-      {/* Hero Banner with Parallax */}
+    <div className="w-full font-sans text-gray-900 bg-white">
+      {/* Hero Section */}
       <section
-        className="relative h-[90vh] flex items-end justify-center bg-fixed bg-cover bg-center"
+        className="relative h-[85vh] flex items-center justify-center bg-fixed bg-cover bg-center"
         style={{ backgroundImage: `url(${AboutBanner})` }}
       >
-        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 bg-blue-900/24"></div>
         <motion.div
-          initial={{ y: 60, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="relative z-10 text-center mb-20"
+          className="relative z-10 text-center px-6"
         >
-          <h1 className="text-5xl md:text-6xl font-extrabold text-white drop-shadow-lg">
-            About Us
+          <h1 className="text-4xl md:text-6xl font-['Playfair_Display'] font-bold tracking-tight drop-shadow-lg">
+            <span className="text-black">About</span>{" "}
+            <span className="text-yellow-500">Us</span>
           </h1>
+          <p className="mt-4 text-lg md:text-xl text-gray-900 max-w-3xl mx-auto">
+            A Century of Excellence • A Future of Global Learning
+          </p>
+          <div className="w-28 h-[3px] bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-600 mx-auto mt-6 rounded-full"></div>
         </motion.div>
       </section>
 
-      {/* Breadcrumb */}
-      <section className="bg-gradient-to-r from-green-100 via-white to-green-50 py-4 px-6 shadow-md">
-        <div className="max-w-7xl mx-auto flex items-center space-x-2 text-sm text-gray-700">
-          <span>🏠</span>
-          <span className="text-gray-400">/</span>
-          <span className="text-green-700 font-semibold">About Us</span>
-        </div>
-      </section>
-
-      {/* About Content */}
+      {/* Our Story */}
       <motion.section
         variants={fadeInUp}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="relative py-20 px-6 bg-gradient-to-br from-white via-green-50 to-green-100 overflow-hidden"
+        className="py-20 px-6 bg-gradient-to-br from-white via-[#fdfbf7] to-[#faf7f0]"
       >
-        {/* Decorative blobs */}
-        <div className="pointer-events-none absolute -top-12 -left-10 w-72 h-72 bg-emerald-200/40 rounded-full blur-3xl"></div>
-        <div className="pointer-events-none absolute -bottom-16 -right-12 w-96 h-96 bg-teal-300/40 rounded-full blur-3xl"></div>
-
-        <div className="relative z-10 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-14 items-center">
           <div>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
-              Learning & Innovation PSG Global @ Coimbatore
+            <h2 className="text-4xl font-['Playfair_Display'] font-bold">
+              <span className="text-black">Our</span>{" "}
+              <span className="text-yellow-500">Story</span>
             </h2>
-            <p className="text-emerald-700 font-semibold mb-6">
-              Ignite Learning • Inspire Growth • Transform Futures
+            <div className="w-16 h-[3px] bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-600 mt-4 mb-6"></div>
+            <p className="text-lg text-blue-950 leading-relaxed text-justify">
+              Rooted in the 100-year heritage of PSG Institutions, PSG World
+              School stands as a beacon of tradition and innovation. With
+              authorization as an IB World School, we ensure our learners
+              experience education aligned with globally benchmarked
+              International Baccalaureate philosophy.
             </p>
           </div>
-          <div>
-            <p className="text-gray-700 leading-relaxed text-justify">
-              At PSG Global @ Coimbatore, we believe that true education goes
-              beyond textbooks. It is about igniting curiosity, inspiring
-              purpose, and transforming young learners into confident World
-              School citizens. Aligned with the PSG motto — Ignite, Inspire,
-              Transform — our academic program is thoughtfully designed to shape
-              not just minds, but also values, creativity, and resilience.
-              Powered by Veranda K-12, we bring together academic rigour,
-              real-world application, future-ready skills, and personal
-              well-being — creating a holistic educational journey for every
-              child.
+          <div className="bg-amber-200 shadow-lg rounded-2xl border border-[#f2e7d7] p-6">
+            <p className="text-blue-950 italic leading-relaxed">
+              "Education is not the filling of a pail, but the lighting of a
+              fire."
+              <br />
+              Our journey blends innovation with values, preparing students to
+              thrive as global citizens.
             </p>
           </div>
         </div>
       </motion.section>
 
-      {/* Vision Banner with Parallax */}
+      {/* Vision Section */}
       <section
-        className="relative h-[70vh] bg-fixed bg-center bg-cover flex items-center justify-center"
+        className="relative h-[70vh] flex items-center justify-center bg-fixed bg-cover bg-center"
         style={{ backgroundImage: `url(${AboutBanner2})` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-900/70 via-gray-900/60 to-teal-700/70"></div>
-        <h2 className="relative z-10 text-white text-4xl md:text-5xl font-extrabold drop-shadow-lg">
-          Our Vision
-        </h2>
-      </section>
-
-      {/* Vision Copy */}
-      <motion.section
-        variants={fadeInUp}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
-        className="py-20 px-6 bg-gradient-to-r from-white via-green-50 to-white"
-      >
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-emerald-700 font-semibold text-lg mb-6">
-            “Provide every child a nurturing, inclusive space to build
-            confidence, emotional intelligence, and lifelong real-world skills”
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0a1a3f]/90 via-[#112a55]/25 to-[#c5a45f]/70"></div>
+        <div className="relative z-10 text-center max-w-3xl px-6">
+          <h2 className="text-5xl font-['Playfair_Display'] font-bold drop-shadow-lg">
+            <span className="text-black">Our</span>{" "}
+            <span className="text-yellow-500">Vision</span>
+          </h2>
+          <div className="w-20 h-[3px] bg-yellow-400 mx-auto mt-4 mb-6"></div>
+          <p className="text-zinc-200 text-lg leading-relaxed">
+            To nurture ethical, empathetic, and future-ready leaders through
+            values-driven, inquiry-based education—shaping global citizens who
+            inspire change.
           </p>
-          <p className="text-gray-700 leading-relaxed text-justify">
-            We nurture future–ready leaders and World School citizens equipped
-            to embrace and overcome the challenges of a dynamic world — through
-            a value-enriched curriculum balancing physical, intellectual, and
-            emotional development.
-          </p>
-        </div>
-      </motion.section>
-
-      {/* Carousel + Pillars */}
-      <section className="py-20 px-6 bg-gradient-to-br from-emerald-50 to-teal-100 relative">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <Slider {...sliderSettings}>
-              <div>
-                <img
-                  src={StudentImg1}
-                  alt="Student 1"
-                  className="rounded-2xl shadow-xl object-cover w-full h-[420px]"
-                />
-              </div>
-              <div>
-                <img
-                  src={StudentImg1}
-                  alt="Student 2"
-                  className="rounded-2xl shadow-xl object-cover w-full h-[420px]"
-                />
-              </div>
-            </Slider>
-          </div>
-
-          <motion.div
-            variants={fadeInUp}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6">
-              Our Three Pillars of Holistic Education
-            </h2>
-            <div className="space-y-5 text-gray-700 leading-relaxed">
-              <p>
-                <span className="font-semibold text-emerald-700">
-                  Whole Child Focus –{" "}
-                </span>
-                intellectual, emotional, physical, and ethical growth.
-              </p>
-              <p>
-                <span className="font-semibold text-emerald-700">
-                  Transformational Learning –{" "}
-                </span>
-                inquiry, problem-solving, collaboration, reflection.
-              </p>
-              <p>
-                <span className="font-semibold text-emerald-700">
-                  Global Citizenship –{" "}
-                </span>
-                empathy, values, and worldwide readiness.
-              </p>
-            </div>
-          </motion.div>
         </div>
       </section>
 
-      {/* Core Values */}
+      {/* Mission Section */}
       <motion.section
         variants={containerStagger}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="py-20 px-6 bg-grey"
-      >
-        <div className="max-w-6xl mx-auto text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
-            Our Core Values
-          </h2>
-        </div>
-        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
-          {[
-            {
-              t: "Excellence",
-              d: "We aim for the highest standards across academics, activities, and character.",
-            },
-            {
-              t: "Integrity",
-              d: "Honesty, transparency, and accountability guide our actions and relationships.",
-            },
-            {
-              t: "Respect & Empathy",
-              d: "An inclusive culture built on kindness, dignity, and understanding.",
-            },
-          ].map((v, i) => (
-            <motion.div
-              key={i}
-              variants={fadeInUp}
-              className="p-8 rounded-2xl bg-gradient-to-br from-emerald-50 to-white shadow-lg hover:shadow-2xl transition"
-              whileHover={{ scale: 1.03 }}
-            >
-              <h3 className="text-xl font-semibold text-emerald-700 mb-3">
-                {v.t}
-              </h3>
-              <p className="text-gray-600">{v.d}</p>
-            </motion.div>
-          ))}
-        </div>
-      </motion.section>
-
-      {/* Mission */}
-      <motion.section
-        variants={fadeInUp}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
-        className="relative py-20 px-6 bg-gradient-to-r from-emerald-700 via-emerald-600 to-teal-600 text-white overflow-hidden"
-      >
-        <div className="absolute -top-10 -left-10 w-72 h-72 bg-white/10 rounded-full blur-2xl"></div>
-        <div className="absolute -bottom-12 -right-16 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
-
-        <div className="relative max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-extrabold mb-6">
-            Our Mission
-          </h2>
-          <p className="text-lg md:text-xl leading-relaxed max-w-3xl mx-auto text-emerald-50">
-            To inspire learners to be happy, healthy, responsible World School
-            citizens — and to attract, develop, and retain exceptional educators
-            who bring this mission to life.
-          </p>
-        </div>
-      </motion.section>
-
-      {/* Why Choose */}
-      <motion.section
-        variants={fadeInUp}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
         className="py-20 px-6 bg-white"
       >
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-extrabold text-center text-gray-900 mb-12">
-            Why Choose PSG Global @ Coimbatore?
+        <div className="max-w-6xl mx-auto text-center mb-14">
+          <h2 className="text-4xl font-['Playfair_Display'] font-bold">
+            <span className="text-black">Our</span>{" "}
+            <span className="text-yellow-500">Mission</span>
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-12">
-            <motion.div className="bg-gradient-to-br from-emerald-50 to-white p-8 rounded-2xl shadow-md">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                CBSE + NIOS • Conceptual Clarity
-              </h3>
-              <ul className="list-disc list-inside text-gray-700 space-y-2">
-                <li>Innovation & skill-building • Caring, trained educators</li>
-                <li>Spacious green campus with modern facilities</li>
-                <li>Strong focus on sports, arts & student-led clubs</li>
-                <li>Transparent communication & parent partnership</li>
-                <li>Proven results & individual progress tracking</li>
-                <li>Customized Student Learning Program</li>
-              </ul>
-            </motion.div>
-
-            <motion.div className="bg-gradient-to-br from-teal-50 to-white p-8 rounded-2xl shadow-md border-l md:border-l-0">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                Purposeful Growth • Innovation & Compassion
-              </h3>
-              <ul className="list-disc list-inside text-gray-700 space-y-2">
-                <li>Whole-child development with emotional & ethical focus</li>
-                <li>Student voice & real-life leadership opportunities</li>
-                <li>Safe, supportive environment with trained counselors</li>
-                <li>
-                  Diversity, culture, World School awareness & community service
-                </li>
-                <li>Hands-on learning: projects, fieldwork & labs</li>
-                <li>Community engagement & social responsibility</li>
-              </ul>
-            </motion.div>
-          </div>
-        </div>
-      </motion.section>
-
-      {/* PSG Group */}
-      <motion.section
-        variants={fadeInUp}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
-        className="py-20 px-6 bg-gradient-to-br from-emerald-50 to-teal-100"
-      >
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-6">
-            A Proud Part of the PSG Group of Schools
-          </h2>
-          <p className="text-gray-700 leading-relaxed max-w-4xl mx-auto">
-            PSG Global is a respected name across India. Being part of this
-            group provides a strong academic foundation, collaborative growth,
-            and continuous innovation — enriching every learner’s experience.
+          <div className="w-20 h-[3px] bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-600 mx-auto mt-4 mb-6"></div>
+          <p className="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">
+            PSG IB World School commits to academic rigor balanced with
+            compassion, creativity, and intercultural understanding.
           </p>
         </div>
-      </motion.section>
-
-      {/* PRINCIPAL'S DESK — Parallax & Rich Card */}
-      <section
-        className="relative py-24 px-6 text-white bg-fixed bg-cover bg-center overflow-hidden"
-        style={{ backgroundImage: `url(${AboutBanner2})` }}
-      >
-        {/* Animated Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-900/80 via-gray-900/70 to-teal-800/80 animate-gradient-x"></div>
-
-        <div className="relative max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-          {/* Principal Image Card */}
+        <div className="max-w-6xl mx-auto">
           <motion.div
             variants={fadeInUp}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            whileHover={{ scale: 1.05, rotate: 1 }}
-            transition={{ type: "spring", stiffness: 120 }}
-            className="bg-white/90 backdrop-blur-md rounded-3xl shadow-2xl p-3 hover:shadow-[0_25px_80px_rgba(0,0,0,0.55)] transition"
+            className="p-10 rounded-2xl shadow-lg bg-gradient-to-r from-white via-[#fff9f0] to-[#f6d365] border border-[#f2e7d7] transition transform hover:shadow-2xl hover:scale-105 hover:from-[#f6d365] hover:via-[#fff9f0] hover:to-white"
           >
-            <motion.img
-              src={StudentImg1}
-              alt="Principal"
-              className="rounded-2xl object-cover w-full h-[420px]"
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            />
-          </motion.div>
-
-          {/* Principal Message */}
-          <motion.div
-            variants={fadeInUp}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            className="space-y-6"
-          >
-            <motion.h2
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-3xl md:text-4xl font-extrabold drop-shadow"
-            >
-              From the Principal’s Desk
-            </motion.h2>
-
-            <motion.p
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ delay: 0.3, duration: 0.8 }}
-              className="italic text-emerald-200 font-medium"
-            >
-              “Education is not the filling of a pail, but the lighting of a
-              fire.”
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 1 }}
-              className="bg-white/10 p-6 rounded-2xl backdrop-blur-sm shadow-lg hover:bg-white/20 transition"
-            >
-              <p className="text-emerald-50 leading-relaxed text-justify">
-                At PSG Global Coimbatore, true education begins with curiosity.
-                We nurture young minds with compassion, creativity, and
-                confidence — building strong character and life skills. Every
-                learner is unique, and we help them discover and celebrate their
-                individuality.
-              </p>
-              <p className="text-emerald-50 leading-relaxed text-justify mt-4">
-                Through holistic experiences, we prepare students for challenges
-                in and beyond classrooms. Respect for self, others, and the
-                environment is woven into our culture — creating a safe, joyful,
-                and inclusive environment where every child thrives.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ delay: 0.6, duration: 0.8 }}
-              className="pt-2"
-            >
-              <p className="font-semibold text-emerald-200">
-                — Principal, PSG Global @ Coimbatore
-              </p>
-            </motion.div>
+            <ul className="space-y-4 text-gray-800 font-medium">
+              {[
+                "Empower students with curiosity and courage to make a difference.",
+                "Cultivate principled learners for a sustainable future.",
+                "Deliver a globally relevant and value-driven curriculum.",
+                "Nurture creativity, reflection, and social responsibility.",
+                "Inspire kindness, innovation, and lifelong learning.",
+                "Foster resilience, inclusivity, and excellence in all pursuits.",
+              ].map((m, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <span className="text-yellow-600 font-bold">✦</span>
+                  <span>{m}</span>
+                </li>
+              ))}
+            </ul>
           </motion.div>
         </div>
+      </motion.section>
+
+      {/* Motto */}
+      <section className="py-16 px-6 text-center bg-gradient-to-r from-[#2b5ed4] via-[#112a55] to-[#0c42be]">
+        <h2 className="text-4xl md:text-5xl font-['Playfair_Display'] font-bold mb-4">
+          <span className="text-black">Our</span>{" "}
+          <span className="text-yellow-500">Motto</span>
+        </h2>
+        <p className="text-2xl font-semibold text-yellow-200 tracking-wide">
+          i³
+          <br />
+          Ignite • Innovate • Inspire
+          <br />
+        </p>
       </section>
 
-      {/* Leadership Philosophy */}
+      {/* Why Choose Us */}
       <motion.section
-        variants={fadeInUp}
+        variants={containerStagger}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="py-20 px-6 bg-white"
+        className="py-20 px-6 bg-gradient-to-br from-white via-[#fdfbf7] to-[#faf7f0]"
       >
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-6">
-            Our Leadership Philosophy
+        {/* Section Heading */}
+        <div className="max-w-6xl mx-auto text-center mb-14">
+          <h2 className="text-4xl font-['Playfair_Display'] font-bold">
+            <span className="text-black">Why</span>{" "}
+            <span className="text-yellow-500">Choose</span>{" "}
+            <span className="text-black">PSG</span>{" "}
+            <span className="text-yellow-500">World</span>{" "}
+            <span className="text-black">School</span>{" "}
+            <span className="text-yellow-500">IB?</span>
           </h2>
-          <p className="text-gray-700 leading-relaxed max-w-4xl mx-auto mb-6">
-            Our leadership models lifelong learning, collaboration, and a deep
-            commitment to every student’s potential — co-creating a thriving
-            school culture with faculty, parents, and community.
-          </p>
-          <p className="text-gray-700 leading-relaxed max-w-4xl mx-auto">
-            PSG Global School in Coimbatore offers an advanced academic
-            curriculum and the freedom to personalise learning — helping
-            students stand out with confidence and purpose.
-          </p>
-        </div>
-      </motion.section>
-
-      {/* Affiliations */}
-      <motion.section
-        variants={fadeInUp}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
-        className="py-20 px-6 bg-gradient-to-r from-emerald-50 via-white to-teal-100"
-      >
-        <div className="max-w-6xl mx-auto text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
-            Our Affiliations
-          </h2>
+          <div className="w-20 h-[3px] bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-600 mx-auto mt-4"></div>
         </div>
 
-        <div className="grid md:grid-cols-4 gap-10 max-w-9xl mx-auto">
+        {/* Single Highlighted Box */}
+        <div className="max-w-5xl mx-auto">
           <motion.div
-            whileHover={{ scale: 1.04 }}
-            className="bg-white rounded-2xl shadow-xl p-8 border border-emerald-100 transition"
+            variants={fadeInUp}
+            className="p-10 rounded-2xl shadow-lg bg-gradient-to-r from-white via-[#fff9f0] to-[#e2bf4a] border border-[#f2e7d7] transition transform hover:shadow-2xl hover:scale-105 hover:from-[#f6d365] hover:via-[#fff9f0] hover:to-white"
           >
-            <img src={CBSE} alt="CBSE" className="w-40 mx-auto mb-5" />
-            <h3 className="text-xl font-semibold text-emerald-700">CBSE</h3>
-            <p className="text-gray-600 mt-3">
-              Robust academic framework balancing knowledge with 21st-century
-              skills and holistic development.
-            </p>
-          </motion.div>
-
-          <motion.div
-            whileHover={{ scale: 1.04 }}
-            className="bg-white rounded-2xl shadow-xl p-8 border border-teal-100 transition"
-          >
-            <img src={NIOS} alt="NIOS" className="w-40 mx-auto mb-5" />
-            <h3 className="text-xl font-semibold text-emerald-700">NIOS</h3>
-            <p className="text-gray-600 mt-3">
-              Flexible academic pathways that support diverse needs while
-              maintaining high standards.
-            </p>
-          </motion.div>
-          <motion.div
-            whileHover={{ scale: 1.04 }}
-            className="bg-white rounded-2xl shadow-xl p-8 border border-teal-100 transition"
-          >
-            <img src={NIOS} alt="NIOS" className="w-40 mx-auto mb-5" />
-            <h3 className="text-xl font-semibold text-emerald-700">NIOS</h3>
-            <p className="text-gray-600 mt-3">
-              Flexible academic pathways that support diverse needs while
-              maintaining high standards.
-            </p>
-          </motion.div>
-          <motion.div
-            whileHover={{ scale: 1.04 }}
-            className="bg-white rounded-2xl shadow-xl p-8 border border-teal-100 transition"
-          >
-            <img src={CBSE} alt="NIOS" className="w-40 mx-auto mb-5" />
-            <h3 className="text-xl font-semibold text-emerald-700">NIOS</h3>
-            <p className="text-gray-600 mt-3">
-              Flexible academic pathways that support diverse needs while
-              maintaining high standards.
-            </p>
+            <ul className="space-y-4 text-gray-800 font-medium text-lg text-left">
+              {[
+                "🎓 A century-old PSG legacy driving global excellence.",
+                "🌐 IB network recognition, trusted by top universities.",
+                "📚 Full IB continuum: PYP, MYP, DP, and CP.",
+                "🏫 World-class campus designed for inquiry and innovation.",
+                "💡 Future-ready skills: leadership, research, and digital literacy.",
+                "❤️ Rooted in service, values, and social responsibility.",
+              ].map((point, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <span className="text-yellow-600 font-bold">✦</span>
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
           </motion.div>
         </div>
       </motion.section>

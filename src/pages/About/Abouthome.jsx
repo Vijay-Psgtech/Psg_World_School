@@ -1,42 +1,62 @@
 import React from "react";
-import BannerImg from "../../assets/images/banner.png";
+import BannerImg from "../../assets/images/building2.png";
 import { motion } from "framer-motion";
-import { fadeInUp, fadeIn } from "../../utils/Variants";
+import { fadeIn } from "../../utils/Variants";
 
 const Abouthome = () => {
   return (
-    <section className="w-full py-12 bg-white">
-      <div className="container mx-auto flex flex-col md:flex-row items-center px-4 md:px-8">
+    <section className="w-full py-20 bg-white font-sans relative">
+      <div className="container mx-auto flex flex-col md:flex-row items-center px-6 md:px-12">
+        
         {/* Left: Content */}
         <motion.div
           variants={fadeIn("right")}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="md:w-1/2 w-full mb-8 md:px-12 md:mb-0 md:pr-12"
+          className="md:w-1/2 w-full mb-12 md:mb-0 md:pr-12"
         >
-          <p className="w-16 border-t-2 border-blue-600 mb-4"></p>
-          <h6 className="text-blue-600 font-semibold mb-2 ">
-            Our school campus
+          {/* Decorative Accent */}
+          <div className="w-20 h-[3px] bg-gradient-to-r from-yellow-400 to-blue-600 mb-6 rounded-full"></div>
+
+          {/* Subtitle */}
+          <h6 className="text-blue-800 font-semibold mb-3 tracking-widest uppercase text-sm">
+            Our School Campus
           </h6>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 py-2">
-            About PSG World School
+
+          {/* Title */}
+          <h2 className="text-4xl md:text-5xl font-serif font-bold text-blue-900 mb-6 leading-snug drop-shadow-sm">
+            About Us – Legacy with a Global Vision
           </h2>
-          <p className="text-md text-gray-600 mb-6 py-2">
-            PSG World School Coimbatore stands as a beacon of progressive
-            education in South India. As part of the reputed PSG World School
-            Group of Schools, we offer a dynamic learning journey guided by the
-            principles of the National Education Policy (NEP) and the National
-            Curriculum Framework (NCF). Our holistic pedagogy integrates
-            academic rigor with experiential and values-based learning,
-            cultivating confident, creative, and curious learners. With campuses
-            in Chennai (Bollineni Hillside & Perungudi), Coimbatore, Trichy, and
-            Bengaluru, PSG World School nurtures students with a
-            forward-thinking curriculum, rooted in Indian ethos and global best
-            practices. We are committed to creating lifelong learners who thrive
-            in a rapidly changing world.
+
+          {/* Body */}
+          <p className="text-lg text-gray-700 mb-8 leading-relaxed font-medium">
+            Rooted in the 100-year educational heritage of PSG Institutions,
+            <span className="text-blue-900 font-semibold">
+              {" "}PSG World School{" "}
+            </span>
+            blends tradition with innovation. Our authorization as an IB World
+            School ensures every learner experiences globally benchmarked
+            education aligned with the International Baccalaureate philosophy.
           </p>
+
+          {/* Buttons */}
+          <div className="flex flex-wrap gap-4">
+            <a
+              href="/about"
+              className="bg-blue-900 text-white px-6 py-3 rounded-full font-medium shadow-md hover:bg-blue-700 transition"
+            >
+              Learn More →
+            </a>
+            <a
+              href="/admissions"
+              className="bg-yellow-400 text-blue-900 px-6 py-3 rounded-full font-medium shadow-md hover:bg-yellow-500 transition"
+            >
+              Admissions →
+            </a>
+          </div>
         </motion.div>
+
         {/* Right: Image */}
         <motion.div
           variants={fadeIn("left")}
@@ -45,12 +65,16 @@ const Abouthome = () => {
           viewport={{ once: true }}
           className="md:w-1/2 w-full flex justify-center"
         >
-          <img
-            src={BannerImg}
-            alt="About PSG World School"
-            className="w-full max-w-lg rounded-lg shadow-lg object-cover"
-            loading="lazy"
-          />
+          <div className="relative">
+            <img
+              src={BannerImg}
+              alt="About PSG World School"
+              className="w-full max-w-lg rounded-2xl shadow-xl object-cover"
+              loading="lazy"
+            />
+            {/* Decorative Border/Glow */}
+            <div className="absolute inset-0 rounded-2xl border-4 border-blue-900/20 pointer-events-none"></div>
+          </div>
         </motion.div>
       </div>
     </section>
