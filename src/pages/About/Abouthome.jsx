@@ -25,7 +25,7 @@ const Abouthome = () => {
           </h6>
 
           {/* Title */}
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-blue-900 mb-6 leading-snug drop-shadow-sm">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-blue-900 mb-6 leading-snug drop-shadow-sm">
             About Us – Legacy with a Global Vision
           </h2>
 

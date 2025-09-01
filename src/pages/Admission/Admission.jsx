@@ -15,26 +15,88 @@ const Admission = () => {
 
   // Content Data
   const steps = [
-    { icon: <FileText className="w-6 h-6 text-emerald-600" />, title: "Online Inquiry Form Submission" },
-    { icon: <Users className="w-6 h-6 text-emerald-600" />, title: "Campus Tour & Interaction" },
-    { icon: <GraduationCap className="w-6 h-6 text-emerald-600" />, title: "Entrance Assessment & Student Profile Review" },
-    { icon: <Star className="w-6 h-6 text-emerald-600" />, title: "Parent Meeting and Offer of Admission" },
+    {
+      icon: <FileText className="w-6 h-6 text-emerald-600" />,
+      title: "Online Inquiry Form Submission",
+    },
+    {
+      icon: <Users className="w-6 h-6 text-emerald-600" />,
+      title: "Campus Tour & Interaction",
+    },
+    {
+      icon: <GraduationCap className="w-6 h-6 text-emerald-600" />,
+      title: "Entrance Assessment & Student Profile Review",
+    },
+    {
+      icon: <Star className="w-6 h-6 text-emerald-600" />,
+      title: "Parent Meeting and Offer of Admission",
+    },
   ];
 
   const scholarships = [
-    { icon: <Star className="w-6 h-6 text-yellow-500" />, title: "Merit-Based Scholarships", desc: "For high achievers across academics, sports, and arts." },
-    { icon: <HandCoins className="w-6 h-6 text-yellow-500" />, title: "Need-Based Financial Aid", desc: "Ensuring inclusivity and equal opportunity for every learner." },
+    {
+      icon: <Star className="w-6 h-6 text-yellow-500" />,
+      title: "Merit-Based Scholarships",
+      desc: "For high achievers across academics, sports, and arts.",
+    },
+    {
+      icon: <HandCoins className="w-6 h-6 text-yellow-500" />,
+      title: "Need-Based Financial Aid",
+      desc: "Ensuring inclusivity and equal opportunity for every learner.",
+    },
   ];
 
   const ageCriteria = [
-    { no: 1, grade: "Reception", range: "3–4 years", uk: "Nursery", us: "Pre-School" },
-    { no: 2, grade: "Prep 1", range: "4–5 years", uk: "Reception", us: "Pre-KG" },
+    {
+      no: 1,
+      grade: "Reception",
+      range: "3–4 years",
+      uk: "Nursery",
+      us: "Pre-School",
+    },
+    {
+      no: 2,
+      grade: "Prep 1",
+      range: "4–5 years",
+      uk: "Reception",
+      us: "Pre-KG",
+    },
     { no: 3, grade: "Prep 2", range: "5–6 years", uk: "Year 1", us: "KG" },
-    { no: 4, grade: "Grade 1", range: "6–7 years", uk: "Year 2", us: "Grade 1" },
-    { no: 5, grade: "Grade 2", range: "7–8 years", uk: "Year 3", us: "Grade 2" },
-    { no: 6, grade: "Grade 3", range: "8–9 years", uk: "Year 4", us: "Grade 3" },
-    { no: 7, grade: "Grade 4", range: "9–10 years", uk: "Year 5", us: "Grade 4" },
-    { no: 8, grade: "Grade 5", range: "10–11 years", uk: "Year 6", us: "Grade 5" },
+    {
+      no: 4,
+      grade: "Grade 1",
+      range: "6–7 years",
+      uk: "Year 2",
+      us: "Grade 1",
+    },
+    {
+      no: 5,
+      grade: "Grade 2",
+      range: "7–8 years",
+      uk: "Year 3",
+      us: "Grade 2",
+    },
+    {
+      no: 6,
+      grade: "Grade 3",
+      range: "8–9 years",
+      uk: "Year 4",
+      us: "Grade 3",
+    },
+    {
+      no: 7,
+      grade: "Grade 4",
+      range: "9–10 years",
+      uk: "Year 5",
+      us: "Grade 4",
+    },
+    {
+      no: 8,
+      grade: "Grade 5",
+      range: "10–11 years",
+      uk: "Year 6",
+      us: "Grade 5",
+    },
   ];
 
   // ✅ Reusable heading
@@ -59,11 +121,12 @@ const Admission = () => {
           transition={{ duration: 1 }}
           className="relative z-10 text-center mb-20"
         >
-          <h1 className="text-5xl md:text-6xl font-extrabold drop-shadow-lg 
-               bg-gradient-to-r from-black to-yellow-300 bg-clip-text text-transparent">
-  Admissions
- 
-</h1>
+          <h1
+            className="text-5xl md:text-6xl font-extrabold drop-shadow-lg 
+               bg-gradient-to-r from-black to-yellow-300 bg-clip-text text-transparent"
+          >
+            Admissions
+          </h1>
         </motion.div>
       </section>
 
@@ -81,9 +144,9 @@ const Admission = () => {
         <div className="max-w-5xl mx-auto text-center" data-aos="fade-up">
           <Heading black="Join the" yellow="PSG World School Community" />
           <p className="text-lg text-gray-700 leading-relaxed">
-            Our admissions process is transparent, inclusive, and student-centered. 
-            We seek learners who are curious, open-minded, and ready to embrace 
-            the challenge of IB learning.
+            Our admissions process is transparent, inclusive, and
+            student-centered. We seek learners who are curious, open-minded, and
+            ready to embrace the challenge of IB learning.
           </p>
         </div>
       </section>
@@ -113,7 +176,10 @@ const Admission = () => {
           <Heading black="Scholarships &" yellow="Financial Aid" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
             {scholarships.map((item, index) => (
-              <div key={index} className="bg-gradient-to-br from-yellow-50 to-white shadow-sm border rounded-xl p-6 flex items-start gap-4">
+              <div
+                key={index}
+                className="bg-gradient-to-br from-yellow-50 to-white shadow-sm border rounded-xl p-6 flex items-start gap-4"
+              >
                 {item.icon}
                 <div>
                   <h3 className="font-semibold text-gray-900">{item.title}</h3>
@@ -160,6 +226,3 @@ const Admission = () => {
 };
 
 export default Admission;
-
-
-
