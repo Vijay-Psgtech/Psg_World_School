@@ -72,7 +72,7 @@ function CampusHighlights() {
         <div className="relative">
           {/* Left Button */}
           <button
-            className="absolute left-2 top-1/2 -translate-y-1/2 z-10 
+            className="absolute left-2 top-1/3 -translate-y-1/2 z-10 
                        w-12 h-12 flex items-center justify-center 
                        rounded-full bg-white/70 backdrop-blur-md shadow-lg 
                        hover:scale-110 hover:bg-blue-600 hover:text-white 
@@ -125,7 +125,7 @@ function CampusHighlights() {
 
           {/* Right Button */}
           <button
-            className="absolute right-2 top-1/2 -translate-y-1/2 z-10 
+            className="absolute right-2 top-1/3 -translate-y-1/2 z-10 
                        w-12 h-12 flex items-center justify-center 
                        rounded-full bg-white/70 backdrop-blur-md shadow-lg 
                        hover:scale-110 hover:bg-blue-600 hover:text-white 

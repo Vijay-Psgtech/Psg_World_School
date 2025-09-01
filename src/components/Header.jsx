@@ -27,9 +27,9 @@ function Header() {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        headerBg
+        headerBg && !menuOpen
           ? "bg-white/90 backdrop-blur-md shadow-md"
-          : "bg-gradient-to-b from-black/30 to-transparent"
+          : "bg-gradient-to-b from-white/30 to-transparent"
       }`}
       style={{ fontFamily: "Poppins, sans-serif" }}
     >
