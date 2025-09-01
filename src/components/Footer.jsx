@@ -45,25 +45,25 @@ const Footer = () => {
           <div className="flex gap-4">
             <a
               href="#"
-              className="p-3 bg-white/10 rounded-full hover:bg-gold hover:text-[#0A1A2F] transition"
+              className="p-3 bg-white/10 rounded-full hover:bg-gold hover:text-yellow-400 transition"
             >
               <FaInstagram size={18} />
             </a>
             <a
               href="#"
-              className="p-3 bg-white/10 rounded-full hover:bg-gold hover:text-[#0A1A2F] transition"
+              className="p-3 bg-white/10 rounded-full hover:bg-gold hover:text-yellow-400 transition"
             >
               <FaLinkedin size={18} />
             </a>
             <a
               href="#"
-              className="p-3 bg-white/10 rounded-full hover:bg-gold hover:text-[#0A1A2F] transition"
+              className="p-3 bg-white/10 rounded-full hover:bg-gold hover:text-yellow-400 transition"
             >
               <FaTwitter size={18} />
             </a>
             <a
               href="#"
-              className="p-3 bg-white/10 rounded-full hover:bg-gold hover:text-[#0A1A2F] transition"
+              className="p-3 bg-white/10 rounded-full hover:bg-gold hover:text-yellow-400 transition"
             >
               <FaFacebookF size={18} />
             </a>

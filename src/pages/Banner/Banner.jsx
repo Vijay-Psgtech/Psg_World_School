@@ -4,7 +4,7 @@ import BannerImg2 from "../../assets/images/banner/b2.png";
 import BannerImg3 from "../../assets/images/banner/b3.png";
 import BannerImg4 from "../../assets/images/banner/b4.png";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaPhone } from "react-icons/fa";
+import { FaPhoneAlt } from "react-icons/fa";
 
 const images = [BannerImg1, BannerImg2, BannerImg3, BannerImg4];
 
@@ -44,12 +44,12 @@ function Banner() {
         className="relative z-20 h-full flex flex-col justify-center px-6 md:px-16 lg:px-24"
       >
         {/* Tagline */}
-        <h2 className="text-xl md:text-2xl font-serif text-[#D4AF37] mb-4 tracking-wide text-center md:text-left">
+        <h2 className="text-xl md:text-2xl font-serif font-extrabold text-[#D4AF37] mb-4 tracking-wide text-center md:text-left">
           Empowering Young Minds to Lead with Purpose
         </h2>
 
         {/* Main Text */}
-        <p className="text-lg md:text-xl lg:text-2xl text-white/90 leading-relaxed max-w-2xl font-light mb-10 text-center md:text-left">
+        <p className="text-lg md:text-xl lg:text-2xl text-white/90 font-bold leading-relaxed max-w-2xl font-light mb-10 text-center md:text-left">
           Discover a world-class learning environment where curiosity meets
           opportunity. Our IB curriculum, global standards, and nurturing
           faculty empower every student to excel academically and grow as
@@ -71,12 +71,12 @@ function Banner() {
             href="#"
             className="bg-[#D4AF37] text-blue-900 px-6 py-3 rounded-full font-medium shadow-md hover:bg-yellow-500 transition"
           >
-            Book a Campus Visit <FaPhone className="inline ml-2" />
+            Book a Campus Visit <FaPhoneAlt className="inline ml-2" />
           </a>
 
           {/* Outline */}
           <a
-            href="#"
+            href="/admissions"
             className="bg-transparent text-white border border-white px-6 py-3 rounded-full font-medium shadow-md hover:bg-white/10 transition"
           >
             Admissions 2026–27 Open <span className="ml-2">➔</span>

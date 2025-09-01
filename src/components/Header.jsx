@@ -18,8 +18,9 @@ function Header() {
     { label: "Academics", href: "/academics" },
     { label: "Facilities", href: "/facilities" },
     { label: "Admissions", href: "/admissions" },
-    { label: "Gallery", href: "/gallery" },
-    { label: "News", href: "/news" },
+    { label: "Students", href: "/students-life" },
+    // { label: "Gallery", href: "/gallery" },
+    // { label: "News", href: "/news" },
     { label: "Contact", href: "/contact" },
   ];
 
