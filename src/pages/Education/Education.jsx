@@ -52,7 +52,13 @@ function Education() {
     <section className="w-full py-20 px-6 md:px-12 bg-gradient-to-br from-white via-blue-50 to-yellow-50 font-sans">
       {/* Section Header */}
       <div className="text-center mb-16">
-        <div className="w-20 h-[3px] bg-gradient-to-r from-yellow-400 to-blue-600 mb-6 mx-auto rounded-full"></div>
+        <motion.div 
+          initial={{ scaleX: 0 }}
+          whileInView={{ scaleX: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="w-20 h-[3px] bg-gradient-to-r from-yellow-400 to-blue-600 mb-6 mx-auto rounded-full"
+        ></motion.div>
         <h4 className="text-blue-800 font-semibold mb-3 tracking-widest uppercase text-sm">
            The IB Continuum
         </h4>

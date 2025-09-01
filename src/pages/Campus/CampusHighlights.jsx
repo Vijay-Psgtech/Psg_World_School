@@ -6,7 +6,7 @@ import Campus2 from "../../assets/images/campus/campus2.jpg";
 import Campus3 from "../../assets/images/campus/campus3.png";
 import Campus4 from "../../assets/images/campus/campus4.png";
 import Campus5 from "../../assets/images/campus/campus5.jpg";
-import Campus6 from "../../assets/images/campus/campus6.png"
+import Campus6 from "../../assets/images/campus/campus6.png";
 
 const highlights = [
   {
@@ -59,12 +59,18 @@ function CampusHighlights() {
       <div className="container mx-auto px-4 md:px-8">
         {/* Section Header */}
         <div className="text-left mb-12">
-          <div className="w-20 h-[3px] bg-gradient-to-r from-yellow-400 to-blue-600 mb-6 rounded-full"></div>
+          <motion.div
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="w-20 h-[3px] bg-gradient-to-r from-yellow-400 to-blue-600 mb-6 rounded-full"
+          ></motion.div>
           <h4 className="text-blue-800 font-semibold mb-3 tracking-widest uppercase text-sm">
-              A Learning Environment that Inspires Excellence
+            A Learning Environment that Inspires Excellence
           </h4>
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-blue-900 drop-shadow-sm">
-           Campus & Facilities
+            Campus & Facilities
           </h2>
         </div>
 

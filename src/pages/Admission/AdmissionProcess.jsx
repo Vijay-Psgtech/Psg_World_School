@@ -38,10 +38,16 @@ const AdmissionProcess = () => {
     <section className="relative bg-gradient-to-b from-white via-blue-50 to-white py-16 px-6 lg:px-20">
       {/* Header */}
       <div className="text-center max-w-3xl mx-auto mb-14">
-        <div className="w-20 h-[3px] bg-gradient-to-r from-yellow-400 to-blue-600 mb-6 mx-auto rounded-full"></div>
+        <motion.div
+          initial={{ scaleX: 0 }}
+          whileInView={{ scaleX: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="w-20 h-[3px] bg-gradient-to-r from-yellow-400 to-blue-600 mb-6 mx-auto rounded-full"
+        ></motion.div>
         <h4 className="text-blue-800 font-semibold mb-3 tracking-widest uppercase text-sm">
-            Join the PSG World School Community
-          </h4>
+          Join the PSG World School Community
+        </h4>
         <motion.h2
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -51,8 +57,9 @@ const AdmissionProcess = () => {
           Admissions
         </motion.h2>
         <p className="text-lg text-gray-600">
-          Our admissions process is transparent, inclusive, and student-centered. 
-          We seek learners who are curious, open-minded, and ready to embrace the challenge of IB learning.
+          Our admissions process is transparent, inclusive, and
+          student-centered. We seek learners who are curious, open-minded, and
+          ready to embrace the challenge of IB learning.
         </p>
       </div>
 
@@ -67,7 +74,9 @@ const AdmissionProcess = () => {
             viewport={{ once: true }}
             className="flex flex-col items-center text-center bg-white shadow-lg rounded-2xl p-8 border-t-4 border-blue-600 hover:shadow-2xl transition-shadow duration-300"
           >
-            <div className="mb-6 bg-yellow-100 rounded-full p-5">{step.icon}</div>
+            <div className="mb-6 bg-yellow-100 rounded-full p-5">
+              {step.icon}
+            </div>
             <h3 className="text-xl font-semibold text-blue-900 mb-3">
               {step.title}
             </h3>
