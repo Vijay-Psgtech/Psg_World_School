@@ -1,16 +1,37 @@
-import React from "react";
-import BannerImg from "../../assets/images/building1.png";
-import { motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
+import BannerImg1 from "../../assets/images/banner/b1.png";
+import BannerImg2 from "../../assets/images/banner/b2.png";
+import BannerImg3 from "../../assets/images/banner/b3.png";
+import BannerImg4 from "../../assets/images/banner/b4.png";
+import { motion, AnimatePresence } from "framer-motion";
 import { FaPhone } from "react-icons/fa";
 
+const images = [BannerImg1, BannerImg2, BannerImg3, BannerImg4];
+
 function Banner() {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div className="relative h-[580px] md:h-[650px] lg:h-[720px] font-sans">
-      {/* Background Image */}
-      <div
-        className="absolute inset-0 w-full h-full bg-cover bg-center z-0"
-        style={{ backgroundImage: `url(${BannerImg})` }}
-      ></div>
+    <div className="relative h-[580px] md:h-[650px] lg:h-[720px] font-sans overflow-hidden">
+      {/* Background Image Carousel*/}
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={current}
+          initial={{ opacity: 0, scale: 1.05 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1.2 }}
+          className="absolute inset-0 w-full h-full bg-cover bg-center z-0"
+          style={{ backgroundImage: `url(${images[current]})` }}
+        ></motion.div>
+      </AnimatePresence>
 
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-blue-950/24 to-transparent"></div>
@@ -29,9 +50,10 @@ function Banner() {
 
         {/* Main Text */}
         <p className="text-lg md:text-xl lg:text-2xl text-white/90 leading-relaxed max-w-2xl font-light mb-10 text-center md:text-left">
-          Discover a world-class learning environment where curiosity meets opportunity. 
-          Our IB curriculum, global standards, and nurturing faculty empower every student 
-          to excel academically and grow as compassionate leaders.
+          Discover a world-class learning environment where curiosity meets
+          opportunity. Our IB curriculum, global standards, and nurturing
+          faculty empower every student to excel academically and grow as
+          compassionate leaders.
         </p>
 
         {/* Buttons */}
