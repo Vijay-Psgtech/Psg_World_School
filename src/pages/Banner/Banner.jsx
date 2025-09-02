@@ -50,10 +50,7 @@ function Banner() {
 
         {/* Main Text */}
         <p className="text-md md:text-lg lg:text-xl text-white/90 font-bold drop-shadow-[0_2px_3px_rgba(0,0,0,0.8)] leading-relaxed max-w-2xl font-light mb-10 text-center md:text-left" style={{ fontFamily: "Inter, sans-serif" }}>
-          Discover a world-class learning environment where curiosity meets
-          opportunity. Our IB curriculum, global standards, and nurturing
-          faculty empower every student to excel academically and grow as
-          compassionate leaders.
+          At <span className="text-[#D4AF37] font-bold">PSG World School</span>, we believe education is not just about learning — it’s about becoming. As an IB World School, we nurture curiosity, creativity, and compassion, preparing every learner to thrive in the world’s best universities and, more importantly, to shape a better tomorrow.
         </p>
 
         {/* Buttons */}
