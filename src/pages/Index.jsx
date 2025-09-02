@@ -6,6 +6,7 @@ import Education from "./Education/Education";
 import CampusHighlights from "./Campus/CampusHighlights";
 import StudentLife from "./Students/StudentLife";
 import AdmissionProcess from "./Admission/AdmissionProcess";
+import WhatsappIcon from "../components/WhatsppIcon";
 
 
 const Index = () => {
@@ -18,6 +19,7 @@ const Index = () => {
       <CampusHighlights />
       <StudentLife />
       <AdmissionProcess />
+      <WhatsappIcon />
     </div>
   );
 };
