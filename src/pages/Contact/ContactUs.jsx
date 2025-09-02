@@ -53,7 +53,7 @@ const ContactUs = () => {
             <FaEnvelope className="text-blue-800 text-3xl mx-auto mb-3" />
             <h3 className="text-lg font-semibold">Email Us</h3>
             <p className="text-gray-600 mt-2">
-              admissions@psgworldschool.ac.in
+              admissions@psgworldschool.edu.in
             </p>
           </div>
           <div className="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
@@ -70,7 +70,7 @@ const ContactUs = () => {
         <div className="h-[400px] w-full rounded-2xl overflow-hidden shadow">
           <iframe
             title="school-location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15664.79407759998!2d76.9873134395508!3d11.023727200000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba858292a575fff%3A0xc55f6cac5ba482c7!2sPSG%20Public%20Schools!5e0!3m2!1sen!2sin!4v1756701091461!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.0537513396685!2d77.03128737498162!3d11.034594154378855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba858526b5c0591%3A0x6c452206816788d4!2sPSG%20College%20of%20Arts%20and%20Science!5e0!3m2!1sen!2sin!4v1756792652876!5m2!1sen!2sin"
             className="w-full h-full border-0"
             allowFullScreen=""
             loading="lazy"

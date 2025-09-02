@@ -42,7 +42,7 @@ function Header() {
             className="w-12 h-12 object-contain"
           />
           <span 
-            className={`text-xl md:text-2xl font-bold tracking-wide transition ${headerBg ? "text-blue-900 hover:text-yellow-500" : "text-white hover:text-blue-700 drop-shadow-[0_2px_3px_rgba(0,0,0,0.8)]"}`}
+            className={`text-xl md:text-2xl font-bold tracking-wide transition ${headerBg ? "text-blue-900 hover:text-yellow-500" : "text-gray-300 hover:text-blue-700 drop-shadow-[0_2px_3px_rgba(0,0,0,0.8)]"}`}
             style={{ fontFamily: "Playfair Display, serif" }}
           >
             PSG World School
@@ -59,7 +59,7 @@ function Header() {
                   ${
                     headerBg
                       ? "text-blue-900 hover:text-yellow-500"
-                      : "text-white hover:text-yellow-400 drop-shadow-[0_2px_3px_rgba(0,0,0,0.8)]"
+                      : "text-gray-300 hover:text-yellow-400 drop-shadow-[0_2px_3px_rgba(0,0,0,0.8)]"
                   }
                 `}
               >

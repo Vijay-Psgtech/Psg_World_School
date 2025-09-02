@@ -18,9 +18,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 border-b border-gray-700 pb-10">
         {/* Address */}
         <div>
-          <h3 className="text-xl font-semibold text-gold mb-4">
-            Contact Us
-          </h3>
+          <h3 className="text-xl font-semibold text-gold mb-4">Contact Us</h3>
           <p className="flex items-start gap-3 mb-3 text-gray-300">
             <MapPin className="w-5 h-5 text-gold mt-1" />
             PSG World School, S.F. No. 472, Civil Aerodrome Post,
@@ -29,7 +27,7 @@ const Footer = () => {
           </p>
           <p className="flex items-center gap-3 mb-2 text-gray-300">
             <Mail className="w-5 h-5 text-gold" />
-            admissions@psgworldschool.ac.in
+            admissions@psgworldschool.edu.in
           </p>
           <p className="flex items-center gap-3 text-gray-300">
             <Phone className="w-5 h-5 text-gold" />
@@ -71,7 +69,7 @@ const Footer = () => {
         </div>
 
         {/* Accreditation Logos */}
-        <div>
+        {/* <div>
           <h3 className="text-xl font-semibold text-gold mb-4">
             Accreditations
           </h3>
@@ -81,12 +79,25 @@ const Footer = () => {
             <img src={rsLogo} alt="Round Square" className="h-10 object-contain" />
             <img src={ecoLogo} alt="Eco Schools" className="h-10 object-contain" />
           </div>
+        </div> */}
+
+        {/*Map location*/}
+        <div className="w-full h-[250px] rounded-2xl overflow-hidden shadow-md">
+          <iframe
+            title="school-location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.0537513396685!2d77.03128737498162!3d11.034594154378855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba858526b5c0591%3A0x6c452206816788d4!2sPSG%20College%20of%20Arts%20and%20Science!5e0!3m2!1sen!2sin!4v1756792652876!5m2!1sen!2sin"
+            className="w-full h-full border-0"
+            allowFullScreen=""
+            loading="lazy"
+          ></iframe>
         </div>
       </div>
 
       {/* Bottom Note */}
       <div className="text-center text-gray-400 mt-6 text-sm">
         © {new Date().getFullYear()} PSG World School. All rights reserved.
+        <br/>
+        Powered By IT Services Team, PSG Institutions.
       </div>
     </footer>
   );
