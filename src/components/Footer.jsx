@@ -27,7 +27,7 @@ const Footer = () => {
           </p>
           <p className="flex items-center gap-3 mb-2 text-gray-300">
             <Mail className="w-5 h-5 text-gold" />
-            admissions@psgworldschool.ac.in
+            admissions@psgworldschool.edu.in
           </p>
           <p className="flex items-center gap-3 text-gray-300">
             <Phone className="w-5 h-5 text-gold" />

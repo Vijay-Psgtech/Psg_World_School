@@ -53,7 +53,7 @@ const ContactUs = () => {
             <FaEnvelope className="text-blue-800 text-3xl mx-auto mb-3" />
             <h3 className="text-lg font-semibold">Email Us</h3>
             <p className="text-gray-600 mt-2">
-              admissions@psgworldschool.ac.in
+              admissions@psgworldschool.edu.in
             </p>
           </div>
           <div className="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">

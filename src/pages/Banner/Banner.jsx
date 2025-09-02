@@ -45,7 +45,7 @@ function Banner() {
       >
         {/* Tagline */}
         <h2 className="text-lg md:text-2xl font-serif font-extrabold text-[#D4AF37] drop-shadow-[0_2px_3px_rgba(0,0,0,0.8)] mb-4 tracking-wide text-center md:text-left">
-          Empowering Young Minds to Lead with Purpose
+          “Empowering Young Minds to Lead with Purpose in a Global Future”
         </h2>
 
         {/* Main Text */}
