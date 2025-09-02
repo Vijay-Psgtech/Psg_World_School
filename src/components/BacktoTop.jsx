@@ -34,7 +34,7 @@ const BacktoTop = () => {
         bg-gradient-to-r from-blue-600 to-yellow-400 text-white hover:scale-110`}
       aria-label="Back to top"
     >
-      <ArrowUp size={24} />
+      <ArrowUp size={18} />
     </button>
   );
 };
