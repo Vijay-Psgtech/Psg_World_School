@@ -27,11 +27,11 @@ function Header() {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        headerBg
+        headerBg && !menuOpen
           ? "bg-white/90 backdrop-blur-md shadow-md"
           : "bg-gradient-to-b from-black/30 to-transparent"
       }`}
-      style={{ fontFamily: "Poppins, sans-serif" }}
+      style={{ fontFamily: "Inter, sans-serif" }}
     >
       <nav className="container mx-auto flex justify-between items-center py-3 px-4 md:px-12">
         {/* Logo */}
@@ -41,7 +41,10 @@ function Header() {
             alt="Logo"
             className="w-12 h-12 object-contain"
           />
-          <span className="text-xl md:text-2xl font-bold text-blue-900 tracking-wide transition hover:text-yellow-500">
+          <span 
+            className={`text-xl md:text-2xl font-bold tracking-wide transition ${headerBg ? "text-blue-900 hover:text-yellow-500" : "text-white hover:text-blue-700 drop-shadow-[0_2px_3px_rgba(0,0,0,0.8)]"}`}
+            style={{ fontFamily: "Playfair Display, serif" }}
+          >
             PSG World School
           </span>
         </a>
@@ -52,10 +55,20 @@ function Header() {
             <li key={item.label}>
               <a
                 href={item.href}
-                className="relative text-blue-900 font-medium px-2 py-1 transition hover:text-yellow-500"
+                className={`relative font-medium px-2 py-1 transition
+                  ${
+                    headerBg
+                      ? "text-blue-900 hover:text-yellow-500"
+                      : "text-white hover:text-yellow-400 drop-shadow-[0_2px_3px_rgba(0,0,0,0.8)]"
+                  }
+                `}
               >
                 {item.label}
-                <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-yellow-500 transition-all duration-300 hover:w-full"></span>
+                <span
+                  className={`absolute left-0 bottom-0 w-0 h-[2px] transition-all duration-300
+                    ${headerBg ? "bg-yellow-500" : "bg-yellow-400"}
+                    hover:w-full`}
+                ></span>
               </a>
             </li>
           ))}

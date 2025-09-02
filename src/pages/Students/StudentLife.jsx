@@ -1,7 +1,16 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../utils/Variants";
-import { Users, Globe2, BookOpen, Leaf, Music, Cpu, Dumbbell, Mountain } from "lucide-react";
+import {
+  Users,
+  Globe2,
+  BookOpen,
+  Leaf,
+  Music,
+  Cpu,
+  Dumbbell,
+  Mountain,
+} from "lucide-react";
 
 const StudentLife = () => {
   return (
@@ -13,14 +22,25 @@ const StudentLife = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="text-center mb-16 font-serif"
+          className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-blue-900 drop-shadow-lg mb-4">
-            Student Life – Beyond Academics
-          </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            At PSG World School, life extends beyond the classroom. 
-            We empower learners with leadership, creativity, global exposure, and a spirit of adventure.
+          <motion.div
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="w-20 h-[3px] bg-gradient-to-r from-yellow-400 to-blue-600 mb-6 mx-auto rounded-full"
+          ></motion.div>
+          <h4 className="text-blue-800 font-semibold mb-3 tracking-widest uppercase text-sm">
+            Beyond Academics
+          </h4>
+          <h1 className="text-4xl md:text-5xl font-serif font-bold text-blue-900 drop-shadow-sm mb-4">
+            Student Life
+          </h1>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto ">
+            At PSG World School, life extends beyond the classroom. We empower
+            learners with leadership, creativity, global exposure, and a spirit
+            of adventure.
           </p>
         </motion.div>
 
@@ -40,9 +60,18 @@ const StudentLife = () => {
               </h3>
             </div>
             <ul className="space-y-3 text-gray-700 font-medium">
-              <li>• Model United Nations (MUN), TEDx Youth, and student-led councils.</li>
-              <li>• Community service programs aligned with UN Sustainable Development Goals.</li>
-              <li>• Global exchange programs and partnerships with international schools.</li>
+              <li>
+                • Model United Nations (MUN), TEDx Youth, and student-led
+                councils.
+              </li>
+              <li>
+                • Community service programs aligned with UN Sustainable
+                Development Goals.
+              </li>
+              <li>
+                • Global exchange programs and partnerships with international
+                schools.
+              </li>
             </ul>
           </motion.div>
 
@@ -84,7 +113,10 @@ const StudentLife = () => {
               </h3>
             </div>
             <ul className="space-y-3 text-gray-700 font-medium">
-              <li>• Athletics, swimming, basketball, football, cricket, tennis, and martial arts.</li>
+              <li>
+                • Athletics, swimming, basketball, football, cricket, tennis,
+                and martial arts.
+              </li>
               <li>• Outdoor learning, trekking, and leadership camps.</li>
             </ul>
           </motion.div>

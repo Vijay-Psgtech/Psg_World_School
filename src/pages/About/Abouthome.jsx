@@ -17,7 +17,13 @@ const Abouthome = () => {
           className="md:w-1/2 w-full mb-12 md:mb-0 md:pr-12"
         >
           {/* Decorative Accent */}
-          <div className="w-20 h-[3px] bg-gradient-to-r from-yellow-400 to-blue-600 mb-6 rounded-full"></div>
+          <motion.div 
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="w-20 h-[3px] bg-gradient-to-r from-yellow-400 to-blue-600 mb-6 rounded-full"
+          ></motion.div>
 
           {/* Subtitle */}
           <h6 className="text-blue-800 font-semibold mb-3 tracking-widest uppercase text-sm">
@@ -25,7 +31,7 @@ const Abouthome = () => {
           </h6>
 
           {/* Title */}
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-blue-900 mb-6 leading-snug drop-shadow-sm">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-blue-900 mb-6 leading-snug drop-shadow-sm">
             About Us – Legacy with a Global Vision
           </h2>
 

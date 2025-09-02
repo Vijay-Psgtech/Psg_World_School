@@ -52,12 +52,18 @@ function Education() {
     <section className="w-full py-20 px-6 md:px-12 bg-gradient-to-br from-white via-blue-50 to-yellow-50 font-sans">
       {/* Section Header */}
       <div className="text-center mb-16">
-        <p className="w-20 border-t-4 border-yellow-400 mx-auto mb-4"></p>
-        <h6 className="text-blue-900 font-semibold mb-3 tracking-wide uppercase">
-          Academics – The IB Advantage at PSG
-        </h6>
+        <motion.div 
+          initial={{ scaleX: 0 }}
+          whileInView={{ scaleX: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="w-20 h-[3px] bg-gradient-to-r from-yellow-400 to-blue-600 mb-6 mx-auto rounded-full"
+        ></motion.div>
+        <h4 className="text-blue-800 font-semibold mb-3 tracking-widest uppercase text-sm">
+           The IB Continuum
+        </h4>
         <h1 className="text-4xl md:text-5xl font-serif font-bold text-blue-900 drop-shadow-sm">
-          The IB Continuum
+          Academics 
         </h1>
       </div>
 
@@ -75,8 +81,8 @@ function Education() {
             <motion.div
               key={item.id}
               initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
               className="relative group cursor-pointer"
               onClick={() => setActiveId(isActive ? null : item.id)}
