@@ -19,8 +19,6 @@ function Header() {
     { label: "Facilities", href: "/facilities" },
     { label: "Admissions", href: "/admissions" },
     { label: "Students", href: "/students-life" },
-    // { label: "Gallery", href: "/gallery" },
-    // { label: "News", href: "/news" },
     { label: "Contact", href: "/contact" },
   ];
 
@@ -28,35 +26,45 @@ function Header() {
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         headerBg
-          ? "bg-white/90 backdrop-blur-md shadow-md"
-          : "bg-gradient-to-b from-black/30 to-transparent"
+          ? "bg-white/90 backdrop-blur-md shadow-md py-2"
+          : "bg-gradient-to-b from-black/50 to-transparent py-4"
       }`}
-      style={{ fontFamily: "Poppins, sans-serif" }}
+      style={{ fontFamily: "Inter, sans-serif" }}
     >
-      <nav className="container mx-auto flex justify-between items-center py-3 px-4 md:px-12">
+      <nav className="container mx-auto flex justify-between items-center px-4 md:px-12">
         {/* Logo */}
         <a href="/" className="flex items-center gap-3">
           <img
             src="/Logo.png"
             alt="Logo"
-            className="w-12 h-12 object-contain"
+            className={`transition-all duration-300 ${
+              headerBg ? "w-12 h-12" : "w-16 h-16"
+            } object-contain`}
           />
-          <span className="text-xl md:text-2xl font-bold text-blue-900 tracking-wide transition hover:text-yellow-500">
+          <span
+            className={`text-2xl md:text-3xl font-bold tracking-wide transition-colors duration-300 ${
+              headerBg ? "text-blue-900 hover:text-yellow-500" : "text-white hover:text-yellow-500"
+            }`}
+            style={{ fontFamily: "Inter, sans-serif" }}
+          >
             PSG World School
           </span>
         </a>
 
         {/* Desktop Nav */}
-        <ul className="hidden md:flex gap-8 lg:gap-10">
+        <ul className="hidden md:flex gap-10 lg:gap-12">
           {navLinks.map((item) => (
-            <li key={item.label}>
+            <li key={item.label} className="relative group">
               <a
                 href={item.href}
-                className="relative text-blue-900 font-medium px-2 py-1 transition hover:text-yellow-500"
+                className={`text-lg lg:text-xl font-semibold px-2 py-1 transition-colors duration-300 group-hover:text-yellow-500 ${
+                  headerBg ? "text-blue-900" : "text-white"
+                }`}
+                style={{ fontFamily: "revert" }}
               >
                 {item.label}
-                <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-yellow-500 transition-all duration-300 hover:w-full"></span>
               </a>
+              <span className="absolute left-1/2 bottom-0 w-0 h-[2px] bg-yellow-500 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
             </li>
           ))}
         </ul>
@@ -66,7 +74,9 @@ function Header() {
           <img
             src="/100yearsLogo.png"
             alt="100 years"
-            className="w-28 h-12 object-contain"
+            className={`transition-all duration-300 ${
+              headerBg ? "w-28 h-12" : "w-32 h-14"
+            } object-contain`}
           />
         </div>
 
@@ -74,7 +84,9 @@ function Header() {
         <div className="md:hidden">
           {!menuOpen && (
             <FiMenu
-              className="text-blue-900 text-3xl cursor-pointer"
+              className={`text-3xl cursor-pointer transition-colors duration-300 ${
+                headerBg ? "text-blue-900" : "text-white"
+              }`}
               onClick={() => setMenuOpen(true)}
             />
           )}
@@ -83,26 +95,35 @@ function Header() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="fixed inset-0 bg-gradient-to-b from-white/95 to-blue-50/90 text-blue-900 py-6 px-8 z-50 flex flex-col animate-slideDown">
-          <div className="flex justify-end mb-6">
+        <div className="fixed inset-0 bg-white/95 backdrop-blur-lg text-blue-900 py-6 px-8 z-50 flex flex-col animate-slideDown">
+          {/* Close button */}
+          <div className="flex justify-end mb-8">
             <FiX
               className="text-blue-900 text-3xl cursor-pointer"
               onClick={() => setMenuOpen(false)}
             />
           </div>
-          <ul className="flex flex-col gap-6 text-lg font-medium">
+
+          {/* Mobile Links */}
+          <ul className="flex flex-col gap-8 text-xl font-semibold tracking-wide">
             {navLinks.map((item) => (
-              <li key={item.label}>
+              <li key={item.label} className="relative group">
                 <a
                   href={item.href}
-                  className="hover:text-yellow-500 transition"
+                  className="transition-colors duration-300 hover:text-yellow-500"
                   onClick={() => setMenuOpen(false)}
                 >
                   {item.label}
                 </a>
+                <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-yellow-500 transition-all duration-300 group-hover:w-full"></span>
               </li>
             ))}
           </ul>
+
+          {/* Mobile Footer */}
+          <div className="mt-auto pt-8 text-center text-sm text-gray-600">
+            Excellence in Education since 1926 ✨
+          </div>
         </div>
       )}
     </header>

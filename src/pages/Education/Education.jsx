@@ -34,7 +34,7 @@ const EducationData = [
       "Globally recognized, academically rigorous preparation for top universities. The DP challenges students to excel academically and personally.",
     image: dpImg,
   },
-  {
+  {          
     id: 4,
     title: "Career-related Programme (CP)",
     subtitle: "Ages 16–19",

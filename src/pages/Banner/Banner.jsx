@@ -19,8 +19,8 @@ function Banner() {
   }, []);
 
   return (
-    <div className="relative h-[580px] md:h-[650px] lg:h-[720px] font-sans overflow-hidden">
-      {/* Background Image Carousel*/}
+    <div className="relative h-[600px] sm:h-[650px] md:h-[700px] lg:h-[780px] xl:h-[850px] font-sans overflow-hidden">
+      {/* Background Image Carousel */}
       <AnimatePresence mode="wait">
         <motion.div
           key={current}
@@ -30,26 +30,26 @@ function Banner() {
           transition={{ duration: 1.2 }}
           className="absolute inset-0 w-full h-full bg-cover bg-center z-0"
           style={{ backgroundImage: `url(${images[current]})` }}
-        ></motion.div>
+        />
       </AnimatePresence>
 
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-blue-950/24 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent z-10"></div>
 
       {/* Content */}
       <motion.div
-        initial={{ y: 50, opacity: 0 }}
+        initial={{ y: 40, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1 }}
-        className="relative z-20 h-full flex flex-col justify-center px-6 md:px-16 lg:px-24"
+        className="relative z-20 h-full flex flex-col justify-center items-center md:items-start px-4 sm:px-8 md:px-12 lg:px-20"
       >
         {/* Tagline */}
-        <h2 className="text-xl md:text-2xl font-serif font-extrabold text-[#D4AF37] mb-4 tracking-wide text-center md:text-left">
+        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-serif font-extrabold text-[#D4AF37] mb-4 tracking-wide text-center md:text-left drop-shadow-md leading-snug">
           Empowering Young Minds to Lead with Purpose
         </h2>
 
         {/* Main Text */}
-        <p className="text-lg md:text-xl lg:text-2xl text-white/90 font-bold leading-relaxed max-w-2xl font-light mb-10 text-center md:text-left">
+        <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-white/90 leading-relaxed max-w-2xl md:max-w-3xl mb-8 text-center md:text-left drop-shadow-md">
           Discover a world-class learning environment where curiosity meets
           opportunity. Our IB curriculum, global standards, and nurturing
           faculty empower every student to excel academically and grow as
@@ -57,27 +57,27 @@ function Banner() {
         </p>
 
         {/* Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4">
-          {/* Primary */}
+        <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center md:justify-start">
+          {/* Primary CTA */}
           <a
             href="#"
-            className="bg-[#1E3A8A] text-white px-6 py-3 rounded-full font-medium shadow-md hover:bg-[#1D4ED8] transition"
+            className="bg-blue-800 text-white px-6 sm:px-7 py-3 text-sm sm:text-base lg:text-lg rounded-full font-semibold shadow-lg hover:bg-blue-900 hover:scale-105 transform transition duration-300 text-center"
           >
             Explore IB Journey <span className="ml-2">➔</span>
           </a>
 
-          {/* Secondary */}
+          {/* Secondary CTA */}
           <a
             href="#"
-            className="bg-[#D4AF37] text-blue-900 px-6 py-3 rounded-full font-medium shadow-md hover:bg-yellow-500 transition"
+            className="bg-[#D4AF37] text-blue-900 px-6 sm:px-7 py-3 text-sm sm:text-base lg:text-lg rounded-full font-semibold shadow-lg hover:bg-yellow-500 hover:scale-105 transform transition duration-300 text-center"
           >
             Book a Campus Visit <FaPhoneAlt className="inline ml-2" />
           </a>
 
-          {/* Outline */}
+          {/* Outline CTA */}
           <a
             href="/admissions"
-            className="bg-transparent text-white border border-white px-6 py-3 rounded-full font-medium shadow-md hover:bg-white/10 transition"
+            className="bg-transparent text-white border border-white px-6 sm:px-7 py-3 text-sm sm:text-base lg:text-lg rounded-full font-semibold shadow-lg hover:bg-white/20 hover:scale-105 transform transition duration-300 text-center"
           >
             Admissions 2026–27 Open <span className="ml-2">➔</span>
           </a>
