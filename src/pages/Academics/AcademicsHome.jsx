@@ -5,6 +5,7 @@ import dpImg from "../../assets/images/students/dp.jpg";
 import cpImg from "../../assets/images/students/cp.jpg";
 import { motion } from "framer-motion";
 import { Plus, X } from "lucide-react";
+import { Typewriter } from "react-simple-typewriter";
 
 const EducationData = [
   {
@@ -45,7 +46,7 @@ const EducationData = [
   },
 ];
 
-function Education() {
+function AcademicsHome() {
   const [activeId, setActiveId] = useState(null);
 
   return (
@@ -60,7 +61,19 @@ function Education() {
           className="w-20 h-[3px] bg-gradient-to-r from-yellow-400 to-blue-600 mb-6 mx-auto rounded-full"
         ></motion.div>
         <h4 className="text-blue-800 font-semibold mb-3 tracking-widest uppercase text-sm">
-           The IB Continuum
+           <Typewriter
+              words={[
+                "The IB Continuum",
+                "The IB Advantage at PSG",
+                "Academic Outcomes"
+              ]}
+              loop={true}
+              cursor
+              cursorStyle="|"
+              typeSpeed={70}
+              deleteSpeed={50}
+              delaySpeed={1500}
+            />
         </h4>
         <h1 className="text-4xl md:text-5xl font-serif font-bold text-blue-900 drop-shadow-sm">
           Academics 
@@ -154,4 +167,4 @@ function Education() {
   );
 }
 
-export default Education;
+export default AcademicsHome;

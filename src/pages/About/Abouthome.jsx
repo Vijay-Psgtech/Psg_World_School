@@ -2,12 +2,12 @@ import React from "react";
 import BannerImg from "../../assets/images/building2.png";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../utils/Variants";
+import { Typewriter } from "react-simple-typewriter";
 
 const Abouthome = () => {
   return (
     <section className="w-full py-20 bg-white font-sans relative">
       <div className="container mx-auto flex flex-col md:flex-row items-center px-6 md:px-12">
-        
         {/* Left: Content */}
         <motion.div
           variants={fadeIn("right")}
@@ -17,7 +17,7 @@ const Abouthome = () => {
           className="md:w-1/2 w-full mb-12 md:mb-0 md:pr-12"
         >
           {/* Decorative Accent */}
-          <motion.div 
+          <motion.div
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
             transition={{ duration: 0.8 }}
@@ -27,7 +27,19 @@ const Abouthome = () => {
 
           {/* Subtitle */}
           <h6 className="text-blue-800 font-semibold mb-3 tracking-widest uppercase text-sm">
-            Our School Campus
+            <Typewriter
+              words={[
+                "Our School Campus",
+                "Excellence in Education",
+                "Global Vision",
+              ]}
+              loop={true}
+              cursor
+              cursorStyle="|"
+              typeSpeed={70}
+              deleteSpeed={50}
+              delaySpeed={1500}
+            />
           </h6>
 
           {/* Title */}
@@ -39,7 +51,8 @@ const Abouthome = () => {
           <p className="text-lg text-gray-700 mb-8 leading-relaxed font-medium">
             Rooted in the 100-year educational heritage of PSG Institutions,
             <span className="text-blue-900 font-semibold">
-              {" "}PSG World School{" "}
+              {" "}
+              PSG World School{" "}
             </span>
             blends tradition with innovation. Our authorization as an IB World
             School ensures every learner experiences globally benchmarked

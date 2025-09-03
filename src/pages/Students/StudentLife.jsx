@@ -11,6 +11,7 @@ import {
   Dumbbell,
   Mountain,
 } from "lucide-react";
+import { Typewriter } from "react-simple-typewriter";
 
 const StudentLife = () => {
   return (
@@ -32,7 +33,18 @@ const StudentLife = () => {
             className="w-20 h-[3px] bg-gradient-to-r from-yellow-400 to-blue-600 mb-6 mx-auto rounded-full"
           ></motion.div>
           <h4 className="text-blue-800 font-semibold mb-3 tracking-widest uppercase text-sm">
-            Beyond Academics
+            <Typewriter
+              words={[
+                "Beyond Academics",
+                "leadership, clubs and a spirit of adventure",
+              ]}
+              loop={true}
+              cursor
+              cursorStyle="|"
+              typeSpeed={70}
+              deleteSpeed={50}
+              delaySpeed={1500}
+            />
           </h4>
           <h1 className="text-4xl md:text-5xl font-serif font-bold text-blue-900 drop-shadow-sm mb-4">
             Student Life

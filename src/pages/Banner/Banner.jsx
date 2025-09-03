@@ -8,8 +8,12 @@ import { FaPhoneAlt } from "react-icons/fa";
 
 const images = [BannerImg1, BannerImg2, BannerImg3, BannerImg4];
 
+const tagline = "“Empowering Young Minds to Lead with Purpose in a Global Future”";
+
 function Banner() {
   const [current, setCurrent] = useState(0);
+  const [displayedText, setDisplayedText] = useState("");
+  const [index, setIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -17,6 +21,17 @@ function Banner() {
     }, 5000);
     return () => clearInterval(interval);
   }, []);
+
+  // TypeWriter Effect
+  useEffect(() => {
+    if (index < tagline.length) {
+      const timeout = setTimeout(() => {
+        setDisplayedText((prev) => prev + tagline.charAt(index));
+        setIndex(index + 1);
+      }, 80); // typing speed in ms
+      return () => clearTimeout(timeout);
+    }
+  }, [index]);
 
   return (
     <div className="relative h-[580px] md:h-[650px] lg:h-[720px] font-sans overflow-hidden">
@@ -44,8 +59,8 @@ function Banner() {
         className="relative z-20 h-full flex flex-col justify-center px-6 md:px-16 lg:px-24"
       >
         {/* Tagline */}
-        <h2 className="text-lg md:text-2xl font-serif font-extrabold text-[#D4AF37] drop-shadow-[0_2px_3px_rgba(0,0,0,0.8)] mb-4 tracking-wide text-center md:text-left">
-          “Empowering Young Minds to Lead with Purpose in a Global Future”
+        <h2 className="text-lg md:text-2xl font-sans font-extrabold text-[#D4AF37] drop-shadow-[0_2px_3px_rgba(0,0,0,0.8)] mb-4 tracking-wide text-center md:text-left">
+         {displayedText}
         </h2>
 
         {/* Main Text */}
