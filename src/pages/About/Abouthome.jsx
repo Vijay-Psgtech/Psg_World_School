@@ -2,6 +2,7 @@ import React from "react";
 import BannerImg from "../../assets/images/building2.png";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../utils/Variants";
+import { Typewriter } from "react-simple-typewriter";
 
 const Abouthome = () => {
   return (
@@ -16,12 +17,19 @@ const Abouthome = () => {
           viewport={{ once: true }}
           className="md:w-1/2 w-full mb-12 md:mb-0 md:pr-12"
         >
-          {/* Decorative Accent */}
           <div className="w-20 h-[3px] bg-gradient-to-r from-yellow-400 to-blue-600 mb-6 rounded-full"></div>
 
-          {/* Subtitle */}
+          {/* Subtitle with typewriter */}
           <h6 className="text-blue-800 font-semibold mb-3 tracking-widest uppercase text-sm">
-            Our School Campus
+            <Typewriter
+              words={["Our School Campus", "Excellence in Education", "Global Vision"]}
+              loop={true}
+              cursor
+              cursorStyle="|"
+              typeSpeed={70}
+              deleteSpeed={50}
+              delaySpeed={1500}
+            />
           </h6>
 
           {/* Title */}
@@ -72,7 +80,6 @@ const Abouthome = () => {
               className="w-full max-w-lg rounded-2xl shadow-xl object-cover"
               loading="lazy"
             />
-            {/* Decorative Border/Glow */}
             <div className="absolute inset-0 rounded-2xl border-4 border-blue-900/20 pointer-events-none"></div>
           </div>
         </motion.div>
@@ -82,3 +89,4 @@ const Abouthome = () => {
 };
 
 export default Abouthome;
+
