@@ -8,14 +8,20 @@ import {
   Palette,
   Leaf,
 } from "lucide-react";
+import Slider from "react-slick"; // carousel
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 // Images
-import AboutBanner from "../../assets/images/ap3.png";
-import ClassRoom1 from "../../assets/images/room1.jpg";
-import ClassRoom2 from "../../assets/images/room2.jpg";
-import ClassRoom3 from "../../assets/images/Classroom3.jpg";
+import AboutBanner from "../../assets/images/campus/campus11.png";
+import ClassRoom1 from "../../assets/images/campus/campus12.png";
+import ClassRoom2 from "../../assets/images/campus/campus13.png";
+import ClassRoom3 from "../../assets/images/campus/campus17.png";
+import ClassRoom4 from "../../assets/images/campus/campus18.png";
+import ClassRoom5 from "../../assets/images/campus/campus16.png";
 
 // Reusable Heading
 const SectionHeading = ({ first, second, center, light }) => (
@@ -24,56 +30,75 @@ const SectionHeading = ({ first, second, center, light }) => (
       light ? "text-white" : "text-gray-900"
     } ${center ? "text-center" : ""}`}
   >
-    <span className={light ? "text-white" : "text-black"}>{first} </span>
+    <span className={light ? "text-gray-200" : "text-black"}>{first} </span>
     <span className="text-yellow-500">{second}</span>
   </h2>
 );
 
 const FacilitiesPage = () => {
   const [openIndex, setOpenIndex] = useState(null);
+  const [showGallery, setShowGallery] = useState(false);
+  const [galleryImages, setGalleryImages] = useState([]);
 
   useEffect(() => {
     AOS.init({ duration: 800, easing: "ease-in-out" });
   }, []);
 
+  // Facilities with 4 images each
   const facilities = [
     {
       icon: <Palette className="w-10 h-10 text-pink-500" />,
       title: "Learning Spaces",
       desc: "Smart classrooms, flexible learning zones, and IB studios designed for inquiry.",
-      img: ClassRoom3,
+      images: [ClassRoom3, ClassRoom1, ClassRoom2, ClassRoom4],
     },
     {
       icon: <FlaskConical className="w-10 h-10 text-green-500" />,
       title: "Innovation Labs",
       desc: "Robotics, AI, 3D printing, design thinking, and sustainability projects.",
-      img: ClassRoom2,
+      images: [ClassRoom2, ClassRoom5, ClassRoom3, ClassRoom4],
     },
     {
       icon: <Music className="w-10 h-10 text-indigo-500" />,
       title: "Arts & Culture",
       desc: "Performing arts theatre, music and dance studios, visual arts atelier.",
-      img: ClassRoom1,
+      images: [ClassRoom1, ClassRoom2, ClassRoom3, ClassRoom5],
     },
     {
       icon: <Dumbbell className="w-10 h-10 text-orange-500" />,
       title: "Sports & Wellness",
       desc: "Olympic-sized swimming pool, multi-sport grounds, indoor arenas, yoga and mindfulness programs.",
-      img: ClassRoom2,
+      images: [ClassRoom4, ClassRoom1, ClassRoom3, ClassRoom2],
     },
     {
       icon: <Library className="w-10 h-10 text-yellow-600" />,
       title: "Library & Research Hub",
       desc: "Print, digital, and global resources integrated with IB learner projects.",
-      img: ClassRoom1,
+      images: [ClassRoom5, ClassRoom2, ClassRoom1, ClassRoom3],
     },
     {
       icon: <Leaf className="w-10 h-10 text-emerald-600" />,
       title: "Sustainability Campus",
       desc: "Eco-conscious architecture, green zones, waste-to-energy initiatives.",
-      img: ClassRoom3,
+      images: [ClassRoom3, ClassRoom4, ClassRoom5, ClassRoom1],
     },
   ];
+
+  // Slick carousel settings
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
+  const handleImageClick = (images) => {
+    setGalleryImages(images);
+    setShowGallery(true);
+  };
 
   return (
     <div className="w-full font-sans text-gray-800 leading-relaxed tracking-normal">
@@ -94,7 +119,7 @@ const FacilitiesPage = () => {
           transition={{ duration: 1, delay: 0.3 }}
           className="relative z-10 text-center mb-20"
         >
-          <h1 className="text-5xl md:text-6xl font-extrabold text-white drop-shadow-2xl">
+          <h1 className="text-5xl md:text-6xl font-extrabold text-black drop-shadow-2xl">
             Campus <span className="text-yellow-400">& Facilities</span>
           </h1>
           <p className="mt-4 text-lg md:text-xl text-gray-200 font-light">
@@ -145,9 +170,10 @@ const FacilitiesPage = () => {
                           initial={{ opacity: 0, x: -30 }}
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ duration: 0.5 }}
-                          src={facility.img}
+                          src={facility.images[0]} // show first image
                           alt={facility.title}
-                          className="rounded-xl shadow-md object-cover w-full h-64"
+                          className="rounded-xl shadow-md object-cover w-full h-64 cursor-pointer"
+                          onClick={() => handleImageClick(facility.images)}
                         />
                         <motion.p
                           initial={{ opacity: 0, x: 30 }}
@@ -166,6 +192,46 @@ const FacilitiesPage = () => {
           </div>
         </div>
       </section>
+
+      {/* Fullscreen Gallery Modal */}
+      <AnimatePresence>
+        {showGallery && (
+          <motion.div
+            className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <motion.div
+              className="relative w-[90%] md:w-[70%] lg:w-[60%] bg-white rounded-xl overflow-hidden shadow-2xl"
+              initial={{ scale: 0.8 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.8 }}
+            >
+              {/* Close Button */}
+              <button
+                onClick={() => setShowGallery(false)}
+                className="absolute top-3 right-3 text-white bg-black/60 hover:bg-black/80 p-2 rounded-full z-10"
+              >
+                ✕
+              </button>
+
+              {/* Slider */}
+              <Slider {...sliderSettings}>
+                {galleryImages.map((img, index) => (
+                  <div key={index} className="flex justify-center">
+                    <img
+                      src={img}
+                      alt={`gallery-${index}`}
+                      className="w-full h-[500px] object-cover rounded-xl"
+                    />
+                  </div>
+                ))}
+              </Slider>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Call to Action */}
       <section className="bg-gradient-to-r from-[#2b5ed4] via-[#112a55] to-[#0c42be] py-16">
