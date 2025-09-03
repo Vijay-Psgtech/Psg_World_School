@@ -29,7 +29,7 @@ function Header() {
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         headerBg && !menuOpen
           ? "bg-white/90 backdrop-blur-md shadow-md"
-          : "bg-gradient-to-b from-black/30 to-transparent"
+          : "bg-gradient-to-b from-black/50 to-transparent"
       }`}
       style={{ fontFamily: "Inter, sans-serif" }}
     >
@@ -39,10 +39,12 @@ function Header() {
           <img
             src="/Logo.png"
             alt="Logo"
-            className="w-12 h-12 object-contain"
+            className={`transition-all duration-300 ${
+              headerBg ? "w-12 h-12" : "w-16 h-16"
+            } object-contain`}
           />
           <span 
-            className={`text-xl md:text-2xl font-bold tracking-wide transition ${headerBg ? "text-blue-900 hover:text-yellow-500" : "text-gray-300 hover:text-blue-700 drop-shadow-[0_2px_3px_rgba(0,0,0,0.8)]"}`}
+            className={`text-xl md:text-2xl font-bold tracking-wide transition ${headerBg ? "text-blue-900 hover:text-yellow-500" : "text-gray-300 hover:text-yellow-500 drop-shadow-[0_2px_3px_rgba(0,0,0,0.8)]"}`}
             style={{ fontFamily: "Playfair Display, serif" }}
           >
             PSG World School
@@ -52,22 +54,20 @@ function Header() {
         {/* Desktop Nav */}
         <ul className="hidden md:flex gap-8 lg:gap-10">
           {navLinks.map((item) => (
-            <li key={item.label}>
+            <li key={item.label} className="relative group">
               <a
                 href={item.href}
-                className={`relative font-medium px-2 py-1 transition
+                className={`font-medium px-2 py-1 transition-colors duration-300 group-hover:text-yellow-500 
                   ${
                     headerBg
-                      ? "text-blue-900 hover:text-yellow-500"
-                      : "text-gray-300 hover:text-yellow-400 drop-shadow-[0_2px_3px_rgba(0,0,0,0.8)]"
+                      ? "text-blue-900"
+                      : "text-gray-300 drop-shadow-[0_2px_3px_rgba(0,0,0,0.8)]"
                   }
                 `}
               >
                 {item.label}
                 <span
-                  className={`absolute left-0 bottom-0 w-0 h-[2px] transition-all duration-300
-                    ${headerBg ? "bg-yellow-500" : "bg-yellow-400"}
-                    hover:w-full`}
+                 className="absolute left-1/2 bottom-0 w-0 h-[2px] bg-yellow-500 transition-all duration-300 group-hover:w-full group-hover:left-0"
                 ></span>
               </a>
             </li>
@@ -79,7 +79,9 @@ function Header() {
           <img
             src="/100yearsLogo.png"
             alt="100 years"
-            className="w-28 h-12 object-contain"
+            className={`transition-all duration-300 ${
+              headerBg ? "w-28 h-12" : "w-32 h-14"
+            } object-contain`}
           />
         </div>
 

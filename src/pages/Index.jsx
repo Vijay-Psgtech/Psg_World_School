@@ -2,7 +2,7 @@ import React from "react";
 import Banner from "./Banner/Banner";
 import Abouthome from "./About/Abouthome";
 import Moto from "./About/Moto";
-import Education from "./Education/Education";
+import AcademicsHome from "./Academics/AcademicsHome";
 import CampusHighlights from "./Campus/CampusHighlights";
 import StudentLife from "./Students/StudentLife";
 import AdmissionProcess from "./Admission/AdmissionProcess";
@@ -16,7 +16,7 @@ const Index = () => {
       <Banner />
       <Abouthome />
       <Moto />
-      <Education />
+      <AcademicsHome />
       <CampusHighlights />
       <StudentLife />
       <AdmissionProcess />

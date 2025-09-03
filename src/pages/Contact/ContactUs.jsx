@@ -8,7 +8,7 @@ import {
   FaLinkedin,
   FaTwitter,
 } from "react-icons/fa";
-import Image1 from "../../assets/images/building3.png";
+import Image1 from "../../assets/images/campus/campus17.png";
 import { motion } from "framer-motion";
 import { fadeInUp } from "../../utils/Variants";
 
@@ -26,9 +26,10 @@ const ContactUs = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="relative text-4xl md:text-5xl font-bold text-white z-10"
+          className="text-4xl md:text-6xl font-['Playfair_Display'] font-bold tracking-tight drop-shadow-lg"
         >
-          Contact Us
+          <span className="text-black">Contact</span>{" "}
+            <span className="text-yellow-500">Us</span>
         </motion.h1>
       </section>
 

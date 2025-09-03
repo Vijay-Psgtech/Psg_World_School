@@ -7,6 +7,7 @@ import Campus3 from "../../assets/images/campus/campus3.png";
 import Campus4 from "../../assets/images/campus/campus4.png";
 import Campus5 from "../../assets/images/campus/campus5.jpg";
 import Campus6 from "../../assets/images/campus/campus6.png";
+import { Typewriter } from "react-simple-typewriter";
 
 const highlights = [
   {
@@ -67,7 +68,18 @@ function CampusHighlights() {
             className="w-20 h-[3px] bg-gradient-to-r from-yellow-400 to-blue-600 mb-6 rounded-full"
           ></motion.div>
           <h4 className="text-blue-800 font-semibold mb-3 tracking-widest uppercase text-sm">
-            A Learning Environment that Inspires Excellence
+            <Typewriter
+              words={[
+                "A Learning Environment that Inspires Excellence",
+                "Campus Highlights",
+              ]}
+              loop={true}
+              cursor
+              cursorStyle="|"
+              typeSpeed={70}
+              deleteSpeed={50}
+              delaySpeed={1500}
+            />
           </h4>
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-blue-900 drop-shadow-sm">
             Campus & Facilities

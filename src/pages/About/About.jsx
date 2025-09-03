@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import AboutBanner from "../../assets/images/a4.png";
-import AboutBanner2 from "../../assets/images/a1.png";
+import AboutBanner from "../../assets/images/campus/campus16.png";
+import AboutBanner2 from "../../assets/images/campus/campus18.png";
 
 // Animation Variants
 const fadeInUp = {
@@ -95,49 +95,58 @@ const About = () => {
       </section>
 
       {/* Mission Section */}
-      <motion.section
-        variants={containerStagger}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
-        className="py-20 px-6 bg-white"
-      >
-        <div className="max-w-6xl mx-auto text-center mb-14">
-          <h2 className="text-4xl font-['Playfair_Display'] font-bold">
+     <motion.section
+      variants={containerStagger}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
+      className="relative py-20 px-6 bg-white"
+    >
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        {/* Left Title Section */}
+        <div className="text-left space-y-6 relative z-10">
+          <h2 className="text-4xl md:text-5xl font-['Playfair_Display'] font-bold leading-tight">
             <span className="text-black">Our</span>{" "}
             <span className="text-yellow-500">Mission</span>
           </h2>
-
-          <div className="w-20 h-[3px] bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-600 mx-auto mt-4 mb-6"></div>
-          <p className="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">
+          <div className="w-20 h-[3px] bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-600"></div>
+          <p className="text-gray-600 text-lg leading-relaxed max-w-md">
             PSG IB World School commits to academic rigor balanced with
             compassion, creativity, and intercultural understanding.
           </p>
         </div>
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            variants={fadeInUp}
-            className="p-10 rounded-2xl shadow-lg bg-gradient-to-r from-white via-[#fff9f0] to-[#f6d365] border border-[#f2e7d7] transition transform hover:shadow-2xl hover:scale-105 hover:from-[#f6d365] hover:via-[#fff9f0] hover:to-white"
-          >
-            <ul className="space-y-4 text-gray-800 font-medium">
-              {[
-                "Empower students with curiosity and courage to make a difference.",
-                "Cultivate principled learners for a sustainable future.",
-                "Deliver a globally relevant and value-driven curriculum.",
-                "Nurture creativity, reflection, and social responsibility.",
-                "Inspire kindness, innovation, and lifelong learning.",
-                "Foster resilience, inclusivity, and excellence in all pursuits.",
-              ].map((m, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <span className="text-yellow-600 font-bold">✦</span>
-                  <span>{m}</span>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-        </div>
-      </motion.section>
 
+        {/* Right Content Section */}
+        <motion.div
+          variants={fadeInUp}
+          className="relative p-10 rounded-2xl shadow-lg bg-gradient-to-r from-white via-[#fff9f0] to-[#f6d365] border border-[#f2e7d7] transition transform hover:shadow-2xl hover:scale-105"
+        >
+          {/* Triangle Accent */}
+          <div className="absolute -left-6 top-6 w-0 h-0 border-t-[40px] border-t-transparent border-r-[40px] border-r-[#f6d365] border-b-[40px] border-b-transparent"></div>
+
+          <ul className="space-y-4 text-gray-800 font-medium relative z-10">
+            {[
+              "Empower students with curiosity and courage to make a difference.",
+              "Cultivate principled learners for a sustainable future.",
+              "Deliver a globally relevant and value-driven curriculum.",
+              "Nurture creativity, reflection, and social responsibility.",
+              "Inspire kindness, innovation, and lifelong learning.",
+              "Foster resilience, inclusivity, and excellence in all pursuits.",
+            ].map((m, i) => (
+              <li
+                key={i}
+                className="flex items-start gap-3 group hover:text-yellow-700 transition"
+              >
+                <span className="text-yellow-600 font-bold group-hover:scale-125 transition">
+                  ✦
+                </span>
+                <span>{m}</span>
+              </li>
+            ))}
+          </ul>
+        </motion.div>
+      </div>
+    </motion.section>
       {/* Motto */}
       <section className="py-16 px-6 text-center bg-gradient-to-r from-[#2b5ed4] via-[#112a55] to-[#0c42be]">
         <h2 className="text-4xl md:text-5xl font-['Playfair_Display'] font-bold mb-4">

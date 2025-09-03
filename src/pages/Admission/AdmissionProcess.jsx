@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { GraduationCap, FileText, Users, ClipboardCheck } from "lucide-react";
+import { Typewriter } from "react-simple-typewriter";
 
 const steps = [
   {
@@ -46,7 +47,20 @@ const AdmissionProcess = () => {
           className="w-20 h-[3px] bg-gradient-to-r from-yellow-400 to-blue-600 mb-6 mx-auto rounded-full"
         ></motion.div>
         <h4 className="text-blue-800 font-semibold mb-3 tracking-widest uppercase text-sm">
-          Join the PSG World School Community
+          <Typewriter
+              words={[
+                "Join the PSG World School Community",
+                "Path to Admission",
+                "Scholarships & Financial Aid",
+              ]}
+              loop={true}
+              cursor
+              cursorStyle="|"
+              typeSpeed={70}
+              deleteSpeed={50}
+              delaySpeed={1500}
+            />
+          
         </h4>
         <motion.h2
           initial={{ opacity: 0, y: -30 }}

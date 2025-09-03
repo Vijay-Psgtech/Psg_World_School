@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-import AboutBanne1 from "../../assets/images/ap5.png";
+import AboutBanne1 from "../../assets/images/campus/campus15.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -123,7 +123,7 @@ const Admission = () => {
         >
           <h1
             className="text-5xl md:text-6xl font-extrabold drop-shadow-lg 
-               bg-gradient-to-r from-black to-yellow-300 bg-clip-text text-transparent"
+               bg-yellow-300 bg-clip-text text-transparent italic"
           >
             Admissions
           </h1>
