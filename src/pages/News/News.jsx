@@ -58,11 +58,11 @@ const News = () => {
   const [current, setCurrent] = useState(0);
 
   const nextSlide = () => {
-    setCurrent((prev) => (prev + 1) % newsData.length);
+    setCurrent((prev) => (prev + 3) % newsData.length);
   };
 
   const prevSlide = () => {
-    setCurrent((prev) => (prev - 1 + newsData.length) % newsData.length);
+    setCurrent((prev) => (prev - 3 + newsData.length) % newsData.length);
   };
 
   const visibleCards = [
