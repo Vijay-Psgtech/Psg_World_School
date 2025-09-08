@@ -22,7 +22,10 @@ const ChatBot = () => {
     setTimeout(() => {
       setMessages((prev) => [
         ...prev,
-        { sender: "bot", text: "Thanks for your message! We'll get back to you soon 🚀" },
+        {
+          sender: "bot",
+          text: "Thanks for your message! We'll get back to you soon 🚀",
+        },
       ]);
     }, 1000);
 
