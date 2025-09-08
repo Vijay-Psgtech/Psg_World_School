@@ -61,8 +61,8 @@ const AdmissionProcess = () => {
         {steps.map((step, index) => (
           <motion.div
             key={step.id}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 40 }}   
+             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
             viewport={{ once: true }}
             className="flex flex-col items-center text-center bg-white shadow-lg rounded-2xl p-8 border-t-4 border-blue-600 hover:shadow-2xl transition-shadow duration-300"

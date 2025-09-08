@@ -125,6 +125,7 @@ const FacilitiesPage = () => {
           <p className="mt-4 text-lg md:text-xl text-gray-200 font-light">
             A Learning Environment that Inspires Excellence
           </p>
+          <div className="w-20 h-[3px] bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-600 mx-auto mt-4"></div>
         </motion.div>
       </section>
 

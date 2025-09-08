@@ -47,8 +47,7 @@ const Abouthome = () => {
             School ensures every learner experiences globally benchmarked
             education aligned with the International Baccalaureate philosophy.
           </p>
-
-          {/* Buttons */}
+             {/* Buttons */}
           <div className="flex flex-wrap gap-4">
             <a
               href="/about"

@@ -3,7 +3,7 @@ import pypImg from "../../assets/images/students/pyp.jpg";
 import mypImg from "../../assets/images/students/myp.jpg";
 import dpImg from "../../assets/images/students/dp.jpg";
 import cpImg from "../../assets/images/students/cp.jpg";
-import { motion } from "framer-motion";
+import { motion} from "framer-motion";
 import { Plus, X } from "lucide-react";
 
 const EducationData = [
@@ -34,7 +34,7 @@ const EducationData = [
       "Globally recognized, academically rigorous preparation for top universities. The DP challenges students to excel academically and personally.",
     image: dpImg,
   },
-  {          
+  {
     id: 4,
     title: "Career-related Programme (CP)",
     subtitle: "Ages 16–19",
@@ -83,11 +83,13 @@ function Education() {
             >
               {/* Default Card */}
               {!isActive && (
-                <div className={`relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500 ${
-                  activeId && activeId !== item.id
-                    ? "opacity-40 grayscale"
-                    : "opacity-100"
-                }`}>
+                <div
+                  className={`relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500 ${
+                    activeId && activeId !== item.id
+                      ? "opacity-40 grayscale"
+                      : "opacity-100"
+                  }`}
+                >
                   <img
                     src={item.image}
                     alt={item.title}

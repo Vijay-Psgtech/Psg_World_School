@@ -61,7 +61,7 @@ function Banner() {
         className="relative z-20 h-full flex flex-col justify-center items-center md:items-start px-4 sm:px-8 md:px-12 lg:px-20"
       >
         {/* Tagline with typewriter */}
-        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-serif font-extrabold text-[#D4AF37] mb-4 tracking-wide text-center md:text-left drop-shadow-md leading-snug">
+        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-serif font-extrabold text-[#D4AF32] mb-4 tracking-wide text-center md:text-left drop-shadow-md leading-snug">
           {displayedText}
           <span className="animate-pulse">|</span> {/* blinking cursor */}
         </h2>

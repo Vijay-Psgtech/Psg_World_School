@@ -13,6 +13,21 @@ const Admission = () => {
     AOS.init({ duration: 1200, once: true });
   }, []);
 
+  const container = {
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  };
+
+   const item = {
+    hidden: { opacity: 0, y: 40 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  };
+
+
   // Content Data
   const steps = [
     { icon: <FileText className="w-6 h-6 text-emerald-600" />, title: "Online Inquiry Form Submission" },
@@ -64,6 +79,7 @@ const Admission = () => {
   Admissions
  
 </h1>
+<div className="w-20 h-[3px] bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-600 mx-auto mt-4"></div>
         </motion.div>
       </section>
 
@@ -126,35 +142,71 @@ const Admission = () => {
       </section>
 
       {/* Age Criteria Table */}
-      <section className="py-20 bg-gradient-to-br from-emerald-50 via-white to-indigo-50">
-        <div className="max-w-6xl mx-auto px-6" data-aos="fade-up">
+       <section className="py-20 bg-gradient-to-br from-emerald-50 via-white to-indigo-50">
+      <div className="max-w-6xl mx-auto px-6">
+        {/* Heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+        >
           <Heading black="Age" yellow="Criteria" />
-          <div className="overflow-x-auto">
-            <table className="w-full border-collapse rounded-xl overflow-hidden shadow-md">
-              <thead className="bg-emerald-600 text-white">
-                <tr>
-                  <th className="p-3 text-left">No</th>
-                  <th className="p-3 text-left">Grade</th>
-                  <th className="p-3 text-left">Age Range</th>
-                  <th className="p-3 text-left">UK System</th>
-                  <th className="p-3 text-left">US System</th>
-                </tr>
-              </thead>
-              <tbody>
-                {ageCriteria.map((row, i) => (
-                  <tr key={i} className="even:bg-gray-50">
-                    <td className="p-3">{row.no}</td>
-                    <td className="p-3">{row.grade}</td>
-                    <td className="p-3">{row.range}</td>
-                    <td className="p-3">{row.uk}</td>
-                    <td className="p-3">{row.us}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <div className="w-20 h-[3px] bg-gradient-to-r from-emerald-500 via-yellow-400 to-indigo-500 rounded-full mx-auto mt-4 mb-10"></div>
+        </motion.div>
+
+        {/* Animated Table */}
+        <div className="overflow-x-auto">
+          <motion.table
+            variants={container}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="w-full border-collapse rounded-2xl shadow-xl overflow-hidden"
+          >
+            {/* Table Head */}
+            <thead className="bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-600 text-white text-left">
+              <tr>
+                {["No", "Grade", "Age Range", "UK System", "US System"].map(
+                  (col, i) => (
+                    <motion.th
+                      key={i}
+                      variants={item}
+                      className="p-4 text-sm sm:text-base font-semibold tracking-wide"
+                    >
+                      {col}
+                    </motion.th>
+                  )
+                )}
+              </tr>
+            </thead>
+
+            {/* Table Body */}
+            <tbody className="divide-y divide-gray-200 bg-white">
+              {ageCriteria.map((row, i) => (
+                <motion.tr
+                  key={i}
+                  variants={item}
+                  whileHover={{
+                    scale: 1.02,
+                    backgroundColor: "rgba(240,253,244,0.8)",
+                  }}
+                  className="transition duration-300 cursor-pointer"
+                >
+                  <td className="p-4 font-semibold text-gray-700">{row.no}</td>
+                  <td className="p-4 text-emerald-700 font-medium">
+                    {row.grade}
+                  </td>
+                  <td className="p-4 text-gray-600">{row.range}</td>
+                  <td className="p-4 text-indigo-700">{row.uk}</td>
+                  <td className="p-4 text-yellow-700">{row.us}</td>
+                </motion.tr>
+              ))}
+            </tbody>
+          </motion.table>
         </div>
-      </section>
+      </div>
+    </section>
     </div>
   );
 };

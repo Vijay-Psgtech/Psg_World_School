@@ -20,7 +20,7 @@ const Footer = () => {
         <div>
           <h3 className="text-xl font-semibold text-gold mb-4">
             Contact Us
-          </h3>
+          </h3> 
           <p className="flex items-start gap-3 mb-3 text-gray-300">
             <MapPin className="w-5 h-5 text-gold mt-1" />
             PSG World School, S.F. No. 472, Civil Aerodrome Post,

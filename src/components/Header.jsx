@@ -43,7 +43,7 @@ function Header() {
           />
           <span
             className={`text-2xl md:text-3xl font-bold tracking-wide transition-colors duration-300 ${
-              headerBg ? "text-blue-900 hover:text-yellow-500" : "text-white hover:text-yellow-500"
+              headerBg ? "text-blue-900 hover:text-yellow-500" : "text-[#F5EAD8] hover:text-yellow-500"
             }`}
             style={{ fontFamily: "Inter, sans-serif" }}
           >
@@ -58,9 +58,9 @@ function Header() {
               <a
                 href={item.href}
                 className={`text-lg lg:text-xl font-semibold px-2 py-1 transition-colors duration-300 group-hover:text-yellow-500 ${
-                  headerBg ? "text-blue-900" : "text-white"
+                  headerBg ? "text-blue-900" : "text-[#F5EAD8]"
                 }`}
-                style={{ fontFamily: "revert" }}
+                style={{ fontFamily: "revert-layer" }}
               >
                 {item.label}
               </a>
