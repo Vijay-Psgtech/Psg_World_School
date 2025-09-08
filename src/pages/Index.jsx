@@ -7,7 +7,7 @@ import CampusHighlights from "./Campus/CampusHighlights";
 import StudentLife from "./Students/StudentLife";
 import AdmissionProcess from "./Admission/AdmissionProcess";
 import WhatsappIcon from "../components/WhatsppIcon";
-import ChatBot from "../components/Chatbot";
+import ChatBot from "../components/ChatBot";
 
 
 const Index = () => {
