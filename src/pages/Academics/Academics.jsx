@@ -87,7 +87,7 @@ export default function Academics() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.5 }}
-          src={AboutBanner}
+          src={AboutBanner}   
           alt="Academics Banner"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -105,6 +105,7 @@ export default function Academics() {
           <p className="mt-4 text-lg md:text-xl text-blue-200">
             Excellence • Global Perspective • Lifelong Learning
           </p>
+          <div className="w-20 h-[3px] bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-600 mx-auto mt-4"></div>
         </motion.div>
       </section>
 
@@ -183,7 +184,7 @@ export default function Academics() {
               </h3>
               <p className="text-gray-600 leading-relaxed">{p.desc}</p>
             </motion.div>
-          ))}
+          ))}  
         </div>
 
         {/* Decorative Background Glow */}
