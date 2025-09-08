@@ -1,12 +1,12 @@
 import React, { useRef } from "react";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { motion } from "framer-motion";
-import Campus1 from "../../assets/images/campus/campus1.png";
-import Campus2 from "../../assets/images/campus/campus2.jpg";
-import Campus3 from "../../assets/images/campus/campus3.png";
-import Campus4 from "../../assets/images/campus/campus4.png";
+import Campus1 from "../../assets/images/campus/campus21.png";
+import Campus2 from "../../assets/images/campus/campus20.png";
+import Campus3 from "../../assets/images/campus/campus22.png";
+import Campus4 from "../../assets/images/campus/campus23.jpg";
 import Campus5 from "../../assets/images/campus/campus5.jpg";
-import Campus6 from "../../assets/images/campus/campus6.png";
+import Campus6 from "../../assets/images/campus/campus16.png"
 import { Typewriter } from "react-simple-typewriter";
 
 const highlights = [

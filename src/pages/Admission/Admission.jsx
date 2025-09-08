@@ -13,90 +13,43 @@ const Admission = () => {
     AOS.init({ duration: 1200, once: true });
   }, []);
 
+  const container = {
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  };
+
+   const item = {
+    hidden: { opacity: 0, y: 40 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  };
+
+
   // Content Data
   const steps = [
-    {
-      icon: <FileText className="w-6 h-6 text-emerald-600" />,
-      title: "Online Inquiry Form Submission",
-    },
-    {
-      icon: <Users className="w-6 h-6 text-emerald-600" />,
-      title: "Campus Tour & Interaction",
-    },
-    {
-      icon: <GraduationCap className="w-6 h-6 text-emerald-600" />,
-      title: "Entrance Assessment & Student Profile Review",
-    },
-    {
-      icon: <Star className="w-6 h-6 text-emerald-600" />,
-      title: "Parent Meeting and Offer of Admission",
-    },
+    { icon: <FileText className="w-6 h-6 text-emerald-600" />, title: "Online Inquiry Form Submission" },
+    { icon: <Users className="w-6 h-6 text-emerald-600" />, title: "Campus Tour & Interaction" },
+    { icon: <GraduationCap className="w-6 h-6 text-emerald-600" />, title: "Entrance Assessment & Student Profile Review" },
+    { icon: <Star className="w-6 h-6 text-emerald-600" />, title: "Parent Meeting and Offer of Admission" },
   ];
 
   const scholarships = [
-    {
-      icon: <Star className="w-6 h-6 text-yellow-500" />,
-      title: "Merit-Based Scholarships",
-      desc: "For high achievers across academics, sports, and arts.",
-    },
-    {
-      icon: <HandCoins className="w-6 h-6 text-yellow-500" />,
-      title: "Need-Based Financial Aid",
-      desc: "Ensuring inclusivity and equal opportunity for every learner.",
-    },
+    { icon: <Star className="w-6 h-6 text-yellow-500" />, title: "Merit-Based Scholarships", desc: "For high achievers across academics, sports, and arts." },
+    { icon: <HandCoins className="w-6 h-6 text-yellow-500" />, title: "Need-Based Financial Aid", desc: "Ensuring inclusivity and equal opportunity for every learner." },
   ];
 
   const ageCriteria = [
-    {
-      no: 1,
-      grade: "Reception",
-      range: "3–4 years",
-      uk: "Nursery",
-      us: "Pre-School",
-    },
-    {
-      no: 2,
-      grade: "Prep 1",
-      range: "4–5 years",
-      uk: "Reception",
-      us: "Pre-KG",
-    },
+    { no: 1, grade: "Reception", range: "3–4 years", uk: "Nursery", us: "Pre-School" },
+    { no: 2, grade: "Prep 1", range: "4–5 years", uk: "Reception", us: "Pre-KG" },
     { no: 3, grade: "Prep 2", range: "5–6 years", uk: "Year 1", us: "KG" },
-    {
-      no: 4,
-      grade: "Grade 1",
-      range: "6–7 years",
-      uk: "Year 2",
-      us: "Grade 1",
-    },
-    {
-      no: 5,
-      grade: "Grade 2",
-      range: "7–8 years",
-      uk: "Year 3",
-      us: "Grade 2",
-    },
-    {
-      no: 6,
-      grade: "Grade 3",
-      range: "8–9 years",
-      uk: "Year 4",
-      us: "Grade 3",
-    },
-    {
-      no: 7,
-      grade: "Grade 4",
-      range: "9–10 years",
-      uk: "Year 5",
-      us: "Grade 4",
-    },
-    {
-      no: 8,
-      grade: "Grade 5",
-      range: "10–11 years",
-      uk: "Year 6",
-      us: "Grade 5",
-    },
+    { no: 4, grade: "Grade 1", range: "6–7 years", uk: "Year 2", us: "Grade 1" },
+    { no: 5, grade: "Grade 2", range: "7–8 years", uk: "Year 3", us: "Grade 2" },
+    { no: 6, grade: "Grade 3", range: "8–9 years", uk: "Year 4", us: "Grade 3" },
+    { no: 7, grade: "Grade 4", range: "9–10 years", uk: "Year 5", us: "Grade 4" },
+    { no: 8, grade: "Grade 5", range: "10–11 years", uk: "Year 6", us: "Grade 5" },
   ];
 
   // ✅ Reusable heading
@@ -121,12 +74,12 @@ const Admission = () => {
           transition={{ duration: 1 }}
           className="relative z-10 text-center mb-20"
         >
-          <h1
-            className="text-5xl md:text-6xl font-extrabold drop-shadow-lg 
-               bg-yellow-300 bg-clip-text text-transparent italic"
-          >
-            Admissions
-          </h1>
+          <h1 className="text-5xl md:text-6xl font-extrabold drop-shadow-lg 
+               bg-yellow-300 bg-clip-text text-transparent italic">
+  Admissions
+ 
+</h1>
+<div className="w-20 h-[3px] bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-600 mx-auto mt-4"></div>
         </motion.div>
       </section>
 
@@ -144,9 +97,9 @@ const Admission = () => {
         <div className="max-w-5xl mx-auto text-center" data-aos="fade-up">
           <Heading black="Join the" yellow="PSG World School Community" />
           <p className="text-lg text-gray-700 leading-relaxed">
-            Our admissions process is transparent, inclusive, and
-            student-centered. We seek learners who are curious, open-minded, and
-            ready to embrace the challenge of IB learning.
+            Our admissions process is transparent, inclusive, and student-centered. 
+            We seek learners who are curious, open-minded, and ready to embrace 
+            the challenge of IB learning.
           </p>
         </div>
       </section>
@@ -176,10 +129,7 @@ const Admission = () => {
           <Heading black="Scholarships &" yellow="Financial Aid" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
             {scholarships.map((item, index) => (
-              <div
-                key={index}
-                className="bg-gradient-to-br from-yellow-50 to-white shadow-sm border rounded-xl p-6 flex items-start gap-4"
-              >
+              <div key={index} className="bg-gradient-to-br from-yellow-50 to-white shadow-sm border rounded-xl p-6 flex items-start gap-4">
                 {item.icon}
                 <div>
                   <h3 className="font-semibold text-gray-900">{item.title}</h3>
@@ -192,35 +142,71 @@ const Admission = () => {
       </section>
 
       {/* Age Criteria Table */}
-      <section className="py-20 bg-gradient-to-br from-emerald-50 via-white to-indigo-50">
-        <div className="max-w-6xl mx-auto px-6" data-aos="fade-up">
+       <section className="py-20 bg-gradient-to-br from-emerald-50 via-white to-indigo-50">
+      <div className="max-w-6xl mx-auto px-6">
+        {/* Heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+        >
           <Heading black="Age" yellow="Criteria" />
-          <div className="overflow-x-auto">
-            <table className="w-full border-collapse rounded-xl overflow-hidden shadow-md">
-              <thead className="bg-emerald-600 text-white">
-                <tr>
-                  <th className="p-3 text-left">No</th>
-                  <th className="p-3 text-left">Grade</th>
-                  <th className="p-3 text-left">Age Range</th>
-                  <th className="p-3 text-left">UK System</th>
-                  <th className="p-3 text-left">US System</th>
-                </tr>
-              </thead>
-              <tbody>
-                {ageCriteria.map((row, i) => (
-                  <tr key={i} className="even:bg-gray-50">
-                    <td className="p-3">{row.no}</td>
-                    <td className="p-3">{row.grade}</td>
-                    <td className="p-3">{row.range}</td>
-                    <td className="p-3">{row.uk}</td>
-                    <td className="p-3">{row.us}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <div className="w-20 h-[3px] bg-gradient-to-r from-emerald-500 via-yellow-400 to-indigo-500 rounded-full mx-auto mt-4 mb-10"></div>
+        </motion.div>
+
+        {/* Animated Table */}
+        <div className="overflow-x-auto">
+          <motion.table
+            variants={container}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="w-full border-collapse rounded-2xl shadow-xl overflow-hidden"
+          >
+            {/* Table Head */}
+            <thead className="bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-600 text-white text-left">
+              <tr>
+                {["No", "Grade", "Age Range", "UK System", "US System"].map(
+                  (col, i) => (
+                    <motion.th
+                      key={i}
+                      variants={item}
+                      className="p-4 text-sm sm:text-base font-semibold tracking-wide"
+                    >
+                      {col}
+                    </motion.th>
+                  )
+                )}
+              </tr>
+            </thead>
+
+            {/* Table Body */}
+            <tbody className="divide-y divide-gray-200 bg-white">
+              {ageCriteria.map((row, i) => (
+                <motion.tr
+                  key={i}
+                  variants={item}
+                  whileHover={{
+                    scale: 1.02,
+                    backgroundColor: "rgba(240,253,244,0.8)",
+                  }}
+                  className="transition duration-300 cursor-pointer"
+                >
+                  <td className="p-4 font-semibold text-gray-700">{row.no}</td>
+                  <td className="p-4 text-emerald-700 font-medium">
+                    {row.grade}
+                  </td>
+                  <td className="p-4 text-gray-600">{row.range}</td>
+                  <td className="p-4 text-indigo-700">{row.uk}</td>
+                  <td className="p-4 text-yellow-700">{row.us}</td>
+                </motion.tr>
+              ))}
+            </tbody>
+          </motion.table>
         </div>
-      </section>
+      </div>
+    </section>
     </div>
   );
 };
