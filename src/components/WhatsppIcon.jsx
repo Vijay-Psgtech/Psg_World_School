@@ -15,9 +15,9 @@ const WhatsappIcon = () => {
   return (
     <button
       onClick={openWhatsApp}
-      className="fixed bottom-6 left-6 z-50 p-4 rounded-full shadow-lg transition-transform duration-300 bg-green-500 hover:scale-110 hover:bg-green-600 text-white"
+      className="fixed bottom-6 left-6 z-50 p-3 rounded-full shadow-lg transition-transform duration-300 bg-green-500 hover:scale-110 hover:bg-green-600 text-white"
     >
-      <FaWhatsapp size={28} />
+      <FaWhatsapp size={18} />
     </button>
   );
 };

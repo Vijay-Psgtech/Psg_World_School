@@ -120,18 +120,20 @@ const News = () => {
         </div>
 
         {/* Arrows at bottom */}
-        <div className="flex gap-6 mt-10 items-center">
+        <div className="flex gap-4 mt-10 items-center">
           <button
             onClick={prevSlide}
-            className="p-3 rounded-full bg-white border shadow-md hover:bg-gray-100 transition"
+            className="p-3 w-12 h-12 rounded-full shadow-md bg-white/70 backdrop-blur-md hover:scale-110 hover:bg-blue-600 hover:text-white 
+                       transition"
           >
-            <ChevronLeft size={22} className="text-gray-700" />
+            <ChevronLeft size={22} />
           </button>
           <button
             onClick={nextSlide}
-            className="p-3 rounded-full bg-white border shadow-md hover:bg-gray-100 transition"
+            className="p-3 w-12 h-12 rounded-full shadow-md bg-white/70 backdrop-blur-md hover:scale-110 hover:bg-blue-600 hover:text-white 
+                       transition"
           >
-            <ChevronRight size={22} className="text-gray-700" />
+            <ChevronRight size={22} />
           </button>
         </div>
 
