@@ -1,27 +1,33 @@
-#stage 1: Build app
-FROM node:23-apline AS build
+# Stage 1: Build the app
+FROM node:23-alpine AS build
 
-#set working directory
 WORKDIR /app
 
-#install dependencies
+# Install dependencies
 COPY package.json package-lock.json ./
 RUN npm install
 
-#copy application files
+# Copy source code
 COPY . .
 
-#Build the app
+# Build optimized production files
 RUN npm run build
 
-#stage 2: Nginx serve
+
+# Stage 2: Nginx Serve
 FROM nginx:alpine
 
-# Copy build output to nginx html dir
-COPY --from=build /app/dist /usr/share/nginx/html
+# Create the required folder structure
+RUN mkdir -p /usr/share/nginx/html/Psg_World_school/dist
 
-# Expose your dev server port (adjust if different)
-EXPOSE 80
+# Copy the built files into the expected Nginx path
+COPY --from=build /app/dist /usr/share/nginx/html/Psg_World_school/dist
 
-# Start app in dev mode
+# Copy custom nginx.conf (optional but recommended)
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+# Expose HTTP port
+EXPOSE 9000
+
+# Start Nginx in the foreground
 CMD ["nginx", "-g", "daemon off;"]
