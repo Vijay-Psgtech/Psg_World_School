@@ -23,7 +23,11 @@ const Gallery = () => {
         ></motion.div>
         <h4 className="text-blue-800 font-semibold mb-3 tracking-wide uppercase text-sm">
           <Typewriter
-            words={["Galleria", "PSG World's Gallery"]}
+            words={[
+              "Moments of Excellence",
+              "Capturing Memories",
+              "Snapshots of Learning",
+            ]}
             loop={true}
             cursor
             cursorStyle="|"
@@ -38,7 +42,12 @@ const Gallery = () => {
       </div>
 
       {/* Gallery Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 items-center justify-center">
+      <motion.div
+        initial={{ scale: 0.9, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 items-center justify-center"
+      >
         {/* Left column */}
         <div className="flex flex-col gap-4">
           <img
@@ -100,7 +109,7 @@ const Gallery = () => {
             loading="lazy"
           />
         </div>
-      </div>
+      </motion.div>
 
       {/* View all button */}
       <div className="mt-10 text-center">
