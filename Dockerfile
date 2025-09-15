@@ -23,9 +23,6 @@ RUN mkdir -p /usr/share/nginx/html/Psg_World_school/dist
 # Copy the built files into the expected Nginx path
 COPY --from=build /app/dist /usr/share/nginx/html/Psg_World_school/dist
 
-# Copy custom nginx.conf (optional but recommended)
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-
 # Expose HTTP port
 EXPOSE 9000
 
