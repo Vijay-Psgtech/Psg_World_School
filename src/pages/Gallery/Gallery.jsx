@@ -1,13 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
-import img1 from "../../assets/images/a1.png";
-import img2 from "../../assets/images/a2.png";
-import img3 from "../../assets/images/a4.png";
-import img4 from "../../assets/images/room1.jpg";
-import img5 from "../../assets/images/ap5.png";
-import img6 from "../../assets/images/building1.png";
-import img7 from "../../assets/images/building2.png";
+import img1 from "../../assets/images/campus/campus6.png";
+import img2 from "../../assets/images/campus/campus11.png";
+import img3 from "../../assets/images/campus/campus12.png";
+import img4 from "../../assets/images/campus/campus5.jpg";
+import img5 from "../../assets/images/campus/campus13.png";
+import img6 from "../../assets/images/campus/campus2.jpg";
+import img7 from "../../assets/images/campus/campus4.png";
 
 const Gallery = () => {
   return (
