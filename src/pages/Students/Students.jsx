@@ -82,7 +82,7 @@ const Students = () => {
           variants={fadeIn("up")}
           className="relative z-10 text-center px-6"
         >
-          <h1 className="text-4xl md:text-6xl font-['Playfair_Display'] font-bold tracking-tight text-white drop-shadow-lg">
+          <h1 className="text-4xl md:text-6xl font-['Playfair_Display'] font-bold tracking-tight text-black drop-shadow-lg">
             Student Life{" "}
             <span className="text-yellow-400">– Beyond Academics</span>
           </h1>

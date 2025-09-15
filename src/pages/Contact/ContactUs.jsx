@@ -29,7 +29,8 @@ const ContactUs = () => {
           className="text-4xl md:text-6xl font-['Playfair_Display'] font-bold tracking-tight drop-shadow-lg"
         >
           <span className="text-black">Contact</span>{" "}
-            <span className="text-yellow-500">Us</span>
+          <span className="text-yellow-500">Us</span>
+          <div className="w-32 h-[3px] bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 mx-auto mt-6 rounded-full"></div>
         </motion.h1>
       </section>
 
