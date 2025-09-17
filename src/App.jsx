@@ -9,7 +9,6 @@ import FacilitiesPage from "./pages/Facilities/Facilities";
 import Admission from "./pages/Admission/Admission";
 import Students from "./pages/Students/Students";
 import ContactUS from "./pages/Contact/ContactUs";
-import AllGallery from "./pages/Gallery/AllGallery";
 
 function App() {
   return (
@@ -20,11 +19,10 @@ function App() {
           <Route index element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/academics" element={<Academics />} />
-          <Route path="/facilities" element={<FacilitiesPage /> } />
+          <Route path="/facilities" element={<FacilitiesPage />} />
           <Route path="/admissions" element={<Admission />} />
           <Route path="students-life" element={<Students />} />
           <Route path="/contact" element={<ContactUS />} />
-          <Route path="/all-gallery" element={<AllGallery />} />
         </Route>
       </Routes>
     </BrowserRouter>
