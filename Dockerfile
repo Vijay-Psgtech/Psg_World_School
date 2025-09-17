@@ -1,30 +1,17 @@
-# Stage 1: Build the app
-FROM node:23-alpine AS build
+FROM node:23-alpine
 
+# Set working directory
 WORKDIR /app
 
 # Install dependencies
 COPY package.json package-lock.json ./
 RUN npm install
 
-# Copy source code
+# Copy application files
 COPY . .
 
-# Build optimized production files
-RUN npm run build
-
-
-# Stage 2: Nginx Serve
-FROM nginx:alpine
-
-# Create the required folder structure
-RUN mkdir -p /usr/share/nginx/html/Psg_World_school/dist
-
-# Copy the built files into the expected Nginx path
-COPY --from=build /app/dist /usr/share/nginx/html/Psg_World_school/dist
-
-# Expose HTTP port
+# Expose your dev server port (adjust if different)
 EXPOSE 9000
 
-# Start Nginx in the foreground
-CMD ["nginx", "-g", "daemon off;"]
+# Start app in dev mode
+CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]

@@ -19,7 +19,7 @@ function App() {
           <Route index element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/academics" element={<Academics />} />
-          <Route path="/facilities" element={<FacilitiesPage /> } />
+          <Route path="/facilities" element={<FacilitiesPage />} />
           <Route path="/admissions" element={<Admission />} />
           <Route path="students-life" element={<Students />} />
           <Route path="/contact" element={<ContactUS />} />

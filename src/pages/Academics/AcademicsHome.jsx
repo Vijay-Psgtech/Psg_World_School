@@ -53,7 +53,7 @@ function AcademicsHome() {
     <section className="w-full py-20 px-6 md:px-12 bg-gradient-to-br from-white via-blue-50 to-yellow-50 font-sans">
       {/* Section Header */}
       <div className="text-center mb-16">
-        <motion.div 
+        <motion.div
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
           transition={{ duration: 0.8 }}
@@ -61,22 +61,22 @@ function AcademicsHome() {
           className="w-20 h-[3px] bg-gradient-to-r from-yellow-400 to-blue-600 mb-6 mx-auto rounded-full"
         ></motion.div>
         <h4 className="text-blue-800 font-semibold mb-3 tracking-widest uppercase text-sm">
-           <Typewriter
-              words={[
-                "The IB Continuum",
-                "The IB Advantage at PSG",
-                "Academic Outcomes"
-              ]}
-              loop={true}
-              cursor
-              cursorStyle="|"
-              typeSpeed={70}
-              deleteSpeed={50}
-              delaySpeed={1500}
-            />
+          <Typewriter
+            words={[
+              "The IB Continuum",
+              "The IB Advantage at PSG",
+              "Academic Outcomes",
+            ]}
+            loop={true}
+            cursor
+            cursorStyle="|"
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1500}
+          />
         </h4>
         <h1 className="text-4xl md:text-5xl font-serif font-bold text-blue-900 drop-shadow-sm">
-          Academics 
+          Academics
         </h1>
       </div>
 
@@ -102,11 +102,13 @@ function AcademicsHome() {
             >
               {/* Default Card */}
               {!isActive && (
-                <div className={`relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500 ${
-                  activeId && activeId !== item.id
-                    ? "opacity-40 grayscale"
-                    : "opacity-100"
-                }`}>
+                <div
+                  className={`relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500 ${
+                    activeId && activeId !== item.id
+                      ? "opacity-40 grayscale"
+                      : "opacity-100"
+                  }`}
+                >
                   <img
                     src={item.image}
                     alt={item.title}

@@ -19,6 +19,7 @@ function Header() {
     { label: "Facilities", href: "/facilities" },
     { label: "Admissions", href: "/admissions" },
     { label: "Students", href: "/students-life" },
+    { label: "Careers", href: "https://careers.psginstitutions.in/"},
     // { label: "Gallery", href: "/gallery" },
     // { label: "News", href: "/news" },
     { label: "Contact", href: "/contact" },
@@ -57,6 +58,7 @@ function Header() {
             <li key={item.label} className="relative group">
               <a
                 href={item.href}
+                target={item.label === 'Careers' ? '_blank' : '_self'}
                 className={`font-medium px-2 py-1 transition-colors duration-300 group-hover:text-yellow-500 
                   ${
                     headerBg
@@ -110,6 +112,7 @@ function Header() {
               <li key={item.label}>
                 <a
                   href={item.href}
+                  target={item.label === 'Careers' ? '_blank' : '_self'}
                   className="hover:text-yellow-500 transition"
                   onClick={() => setMenuOpen(false)}
                 >
