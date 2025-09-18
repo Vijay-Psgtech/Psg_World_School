@@ -19,9 +19,7 @@ function Header() {
     { label: "Facilities", href: "/facilities" },
     { label: "Admissions", href: "/admissions" },
     { label: "Students", href: "/students-life" },
-    { label: "Careers", href: "https://careers.psginstitutions.in/"},
-    // { label: "Gallery", href: "/gallery" },
-    // { label: "News", href: "/news" },
+    { label: "Careers", href: "https://careers.psginstitutions.in/" },
     { label: "Contact", href: "/contact" },
   ];
 
@@ -30,7 +28,7 @@ function Header() {
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         headerBg && !menuOpen
           ? "bg-white/90 backdrop-blur-md shadow-md"
-          : "bg-gradient-to-b from-black/50 to-transparent"
+          : "bg-gradient-to-b from-white/50 to-white/20"
       }`}
       style={{ fontFamily: "Inter, sans-serif" }}
     >
@@ -44,8 +42,12 @@ function Header() {
               headerBg ? "w-12 h-12" : "w-16 h-16"
             } object-contain`}
           />
-          <span 
-            className={`text-xl md:text-2xl font-bold tracking-wide transition ${headerBg ? "text-blue-900 hover:text-yellow-500" : "text-[#F5EAD8] hover:text-yellow-500 drop-shadow-[0_2px_3px_rgba(0,0,0,0.8)]"}`}
+          <span
+            className={`text-xl md:text-2xl font-bold tracking-wide transition ${
+              headerBg
+                ? "text-blue-900 hover:text-yellow-500"
+                : "text-blue-900 hover:text-yellow-500 drop-shadow-[0_2px_3px_rgba(0,0,0,0.2)]"
+            }`}
             style={{ fontFamily: "Playfair Display, serif" }}
           >
             PSG World School
@@ -58,19 +60,12 @@ function Header() {
             <li key={item.label} className="relative group">
               <a
                 href={item.href}
-                target={item.label === 'Careers' ? '_blank' : '_self'}
-                className={`font-medium px-2 py-1 transition-colors duration-300 group-hover:text-yellow-500 
-                  ${
-                    headerBg
-                      ? "text-blue-900"
-                      : "text-[#F5EAD8] drop-shadow-[0_2px_3px_rgba(0,0,0,0.8)]"
-                  }
+                target={item.label === "Careers" ? "_blank" : "_self"}
+                className={`font-sans font-semibold text-blue-900 text-lg px-2 py-1 transition-colors duration-300 group-hover:text-yellow-500 
                 `}
               >
                 {item.label}
-                <span
-                 className="absolute left-1/2 bottom-0 w-0 h-[2px] bg-yellow-500 transition-all duration-300 group-hover:w-full group-hover:left-0"
-                ></span>
+                <span className="absolute left-1/2 bottom-0 w-0 h-[2px] bg-yellow-500 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
               </a>
             </li>
           ))}
@@ -112,7 +107,7 @@ function Header() {
               <li key={item.label}>
                 <a
                   href={item.href}
-                  target={item.label === 'Careers' ? '_blank' : '_self'}
+                  target={item.label === "Careers" ? "_blank" : "_self"}
                   className="hover:text-yellow-500 transition"
                   onClick={() => setMenuOpen(false)}
                 >

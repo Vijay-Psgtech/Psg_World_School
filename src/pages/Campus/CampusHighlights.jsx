@@ -125,6 +125,7 @@ function CampusHighlights() {
                     src={item.img}
                     alt={item.title}
                     className="w-full h-full object-cover transform group-hover:scale-110 transition duration-700"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-950/70 to-transparent"></div>
                   <h3 className="absolute bottom-3 left-4 text-xl font-bold text-white drop-shadow-lg">

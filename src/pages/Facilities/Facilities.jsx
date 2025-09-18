@@ -225,6 +225,7 @@ const FacilitiesPage = () => {
                       src={img}
                       alt={`gallery-${index}`}
                       className="w-full h-[500px] object-cover rounded-xl"
+                      loading="lazy"
                     />
                   </div>
                 ))}
