@@ -38,9 +38,8 @@ function Header() {
           <img
             src="/Logo.png"
             alt="Logo"
-            className={`transition-all duration-300 ${
-              headerBg ? "w-12 h-12" : "w-16 h-16"
-            } object-contain`}
+            className={`transition-all duration-300 object-contain w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16
+              ${headerBg ? "md:w-12 md:h-12 lg:w-14 lg:h-14" : ""} `}
           />
           <span
             className={`text-xl md:text-2xl font-bold tracking-wide transition ${
@@ -55,7 +54,7 @@ function Header() {
         </a>
 
         {/* Desktop Nav */}
-        <ul className="hidden md:flex gap-8 lg:gap-10">
+        <ul className="hidden lg:flex gap-6 xl:gap-10">
           {navLinks.map((item) => (
             <li key={item.label} className="relative group">
               <a
@@ -76,14 +75,15 @@ function Header() {
           <img
             src="/100yearsLogo.png"
             alt="100 years"
-            className={`transition-all duration-300 ${
-              headerBg ? "w-28 h-12" : "w-32 h-14"
-            } object-contain`}
+            className={`transition-all duration-300 object-contain
+              w-24 h-10 md:w-28 md:h-12 lg:w-32 lg:h-14
+              ${headerBg ? "md:w-24 md:h-10 lg:w-28 lg:h-12" : ""}
+            `}
           />
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="md:hidden">
+        <div className="lg:hidden">
           {!menuOpen && (
             <FiMenu
               className="text-blue-900 text-3xl cursor-pointer"
