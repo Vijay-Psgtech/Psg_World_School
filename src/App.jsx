@@ -1,5 +1,6 @@
 import React,{ Suspense, lazy} from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Loader from "./components/Loader";
 
 const Layout = lazy(() => import("./components/Layout"));
 const Index = lazy(() => import("./pages/Index"));
@@ -24,7 +25,7 @@ import ContactUS from "./pages/Contact/ContactUs";*/
 function App() {
   return (
     <BrowserRouter>
-    <Suspense fallback={<div className="text-center mt-10 font-bold text-blue-900">Loading...</div>}>
+    <Suspense fallback={<Loader />}>
       <BacktoTop />
       <Routes>
         <Route path="" element={<Layout />}>
