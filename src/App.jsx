@@ -1,4 +1,4 @@
-import React,{ Suspense, lazy} from "react";
+import React, { Suspense, lazy } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Loader from "./components/Loader";
 
@@ -25,19 +25,19 @@ import ContactUS from "./pages/Contact/ContactUs";*/
 function App() {
   return (
     <BrowserRouter>
-    <Suspense fallback={<Loader />}>
-      <BacktoTop />
-      <Routes>
-        <Route path="" element={<Layout />}>
-          <Route index element={<Index />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/academics" element={<Academics />} />
-          <Route path="/facilities" element={<FacilitiesPage />} />
-          <Route path="/admissions" element={<Admission />} />
-          <Route path="students-life" element={<Students />} />
-          <Route path="/contact" element={<ContactUS />} />
-        </Route>
-      </Routes>
+      <Suspense fallback={<Loader />}>
+        <BacktoTop />
+        <Routes>
+          <Route path="" element={<Layout />}>
+            <Route index element={<Index />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/academics" element={<Academics />} />
+            <Route path="/facilities" element={<FacilitiesPage />} />
+            <Route path="/admissions" element={<Admission />} />
+            <Route path="students-life" element={<Students />} />
+            <Route path="/contact" element={<ContactUS />} />
+          </Route>
+        </Routes>
       </Suspense>
     </BrowserRouter>
   );
