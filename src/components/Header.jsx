@@ -19,9 +19,7 @@ function Header() {
     { label: "Facilities", href: "/facilities" },
     { label: "Admissions", href: "/admissions" },
     { label: "Students", href: "/students-life" },
-    { label: "Careers", href: "https://careers.psginstitutions.in/"},
-    // { label: "Gallery", href: "/gallery" },
-    // { label: "News", href: "/news" },
+    { label: "Careers", href: "https://careers.psginstitutions.in/" },
     { label: "Contact", href: "/contact" },
   ];
 
@@ -30,7 +28,7 @@ function Header() {
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         headerBg && !menuOpen
           ? "bg-white/90 backdrop-blur-md shadow-md"
-          : "bg-gradient-to-b from-black/50 to-transparent"
+          : "bg-gradient-to-b from-white/50 to-white/20"
       }`}
       style={{ fontFamily: "Inter, sans-serif" }}
     >
@@ -40,12 +38,15 @@ function Header() {
           <img
             src="/Logo.png"
             alt="Logo"
-            className={`transition-all duration-300 ${
-              headerBg ? "w-12 h-12" : "w-16 h-16"
-            } object-contain`}
+            className={`transition-all duration-300 object-contain w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16
+              ${headerBg ? "md:w-12 md:h-12 lg:w-14 lg:h-14" : ""} `}
           />
-          <span 
-            className={`text-xl md:text-2xl font-bold tracking-wide transition ${headerBg ? "text-blue-900 hover:text-yellow-500" : "text-[#F5EAD8] hover:text-yellow-500 drop-shadow-[0_2px_3px_rgba(0,0,0,0.8)]"}`}
+          <span
+            className={`text-xl md:text-2xl font-bold tracking-wide transition ${
+              headerBg
+                ? "text-blue-900 hover:text-yellow-500"
+                : "text-blue-900 hover:text-yellow-500 drop-shadow-[0_2px_3px_rgba(0,0,0,0.2)]"
+            }`}
             style={{ fontFamily: "Playfair Display, serif" }}
           >
             PSG World School
@@ -53,24 +54,17 @@ function Header() {
         </a>
 
         {/* Desktop Nav */}
-        <ul className="hidden md:flex gap-8 lg:gap-10">
+        <ul className="hidden lg:flex gap-6 xl:gap-10">
           {navLinks.map((item) => (
             <li key={item.label} className="relative group">
               <a
                 href={item.href}
-                target={item.label === 'Careers' ? '_blank' : '_self'}
-                className={`font-medium px-2 py-1 transition-colors duration-300 group-hover:text-yellow-500 
-                  ${
-                    headerBg
-                      ? "text-blue-900"
-                      : "text-[#F5EAD8] drop-shadow-[0_2px_3px_rgba(0,0,0,0.8)]"
-                  }
+                target={item.label === "Careers" ? "_blank" : "_self"}
+                className={`font-sans font-semibold text-blue-900 text-lg px-2 py-1 transition-colors duration-300 group-hover:text-yellow-500 
                 `}
               >
                 {item.label}
-                <span
-                 className="absolute left-1/2 bottom-0 w-0 h-[2px] bg-yellow-500 transition-all duration-300 group-hover:w-full group-hover:left-0"
-                ></span>
+                <span className="absolute left-1/2 bottom-0 w-0 h-[2px] bg-yellow-500 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
               </a>
             </li>
           ))}
@@ -81,14 +75,15 @@ function Header() {
           <img
             src="/100yearsLogo.png"
             alt="100 years"
-            className={`transition-all duration-300 ${
-              headerBg ? "w-28 h-12" : "w-32 h-14"
-            } object-contain`}
+            className={`transition-all duration-300 object-contain
+              w-24 h-10 md:w-28 md:h-12 lg:w-32 lg:h-14
+              ${headerBg ? "md:w-24 md:h-10 lg:w-28 lg:h-12" : ""}
+            `}
           />
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="md:hidden">
+        <div className="lg:hidden">
           {!menuOpen && (
             <FiMenu
               className="text-blue-900 text-3xl cursor-pointer"
@@ -112,7 +107,7 @@ function Header() {
               <li key={item.label}>
                 <a
                   href={item.href}
-                  target={item.label === 'Careers' ? '_blank' : '_self'}
+                  target={item.label === "Careers" ? "_blank" : "_self"}
                   className="hover:text-yellow-500 transition"
                   onClick={() => setMenuOpen(false)}
                 >

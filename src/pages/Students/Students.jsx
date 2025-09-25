@@ -149,6 +149,7 @@ const Students = () => {
                 src={card.image}
                 alt={card.title}
                 className="rounded-2xl shadow-md object-cover w-full h-[350px]"
+                loading="lazy"
               />
               {/* Floating Accent */}
               <div className="absolute -top-6 -left-6 w-24 h-24 bg-yellow-200/30 rounded-full blur-2xl animate-pulse"></div>
