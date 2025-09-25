@@ -6,6 +6,6 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [react(),tailwindcss(),],
   server: {
-    allowedHosts: ["worldschool.psginstitutions.in"]
+    allowedHosts: ["loacalhost", "worldschool.psginstitutions.in"]
   }
 })
