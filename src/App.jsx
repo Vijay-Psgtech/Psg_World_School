@@ -1,6 +1,7 @@
 import React, { Suspense, lazy, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Loader from "./components/Loader";
+import ScrolltoTop from "./components/ScrolltoTop";
 
 const Layout = lazy(() => import("./components/Layout"));
 const Index = lazy(() => import("./pages/Index"));
@@ -18,6 +19,7 @@ const GalleryAlbum = lazy(() => import("./pages/Gallery/GalleryAlbum"));
 function App() {
   return (
     <BrowserRouter>
+      <ScrolltoTop />
       <Suspense fallback={<Loader />}>
         <BacktoTop />
         <Routes>
