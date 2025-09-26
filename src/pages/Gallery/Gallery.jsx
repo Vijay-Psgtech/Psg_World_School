@@ -8,6 +8,7 @@ import img4 from "../../assets/images/campus/campus5.jpg";
 import img5 from "../../assets/images/campus/campus13.png";
 import img6 from "../../assets/images/campus/campus2.jpg";
 import img7 from "../../assets/images/campus/campus4.png";
+import { Link } from "react-router-dom";
 
 const Gallery = () => {
   return (
@@ -113,9 +114,12 @@ const Gallery = () => {
 
       {/* View all button */}
       <div className="mt-10 text-center">
-        <button className="px-6 py-3 bg-white border border-gray-300 rounded-lg shadow hover:shadow-md transition">
-          View All Photos
-        </button>
+        <Link to="/all-gallery">
+            <button className="px-6 py-3 bg-white border border-gray-300 rounded-lg shadow hover:shadow-md transition">
+              View All Photos
+            </button>
+        </Link>
+        
       </div>
     </section>
   );
