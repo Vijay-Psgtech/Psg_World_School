@@ -39,7 +39,7 @@ const AllGallery = ({ onSelectAlbum }) => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="relative z-10 text-4xl md:text-6xl font-['Playfair_Display'] font-bold tracking-tight text-white text-center drop-shadow-lg"
+          className="relative z-10 text-4xl md:text-6xl font-['Playfair_Display'] font-bold tracking-tight text-black text-center drop-shadow-lg"
         >
           Our <span className="text-yellow-400">Gallery</span>
           <div className="w-40 h-[3px] bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 mx-auto mt-6 rounded-full"></div>
@@ -49,20 +49,32 @@ const AllGallery = ({ onSelectAlbum }) => {
       {/* Album Collection */}
       <div className="max-w-6xl mx-auto px-6 py-16 grid gap-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
         {Object.entries(ImageData).map(([category, images], idx) => (
-          <Link to={`/gallery/${category}`}>
+          <Link to={`/gallery/${category}`} key={idx}>
             <motion.div
-              key={idx}
-              whileHover={{ scale: 1.05 }}
-              className="relative overflow-hidden shadow-lg cursor-pointer group"
+              whileHover={{ scale: 1.03, rotate: 1 }}
+              transition={{ type: "spring", stiffness: 200, damping: 15 }}
+              className="relative overflow-hidden rounded-2xl shadow-xl cursor-pointer group"
             >
+              {/* Album Cover */}
               <img
-                src={images[0]} // first image as album cover
+                src={images[0]} // first image as cover
                 alt={category}
                 className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/50 transition">
-                <p className="text-white text-2xl font-semibold">{category}</p>
+
+              {/* Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent flex flex-col justify-end p-6 transition group-hover:from-blue-900/80 group-hover:via-black/40">
+                {/* Album Title */}
+                <p className="text-white text-2xl font-bold tracking-wide">
+                  {category}
+                </p>
+                <span className="text-gray-200 text-sm mt-1">
+                  {images.length} Photos
+                </span>
               </div>
+
+              {/* Glow Border on Hover */}
+              <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-blue-500 transition duration-500"></div>
             </motion.div>
           </Link>
         ))}
