@@ -60,6 +60,7 @@ const AllGallery = ({ onSelectAlbum }) => {
                 src={images[0]} // first image as cover
                 alt={category}
                 className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                loading="lazy"
               />
 
               {/* Gradient Overlay */}

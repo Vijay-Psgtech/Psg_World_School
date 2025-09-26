@@ -74,6 +74,7 @@ const GalleryAlbum = () => {
                 src={img}
                 alt={`${albumName}-${i}`}
                 className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                loading="lazy"
               />
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center">
                 <p className="text-white font-medium tracking-wide">
