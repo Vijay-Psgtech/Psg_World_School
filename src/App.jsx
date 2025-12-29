@@ -12,8 +12,7 @@ const FacilitiesPage = lazy(() => import("./pages/Facilities/Facilities"));
 const Admission = lazy(() => import("./pages/Admission/Admission"));
 const Students = lazy(() => import("./pages/Students/Students"));
 const ContactUS = lazy(() => import("./pages/Contact/ContactUs"));
-const AllGallery = lazy(() => import("./pages/Gallery/AllGallery"));
-const GalleryAlbum = lazy(() => import("./pages/Gallery/GalleryAlbum"));
+
 
 
 function App() {
@@ -31,8 +30,6 @@ function App() {
             <Route path="/admissions" element={<Admission />} />
             <Route path="students-life" element={<Students />} />
             <Route path="/contact" element={<ContactUS />} />
-            <Route path="/all-gallery" element={<AllGallery />} />
-            <Route path="/gallery/:albumName" element={<GalleryAlbum />} />
           </Route>
         </Routes>
       </Suspense>

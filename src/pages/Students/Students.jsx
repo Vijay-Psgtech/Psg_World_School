@@ -11,8 +11,8 @@ import {
   Mountain,
 } from "lucide-react";
 import Image1 from "../../assets/images/campus/campus25.png";
-import Image2 from "../../assets/images/campus/campus26.png";
-import Image3 from "../../assets/images/building3.png";
+import Image2 from "../../assets/images/students/cp.jfif";
+import Image3 from "../../assets/images/campus/sports and welness.png";
 
 const cardData = [
   {
