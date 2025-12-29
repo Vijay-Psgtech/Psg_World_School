@@ -66,6 +66,25 @@ const Footer = () => {
               <FaFacebookF size={18} />
             </a>
           </div>
+          <div>
+            <h3 className="text-xl font-semibold text-gold mt-8 mb-4">
+              Quick Links
+            </h3>
+            <ul className="space-y-2 text-gray-300">
+              <li>
+                <a href="/admissions" className="hover:underline hover:text-yellow-400">Admissions</a>
+              </li>
+              <li>
+                <a href="/academics" className="hover:underline hover:text-yellow-400">Academics</a>
+              </li>
+              <li>
+                <a href="/facilities" className="hover:underline hover:text-yellow-400">Facilities</a>
+              </li>
+              <li>
+                <a href="/contact" className="hover:underline hover:text-yellow-400">Contact</a>
+              </li>
+            </ul>
+          </div>
         </div>
 
         {/* Accreditation Logos */}
