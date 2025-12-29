@@ -17,11 +17,12 @@ import "aos/dist/aos.css";
 
 // Images
 import AboutBanner from "../../assets/images/campus/campus11.png";
-import ClassRoom1 from "../../assets/images/campus/campus12.png";
-import ClassRoom2 from "../../assets/images/campus/campus13.png";
-import ClassRoom3 from "../../assets/images/campus/campus17.png";
-import ClassRoom4 from "../../assets/images/campus/campus18.png";
-import ClassRoom5 from "../../assets/images/campus/campus16.png";
+import LearningSpaces from "../../assets/images/campus/learning spaces 2.png";
+import InnovationLab from "../../assets/images/campus/innovation lab.png";
+import ArtandCulture from "../../assets/images/campus/art and culture 3.png";
+import SportsandWelness from "../../assets/images/campus/sports and welness.png";
+import LibraryResearch from "../../assets/images/campus/library and research hub 3.png";
+import Campus from "../../assets/images/campus/campus16.png";
 
 // Reusable Heading
 const SectionHeading = ({ first, second, center, light }) => (
@@ -50,37 +51,37 @@ const FacilitiesPage = () => {
       icon: <Palette className="w-10 h-10 text-pink-500" />,
       title: "Learning Spaces",
       desc: "Smart classrooms, flexible learning zones, and IB studios designed for inquiry.",
-      images: [ClassRoom3, ClassRoom1, ClassRoom2, ClassRoom4],
+      images: [LearningSpaces, LearningSpaces, LearningSpaces, LearningSpaces],
     },
     {
       icon: <FlaskConical className="w-10 h-10 text-green-500" />,
       title: "Innovation Labs",
       desc: "Robotics, AI, 3D printing, design thinking, and sustainability projects.",
-      images: [ClassRoom2, ClassRoom5, ClassRoom3, ClassRoom4],
+      images: [InnovationLab, InnovationLab, InnovationLab, InnovationLab],
     },
     {
       icon: <Music className="w-10 h-10 text-indigo-500" />,
       title: "Arts & Culture",
       desc: "Performing arts theatre, music and dance studios, visual arts atelier.",
-      images: [ClassRoom1, ClassRoom2, ClassRoom3, ClassRoom5],
+      images: [ArtandCulture, ArtandCulture, ArtandCulture, ArtandCulture],
     },
     {
       icon: <Dumbbell className="w-10 h-10 text-orange-500" />,
       title: "Sports & Wellness",
       desc: "Olympic-sized swimming pool, multi-sport grounds, indoor arenas, yoga and mindfulness programs.",
-      images: [ClassRoom4, ClassRoom1, ClassRoom3, ClassRoom2],
+      images: [SportsandWelness, SportsandWelness, SportsandWelness, SportsandWelness],
     },
     {
       icon: <Library className="w-10 h-10 text-yellow-600" />,
       title: "Library & Research Hub",
       desc: "Print, digital, and global resources integrated with IB learner projects.",
-      images: [ClassRoom5, ClassRoom2, ClassRoom1, ClassRoom3],
+      images: [LibraryResearch, LibraryResearch, LibraryResearch, LibraryResearch],
     },
     {
       icon: <Leaf className="w-10 h-10 text-emerald-600" />,
       title: "Sustainability Campus",
       desc: "Eco-conscious architecture, green zones, waste-to-energy initiatives.",
-      images: [ClassRoom3, ClassRoom4, ClassRoom5, ClassRoom1],
+      images: [Campus, Campus, Campus, Campus],
     },
   ];
 

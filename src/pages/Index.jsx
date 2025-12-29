@@ -8,7 +8,6 @@ import StudentLife from "./Students/StudentLife";
 import AdmissionProcess from "./Admission/AdmissionProcess";
 import WhatsappIcon from "../components/WhatsppIcon";
 import ChatBot from "../components/ChatBot";
-import Gallery from "./Gallery/Gallery";
 
 
 const Index = () => {
@@ -23,7 +22,6 @@ const Index = () => {
       <AdmissionProcess />
       <WhatsappIcon />
       <ChatBot />
-      <Gallery />
     </div>
   );
 };

@@ -1,6 +1,7 @@
-import React, { Suspense, lazy } from "react";
+import React, { Suspense, lazy, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Loader from "./components/Loader";
+import ScrolltoTop from "./components/ScrolltoTop";
 
 const Layout = lazy(() => import("./components/Layout"));
 const Index = lazy(() => import("./pages/Index"));
@@ -12,19 +13,12 @@ const Admission = lazy(() => import("./pages/Admission/Admission"));
 const Students = lazy(() => import("./pages/Students/Students"));
 const ContactUS = lazy(() => import("./pages/Contact/ContactUs"));
 
-/*import Layout from "./components/Layout";
-import Index from "./pages/Index";
-import BacktoTop from "./components/BacktoTop";
-import About from "./pages/About/About";
-import Academics from "./pages/Academics/Academics";
-import FacilitiesPage from "./pages/Facilities/Facilities";
-import Admission from "./pages/Admission/Admission";
-import Students from "./pages/Students/Students";
-import ContactUS from "./pages/Contact/ContactUs";*/
+
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrolltoTop />
       <Suspense fallback={<Loader />}>
         <BacktoTop />
         <Routes>

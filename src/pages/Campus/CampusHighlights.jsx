@@ -1,43 +1,43 @@
 import React, { useRef } from "react";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { motion } from "framer-motion";
-import Campus1 from "../../assets/images/campus/campus21.png";
-import Campus2 from "../../assets/images/campus/campus20.png";
-import Campus3 from "../../assets/images/campus/campus22.png";
-import Campus4 from "../../assets/images/campus/campus23.jpg";
-import Campus5 from "../../assets/images/campus/campus5.jpg";
-import Campus6 from "../../assets/images/campus/campus16.png"
+import LearningSpaces from "../../assets/images/campus/learning spaces 1.jfif";
+import InnovationLab from "../../assets/images/campus/innovation lab.jfif";
+import ArtsandCulture from "../../assets/images/campus/art and cuture 1.jfif";
+import SportsandWelness from "../../assets/images/campus/sports and welness.png";
+import LibraryandResearch from "../../assets/images/campus/library and resarch hub.jpg";
+import Campus from "../../assets/images/campus/campus16.png"
 import { Typewriter } from "react-simple-typewriter";
 
 const highlights = [
   {
     title: "Learning Spaces",
-    img: Campus1,
+    img: LearningSpaces,
     desc: "Smart classrooms, flexible learning zones, and IB studios designed for inquiry.",
   },
   {
     title: "Innovation Labs",
-    img: Campus2,
+    img: InnovationLab,
     desc: "Robotics, AI, 3D printing, design thinking, and sustainability projects.",
   },
   {
     title: "Arts & Culture",
-    img: Campus3,
+    img: ArtsandCulture,
     desc: "Performing arts theatre, music and dance studios, visual arts atelier.",
   },
   {
     title: "Sports & Wellness",
-    img: Campus4,
+    img: SportsandWelness,
     desc: "Olympic-sized swimming pool, multi-sport grounds, indoor arenas, yoga and mindfulness programs.",
   },
   {
     title: "Library & Research Hub",
-    img: Campus5,
+    img: LibraryandResearch,
     desc: "Print, digital, and global resources integrated with IB learner projects.",
   },
   {
     title: "Sustainability Campus",
-    img: Campus6,
+    img: Campus,
     desc: "Eco-conscious architecture, green zones, waste-to-energy initiatives.",
   },
 ];

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import pypImg from "../../assets/images/students/pyp.png";
+import pypImg from "../../assets/images/students/pyp.jfif";
 import mypImg from "../../assets/images/students/myp.png";
-import dpImg from "../../assets/images/students/dp.webp";
-import cpImg from "../../assets/images/students/cp.webp";
+import dpImg from "../../assets/images/students/dp.jfif";
+import cpImg from "../../assets/images/students/cp.jfif";
 import { motion } from "framer-motion";
 import { Plus, X } from "lucide-react";
 import { Typewriter } from "react-simple-typewriter";
