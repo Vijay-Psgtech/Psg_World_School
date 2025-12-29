@@ -18,6 +18,11 @@ import "aos/dist/aos.css";
 
 import AboutBanner from "../../assets/images/a2.png";
 import STU from "../../assets/images/ap3.png";
+import { i } from "framer-motion/client";
+import pypImg from "../../assets/images/students/pyp.jfif";
+import mypImg from "../../assets/images/students/myp.png";
+import dpImg from "../../assets/images/students/dp.jfif";
+import cpImg from "../../assets/images/students/cp.jfif";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -154,18 +159,25 @@ export default function Academics() {
             {
               title: "Primary Years Programme (PYP)",
               desc: "Nurturing inquiry, creativity, and confidence in young learners (Ages 3–12).",
+              images: pypImg,
             },
             {
               title: "Middle Years Programme (MYP)",
               desc: "Developing analytical skills, intercultural understanding, and personal responsibility (Ages 11–16).",
+              images: mypImg,
+
             },
             {
               title: "Diploma Programme (DP)",
               desc: "A globally recognized, rigorous curriculum preparing learners for top universities (Ages 16–19).",
+              images: dpImg,
+
             },
             {
               title: "Career-related Programme (CP)",
               desc: "Blending academics with career pathways, empowering ethical and innovative leaders (Ages 16–19).",
+              images: cpImg,
+
             },
           ].map((p, i) => (
             <motion.div
@@ -173,16 +185,18 @@ export default function Academics() {
               variants={fadeInUp}
               data-aos="zoom-in-up"
               whileHover={{ scale: 1.05 }}
-              className="relative group p-8 rounded-2xl shadow-lg border border-yellow-400/40 bg-white/70 backdrop-blur-md transition-all duration-300 hover:shadow-2xl hover:border-yellow-500"
-            >
-              {/* Icon placeholder circle */}
-              <div className="w-14 h-14 flex items-center justify-center rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 text-white font-bold text-xl shadow-md mb-5 group-hover:scale-110 transition">
-                {i + 1}
-              </div>
-              <h3 className="text-lg font-bold text-[#0a1a3f] mb-3">
+              className="relative group p-6 rounded-2xl shadow-lg border border-yellow-400/40 bg-white/70 backdrop-blur-md transition-all duration-300 hover:shadow-2xl hover:border-yellow-500"
+            > 
+              <img
+                src={p.images}
+                alt={p.title}
+                className="w-full h-40 object-cover rounded-lg mb-4"
+                loading="lazy"
+              />
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">
                 {p.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed">{p.desc}</p>
+              <p className="text-gray-700 leading-relaxed">{p.desc}</p>
             </motion.div>
           ))}  
         </div>
