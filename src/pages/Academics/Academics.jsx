@@ -19,7 +19,8 @@ import "aos/dist/aos.css";
 import AboutBanner from "../../assets/images/a2.png";
 import STU from "../../assets/images/ap3.png";
 import { i } from "framer-motion/client";
-import pypImg from "../../assets/images/students/pyp.jfif";
+import eypImg from "../../assets/images/students/eyp.jfif";
+import pypImg from "../../assets/images/students/pyp.png";
 import mypImg from "../../assets/images/students/myp.png";
 import dpImg from "../../assets/images/students/dp.jfif";
 import cpImg from "../../assets/images/students/cp.jfif";
@@ -154,28 +155,33 @@ export default function Academics() {
         </div>
 
         {/* Cards */}
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-4 md:grid-cols-2 gap-8">
+        <div className="max-w-full mx-auto grid lg:grid-cols-5 md:grid-cols-2 gap-8">
           {[
             {
+              title: "Early Years (EYP)",
+              desc: "Our Early Years learning environment supports young learners through play-based and inquiry led experiences that promote social, emotional, physical, and cognitive development. The programme fosters curiosity, independence, and a love for learning in a safe and supportive setting.",
+              images: eypImg,
+            },
+            {
               title: "Primary Years Programme (PYP)",
-              desc: "Nurturing inquiry, creativity, and confidence in young learners (Ages 3–12).",
+              desc: "The IB Primary Years Programme (PYP) is designed for students aged 3–12 years and focuses on the development of the whole child. Learning is structured around inquiry, conceptual understanding, and transdisciplinary themes, enabling students to make connections between learning and real-life contexts.",
               images: pypImg,
             },
             {
               title: "Middle Years Programme (MYP)",
-              desc: "Developing analytical skills, intercultural understanding, and personal responsibility (Ages 11–16).",
+              desc: "The International Baccalaureate (IB) Middle Years Programme (MYP) is designed for students aged 11–16 years. It provides a challenging and balanced education that encourages students to make practical connections between their studies and the real world. The MYP supports students in developing intellectual discipline, personal responsibility, and a strong sense of identity during a critical stage of adolescence.",
               images: mypImg,
 
             },
             {
               title: "Diploma Programme (DP)",
-              desc: "A globally recognized, rigorous curriculum preparing learners for top universities (Ages 16–19).",
+              desc: "The IB Diploma Programme (DP) is a two-year pre-university programme designed for students aged 16–19 years. It aims to develop students who have excellent breadth and depth of knowledge, alongside strong critical thinking and reflective skills. The DP provides a rigorous academic framework while supporting students’ intellectual, personal, emotional, and social development.",
               images: dpImg,
 
             },
             {
               title: "Career-related Programme (CP)",
-              desc: "Blending academics with career pathways, empowering ethical and innovative leaders (Ages 16–19).",
+              desc: "The IB Career-related Programme (CP) is designed for students aged 16–19 years who wish to engage in career-related learning alongside academic studies. The CP supports students in developing transferable skills needed for further education, training, and employment. The CP enables students to develop confidence, responsibility, and an understanding of ethical and global perspectives related to their chosen pathways.",
               images: cpImg,
 
             },
@@ -196,7 +202,7 @@ export default function Academics() {
               <h3 className="text-xl font-semibold text-gray-800 mb-2">
                 {p.title}
               </h3>
-              <p className="text-gray-700 leading-relaxed">{p.desc}</p>
+              <p className="text-gray-700 leading-relaxed text-sm md:text-base overflow-y-auto max-h-[200px] pr-2 no-scrollbar scrollbar-thin scrollbar-thumb-gray-400/60 scrollbar-track-transparent">{p.desc}</p>
             </motion.div>
           ))}  
         </div>
