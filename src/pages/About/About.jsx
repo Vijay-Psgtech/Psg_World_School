@@ -9,55 +9,58 @@ import {
 } from "react-icons/fa";
 import AboutBanner from "../../assets/images/campus/campus16.png";
 import AboutBanner2 from "../../assets/images/campus/campus18.png";
+import CommunityImage from "../../assets/images/pyp3.png";
 
-// Animation Variants
+/* ---------------- Animations ---------------- */
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
-  show: (i) => ({
+  show: (i = 0) => ({
     opacity: 1,
     y: 0,
     transition: { delay: i * 0.15, duration: 0.7, ease: "easeOut" },
   }),
 };
+
 const containerStagger = {
   hidden: {},
   show: { transition: { staggerChildren: 0.25 } },
 };
 
 const About = () => {
-  const text = `"Empowering Young Minds to Lead with Purpose in a Global Future.`;
+  const text = `"Empowering Young Minds to Lead with Purpose in a Global Future".`;
+  const [ibStatus, setIbStatus] = React.useState("AUTHORIZED");
   const [displayedText, setDisplayedText] = useState("");
   const [index, setIndex] = useState(0);
 
   const features = [
     {
       icon: <FaUniversity />,
-      text: "Global Recognition – Part of the world’s most respected IB network, trusted by universities worldwide.",
+      text: "Education aligned with IB standards and practices.",
       color: "from-yellow-400 to-orange-500",
     },
     {
       icon: <FaGlobe />,
-      text: "Academic Excellence – A full IB continuum: PYP, MYP, DP, and CP",
+      text: "Focus on holistic development and learner agency.",
       color: "from-blue-400 to-indigo-500",
     },
     {
       icon: <FaBookOpen />,
-      text: "State-of-the-Art Campus – Designed for inquiry, innovation, arts, sports, and holistic well-being.",
+      text: "Inclusive, safe, and supportive learning environment.",
       color: "from-green-400 to-emerald-500",
     },
     {
       icon: <FaSchool />,
-      text: "Focus on research, entrepreneurship, leadership, and digital innovation.",
+      text: "Emphasis on values, reflection, and global understanding.",
       color: "from-pink-400 to-rose-500",
     },
     {
       icon: <FaLightbulb />,
-      text: "Rooted in PSG’s legacy of service and social responsibility.",
+      text: "Backed by the legacy and educational excellence of the PSG Trust.",
       color: "from-purple-400 to-fuchsia-500",
     },
   ];
 
-  // Typewriter Effect
+  /* ---------------- Typewriter ---------------- */
   useEffect(() => {
     if (index < text.length) {
       const timeout = setTimeout(() => {
@@ -70,15 +73,13 @@ const About = () => {
 
   return (
     <div className="w-full font-sans text-gray-900 bg-white">
-      {/* Parallax Hero with About Us */}
+      {/* Hero */}
       <section
         className="relative h-[85vh] flex items-center justify-center bg-fixed bg-cover bg-center"
         style={{ backgroundImage: `url(${AboutBanner})` }}
       >
-        {/* Overlay */}
         <div className="absolute inset-0 bg-black/30"></div>
 
-        {/* Content */}
         <div className="relative z-10 text-center px-6">
           <h1 className="text-4xl md:text-6xl font-['Playfair_Display'] font-bold tracking-tight drop-shadow-lg">
             <span className="text-black">About</span>{" "}
@@ -90,7 +91,6 @@ const About = () => {
           <div className="w-28 h-[3px] bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-600 mx-auto mt-6 rounded-full"></div>
         </div>
       </section>
-
       {/* Our Story */}
       <motion.section
         variants={fadeInUp}
@@ -115,8 +115,7 @@ const About = () => {
             </p>
           </div>
 
-          {/* Typewriter Card */}
-          <div className="bg-amber-200 shadow-lg rounded-2xl border border-[#f2e7d7] p-6 relative">
+          <div className="bg-amber-200 shadow-lg rounded-2xl border border-[#f2e7d7] p-6">
             <motion.p className="text-blue-950 italic leading-relaxed text-lg sm:text-xl">
               {displayedText}
               <span className="animate-pulse text-blue-900">|</span>
@@ -124,7 +123,6 @@ const About = () => {
           </div>
         </div>
       </motion.section>
-
       {/* Vision */}
       <motion.section
         variants={containerStagger}
@@ -181,7 +179,6 @@ const About = () => {
           </motion.div>
         </div>
       </motion.section>
-
       {/* Mission */}
       <motion.section
         variants={containerStagger}
@@ -238,12 +235,12 @@ const About = () => {
             <div className="md:ml-auto w-20 h-[3px] bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-600"></div>
             <p className="text-gray-600 text-lg leading-relaxed md:ml-auto md:max-w-md">
               PSG IB World School commits to academic rigor balanced with
-              compassion, creativity, and intercultural understanding, and personal growth.
+              compassion, creativity, and intercultural understanding, and
+              personal growth.
             </p>
           </div>
         </div>
       </motion.section>
-
       {/* Motto (Parallax) */}
       <section
         className="relative h-[60vh] flex items-center justify-center bg-fixed bg-cover bg-center"
@@ -265,7 +262,242 @@ const About = () => {
           </p>
         </div>
       </section>
+      {/* Community of Learners */}
+      <motion.section
+        variants={containerStagger}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        className="py-20 px-6 bg-white"
+      >
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
+          {/* Left Image Placeholder */}
+          <motion.div
+            variants={fadeInUp}
+            className="w-full h-[460px]  overflow-hidden rounded-2xl shadow-lg"
+          >
+            <img
+              src={CommunityImage}
+              alt="PSG World School Campus"
+              className="w-full h-full object-cover"
+            />
+          </motion.div>
 
+          {/* Right Content */}
+          <motion.div variants={fadeInUp} className="space-y-12">
+            <h2 className="text-4xl font-['Playfair_Display'] font-bold">
+              A Community of <span className="text-yellow-500">Learners</span>{" "}
+              with a Global Perspective
+            </h2>
+            <div className="w-20 h-[3px] bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-600"></div>
+            <p className="text-lg text-gray-900 leading-relaxed text-justify">
+              PSG World School is committed to delivering a high-quality
+              international education guided by the principles of the
+              International Baccalaureate (IB). Our school aims to develop
+              students who are inquisitive, knowledgeable, and caring, and who
+              are prepared to contribute positively to a complex and
+              interconnected world.
+            </p>
+          </motion.div>
+        </div>
+      </motion.section>
+  
+      <section className="relative py-28 px-6 bg-gradient-to-br from-white via-white to-[#fafafa] border-t overflow-hidden">
+        {/* Animated Decorative Background */}
+        <motion.div
+          animate={{ y: [0, -20, 0] }}
+          transition={{ repeat: Infinity, duration: 10 }}
+          className="absolute -top-32 -left-32 w-96 h-96 bg-yellow-300/30 rounded-full blur-3xl"
+        />
+        <motion.div
+          animate={{ y: [0, 20, 0] }}
+          transition={{ repeat: Infinity, duration: 12 }}
+          className="absolute bottom-0 -right-32 w-[500px] h-[500px] bg-green-300/20 rounded-full blur-3xl"
+        />
+
+        <div className="relative max-w-7xl mx-auto">
+          {/* Heading */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-['Playfair_Display'] font-bold text-gray-900">
+              International Baccalaureate{" "}
+              <span className="text-yellow-500">School Status</span>
+            </h2>
+            <div className="w-28 h-[3px] bg-gradient-to-r from-yellow-500 to-yellow-600 mx-auto mt-6 rounded-full" />
+          </motion.div>
+
+          {/* Toggle Buttons */}
+          <div className="flex justify-center gap-6 mb-20">
+            <button
+              onClick={() => setIbStatus("AUTHORIZED")}
+              className={`px-8 py-3 rounded-full font-semibold transition-all duration-300 ${
+                ibStatus === "AUTHORIZED"
+                  ? "bg-yellow-300 text-black shadow-xl scale-105"
+                  : "bg-white text-green-700 border border-green-200 hover:bg-green-50"
+              }`}
+            >
+              ✔ Authorized School
+            </button>
+
+            <button
+              onClick={() => setIbStatus("CANDIDATE")}
+              className={`px-8 py-3 rounded-full font-semibold transition-all duration-300 ${
+                ibStatus === "CANDIDATE"
+                  ? "bg-yellow-300 text-black shadow-xl scale-105"
+                  : "bg-white text-yellow-800 border border-yellow-200 hover:bg-yellow-50"
+              }`}
+            >
+              ⏳ Candidate School
+            </button>
+          </div>
+
+          {/* Content */}
+          <motion.div
+            key={ibStatus}
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="grid lg:grid-cols-2 gap-14 items-center"
+          >
+            {/* Left Content */}
+            {ibStatus === "AUTHORIZED" ? (
+              <div className="bg-white/80 backdrop-blur-xl border border-green-200 rounded-3xl p-12 shadow-2xl">
+                <span className="inline-block mb-6 px-5 py-2 text-sm font-semibold text-green-700 bg-green-100 rounded-full">
+                  Option A – IB Authorized School
+                </span>
+
+                <p className="text-lg text-gray-800 leading-relaxed">
+                  PSG World School is an IB World School authorized to offer the
+                  Primary Years Programme (PYP).
+                </p>
+
+                <p className="mt-4 text-lg text-gray-700 leading-relaxed">
+                  IB World Schools share a common philosophy — a commitment to
+                  high-quality, challenging, international education.
+                </p>
+
+                <div className="mt-10 grid md:grid-cols-3 gap-6">
+                  {[
+                    {
+                      title: "Status",
+                      text: "Fully recognized and accredited by the IB",
+                    },
+                    {
+                      title: "Activities",
+                      text: "Delivers authorized IB programmes",
+                    },
+                    {
+                      title: "Key Point",
+                      text: "Reviewed every 4–5 years by IB",
+                    },
+                  ].map((item, i) => (
+                    <div
+                      key={i}
+                      className="bg-white rounded-2xl p-6 border border-green-100 shadow-md hover:shadow-xl transition"
+                    >
+                      <h4 className="font-semibold mb-2">{item.title}</h4>
+                      <p className="text-gray-700">{item.text}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <div className="bg-white/80 backdrop-blur-xl border border-yellow-200 rounded-3xl p-12 shadow-2xl">
+                <span className="inline-block mb-6 px-5 py-2 text-sm font-semibold text-yellow-800 bg-yellow-100 rounded-full">
+                  Option B – IB Candidate School
+                </span>
+
+                <p className="text-lg text-gray-800 leading-relaxed">
+                  PSG World School is a candidate school for the International
+                  Baccalaureate (IB) Primary Years Programme (PYP).
+                </p>
+
+                <p className="mt-4 text-lg text-gray-700 leading-relaxed">
+                  The school is pursuing authorization as an IB World School.
+                  Candidate status does not guarantee authorization.
+                </p>
+
+                <div className="mt-10 grid md:grid-cols-3 gap-6">
+                  {[
+                    {
+                      title: "Status",
+                      text: "In transition; pursuing authorization",
+                    },
+                    {
+                      title: "Activities",
+                      text: "Curriculum alignment, staff training, IB readiness",
+                    },
+                    {
+                      title: "Key Point",
+                      text: "Not yet authorized to teach full IB programmes",
+                    },
+                  ].map((item, i) => (
+                    <div
+                      key={i}
+                      className="bg-white rounded-2xl p-6 border border-yellow-100 shadow-md hover:shadow-xl transition"
+                    >
+                      <h4 className="font-semibold mb-2">{item.title}</h4>
+                      <p className="text-gray-700">{item.text}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Right Visual */}
+            <motion.div
+              animate={{ y: [0, -14, 0] }}
+              transition={{ repeat: Infinity, duration: 7, ease: "easeInOut" }}
+              className="relative h-[420px] rounded-3xl overflow-hidden shadow-2xl border border-white"
+            >
+              {/* Background Image */}
+              <img
+                src={
+                  ibStatus === "AUTHORIZED"
+                    ? "/src/assets/images/banner/b2.png" // ← replace with your real image path
+                    : "/src/assets/images/banner/b1.png" // ← replace with your real image path
+                }
+                alt="IB School Status"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+
+              <div className="absolute inset-0 bg-black/40" />
+
+              <div className="relative z-10 h-full flex items-center justify-center p-10">
+                {/* <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-8 text-center shadow-xl max-w-sm">
+                  <h3 className="text-2xl font-semibold text-gray-900 mb-2">
+                    {ibStatus === "AUTHORIZED"
+                      ? "IB World School"
+                      : "IB Candidate School"}
+                  </h3>
+                  <p className="text-gray-700 text-sm leading-relaxed">
+                    {ibStatus === "AUTHORIZED"
+                      ? "Authorized to deliver the International Baccalaureate Primary Years Programme."
+                      : "Progressing towards IB authorization through curriculum alignment and staff development."}
+                  </p>
+                </div> */}
+              </div>
+
+              <div
+                className={`absolute top-0 left-0 h-1 w-full ${
+                  ibStatus === "AUTHORIZED" ? "bg-green-500" : "bg-yellow-500"
+                }`}
+              />
+            </motion.div>
+          </motion.div>
+
+          {/* Disclaimer */}
+          <p className="mt-20 text-sm text-gray-500 italic text-center">
+            International Baccalaureate® and IB® are registered trademarks of
+            the International Baccalaureate Organization.
+          </p>
+        </div>
+      </section>
       {/* Why Choose Us */}
       <motion.section
         variants={containerStagger}
