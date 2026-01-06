@@ -17,7 +17,7 @@ const Why = () => {
           <p className="text-sm font-semibold text-yellow-400 tracking-wide">
             WHY CHOOSE US
           </p>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-blue-900 mt-3 leading-snug drop-shadow-sm">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-blue-900 mt-3 leading-snug drop-shadow-sm">
             Why PSG World School?
           </h2>
           <p className="mt-4 text-gray-700 max-w-xl">

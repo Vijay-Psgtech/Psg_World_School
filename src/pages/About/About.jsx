@@ -32,27 +32,27 @@ const About = () => {
   const features = [
     {
       icon: <FaUniversity />,
-      text: "Global Recognition – Part of the world’s most respected IB network, trusted by universities worldwide.",
+      text: "Education aligned with IB standards and practices.",
       color: "from-yellow-400 to-orange-500",
     },
     {
       icon: <FaGlobe />,
-      text: "Academic Excellence – A full IB continuum: PYP, MYP, DP, and CP",
+      text: "Focus on holistic development and learner agency.",
       color: "from-blue-400 to-indigo-500",
     },
     {
       icon: <FaBookOpen />,
-      text: "State-of-the-Art Campus – Designed for inquiry, innovation, arts, sports, and holistic well-being.",
+      text: "Inclusive, safe, and supportive learning environment.",
       color: "from-green-400 to-emerald-500",
     },
     {
       icon: <FaSchool />,
-      text: "Focus on research, entrepreneurship, leadership, and digital innovation.",
+      text: "Emphasis on values, reflection, and global understanding.",
       color: "from-pink-400 to-rose-500",
     },
     {
       icon: <FaLightbulb />,
-      text: "Rooted in PSG’s legacy of service and social responsibility.",
+      text: "Backed by the legacy and educational excellence of the PSG Trust.",
       color: "from-purple-400 to-fuchsia-500",
     },
   ];
