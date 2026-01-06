@@ -18,12 +18,12 @@ import "aos/dist/aos.css";
 
 import AboutBanner from "../../assets/images/a2.png";
 import STU from "../../assets/images/ap3.png";
-import { i } from "framer-motion/client";
 import eypImg from "../../assets/images/students/eyp.jfif";
 import pypImg from "../../assets/images/students/pyp.png";
 import mypImg from "../../assets/images/students/myp.png";
 import dpImg from "../../assets/images/students/dp.jfif";
 import cpImg from "../../assets/images/students/cp.jfif";
+import IBImage from "../../assets/images/campus/library and research hub 2.png";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -93,7 +93,7 @@ export default function Academics() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.5 }}
-          src={AboutBanner}   
+          src={AboutBanner}
           alt="Academics Banner"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -131,7 +131,7 @@ export default function Academics() {
       </motion.section>
 
       {/* IB Continuum */}
-      <motion.section
+       <motion.section
         variants={fadeInUp}
         initial="hidden"
         whileInView="show"
@@ -210,6 +210,63 @@ export default function Academics() {
         {/* Decorative Background Glow */}
         <div className="absolute top-0 left-0 w-72 h-72 bg-yellow-200/30 rounded-full blur-3xl -z-10"></div>
         <div className="absolute bottom-0 right-0 w-72 h-72 bg-blue-200/30 rounded-full blur-3xl -z-10"></div>
+      </motion.section>
+
+      {/* IB Philosophy */}
+      <motion.section
+        variants={fadeInUp}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        className="py-25 px-12 bg-gradient-to-br from-white via-[#fdfbf7] to-[#faf7f0]"
+      >
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-21 items-center">
+          {/* Left Content */}
+          <div className="space-y-8">
+            <h2 className="text-4xl md:text-5xl font-['Playfair_Display'] font-bold">
+              <span className="text-black">International</span>{" "}
+              <span className="text-yellow-500">Baccalaureate</span>{" "}
+              <span className="text-black">Philosophy</span>
+            </h2>
+
+            <div className="w-20 h-[3px] bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-600"></div>
+
+            <p className="text-lg text-gray-700 leading-relaxed text-justify">
+              The International Baccalaureate (IB) is an internationally
+              recognized educational foundation that develops students who are
+              motivated to learn, think critically, and act with integrity. IB
+              programmes encourage learners to understand multiple perspectives,
+              respect cultural diversity, and take responsibility for their own
+              learning.
+            </p>
+
+            <p className="text-lg text-gray-900 leading-relaxed text-text-center">
+              At PSG World School, our educational practices are aligned with
+              the IB philosophy, emphasizing inquiry, reflection, and meaningful
+              learning experiences that prepare students for a complex and
+              interconnected world.
+            </p>
+          </div>
+
+          {/* Right Highlight Card */}
+          <motion.div
+            variants={fadeInUp}
+            className="relative p-2 rounded-2xl shadow-lg bg-gradient-to-r from-white via-[#fff9f0] to-[#f6d365] border border-[#f2e7d7] overflow-hidden"
+          >
+            {/* Decorative triangle (optional – remove if not needed) */}
+            <div className="absolute -left-12 top-6 w-0 h-0 border-t-[4px] border-t-transparent border-r-[40px] border-r-[#f6d365] border-b-[40px] border-b-transparent z-10" />
+
+            {/* Image */}
+            <img
+              src={IBImage} // replace with your preferred image
+              alt="International Baccalaureate Philosophy"
+              className="w-full h-[420px] md:h-[420px] object-cover rounded-x2"
+            />
+
+            {/* Optional overlay (remove if not needed) */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl" />
+          </motion.div>
+        </div>
       </motion.section>
 
       {/* Academic Outcomes with Parallax */}
