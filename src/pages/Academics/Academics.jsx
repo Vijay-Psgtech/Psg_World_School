@@ -12,6 +12,12 @@ import {
   Dumbbell,
   Lightbulb,
   Users,
+  BookOpen,
+  Target,
+  Brain,
+  MessageSquare,
+  TrendingUp,
+  Award,
 } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -33,6 +39,11 @@ const fadeInUp = {
 const staggerContainer = {
   hidden: {},
   show: { transition: { staggerChildren: 0.2 } },
+};
+
+const scaleIn = {
+  hidden: { opacity: 0, scale: 0.8 },
+  show: { opacity: 1, scale: 1, transition: { duration: 0.6 } },
 };
 
 export default function Academics() {
@@ -68,6 +79,45 @@ export default function Academics() {
       id: 3,
       icon: <Sparkles className="w-8 h-8 text-yellow-400" />,
       text: "PSG graduates as innovators, entrepreneurs, researchers, and change-makers.",
+    },
+  ];
+
+  const teachingPractices = [
+    {
+      icon: BookOpen,
+      title: "Inquiry-based and student-centred learning",
+      description:
+        "Empowering students to explore, question, and discover knowledge through guided inquiry.",
+    },
+    {
+      icon: Target,
+      title: "Concept-driven curriculum design",
+      description:
+        "Building deep understanding through interconnected concepts that transcend subject boundaries.",
+    },
+    {
+      icon: Brain,
+      title: "Development of Approaches to Learning (ATL) skills",
+      description:
+        "Cultivating thinking, communication, social, self-management, and research skills.",
+    },
+    {
+      icon: TrendingUp,
+      title: "Ongoing assessment to inform learning",
+      description:
+        "Using continuous feedback and assessment to support student growth and personalized learning paths.",
+    },
+    {
+      icon: MessageSquare,
+      title: "Reflection and student voice",
+      description:
+        "Encouraging metacognition and ensuring students have an active role in their learning journey.",
+    },
+    {
+      icon: Award,
+      title: "Continuous professional development",
+      description:
+        "Ensuring educators stay aligned with IB standards through ongoing training and best practices.",
     },
   ];
 
@@ -131,7 +181,7 @@ export default function Academics() {
       </motion.section>
 
       {/* IB Continuum */}
-       <motion.section
+      <motion.section
         variants={fadeInUp}
         initial="hidden"
         whileInView="show"
@@ -171,19 +221,16 @@ export default function Academics() {
               title: "Middle Years Programme (MYP)",
               desc: "The International Baccalaureate (IB) Middle Years Programme (MYP) is designed for students aged 11–16 years. It provides a challenging and balanced education that encourages students to make practical connections between their studies and the real world. The MYP supports students in developing intellectual discipline, personal responsibility, and a strong sense of identity during a critical stage of adolescence.",
               images: mypImg,
-
             },
             {
               title: "Diploma Programme (DP)",
               desc: "The IB Diploma Programme (DP) is a two-year pre-university programme designed for students aged 16–19 years. It aims to develop students who have excellent breadth and depth of knowledge, alongside strong critical thinking and reflective skills. The DP provides a rigorous academic framework while supporting students’ intellectual, personal, emotional, and social development.",
               images: dpImg,
-
             },
             {
               title: "Career-related Programme (CP)",
               desc: "The IB Career-related Programme (CP) is designed for students aged 16–19 years who wish to engage in career-related learning alongside academic studies. The CP supports students in developing transferable skills needed for further education, training, and employment. The CP enables students to develop confidence, responsibility, and an understanding of ethical and global perspectives related to their chosen pathways.",
               images: cpImg,
-
             },
           ].map((p, i) => (
             <motion.div
@@ -192,7 +239,7 @@ export default function Academics() {
               data-aos="zoom-in-up"
               whileHover={{ scale: 1.05 }}
               className="relative group p-6 rounded-2xl shadow-lg border border-yellow-400/40 bg-white/70 backdrop-blur-md transition-all duration-300 hover:shadow-2xl hover:border-yellow-500"
-            > 
+            >
               <img
                 src={p.images}
                 alt={p.title}
@@ -202,9 +249,11 @@ export default function Academics() {
               <h3 className="text-xl font-semibold text-gray-800 mb-2">
                 {p.title}
               </h3>
-              <p className="text-gray-700 leading-relaxed text-sm md:text-base overflow-y-auto max-h-[200px] pr-2 no-scrollbar scrollbar-thin scrollbar-thumb-gray-400/60 scrollbar-track-transparent">{p.desc}</p>
+              <p className="text-gray-700 leading-relaxed text-sm md:text-base overflow-y-auto max-h-[200px] pr-2 no-scrollbar scrollbar-thin scrollbar-thumb-gray-400/60 scrollbar-track-transparent">
+                {p.desc}
+              </p>
             </motion.div>
-          ))}  
+          ))}
         </div>
 
         {/* Decorative Background Glow */}
@@ -267,6 +316,105 @@ export default function Academics() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl" />
           </motion.div>
         </div>
+      </motion.section>
+
+      {/* NEW: Teaching and Learning Section */}
+      <motion.section
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        className="relative py-20 px-6 bg-gradient-to-br from-[#fdfcf7] via-white to-[#f6f9ff] overflow-hidden"
+      >
+        {/* Decorative Elements */}
+        <div className="absolute top-10 right-10 w-64 h-64 bg-yellow-300/20 rounded-full blur-3xl -z-10"></div>
+        <div className="absolute bottom-20 left-10 w-80 h-80 bg-blue-300/20 rounded-full blur-3xl -z-10"></div>
+
+        {/* Title */}
+        <motion.div
+          variants={fadeInUp}
+          className="max-w-6xl mx-auto text-center mb-16"
+          data-aos="fade-up"
+        >
+          <h2 className="text-4xl md:text-5xl font-['Playfair_Display'] font-bold">
+            <span className="text-black">Teaching & Learning</span>{" "}
+            <span className="text-yellow-500">at PSG World School</span>
+          </h2>
+          <div className="w-24 h-[4px] bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-600 mx-auto mt-4 rounded-full shadow-md"></div>
+          <motion.p
+            variants={fadeInUp}
+            className="mt-6 text-gray-700 max-w-4xl mx-auto text-lg leading-relaxed"
+          >
+            Teaching and learning practices are guided by IB principles,
+            fostering inquiry, reflection, and meaningful engagement. Our
+            educators engage in continuous professional development to ensure
+            alignment with IB standards and practices.
+          </motion.p>
+        </motion.div>
+
+        {/* Cards Grid */}
+        <motion.div
+          variants={staggerContainer}
+          className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          {teachingPractices.map((practice, index) => (
+            <motion.div
+              key={index}
+              variants={scaleIn}
+              whileHover={{ scale: 1.05, y: -5 }}
+              data-aos="flip-left"
+              data-aos-delay={index * 100}
+              className="relative group p-8 rounded-2xl bg-white shadow-lg border border-yellow-400/30 hover:border-yellow-500 hover:shadow-2xl transition-all duration-500"
+            >
+              {/* Icon Circle */}
+              <div className="flex justify-center mb-5">
+                <motion.div
+                  whileHover={{ rotate: 360 }}
+                  transition={{ duration: 0.6 }}
+                  className="p-5 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 text-white shadow-lg group-hover:shadow-xl"
+                >
+                  <practice.icon size={36} strokeWidth={2} />
+                </motion.div>
+              </div>
+
+              {/* Title */}
+              <h3 className="text-xl font-semibold text-gray-800 text-center mb-3 group-hover:text-yellow-600 transition-colors">
+                {practice.title}
+              </h3>
+
+              {/* Description */}
+              <p className="text-gray-600 text-center leading-relaxed">
+                {practice.description}
+              </p>
+
+              {/* Decorative corner accent */}
+              <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-yellow-400/20 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* Bottom Highlight */}
+        <motion.div
+          variants={fadeInUp}
+          className="max-w-4xl mx-auto mt-16 p-8 rounded-2xl bg-gradient-to-r from-yellow-50 to-amber-50 border-l-4 border-yellow-500 shadow-lg"
+          data-aos="fade-up"
+        >
+          <div className="flex items-start space-x-4">
+            <div className="p-3 rounded-full bg-yellow-500 text-white shadow-md flex-shrink-0">
+              <Award size={28} />
+            </div>
+            <div>
+              <h4 className="text-2xl font-semibold text-gray-800 mb-2">
+                Commitment to Excellence
+              </h4>
+              <p className="text-gray-700 leading-relaxed">
+                Our educators engage in continuous professional development to
+                ensure alignment with IB standards and practices, bringing the
+                latest pedagogical innovations to every classroom.
+              </p>
+            </div>
+          </div>
+        </motion.div>
       </motion.section>
 
       {/* Academic Outcomes with Parallax */}
