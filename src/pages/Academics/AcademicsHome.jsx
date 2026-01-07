@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import eypImg from "../../assets/images/students/eyp.jfif";
-import pypImg from "../../assets/images/students/pyp.png";
-import mypImg from "../../assets/images/students/myp.png";
-import dpImg from "../../assets/images/students/dp.jfif";
-import cpImg from "../../assets/images/students/cp.jfif";
+import eypImg from "../../assets/images/students/eypImg.jpg";
+import pypImg from "../../assets/images/students/pypImg.jpg";
+import mypImg from "../../assets/images/students/mypImg.jpg";
+import dpImg from "../../assets/images/students/dpImg.jpg";
+import cpImg from "../../assets/images/students/cpImg.jpg";
 import { motion } from "framer-motion";
 import { Plus, X } from "lucide-react";
 import { Typewriter } from "react-simple-typewriter";
