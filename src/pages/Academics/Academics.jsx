@@ -18,11 +18,11 @@ import "aos/dist/aos.css";
 
 import AboutBanner from "../../assets/images/a2.png";
 import STU from "../../assets/images/ap3.png";
-import eypImg from "../../assets/images/students/eyp.jfif";
-import pypImg from "../../assets/images/students/pyp.png";
-import mypImg from "../../assets/images/students/myp.png";
-import dpImg from "../../assets/images/students/dp.jfif";
-import cpImg from "../../assets/images/students/cp.jfif";
+import eypImg from "../../assets/images/students/eypImg.jpg";
+import pypImg from "../../assets/images/students/pypImg.jpg";
+import mypImg from "../../assets/images/students/mypImg.jpg";
+import dpImg from "../../assets/images/students/dpImg.jpg";
+import cpImg from "../../assets/images/students/cpImg.jpg";
 import IBImage from "../../assets/images/campus/library and research hub 2.png";
 
 const fadeInUp = {
