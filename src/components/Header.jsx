@@ -46,7 +46,7 @@ function Header() {
             `}
           />
          <span
-            className={`text-xl sm:text-2xl font-bold tracking-wide text-blue-900 leading-tight hover:text-yellow-500`}
+            className={`text-xl sm:text-2xl font-bold tracking-wide text-blue-900 leading-tight hover:text-[#B18141]`}
             style={{ fontFamily: "Playfair Display, serif" }}
           >
             PSG World School
@@ -61,10 +61,10 @@ function Header() {
               <a
                 href={item.href}
                 target={item.label === "Careers" ? "_blank" : "_self"}
-                className="font-semibold text-blue-900 text-md px-2 py-1 transition-colors duration-300 group-hover:text-yellow-500"
+                className="font-semibold text-blue-900 text-md px-2 py-1 transition-colors duration-300 group-hover:text-[#B18141]"
               >
                 {item.label}
-                <span className="absolute left-1/2 bottom-0 w-0 h-[2px] bg-yellow-500 transition-all duration-300 group-hover:w-full group-hover:left-0" />
+                <span className="absolute left-1/2 bottom-0 w-0 h-[2px] bg-[#B18141] transition-all duration-300 group-hover:w-full group-hover:left-0" />
               </a>
             </li>
           ))}

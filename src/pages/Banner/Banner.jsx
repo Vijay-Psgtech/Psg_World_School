@@ -59,13 +59,13 @@ function Banner() {
         className="relative z-20 h-full flex flex-col justify-center px-6 md:px-16 lg:px-24"
       >
         {/* Tagline */}
-        <h2 className="text-lg md:text-2xl font-sans font-extrabold text-[#D4AF37] drop-shadow-[0_2px_3px_rgba(0,0,0,0.8)] mb-4 tracking-wide text-center md:text-left">
+        <h2 className="text-lg md:text-2xl font-sans font-extrabold text-[#B18141] drop-shadow-[0_2px_3px_rgba(0,0,0,0.8)] mb-4 tracking-wide text-center md:text-left">
          {displayedText}
         </h2>
 
         {/* Main Text */}
         <p className="text-sm md:text-lg lg:text-xl text-white/90 font-bold drop-shadow-[0_2px_3px_rgba(0,0,0,0.8)] leading-relaxed max-w-2xl font-light mb-10 text-center md:text-left" style={{ fontFamily: "Inter, sans-serif" }}>
-          At <span className="text-[#D4AF37] font-bold">PSG World School</span>, we believe education is not just about learning — it’s about becoming. As an IB World School, we nurture curiosity, creativity, and compassion, preparing every learner to thrive in the world’s best universities and, more importantly, to shape a better tomorrow.
+          At <span className="text-[#B18141] font-bold">PSG World School</span>, we believe education is not just about learning — it’s about becoming. As an IB World School, we nurture curiosity, creativity, and compassion, preparing every learner to thrive in the world’s best universities and, more importantly, to shape a better tomorrow.
         </p>
 
         {/* Buttons */}
@@ -73,7 +73,7 @@ function Banner() {
           {/* Primary */}
           <a
             href="#"
-            className="bg-[#1E3A8A] text-white px-6 py-3 rounded-full font-small md:font-medium shadow-md hover:bg-[#1D4ED8] transition"
+            className="bg-[#1E3A8A] text-white px-6 py-3 rounded-xl font-small md:font-medium shadow-md hover:bg-[#1D4ED8] transition"
           >
             Explore IB Journey <span className="ml-2">➔</span>
           </a>
@@ -81,7 +81,7 @@ function Banner() {
           {/* Secondary */}
           <a
             href="#"
-            className="bg-[#D4AF37] text-blue-900 px-6 py-3 rounded-full font-small md:font-medium shadow-md hover:bg-yellow-500 transition"
+            className="bg-[#B18141]/70 text-blue-900 px-6 py-3 rounded-xl font-small md:font-medium shadow-md hover:bg-[#B18141] transition"
           >
             Book a Campus Visit <FaPhoneAlt className="inline ml-2" />
           </a>
@@ -89,7 +89,7 @@ function Banner() {
           {/* Outline */}
           <a
             href="/admissions"
-            className="bg-transparent text-white border border-white px-6 py-3 rounded-full font-small md:font-medium shadow-md hover:bg-white/10 transition"
+            className="bg-transparent text-white border border-white px-6 py-3 rounded-xl font-small md:font-medium shadow-md hover:bg-white/10 transition"
           >
             Admissions 2026–27 Open <span className="ml-2">➔</span>
           </a>
