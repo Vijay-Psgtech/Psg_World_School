@@ -147,7 +147,8 @@ export default function Academics() {
           alt="Academics Banner"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-white/20 via-[#FFD700]/10 to-transparent"></div>
+        {/* <div className="absolute inset-0 bg-gradient-to-t from-white/20 via-[#FFD700]/10 to-transparent"></div> */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -161,7 +162,7 @@ export default function Academics() {
           <p className="mt-4 text-lg md:text-xl text-blue-200">
             Excellence • Global Perspective • Lifelong Learning
           </p>
-          <div className="w-20 h-[3px] bg-gradient-to-r from-[#B18141] via-yellow-400 to-yellow-600 mx-auto mt-4"></div>
+          <div className="w-20 h-[3px] bg-gradient-to-r from-[#B18141]/50 via-[#B18141]/40 to-[#B18141] mx-auto mt-4"></div>
         </motion.div>
       </section>
 
