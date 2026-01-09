@@ -9,10 +9,12 @@ import {
   Music,
   Trophy,
   Mountain,
+  ClubIcon
 } from "lucide-react";
 import Image1 from "../../assets/images/campus/campus25.png";
 import Image2 from "../../assets/images/students/cp.jfif";
 import Image3 from "../../assets/images/campus/sports and welness.png";
+import Image4 from "../../assets/images/students/dp.jfif";
 
 const cardData = [
   {
@@ -28,7 +30,7 @@ const cardData = [
   },
   {
     title: "Clubs & Societies",
-    icon: <BookOpen className="w-10 h-10 text-green-600" />,
+    icon: <ClubIcon className="w-10 h-10 text-green-600" />,
     image: Image2,
     points: [
       "Entrepreneurship & Start-up Incubator",
@@ -49,6 +51,19 @@ const cardData = [
     ],
     accent: "from-yellow-100/60 to-orange-100/40",
   },
+  {
+    title: "Teaching and Learning at PSG World School",
+    icon: <BookOpen className="w-10 h-10 text-yellow-700" />,
+    image: Image4,
+    points: [
+      "Inquiry-based and student-centred learning.",
+      "Concept-driven curriculum design.",
+      "Development of Approaches to Learning (ATL) skills.",
+      "Ongoing assessment to inform learning.",
+      "Reflection and student voice."
+    ]
+
+  }
 ];
 
 const fadeIn = (direction = "up", delay = 0) => {
