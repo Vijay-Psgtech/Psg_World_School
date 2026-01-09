@@ -38,7 +38,7 @@ const ChatBot = () => {
       {!isOpen && (
         <button
           onClick={toggleChat}
-          className="fixed bottom-24 right-6 z-50 p-4 rounded-full shadow-lg bg-gradient-to-r from-blue-600 to-yellow-400 hover:bg-blue-700 text-white transition-transform duration-300 hover:scale-110"
+          className="fixed bottom-24 right-6 z-50 p-4 rounded-full shadow-lg bg-gradient-to-r from-[#B18141] to-blue-900  hover:bg-blue-900 text-white transition-transform duration-300 hover:scale-110"
         >
           <FaComments size={24} />
         </button>
