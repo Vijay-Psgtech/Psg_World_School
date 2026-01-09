@@ -41,12 +41,12 @@ function Header() {
             className={`object-contain transition-all duration-300
               w-16 h-16
               md:w-20 md:h-20
-              lg:w-24 lg:h-24
+              lg:w-32 lg:h-24
               ${headerBg ? "md:w-18 md:h-18 lg:w-20 lg:h-20" : ""}
             `}
           />
          <span
-            className={`text-xl sm:text-2xl font-bold tracking-wide text-blue-900 leading-tight hover:text-[#B18141]`}
+            className={`text-xl sm:text-xl font-extrabold tracking-wide text-blue-900 leading-tight hover:text-[#B18141]`}
             style={{ fontFamily: "Playfair Display, serif" }}
           >
             PSG World School
