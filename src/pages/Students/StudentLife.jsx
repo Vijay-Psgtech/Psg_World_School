@@ -31,9 +31,9 @@ const StudentLife = () => {
             whileInView={{ scaleX: 1 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="w-20 h-[3px] bg-gradient-to-r from-yellow-400 to-blue-600 mb-6 mx-auto rounded-full"
+            className="w-20 h-[3px] bg-gradient-to-r from-[#B18141] to-blue-600 mb-6 mx-auto rounded-full"
           ></motion.div>
-          <h4 className="text-blue-800 font-semibold mb-3 tracking-widest uppercase text-sm">
+          <h4 className="text-[#B18141] font-semibold mb-3 tracking-widest uppercase text-sm">
             <Typewriter
               words={[
                 "Beyond Academics",
@@ -94,11 +94,11 @@ const StudentLife = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-yellow-700 hover:shadow-2xl transition"
+            className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-[#B18141] hover:shadow-2xl transition"
           >
             <div className="flex items-center gap-3 mb-6">
-              <ClubIcon className="text-yellow-700 w-8 h-8" />
-              <h3 className="text-2xl font-semibold text-blue-900">
+              <ClubIcon className="text-[#B18141] w-8 h-8" />
+              <h3 className="text-2xl font-semibold text-[#B18141]">
                 Clubs & Societies
               </h3>
             </div>
@@ -121,7 +121,7 @@ const StudentLife = () => {
           >
             <div className="flex items-center gap-3 mb-6">
               <Dumbbell className="text-green-600 w-8 h-8" />
-              <h3 className="text-2xl font-semibold text-blue-900">
+              <h3 className="text-2xl font-semibold text-green-600">
                 Sports & Adventure
               </h3>
             </div>
@@ -144,7 +144,7 @@ const StudentLife = () => {
           >
             <div className="flex items-center gap-3 mb-6">
               <BookOpen className="text-orange-600 w-8 h-8" />
-              <h3 className="text-2xl font-semibold text-blue-900">
+              <h3 className="text-2xl font-semibold text-orange-600">
                 Teaching and Learning at PSG World School
               </h3>
             </div>

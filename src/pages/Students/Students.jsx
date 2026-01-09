@@ -99,13 +99,13 @@ const Students = () => {
         >
           <h1 className="text-4xl md:text-6xl font-['Playfair_Display'] font-bold tracking-tight text-black drop-shadow-lg">
             Student Life{" "}
-            <span className="text-yellow-400">– Beyond Academics</span>
+            <span className="text-[#B18141]">– Beyond Academics</span>
           </h1>
           <p className="mt-4 text-lg md:text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed">
             A vibrant community that balances intellectual pursuits with
             creativity, leadership, sports, and global experiences.
           </p>
-          <div className="w-32 h-[3px] bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 mx-auto mt-6 rounded-full"></div>
+          <div className="w-32 h-[3px] bg-gradient-to-r from-[#B18141]/50 via-[#B18141]/40 to-[#B18141] mx-auto mt-6 rounded-full"></div>
         </motion.div>
       </section>
 
@@ -147,7 +147,7 @@ const Students = () => {
                     transition={{ delay: i * 0.1 }}
                     className="flex items-start gap-3 bg-gradient-to-r from-white/70 to-white/30 backdrop-blur-md border border-gray-100 rounded-xl p-4 shadow-sm hover:shadow-lg transition"
                   >
-                    <span className="text-yellow-500 font-bold">✦</span>
+                    <span className="text-[#B18141] font-bold">✦</span>
                     <span className="leading-relaxed">{point}</span>
                   </motion.li>
                 ))}

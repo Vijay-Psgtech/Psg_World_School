@@ -22,11 +22,11 @@ const Abouthome = () => {
             whileInView={{ scaleX: 1 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="w-20 h-[3px] bg-gradient-to-r from-yellow-400 to-blue-600 mb-6 rounded-full"
+            className="w-20 h-[3px] bg-gradient-to-r from-[#B18141] to-blue-600 mb-6 rounded-full"
           ></motion.div>
 
           {/* Subtitle */}
-          <h6 className="text-blue-800 font-semibold mb-3 tracking-widest uppercase text-sm">
+          <h6 className="text-[#B18141] font-semibold mb-3 tracking-widest uppercase text-sm">
             <Typewriter
               words={[
                 "Our School Campus",
@@ -63,13 +63,13 @@ const Abouthome = () => {
           <div className="flex flex-wrap gap-4">
             <a
               href="/about"
-              className="bg-blue-900 text-white px-6 py-3 rounded-full font-medium shadow-md hover:bg-blue-700 transition"
+              className="bg-blue-900 text-white px-6 py-3 rounded-xl font-medium shadow-md hover:bg-blue-700 transition"
             >
               Learn More →
             </a>
             <a
               href="/admissions"
-              className="bg-yellow-400 text-blue-900 px-6 py-3 rounded-full font-medium shadow-md hover:bg-yellow-500 transition"
+              className="bg-[#B18141] text-blue-900 px-6 py-3 rounded-xl font-medium shadow-md hover:bg-[#B18141]/80 transition"
             >
               Admissions →
             </a>

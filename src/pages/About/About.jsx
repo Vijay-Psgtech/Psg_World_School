@@ -36,7 +36,7 @@ const About = () => {
     {
       icon: <FaUniversity />,
       text: "Education aligned with IB standards and practices.",
-      color: "from-yellow-400 to-orange-500",
+      color: "from-[#B18141] to-orange-500",
     },
     {
       icon: <FaGlobe />,
@@ -83,12 +83,12 @@ const About = () => {
         <div className="relative z-10 text-center px-6">
           <h1 className="text-4xl md:text-6xl font-['Playfair_Display'] font-bold tracking-tight drop-shadow-lg">
             <span className="text-black">About</span>{" "}
-            <span className="text-yellow-500">Us</span>
+            <span className="text-[#B18141]">Us</span>
           </h1>
           <p className="mt-4 text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
             A Century of Excellence • A Future of Global Learning
           </p>
-          <div className="w-28 h-[3px] bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-600 mx-auto mt-6 rounded-full"></div>
+          <div className="w-28 h-[3px] bg-gradient-to-r from-[#B18141]/50 via-[#B18141]/40 to-[#B18141] mx-auto mt-6 rounded-full"></div>
         </div>
       </section>
       {/* Our Story */}
@@ -103,9 +103,9 @@ const About = () => {
           <div>
             <h2 className="text-4xl font-['Playfair_Display'] font-bold">
               <span className="text-black">Our</span>{" "}
-              <span className="text-yellow-500">Story</span>
+              <span className="text-[#B18141]">Story</span>
             </h2>
-            <div className="w-16 h-[3px] bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-600 mt-4 mb-6"></div>
+            <div className="w-16 h-[3px] bg-gradient-to-r from-[#B18141]/50 via-[#B18141]/40 to-[#B18141] mt-4 mb-6"></div>
             <p className="text-lg text-blue-950 leading-relaxed text-justify">
               Rooted in the 100-year heritage of PSG Institutions, PSG World
               School stands as a beacon of tradition and innovation. With
@@ -115,7 +115,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className="bg-amber-200 shadow-lg rounded-2xl border border-[#f2e7d7] p-6">
+          <div className="bg-[#B18141]/70 shadow-lg rounded-2xl border border-[#f2e7d7] p-6">
             <motion.p className="text-blue-950 italic leading-relaxed text-lg sm:text-xl">
               {displayedText}
               <span className="animate-pulse text-blue-900">|</span>
@@ -136,9 +136,9 @@ const About = () => {
           <div className="text-left space-y-6">
             <h2 className="text-4xl md:text-5xl font-['Playfair_Display'] font-bold leading-tight">
               <span className="text-black">Our</span>{" "}
-              <span className="text-yellow-500">Vision</span>
+              <span className="text-[#B18141]">Vision</span>
             </h2>
-            <div className="w-20 h-[3px] bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-600"></div>
+            <div className="w-20 h-[3px] bg-gradient-to-r from-[#B18141]/50 via-[#B18141]/40 to-[#B18141]"></div>
             <p className="text-gray-600 text-lg leading-relaxed max-w-md">
               A transformative learning experience that nurtures principled,
               innovative, and compassionate global citizens.
@@ -148,10 +148,10 @@ const About = () => {
           {/* Right Card */}
           <motion.div
             variants={fadeInUp}
-            className="relative p-10 rounded-2xl shadow-lg bg-gradient-to-r from-white via-[#fff9f0] to-[#f6d365] border border-[#f2e7d7] transition transform hover:shadow-2xl hover:scale-105"
+            className="relative p-10 rounded-2xl shadow-lg bg-gradient-to-r from-white via-[#B18141]/30 to-[#B18141]/50 border border-[#B18141] transition transform hover:shadow-2xl hover:scale-105"
           >
             {/* Triangle Accent (left) */}
-            <div className="absolute -left-6 top-6 w-0 h-0 border-t-[40px] border-t-transparent border-r-[40px] border-r-[#f6d365] border-b-[40px] border-b-transparent"></div>
+            <div className="absolute -left-6 top-6 w-0 h-0 border-t-[40px] border-t-transparent border-r-[40px] border-r-[#B18141] border-b-[40px] border-b-transparent"></div>
 
             <div className="text-gray-800 font-medium relative z-10 leading-relaxed space-y-4">
               <p>
@@ -191,13 +191,13 @@ const About = () => {
           {/* Left Card */}
           <motion.div
             variants={fadeInUp}
-            className="order-2 md:order-1 relative p-10 rounded-2xl shadow-lg bg-gradient-to-r from-white via-[#fff9f0] to-[#f6d365] border border-[#f2e7d7] transition transform hover:shadow-2xl hover:scale-105"
+            className="order-2 md:order-1 relative p-10 rounded-2xl shadow-lg bg-gradient-to-r from-white via-[#B18141]/20 to-[#B18141]/50 border border-[#f2e7d7] transition transform hover:shadow-2xl hover:scale-105"
           >
             {/* Triangle Accent (right) */}
             <div
               className="absolute -right-6 top-6 w-0 h-0 
                 border-t-[40px] border-t-transparent 
-                border-l-[40px] border-l-[#f6d365] 
+                border-l-[40px] border-l-[#B18141] 
                 border-b-[40px] border-b-transparent"
             ></div>
 
@@ -230,9 +230,9 @@ const About = () => {
           <div className="order-1 md:order-2 text-left md:text-right space-y-6">
             <h2 className="text-4xl md:text-5xl font-['Playfair_Display'] font-bold leading-tight">
               <span className="text-black">Our</span>{" "}
-              <span className="text-yellow-500">Mission</span>
+              <span className="text-[#B18141]">Mission</span>
             </h2>
-            <div className="md:ml-auto w-20 h-[3px] bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-600"></div>
+            <div className="md:ml-auto w-20 h-[3px] bg-gradient-to-r from-[#B18141]/50 via-[#B18141]/40 to-[#B18141]"></div>
             <p className="text-gray-600 text-lg leading-relaxed md:ml-auto md:max-w-md">
               PSG IB World School commits to academic rigor balanced with
               compassion, creativity, and intercultural understanding, and
@@ -252,10 +252,10 @@ const About = () => {
         {/* Content */}
         <div className="relative z-10 text-center px-6">
           <h2 className="text-4xl md:text-5xl font-['Playfair_Display'] font-bold mb-4 text-white drop-shadow-lg">
-            <span className="text-yellow-300">Our</span>{" "}
-            <span className="text-yellow-500">Motto</span>
+            <span className="text-white">Our</span>{" "}
+            <span className="text-[#B18141]">Motto</span>
           </h2>
-          <p className="text-2xl font-semibold text-yellow-200 tracking-wide">
+          <p className="text-2xl font-semibold text-[#B18141] tracking-wide">
             i³
             <br />
             Ignite • Innovate • Inspire
@@ -286,10 +286,10 @@ const About = () => {
           {/* Right Content */}
           <motion.div variants={fadeInUp} className="space-y-12">
             <h2 className="text-4xl font-['Playfair_Display'] font-bold">
-              A Community of <span className="text-yellow-500">Learners</span>{" "}
+              A Community of <span className="text-[#B18141]">Learners</span>{" "}
               with a Global Perspective
             </h2>
-            <div className="w-20 h-[3px] bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-600"></div>
+            <div className="w-20 h-[3px] bg-gradient-to-r from-[#B18141]/50 via-[#B18141]/40 to-[#B18141]"></div>
             <p className="text-lg text-gray-900 leading-relaxed text-justify">
               PSG World School is committed to delivering a high-quality
               international education guided by the principles of the
@@ -326,9 +326,9 @@ const About = () => {
           >
             <h2 className="text-4xl md:text-5xl font-['Playfair_Display'] font-bold text-gray-900">
               International Baccalaureate{" "}
-              <span className="text-yellow-500">School Status</span>
+              <span className="text-[#B18141]">School Status</span>
             </h2>
-            <div className="w-28 h-[3px] bg-gradient-to-r from-yellow-500 to-yellow-600 mx-auto mt-6 rounded-full" />
+            <div className="w-28 h-[3px] bg-gradient-to-r from-[#B18141]/50 via-[#B18141]/40 to-[#B18141] mx-auto mt-6 rounded-full" />
           </motion.div>
 
           {/* Toggle Buttons */}
@@ -337,7 +337,7 @@ const About = () => {
               onClick={() => setIbStatus("AUTHORIZED")}
               className={`px-8 py-3 rounded-full font-semibold transition-all duration-300 ${
                 ibStatus === "AUTHORIZED"
-                  ? "bg-yellow-300 text-black shadow-xl scale-105"
+                  ? "bg-[#B18141] text-black shadow-xl scale-105"
                   : "bg-white text-green-700 border border-green-200 hover:bg-green-50"
               }`}
             >
@@ -348,7 +348,7 @@ const About = () => {
               onClick={() => setIbStatus("CANDIDATE")}
               className={`px-8 py-3 rounded-full font-semibold transition-all duration-300 ${
                 ibStatus === "CANDIDATE"
-                  ? "bg-yellow-300 text-black shadow-xl scale-105"
+                  ? "bg-[#B18141] text-black shadow-xl scale-105"
                   : "bg-white text-yellow-800 border border-yellow-200 hover:bg-yellow-50"
               }`}
             >
@@ -509,13 +509,13 @@ const About = () => {
         <div className="max-w-6xl mx-auto text-center mb-14">
           <h2 className="text-4xl font-['Playfair_Display'] font-bold">
             <span className="text-black">Why</span>{" "}
-            <span className="text-yellow-500">Choose</span>{" "}
+            <span className="text-[#B18141]">Choose</span>{" "}
             <span className="text-black">PSG</span>{" "}
-            <span className="text-yellow-500">World</span>{" "}
+            <span className="text-[#B18141]">World</span>{" "}
             <span className="text-black">School</span>{" "}
-            <span className="text-yellow-500">IB?</span>
+            <span className="text-[#B18141]">IB?</span>
           </h2>
-          <div className="w-20 h-[3px] bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-600 mx-auto mt-4"></div>
+          <div className="w-20 h-[3px] bg-gradient-to-r from-[#B18141]/50 via-[#B18141]/40 to-[#B18141] mx-auto mt-4"></div>
         </div>
 
         <section className="relative py-20 bg-gradient-to-br from-amber-50 via-white to-yellow-50 overflow-hidden">

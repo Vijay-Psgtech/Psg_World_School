@@ -67,17 +67,17 @@ export default function Academics() {
   const outcomes = [
     {
       id: 1,
-      icon: <GraduationCap className="w-8 h-8 text-yellow-400" />,
+      icon: <GraduationCap className="w-8 h-8 text-yellow-600" />,
       text: "Aspire for IB Diploma scores above the global benchmark (33–34).",
     },
     {
       id: 2,
-      icon: <University className="w-8 h-8 text-yellow-400" />,
+      icon: <University className="w-8 h-8 text-yellow-600" />,
       text: "University placements at Ivy League, Oxbridge, NUS, NTU, Ashoka, IITs, and more.",
     },
     {
       id: 3,
-      icon: <Sparkles className="w-8 h-8 text-yellow-400" />,
+      icon: <Sparkles className="w-8 h-8 text-yellow-600" />,
       text: "PSG graduates as innovators, entrepreneurs, researchers, and change-makers.",
     },
   ];
@@ -136,7 +136,7 @@ export default function Academics() {
   }, []);
 
   return (
-    <div className="w-full font-sans text-yellow-500 leading-relaxed tracking-normal">
+    <div className="w-full font-sans text-[#B18141] leading-relaxed tracking-normal">
       {/* Banner */}
       <section className="relative h-[750px] flex items-end justify-center">
         <motion.img
@@ -147,7 +147,8 @@ export default function Academics() {
           alt="Academics Banner"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-white/20 via-[#FFD700]/10 to-transparent"></div>
+        {/* <div className="absolute inset-0 bg-gradient-to-t from-white/20 via-[#FFD700]/10 to-transparent"></div> */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -156,12 +157,12 @@ export default function Academics() {
         >
           <h1 className="text-5xl md:text-6xl font-['Playfair_Display'] font-bold drop-shadow-lg">
             <span className="text-black">Academics</span>{" "}
-            <span className="text-yellow-500">– The IB Advantage at PSG</span>
+            <span className="text-[#B18141]">– The IB Advantage at PSG</span>
           </h1>
           <p className="mt-4 text-lg md:text-xl text-blue-200">
             Excellence • Global Perspective • Lifelong Learning
           </p>
-          <div className="w-20 h-[3px] bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-600 mx-auto mt-4"></div>
+          <div className="w-20 h-[3px] bg-gradient-to-r from-[#B18141]/50 via-[#B18141]/40 to-[#B18141] mx-auto mt-4"></div>
         </motion.div>
       </section>
 
@@ -195,9 +196,9 @@ export default function Academics() {
         >
           <h2 className="text-4xl md:text-5xl font-['Playfair_Display'] font-bold">
             <span className="text-black">The</span> <br />
-            <span className="text-yellow-500">IB Continuum </span>
+            <span className="text-[#B18141]">IB Continuum </span>
           </h2>
-          <div className="w-24 h-[4px] bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-600 mx-auto mt-4 rounded-full shadow-md"></div>
+          <div className="w-24 h-[4px] bg-gradient-to-r from-[#B18141] via-yellow-400 to-yellow-600 mx-auto mt-4 rounded-full shadow-md"></div>
           <p className="mt-6 text-gray-700 max-w-3xl mx-auto text-lg leading-relaxed">
             PSG World School offers the full IB Continuum, ensuring every stage
             of learning is internationally benchmarked and future-focused.
@@ -236,22 +237,43 @@ export default function Academics() {
             <motion.div
               key={i}
               variants={fadeInUp}
-              data-aos="zoom-in-up"
               whileHover={{ scale: 1.05 }}
-              className="relative group p-6 rounded-2xl shadow-lg border border-yellow-400/40 bg-white/70 backdrop-blur-md transition-all duration-300 hover:shadow-2xl hover:border-yellow-500"
+              transition={{ type: "spring", stiffness: 150, damping: 15 }}
+              className="relative group p-6 rounded-2xl shadow-lg border border-yellow-400/40 
+                        bg-white/80 backdrop-blur-md transition-all duration-500 
+                        hover:shadow-2xl hover:border-[#B18141] overflow-hidden"
             >
-              <img
-                src={p.images}
-                alt={p.title}
-                className="w-full h-40 object-cover rounded-lg mb-4"
-                loading="lazy"
-              />
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">
+              {/* Image */}
+              <div className="relative rounded-lg overflow-hidden mb-4">
+                <img
+                  src={p.images}
+                  alt={p.title}
+                  className="w-full h-40 object-cover rounded-lg transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                />
+
+                {/* Subtle overlay gradient on image */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+
+              {/* Title */}
+              <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">
                 {p.title}
               </h3>
-              <p className="text-gray-700 leading-relaxed text-sm md:text-base overflow-y-auto max-h-[200px] pr-2 no-scrollbar scrollbar-thin scrollbar-thumb-gray-400/60 scrollbar-track-transparent">
+
+              {/* Short text */}
+              <p
+                className="text-gray-700 leading-relaxed text-sm md:text-base transition-all duration-500 
+                          line-clamp-4 group-hover:line-clamp-none"
+              >
                 {p.desc}
               </p>
+
+              {/* Bottom gradient to hint more content */}
+              <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none opacity-100 group-hover:opacity-0 transition-opacity duration-500"></div>
+
+              {/* Decorative border glow on hover */}
+              <div className="absolute inset-0 rounded-2xl border border-transparent group-hover:border-[#B18141]/60 transition-all duration-500"></div>
             </motion.div>
           ))}
         </div>
@@ -274,11 +296,11 @@ export default function Academics() {
           <div className="space-y-8">
             <h2 className="text-4xl md:text-5xl font-['Playfair_Display'] font-bold">
               <span className="text-black">International</span>{" "}
-              <span className="text-yellow-500">Baccalaureate</span>{" "}
+              <span className="text-[#B18141]">Baccalaureate</span>{" "}
               <span className="text-black">Philosophy</span>
             </h2>
 
-            <div className="w-20 h-[3px] bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-600"></div>
+            <div className="w-20 h-[3px] bg-gradient-to-r from-[#B18141] via-yellow-400 to-yellow-600"></div>
 
             <p className="text-lg text-gray-700 leading-relaxed text-justify">
               The International Baccalaureate (IB) is an internationally
@@ -338,9 +360,9 @@ export default function Academics() {
         >
           <h2 className="text-4xl md:text-5xl font-['Playfair_Display'] font-bold">
             <span className="text-black">Teaching & Learning</span>{" "}
-            <span className="text-yellow-500">at PSG World School</span>
+            <span className="text-[#B18141]">at PSG World School</span>
           </h2>
-          <div className="w-24 h-[4px] bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-600 mx-auto mt-4 rounded-full shadow-md"></div>
+          <div className="w-24 h-[4px] bg-gradient-to-r from-[#B18141] via-yellow-400 to-yellow-600 mx-auto mt-4 rounded-full shadow-md"></div>
           <motion.p
             variants={fadeInUp}
             className="mt-6 text-gray-700 max-w-4xl mx-auto text-lg leading-relaxed"
@@ -364,14 +386,14 @@ export default function Academics() {
               whileHover={{ scale: 1.05, y: -5 }}
               data-aos="flip-left"
               data-aos-delay={index * 100}
-              className="relative group p-8 rounded-2xl bg-white shadow-lg border border-yellow-400/30 hover:border-yellow-500 hover:shadow-2xl transition-all duration-500"
+              className="relative group p-8 rounded-2xl bg-white shadow-lg border border-yellow-400/30 hover:border-[#B18141] hover:shadow-2xl transition-all duration-500"
             >
               {/* Icon Circle */}
               <div className="flex justify-center mb-5">
                 <motion.div
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.6 }}
-                  className="p-5 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 text-white shadow-lg group-hover:shadow-xl"
+                  className="p-5 rounded-full bg-gradient-to-br from-[#B18141] to-yellow-600 text-white shadow-lg group-hover:shadow-xl"
                 >
                   <practice.icon size={36} strokeWidth={2} />
                 </motion.div>
@@ -396,11 +418,11 @@ export default function Academics() {
         {/* Bottom Highlight */}
         <motion.div
           variants={fadeInUp}
-          className="max-w-4xl mx-auto mt-16 p-8 rounded-2xl bg-gradient-to-r from-yellow-50 to-amber-50 border-l-4 border-yellow-500 shadow-lg"
+          className="max-w-4xl mx-auto mt-16 p-8 rounded-2xl bg-gradient-to-r from-yellow-50 to-amber-50 border-l-4 border-[#B18141] shadow-lg"
           data-aos="fade-up"
         >
           <div className="flex items-start space-x-4">
-            <div className="p-3 rounded-full bg-yellow-500 text-white shadow-md flex-shrink-0">
+            <div className="p-3 rounded-full bg-[#B18141] text-white shadow-md flex-shrink-0">
               <Award size={28} />
             </div>
             <div>
@@ -438,7 +460,7 @@ export default function Academics() {
             transition={{ duration: 0.8 }}
           >
             <span className="text-black">Academic</span>{" "}
-            <span className="text-yellow-500">Outcomes</span>
+            <span className="text-[#B18141]">Outcomes</span>
           </motion.h2>
           <motion.div
             className="w-20 h-[3px] bg-gradient-to-r from-yellow-400 to-yellow-600 mx-auto mt-4"
@@ -481,7 +503,7 @@ export default function Academics() {
             <span className="text-black">Beyond </span>
             <span className="text-yellow-600">Academics</span>
           </h2>
-          <div className="w-20 h-[3px] bg-gradient-to-r from-yellow-500 to-yellow-700 mx-auto mt-4"></div>
+          <div className="w-20 h-[3px] bg-gradient-to-r from-[#B18141] to-yellow-700 mx-auto mt-4"></div>
           <p className="mt-6 text-gray-700 max-w-3xl mx-auto">
             We believe education extends beyond the classroom — through cultural
             exchange, leadership programs, innovation hubs, arts, sports, and
@@ -501,7 +523,7 @@ export default function Academics() {
               className="p-8 rounded-2xl shadow-lg bg-white border border-amber-50 hover:bg-gradient-to-br hover:from-white hover:to-yellow-50 transition-all duration-500 group"
             >
               <div className="flex flex-col items-center">
-                <div className="p-4 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 text-white shadow-md group-hover:scale-110 transition-transform duration-500">
+                <div className="p-4 rounded-full bg-gradient-to-br from-[#B18141] to-yellow-600 text-white shadow-md group-hover:scale-110 transition-transform duration-500">
                   <item.icon size={32} />
                 </div>
                 <h3 className="mt-4 text-xl font-semibold text-gray-800 group-hover:text-yellow-700 transition-colors">

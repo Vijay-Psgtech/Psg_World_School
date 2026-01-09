@@ -65,9 +65,9 @@ function CampusHighlights() {
             whileInView={{ scaleX: 1 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="w-20 h-[3px] bg-gradient-to-r from-yellow-400 to-blue-600 mb-6 rounded-full"
+            className="w-20 h-[3px] bg-gradient-to-r from-[#B18141] to-blue-600 mb-6 rounded-full"
           ></motion.div>
-          <h4 className="text-blue-800 font-semibold mb-3 tracking-widest uppercase text-sm">
+          <h4 className="text-[#B18141] font-semibold mb-3 tracking-widest uppercase text-sm">
             <Typewriter
               words={[
                 "A Learning Environment that Inspires Excellence",

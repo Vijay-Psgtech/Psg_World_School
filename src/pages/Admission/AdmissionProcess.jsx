@@ -6,28 +6,28 @@ import { Typewriter } from "react-simple-typewriter";
 const steps = [
   {
     id: 1,
-    icon: <FileText className="w-10 h-10 text-yellow-700" />,
+    icon: <FileText className="w-10 h-10 text-yellow-900" />,
     title: "Online Inquiry Form",
     description:
       "Start your journey by filling out our simple online inquiry form to share your interest.",
   },
   {
     id: 2,
-    icon: <Users className="w-10 h-10 text-yellow-700" />,
+    icon: <Users className="w-10 h-10 text-yellow-900" />,
     title: "Campus Tour & Interaction",
     description:
       "Experience our vibrant campus, meet our faculty, and get a glimpse of student life.",
   },
   {
     id: 3,
-    icon: <ClipboardCheck className="w-10 h-10 text-yellow-700" />,
+    icon: <ClipboardCheck className="w-10 h-10 text-yellow-900" />,
     title: "Entrance Assessment",
     description:
       "Applicants undergo an entrance assessment and profile review to understand their readiness.",
   },
   {
     id: 4,
-    icon: <GraduationCap className="w-10 h-10 text-yellow-700" />,
+    icon: <GraduationCap className="w-10 h-10 text-yellow-900" />,
     title: "Parent Meeting & Admission",
     description:
       "A final interaction with parents followed by an offer of admission to join PSG World School.",
@@ -44,9 +44,9 @@ const AdmissionProcess = () => {
           whileInView={{ scaleX: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="w-20 h-[3px] bg-gradient-to-r from-yellow-400 to-blue-600 mb-6 mx-auto rounded-full"
+          className="w-20 h-[3px] bg-gradient-to-r from-[#B18141] to-blue-600 mb-6 mx-auto rounded-full"
         ></motion.div>
-        <h4 className="text-blue-800 font-semibold mb-3 tracking-widest uppercase text-sm">
+        <h4 className="text-[#B18141] font-semibold mb-3 tracking-widest uppercase text-sm">
           <Typewriter
               words={[
                 "Join the PSG World School Community",
@@ -88,7 +88,7 @@ const AdmissionProcess = () => {
             viewport={{ once: true }}
             className="flex flex-col items-center text-center bg-white shadow-lg rounded-2xl p-8 border-t-4 border-blue-600 hover:shadow-2xl transition-shadow duration-300"
           >
-            <div className="mb-6 bg-yellow-100 rounded-full p-5">
+            <div className="mb-6 bg-[#B18141]/50 rounded-full p-5">
               {step.icon}
             </div>
             <h3 className="text-xl font-semibold text-blue-900 mb-3">
