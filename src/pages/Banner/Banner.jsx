@@ -17,7 +17,7 @@ function Banner() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+      setCurrent((prev) => (prev + 1) % images.length);
     }, 5000);
     return () => clearInterval(interval);
   }, []);
@@ -34,9 +34,9 @@ function Banner() {
   }, [index]);
 
   return (
-    <div className="relative h-[580px] md:h-[650px] lg:h-[720px] font-sans overflow-hidden">
+    <div className="relative h-[600px] md:h-[650px] lg:h-[740px] font-sans overflow-hidden">
       {/* Background Image Carousel*/}
-      <AnimatePresence mode="wait">
+      <AnimatePresence>
         <motion.div
           key={current}
           initial={{ opacity: 0, scale: 1.05 }}
