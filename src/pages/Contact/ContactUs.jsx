@@ -20,7 +20,7 @@ const ContactUs = () => {
         className="relative h-[60vh] flex items-center justify-center bg-fixed bg-cover bg-center"
         style={{ backgroundImage: `url(${Image1})` }}
       >
-        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
         <motion.h1
           variants={fadeInUp}
           initial="hidden"
@@ -29,8 +29,8 @@ const ContactUs = () => {
           className="text-4xl md:text-6xl font-['Playfair_Display'] font-bold tracking-tight drop-shadow-lg"
         >
           <span className="text-black">Contact</span>{" "}
-          <span className="text-yellow-500">Us</span>
-          <div className="w-32 h-[3px] bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 mx-auto mt-6 rounded-full"></div>
+          <span className="text-[#B18141]">Us</span>
+          <div className="w-32 h-[3px] bg-gradient-to-r from-[#B18141]/50 via-[#B18141]/40 to-[#B18141] mx-auto mt-6 rounded-full"></div>
         </motion.h1>
       </section>
 
@@ -119,16 +119,16 @@ const ContactUs = () => {
       <section className="py-10 bg-blue-900 text-white text-center">
         <h3 className="text-lg font-medium mb-4">Connect With Us</h3>
         <div className="flex justify-center gap-6 text-2xl">
-          <a href="#" className="hover:text-yellow-400 transition">
+          <a href="#" className="hover:text-[#B18141] transition">
             <FaFacebook />
           </a>
-          <a href="#" className="hover:text-yellow-400 transition">
+          <a href="#" className="hover:text-[#B18141] transition">
             <FaInstagram />
           </a>
-          <a href="#" className="hover:text-yellow-400 transition">
+          <a href="#" className="hover:text-[#B18141] transition">
             <FaLinkedin />
           </a>
-          <a href="#" className="hover:text-yellow-400 transition">
+          <a href="#" className="hover:text-[#B18141] transition">
             <FaTwitter />
           </a>
         </div>
