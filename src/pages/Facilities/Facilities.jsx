@@ -32,7 +32,7 @@ const SectionHeading = ({ first, second, center, light }) => (
     } ${center ? "text-center" : ""}`}
   >
     <span className={light ? "text-gray-200" : "text-black"}>{first} </span>
-    <span className="text-yellow-500">{second}</span>
+    <span className="text-[#B18141]">{second}</span>
   </h2>
 );
 
@@ -72,7 +72,7 @@ const FacilitiesPage = () => {
       images: [SportsandWelness, SportsandWelness, SportsandWelness, SportsandWelness],
     },
     {
-      icon: <Library className="w-10 h-10 text-yellow-600" />,
+      icon: <Library className="w-10 h-10 text-[#B18141]" />,
       title: "Library & Research Hub",
       desc: "Print, digital, and global resources integrated with IB learner projects.",
       images: [LibraryResearch, LibraryResearch, LibraryResearch, LibraryResearch],
@@ -121,7 +121,7 @@ const FacilitiesPage = () => {
           className="relative z-10 text-center mb-20"
         >
           <h1 className="text-5xl md:text-6xl font-extrabold text-black drop-shadow-2xl">
-            Campus <span className="text-yellow-400">& Facilities</span>
+            Campus <span className="text-[#B18141]">& Facilities</span>
           </h1>
           <p className="mt-4 text-lg md:text-xl text-gray-200 font-light">
             A Learning Environment that Inspires Excellence
@@ -257,13 +257,13 @@ const FacilitiesPage = () => {
           >
             <a
               href="#apply"
-              className="bg-yellow-400 text-black px-6 py-3 rounded-lg font-semibold shadow-lg hover:bg-yellow-500 transition"
+              className="bg-[#B18141] text-black px-6 py-3 rounded-lg font-semibold shadow-lg hover:bg-yellow-500 transition"
             >
               Apply Now
             </a>
             <a
               href="#visit"
-              className="border-2 border-yellow-300 text-yellow-100 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-400 hover:text-black transition"
+              className="border-2 border-[#B18141] text-yellow-100 px-6 py-3 rounded-lg font-semibold hover:bg-[#B18141] hover:text-black transition"
             >
               Book a Visit
             </a>
