@@ -26,7 +26,7 @@ const Abouthome = () => {
           ></motion.div>
 
           {/* Subtitle */}
-          <h6 className="text-blue-800 font-semibold mb-3 tracking-widest uppercase text-sm">
+          <h6 className="text-[#B18141] font-semibold mb-3 tracking-widest uppercase text-sm">
             <Typewriter
               words={[
                 "Our School Campus",

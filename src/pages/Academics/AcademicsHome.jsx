@@ -68,9 +68,9 @@ function AcademicsHome() {
           whileInView={{ scaleX: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="w-20 h-[3px] bg-gradient-to-r from-yellow-400 to-blue-600 mb-6 mx-auto rounded-full"
+          className="w-20 h-[3px] bg-gradient-to-r from-[#B18141] to-blue-600 mb-6 mx-auto rounded-full"
         ></motion.div>
-        <h4 className="text-blue-800 font-semibold mb-3 tracking-widest uppercase text-sm">
+        <h4 className="text-[#B18141] font-semibold mb-3 tracking-widest uppercase text-sm">
           <Typewriter
             words={[
               "The IB Continuum",
@@ -132,23 +132,23 @@ function AcademicsHome() {
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-950/70 to-transparent"></div>
 
-                  {/* <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/70 to-transparent backdrop-blur-[1px]"></div> */}
+                  {/* <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/70 to-transparent"></div> */}
 
                   {/* Text */}
                   <div className="absolute bottom-0 p-6 text-left">
-                    <p className="text-sm font-semibold text-yellow-400 tracking-wider uppercase">
+                    <p className="text-sm font-semibold text-[#B18141] tracking-wider uppercase">
                       {item.tagline}
                     </p>
                     <h2 className="text-2xl font-bold text-white mt-1 leading-snug bg-clip-text">
                       {item.title}
                     </h2>
-                    <p className="text-yellow-300 font-semibold text-sm">
+                    <p className="text-[#B18141] font-semibold text-sm">
                       {item.subtitle}
                     </p>
                   </div>
 
                   {/* Floating Button */}
-                  <button className="absolute bottom-5 right-5 bg-yellow-400 text-blue-950 p-3 rounded-full shadow-lg hover:scale-110 hover:rotate-90 transition-transform duration-300">
+                  <button className="absolute bottom-5 right-5 bg-[#B18141] text-blue-950 p-3 rounded-full shadow-lg hover:scale-110 hover:rotate-90 transition-transform duration-300">
                     <Plus size={20} />
                   </button>
                 </motion.div>
@@ -164,24 +164,24 @@ function AcademicsHome() {
                   className="bg-gradient-to-br from-blue-950 via-blue-900 to-indigo-900 text-white rounded-3xl p-6 shadow-2xl flex flex-col relative min-h-[380px] backdrop-blur-md"
                 >
                   <div>
-                    <p className="text-sm font-semibold text-yellow-400 mb-2 uppercase tracking-wide">
+                    <p className="text-sm font-semibold text-[#B18141] mb-2 uppercase tracking-wide">
                       {item.tagline}
                     </p>
-                    <h2 className="text-2xl font-bold mb-2 bg-gradient-to-r from-yellow-300 to-yellow-500 bg-clip-text text-transparent">
+                    <h2 className="text-2xl font-bold mb-2 bg-gradient-to-r from-[#B18141] to-[#B18141] bg-clip-text text-transparent">
                       {item.title}
                     </h2>
-                    <p className="text-yellow-300 font-semibold mb-4">
+                    <p className="text-[#B18141] font-semibold mb-4">
                       {item.subtitle}
                     </p>
 
-                    <div className="text-gray-200 leading-relaxed text-sm md:text-base overflow-y-auto max-h-[220px] pr-2 scrollbar-thin scrollbar-thumb-yellow-400/60 scrollbar-track-transparent">
+                    <div className="text-gray-200 leading-relaxed text-sm md:text-base overflow-y-auto max-h-[220px] pr-2 scrollbar-thin scrollbar-thumb-[#B18141]/60 scrollbar-track-transparent">
                       {item.description}
                     </div>
                   </div>
 
                   {/* Close Button */}
                   <button
-                    className="absolute bottom-5 right-5 bg-yellow-400 text-blue-950 p-3 rounded-full shadow-lg hover:scale-110 hover:rotate-90 transition-transform"
+                    className="absolute bottom-5 right-5 bg-[#B18141] text-blue-950 p-3 rounded-full shadow-lg hover:scale-110 hover:rotate-90 transition-transform"
                     onClick={(e) => {
                       e.stopPropagation();
                       setActiveId(null);

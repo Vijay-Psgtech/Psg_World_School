@@ -43,25 +43,25 @@ const Footer = () => {
           <div className="flex gap-4">
             <a
               href="#"
-              className="p-3 bg-white/10 rounded-full hover:bg-gold hover:text-yellow-400 transition"
+              className="p-3 bg-white/10 rounded-full hover:bg-gold hover:text-[#B18141] transition"
             >
               <FaInstagram size={18} />
             </a>
             <a
               href="#"
-              className="p-3 bg-white/10 rounded-full hover:bg-gold hover:text-yellow-400 transition"
+              className="p-3 bg-white/10 rounded-full hover:bg-gold hover:text-[#B18141] transition"
             >
               <FaLinkedin size={18} />
             </a>
             <a
               href="#"
-              className="p-3 bg-white/10 rounded-full hover:bg-gold hover:text-yellow-400 transition"
+              className="p-3 bg-white/10 rounded-full hover:bg-gold hover:text-[#B18141] transition"
             >
               <FaTwitter size={18} />
             </a>
             <a
               href="#"
-              className="p-3 bg-white/10 rounded-full hover:bg-gold hover:text-yellow-400 transition"
+              className="p-3 bg-white/10 rounded-full hover:bg-gold hover:text-[#B18141] transition"
             >
               <FaFacebookF size={18} />
             </a>
@@ -72,16 +72,16 @@ const Footer = () => {
             </h3>
             <ul className="space-y-2 text-gray-300">
               <li>
-                <a href="/admissions" className="hover:underline hover:text-yellow-400">Admissions</a>
+                <a href="/admissions" className="hover:underline hover:text-[#B18141]">Admissions</a>
               </li>
               <li>
-                <a href="/academics" className="hover:underline hover:text-yellow-400">Academics</a>
+                <a href="/academics" className="hover:underline hover:text-[#B18141]">Academics</a>
               </li>
               <li>
-                <a href="/facilities" className="hover:underline hover:text-yellow-400">Facilities</a>
+                <a href="/facilities" className="hover:underline hover:text-[#B18141]">Facilities</a>
               </li>
               <li>
-                <a href="/contact" className="hover:underline hover:text-yellow-400">Contact</a>
+                <a href="/contact" className="hover:underline hover:text-[#B18141]">Contact</a>
               </li>
             </ul>
           </div>

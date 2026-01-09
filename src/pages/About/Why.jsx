@@ -23,7 +23,7 @@ const Why = () => {
           <p className="mt-4 text-gray-700 max-w-xl">
             PSG World School, is committed to delivering a high-quality
             international education guided by the principles of the 
-            <span className="font-bold"> International Baccalaureate (IB)</span>. Our school aims to develop
+            <span className="font-bold text-[#B18141]"> International Baccalaureate (IB)</span>. Our school aims to develop
             students who are inquisitive, knowledgeable, and caring, and who are
             prepared to contribute positively to a complex and interconnected
             world.
