@@ -10,6 +10,7 @@ import {
   Cpu,
   Dumbbell,
   Mountain,
+  ClubIcon
 } from "lucide-react";
 import { Typewriter } from "react-simple-typewriter";
 
@@ -56,7 +57,7 @@ const StudentLife = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-10">
+        <div className="grid md:grid-cols-2 gap-10">
           {/* Leadership & Global Citizenship */}
           <motion.div
             variants={fadeIn("up")}
@@ -93,10 +94,10 @@ const StudentLife = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-yellow-400 hover:shadow-2xl transition"
+            className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-yellow-700 hover:shadow-2xl transition"
           >
             <div className="flex items-center gap-3 mb-6">
-              <BookOpen className="text-yellow-500 w-8 h-8" />
+              <ClubIcon className="text-yellow-700 w-8 h-8" />
               <h3 className="text-2xl font-semibold text-blue-900">
                 Clubs & Societies
               </h3>
@@ -130,6 +131,38 @@ const StudentLife = () => {
                 and martial arts.
               </li>
               <li>• Outdoor learning, trekking, and leadership camps.</li>
+            </ul>
+          </motion.div>
+
+          {/* Teaching and Learning at PSG World School */}
+          <motion.div
+            variants={fadeIn("up")}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-orange-600 hover:shadow-2xl transition"
+          >
+            <div className="flex items-center gap-3 mb-6">
+              <BookOpen className="text-orange-600 w-8 h-8" />
+              <h3 className="text-2xl font-semibold text-blue-900">
+                Teaching and Learning at PSG World School
+              </h3>
+            </div>
+            <ul className="space-y-3 text-gray-700 font-medium">
+              <p>
+                Teaching and learning practices are guided by IB principles and
+                include:
+              </p>
+              <li>• Inquiry-based and student-centred learning.</li>
+              <li>• Concept-driven curriculum design.</li>
+              <li>• Development of Approaches to Learning (ATL) skills.</li>
+              <li>• Ongoing assessment to inform learning.</li>
+              <li>• Reflection and student voice.</li>
+
+              <p>
+                Our educators engage in continuous professional development to
+                ensure alignment with IB standards and practices.
+              </p>
             </ul>
           </motion.div>
         </div>
