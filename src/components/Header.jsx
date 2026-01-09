@@ -28,29 +28,30 @@ function Header() {
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         headerBg && !menuOpen
           ? "bg-white/90 backdrop-blur-md shadow-md"
-          : "bg-gradient-to-b from-white/50 to-white/20"
+          : "bg-gradient-to-b from-white/60 to-white/30"
       }`}
       style={{ fontFamily: "Inter, sans-serif" }}
     >
-      <nav className="container mx-auto flex justify-between items-center py-3 px-4 md:px-12">
+      <nav className="container mx-auto flex justify-between items-center px-4 sm:px-8 lg:px-12 py-2 md:py-3">
         {/* Logo */}
         <a href="/" className="flex items-center gap-3">
           <img
             src="/Logo.png"
-            alt="Logo"
-            className={`transition-all duration-300 object-contain w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16
-              ${headerBg ? "md:w-12 md:h-12 lg:w-14 lg:h-14" : ""} `}
+            alt="PSG World School Logo"
+            className={`object-contain transition-all duration-300
+              w-16 h-16
+              md:w-20 md:h-20
+              lg:w-24 lg:h-24
+              ${headerBg ? "md:w-18 md:h-18 lg:w-20 lg:h-20" : ""}
+            `}
           />
-          <span
-            className={`text-xl md:text-2xl font-bold tracking-wide transition ${
-              headerBg
-                ? "text-blue-900 hover:text-yellow-500"
-                : "text-blue-900 hover:text-yellow-500 drop-shadow-[0_2px_3px_rgba(0,0,0,0.2)]"
-            }`}
+         <span
+            className={`text-xl sm:text-2xl font-bold tracking-wide text-blue-900 leading-tight`}
             style={{ fontFamily: "Playfair Display, serif" }}
           >
             PSG World School
           </span>
+
         </a>
 
         {/* Desktop Nav */}
@@ -60,26 +61,35 @@ function Header() {
               <a
                 href={item.href}
                 target={item.label === "Careers" ? "_blank" : "_self"}
-                className={`font-sans font-semibold text-blue-900 text-lg px-2 py-1 transition-colors duration-300 group-hover:text-yellow-500 
-                `}
+                className="font-semibold text-blue-900 text-lg px-2 py-1 transition-colors duration-300 group-hover:text-yellow-500"
               >
                 {item.label}
-                <span className="absolute left-1/2 bottom-0 w-0 h-[2px] bg-yellow-500 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+                <span className="absolute left-1/2 bottom-0 w-0 h-[2px] bg-yellow-500 transition-all duration-300 group-hover:w-full group-hover:left-0" />
               </a>
             </li>
           ))}
         </ul>
 
-        {/* Right Action (100 years logo) */}
-        <div className="hidden md:flex items-center">
+        {/* Right Section */}
+        <div className="hidden md:flex flex-col items-center text-center">
           <img
             src="/100yearsLogo.png"
-            alt="100 years"
+            alt="100 years of PSG"
             className={`transition-all duration-300 object-contain
-              w-24 h-10 md:w-28 md:h-12 lg:w-32 lg:h-14
-              ${headerBg ? "md:w-24 md:h-10 lg:w-28 lg:h-12" : ""}
+              w-28 h-12 lg:w-32 lg:h-14
+              ${headerBg ? "lg:w-28 lg:h-12" : ""}
             `}
           />
+
+          {/* IB Authorization Message */}
+          <p
+            className={`mt-2 max-w-[220px] text-xs lg:text-sm leading-snug text-blue-800 transition-all duration-500 ${
+              headerBg ? "opacity-100 translate-y-0" : "opacity-90"
+            }`}
+          >
+            We are in the process of IB authorization and will soon become a
+            candidacy school.
+          </p>
         </div>
 
         {/* Mobile Menu Button */}
@@ -123,3 +133,4 @@ function Header() {
 }
 
 export default Header;
+
