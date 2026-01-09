@@ -11,10 +11,10 @@ const reasons = [
 
 const Why = () => {
   return (
-    <section className="w-full py-20 px-6 md:px-12 bg-gradient-to-br from-white via-blue-50 to-yellow-50 font-sans">
+    <section className="w-full py-20 px-6 md:px-12 bg-gradient-to-br from-white via-blue-50 to-[#B18141]/30 font-sans">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center">
         <div>
-          <p className="text-sm font-semibold text-yellow-400 tracking-wide">
+          <p className="text-sm font-semibold text-[#B18141] tracking-wide">
             WHY CHOOSE US
           </p>
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-blue-900 mt-3 leading-snug drop-shadow-sm">
@@ -36,7 +36,7 @@ const Why = () => {
               {reasons.map((r, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <span className="flex-shrink-0 mt-1">
-                    <Check size={18} color="#FBBF24" />
+                    <Check size={18} color="#B18141" />
                   </span>
                   <span className="text-gray-800">{r}</span>
                 </li>

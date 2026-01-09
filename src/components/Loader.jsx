@@ -7,7 +7,7 @@ const Loader = () => {
             <motion.img 
                 src="/Logo.png"
                 alt="Loading..."
-                className='w-20 h-20 object-contain mb-6'
+                className='w-40 h-40 object-contain mb-6'
                 animate={{ scale: [1, 1.2, 1] }}
                 transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
             />
