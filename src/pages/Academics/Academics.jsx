@@ -198,7 +198,7 @@ export default function Academics() {
             <span className="text-black">The</span> <br />
             <span className="text-[#B18141]">IB Continuum </span>
           </h2>
-          <div className="w-24 h-[4px] bg-gradient-to-r from-[#B18141] via-yellow-400 to-yellow-600 mx-auto mt-4 rounded-full shadow-md"></div>
+          <div className="w-24 h-[4px] bg-gradient-to-r from-[#B18141]/50 via-[#B18141]/40 to-[#B18141] mx-auto mt-4 rounded-full shadow-md"></div>
           <p className="mt-6 text-gray-700 max-w-3xl mx-auto text-lg leading-relaxed">
             PSG World School offers the full IB Continuum, ensuring every stage
             of learning is internationally benchmarked and future-focused.
@@ -300,7 +300,7 @@ export default function Academics() {
               <span className="text-black">Philosophy</span>
             </h2>
 
-            <div className="w-20 h-[3px] bg-gradient-to-r from-[#B18141] via-yellow-400 to-yellow-600"></div>
+            <div className="w-20 h-[3px] bg-gradient-to-r from-[#B18141]/50 via-[#B18141]/40 to-[#B18141]"></div>
 
             <p className="text-lg text-gray-700 leading-relaxed text-justify">
               The International Baccalaureate (IB) is an internationally
@@ -362,7 +362,7 @@ export default function Academics() {
             <span className="text-black">Teaching & Learning</span>{" "}
             <span className="text-[#B18141]">at PSG World School</span>
           </h2>
-          <div className="w-24 h-[4px] bg-gradient-to-r from-[#B18141] via-yellow-400 to-yellow-600 mx-auto mt-4 rounded-full shadow-md"></div>
+          <div className="w-24 h-[4px] bg-gradient-to-r from-[#B18141]/50 via-[#B18141]/40 to-[#B18141] mx-auto mt-4 rounded-full shadow-md"></div>
           <motion.p
             variants={fadeInUp}
             className="mt-6 text-gray-700 max-w-4xl mx-auto text-lg leading-relaxed"
@@ -463,7 +463,7 @@ export default function Academics() {
             <span className="text-[#B18141]">Outcomes</span>
           </motion.h2>
           <motion.div
-            className="w-20 h-[3px] bg-gradient-to-r from-yellow-400 to-yellow-600 mx-auto mt-4"
+            className="w-20 h-[3px] bg-gradient-to-r from-[#B18141] to-yellow-700 mx-auto mt-4"
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
             transition={{ duration: 0.8 }}
@@ -501,7 +501,7 @@ export default function Academics() {
         <div className="max-w-6xl mx-auto text-center" data-aos="fade-up">
           <h2 className="text-4xl font-['Playfair_Display'] font-bold">
             <span className="text-black">Beyond </span>
-            <span className="text-yellow-600">Academics</span>
+            <span className="text-[#B18141]">Academics</span>
           </h2>
           <div className="w-20 h-[3px] bg-gradient-to-r from-[#B18141] to-yellow-700 mx-auto mt-4"></div>
           <p className="mt-6 text-gray-700 max-w-3xl mx-auto">
