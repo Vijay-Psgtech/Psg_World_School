@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { motion } from "framer-motion";
 import LearningSpaces from "../../assets/images/campus/learning spaces 1.jfif";
-import InnovationLab from "../../assets/images/campus/innovation lab.jfif";
+import InnovationLab from "../../assets/images/campus/innovation1.jpg";
 import ArtsandCulture from "../../assets/images/campus/art and cuture 1.jfif";
 import SportsandWelness from "../../assets/images/campus/sports and welness.png";
 import LibraryandResearch from "../../assets/images/campus/library and resarch hub.jpg";
