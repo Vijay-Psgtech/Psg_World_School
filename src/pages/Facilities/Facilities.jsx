@@ -18,7 +18,7 @@ import "aos/dist/aos.css";
 // Images
 import AboutBanner from "../../assets/images/campus/campus11.png";
 import LearningSpaces from "../../assets/images/campus/learning spaces 2.png";
-import InnovationLab from "../../assets/images/campus/innovation lab.png";
+import InnovationLab from "../../assets/images/students/cpImg.jpg";
 import ArtandCulture from "../../assets/images/campus/art and culture 3.png";
 import SportsandWelness from "../../assets/images/campus/sports and welness.png";
 import LibraryResearch from "../../assets/images/campus/library and research hub 3.png";
