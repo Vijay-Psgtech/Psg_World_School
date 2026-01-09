@@ -46,7 +46,7 @@ function Header() {
             `}
           />
          <span
-            className={`text-xl sm:text-2xl font-bold tracking-wide text-blue-900 leading-tight`}
+            className={`text-xl sm:text-2xl font-bold tracking-wide text-blue-900 leading-tight hover:text-yellow-500`}
             style={{ fontFamily: "Playfair Display, serif" }}
           >
             PSG World School
@@ -61,7 +61,7 @@ function Header() {
               <a
                 href={item.href}
                 target={item.label === "Careers" ? "_blank" : "_self"}
-                className="font-semibold text-blue-900 text-lg px-2 py-1 transition-colors duration-300 group-hover:text-yellow-500"
+                className="font-semibold text-blue-900 text-md px-2 py-1 transition-colors duration-300 group-hover:text-yellow-500"
               >
                 {item.label}
                 <span className="absolute left-1/2 bottom-0 w-0 h-[2px] bg-yellow-500 transition-all duration-300 group-hover:w-full group-hover:left-0" />
@@ -126,6 +126,18 @@ function Header() {
               </li>
             ))}
           </ul>
+          <div className="mt-10 text-center text-sm text-blue-700">
+            <img
+              src="/100yearsLogo.png"
+              alt="100 years of PSG"
+              className="w-28 h-12 mx-auto mb-3"
+            />
+            <p>
+              We are in the process of IB authorization <br />
+              and will soon become a candidacy school.
+            </p>
+          </div>
+
         </div>
       )}
     </header>
