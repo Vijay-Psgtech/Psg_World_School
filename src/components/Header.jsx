@@ -80,16 +80,6 @@ function Header() {
               ${headerBg ? "lg:w-28 lg:h-12" : ""}
             `}
           />
-
-          {/* IB Authorization Message */}
-          <p
-            className={`mt-2 max-w-[220px] text-xs lg:text-sm leading-snug text-blue-800 transition-all duration-500 ${
-              headerBg ? "opacity-100 translate-y-0" : "opacity-90"
-            }`}
-          >
-            We are in the process of IB authorization and will soon become a
-            candidacy school.
-          </p>
         </div>
 
         {/* Mobile Menu Button */}
@@ -130,12 +120,8 @@ function Header() {
             <img
               src="/100yearsLogo.png"
               alt="100 years of PSG"
-              className="w-28 h-12 mx-auto mb-3"
+              className="w-28 h-14 mx-auto mb-3"
             />
-            <p>
-              We are in the process of IB authorization <br />
-              and will soon become a candidacy school.
-            </p>
           </div>
 
         </div>
