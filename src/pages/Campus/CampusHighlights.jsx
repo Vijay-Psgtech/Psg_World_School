@@ -6,7 +6,7 @@ import InnovationLab from "../../assets/images/campus/innovation1.jpg";
 import ArtsandCulture from "../../assets/images/campus/art and cuture 1.jfif";
 import SportsandWelness from "../../assets/images/campus/sports and welness.png";
 import LibraryandResearch from "../../assets/images/campus/library and resarch hub.jpg";
-import Campus from "../../assets/images/campus/campus16.png"
+import Campus from "../../assets/images/campus/library and research hub 3.png"
 import { Typewriter } from "react-simple-typewriter";
 
 const highlights = [

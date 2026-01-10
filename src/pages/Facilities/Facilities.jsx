@@ -22,7 +22,7 @@ import InnovationLab from "../../assets/images/students/cpImg.jpg";
 import ArtandCulture from "../../assets/images/campus/art and culture 3.png";
 import SportsandWelness from "../../assets/images/campus/sports and welness.png";
 import LibraryResearch from "../../assets/images/campus/library and research hub 3.png";
-import Campus from "../../assets/images/campus/campus16.png";
+import Campus from "../../assets/images/campus/library and research hub 3.png";
 
 // Reusable Heading
 const SectionHeading = ({ first, second, center, light }) => (
