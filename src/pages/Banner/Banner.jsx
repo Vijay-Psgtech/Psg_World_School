@@ -81,7 +81,7 @@ function Banner() {
           {/* Secondary */}
           <a
             href="#"
-            className="bg-[#B18141]/70 text-blue-900 px-6 py-3 rounded-xl font-small md:font-medium shadow-md hover:bg-[#B18141] transition"
+            className="bg-[#B18141] text-blue-900 px-6 py-3 rounded-xl font-small md:font-medium shadow-md hover:bg-yellow-700 transition"
           >
             Book a Campus Visit <FaPhoneAlt className="inline ml-2" />
           </a>
