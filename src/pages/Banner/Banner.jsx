@@ -4,7 +4,7 @@ import BannerImg2 from "../../assets/images/banner/b2.png";
 import BannerImg3 from "../../assets/images/banner/b3.png";
 import BannerImg4 from "../../assets/images/banner/b4.png";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaPhoneAlt } from "react-icons/fa";
+import { FaPhoneAlt, FaAward } from "react-icons/fa";
 
 const images = [BannerImg1, BannerImg2, BannerImg3, BannerImg4];
 
@@ -34,7 +34,7 @@ function Banner() {
   }, [index]);
 
   return (
-    <div className="relative h-[600px] md:h-[650px] lg:h-[740px] font-sans overflow-hidden">
+    <div className="relative h-[670px] md:h-[680px] lg:h-[750px] font-sans overflow-hidden">
       {/* Background Image Carousel*/}
       <AnimatePresence>
         <motion.div
@@ -62,6 +62,8 @@ function Banner() {
         <h2 className="text-lg md:text-2xl font-sans font-extrabold text-[#B18141] drop-shadow-[0_2px_3px_rgba(0,0,0,0.8)] mb-4 tracking-wide text-center md:text-left">
          {displayedText}
         </h2>
+
+        <p className="text-sm text-white mb-6 text-center md:text-left"> <span className="inline-block bg-black/30 px-3 py-1 rounded-full text-xs md:text-lg" style={{ fontFamily: "Inter, sans-serif" }}> ✦ We are in the process of IB authorization and will soon become a candidacy school ✦</span></p>
 
         {/* Main Text */}
         <p className="text-sm md:text-lg lg:text-xl text-white/90 font-bold drop-shadow-[0_2px_3px_rgba(0,0,0,0.8)] leading-relaxed max-w-2xl font-light mb-10 text-center md:text-left" style={{ fontFamily: "Inter, sans-serif" }}>
