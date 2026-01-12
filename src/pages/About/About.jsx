@@ -302,9 +302,10 @@ const About = () => {
         </div>
       </motion.section>
   
-      <section className="relative py-28 px-6 bg-gradient-to-br from-white via-white to-[#fafafa] border-t overflow-hidden">
+      {/*--- School Status Section commented ---*/}
+      {/* <section className="relative py-28 px-6 bg-gradient-to-br from-white via-white to-[#fafafa] border-t overflow-hidden"> */}
         {/* Animated Decorative Background */}
-        <motion.div
+        {/* <motion.div
           animate={{ y: [0, -20, 0] }}
           transition={{ repeat: Infinity, duration: 10 }}
           className="absolute -top-32 -left-32 w-96 h-96 bg-yellow-300/30 rounded-full blur-3xl"
@@ -313,11 +314,11 @@ const About = () => {
           animate={{ y: [0, 20, 0] }}
           transition={{ repeat: Infinity, duration: 12 }}
           className="absolute bottom-0 -right-32 w-[500px] h-[500px] bg-green-300/20 rounded-full blur-3xl"
-        />
+        /> */}
 
-        <div className="relative max-w-7xl mx-auto">
+        {/* <div className="relative max-w-7xl mx-auto"> */}
           {/* Heading */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -329,10 +330,10 @@ const About = () => {
               <span className="text-[#B18141]">School Status</span>
             </h2>
             <div className="w-28 h-[3px] bg-gradient-to-r from-[#B18141]/50 via-[#B18141]/40 to-[#B18141] mx-auto mt-6 rounded-full" />
-          </motion.div>
+          </motion.div> */}
 
           {/* Toggle Buttons */}
-          <div className="flex justify-center gap-6 mb-20">
+          {/* <div className="flex justify-center gap-6 mb-20">
             <button
               onClick={() => setIbStatus("AUTHORIZED")}
               className={`px-8 py-3 rounded-full font-semibold transition-all duration-300 ${
@@ -354,18 +355,18 @@ const About = () => {
             >
               ⏳ Candidate School
             </button>
-          </div>
+          </div> */}
 
           {/* Content */}
-          <motion.div
+          {/* <motion.div
             key={ibStatus}
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="grid lg:grid-cols-2 gap-14 items-center"
-          >
+          > */}
             {/* Left Content */}
-            {ibStatus === "AUTHORIZED" ? (
+            {/* {ibStatus === "AUTHORIZED" ? (
               <div className="bg-white/80 backdrop-blur-xl border border-green-200 rounded-3xl p-12 shadow-2xl">
                 <span className="inline-block mb-6 px-5 py-2 text-sm font-semibold text-green-700 bg-green-100 rounded-full">
                   Option A – IB Authorized School
@@ -447,28 +448,28 @@ const About = () => {
                   ))}
                 </div>
               </div>
-            )}
+            )} */}
 
             {/* Right Visual */}
-            <motion.div
+            {/* <motion.div
               animate={{ y: [0, -14, 0] }}
               transition={{ repeat: Infinity, duration: 7, ease: "easeInOut" }}
               className="relative h-[420px] rounded-3xl overflow-hidden shadow-2xl border border-white"
-            >
+            > */}
               {/* Background Image */}
-              <img
+              {/* <img
                 src={
                   ibStatus === "AUTHORIZED"
-                    ? "/src/assets/images/banner/b2.png" // ← replace with your real image path
-                    : "/src/assets/images/banner/b1.png" // ← replace with your real image path
-                }
+                    ? "/src/assets/images/banner/b2.png" // ← replace with your real image path */}
+                    {/* : "/src/assets/images/banner/b1.png" // ← replace with your real image path */}
+                {/* }
                 alt="IB School Status"
                 className="absolute inset-0 w-full h-full object-cover"
-              />
+              /> */}
 
-              <div className="absolute inset-0 bg-black/40" />
+              {/* <div className="absolute inset-0 bg-black/40" /> */}
 
-              <div className="relative z-10 h-full flex items-center justify-center p-10">
+              {/* <div className="relative z-10 h-full flex items-center justify-center p-10"> */}
                 {/* <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-8 text-center shadow-xl max-w-sm">
                   <h3 className="text-2xl font-semibold text-gray-900 mb-2">
                     {ibStatus === "AUTHORIZED"
@@ -481,23 +482,24 @@ const About = () => {
                       : "Progressing towards IB authorization through curriculum alignment and staff development."}
                   </p>
                 </div> */}
-              </div>
+              {/* </div> */}
 
-              <div
+              {/* <div
                 className={`absolute top-0 left-0 h-1 w-full ${
                   ibStatus === "AUTHORIZED" ? "bg-green-500" : "bg-yellow-500"
                 }`}
               />
             </motion.div>
-          </motion.div>
+          </motion.div> */}
 
           {/* Disclaimer */}
-          <p className="mt-20 text-sm text-gray-500 italic text-center">
+          {/* <p className="mt-20 text-sm text-gray-500 italic text-center">
             International Baccalaureate® and IB® are registered trademarks of
             the International Baccalaureate Organization.
           </p>
         </div>
-      </section>
+      </section> */}
+
       {/* Why Choose Us */}
       <motion.section
         variants={containerStagger}
