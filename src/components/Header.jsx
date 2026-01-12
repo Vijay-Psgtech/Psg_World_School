@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { FiMenu, FiX } from "react-icons/fi";
+import { FiMenu, FiX, FiHome } from "react-icons/fi";
+import { IoHome } from "react-icons/io5";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -27,35 +28,43 @@ function Header() {
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         headerBg && !menuOpen
-          ? "bg-white/90 backdrop-blur-md shadow-md"
-          : "bg-gradient-to-b from-white/60 to-white/30"
+          ? "bg-white/95 backdrop-blur-md shadow-md"
+          : "bg-gradient-to-r from-[#f0f8ff]/80 via-[#f0f8ff]/90 to-[#e6f0ff]/80"
       }`}
       style={{ fontFamily: "Inter, sans-serif" }}
     >
       <nav className="container mx-auto flex justify-between items-center px-4 sm:px-8 lg:px-12 py-2 md:py-3">
         {/* Logo */}
-        <a href="/" className="flex items-center gap-3">
+        <a href="/" className="relative flex items-center gap-3">
           <img
             src="/Logo.png"
             alt="PSG World School Logo"
             className={`object-contain transition-all duration-300
-              w-16 h-16
-              md:w-20 md:h-20
+              w-14 h-14
+              md:w-18 md:h-18
               lg:w-32 lg:h-24
-              ${headerBg ? "md:w-18 md:h-18 lg:w-20 lg:h-20" : ""}
+              ${headerBg ? "md:w-16 md:h-16 lg:w-20 lg:h-20" : ""}
             `}
           />
-         <span
-            className={`text-xl sm:text-xl font-extrabold tracking-wide text-blue-900 leading-tight hover:text-[#B18141]`}
+          <span
+            className={`text-xl sm:text-xl md:text-2xl font-extrabold tracking-wide text-blue-900 leading-tight hover:text-[#B18141] mr-4`}
             style={{ fontFamily: "Playfair Display, serif" }}
           >
             PSG World School
           </span>
-
         </a>
 
         {/* Desktop Nav */}
-        <ul className="hidden lg:flex gap-6 xl:gap-10">
+        <ul className="hidden lg:flex items-center gap-6 xl:gap-10">
+          <li>
+            <a
+              href="/"
+              className="flex items-center gap-2 text-blue-900 hover:text-[#B18141]"
+            >
+              <IoHome className="text-xl" />
+              {/* <span className="text-xl">🏠</span> */}
+            </a>
+          </li>
           {navLinks.map((item) => (
             <li key={item.label} className="relative group">
               <a
@@ -76,14 +85,14 @@ function Header() {
             src="/100yearsLogo.png"
             alt="100 years of PSG"
             className={`transition-all duration-300 object-contain
-              w-28 h-12 lg:w-32 lg:h-14
+              w-32 h-12 lg:w-32 lg:h-14
               ${headerBg ? "lg:w-28 lg:h-12" : ""}
             `}
           />
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="lg:hidden">
+        <div className="lg:hidden flex items-center">
           {!menuOpen && (
             <FiMenu
               className="text-blue-900 text-3xl cursor-pointer"
@@ -103,6 +112,16 @@ function Header() {
             />
           </div>
           <ul className="flex flex-col gap-6 text-lg font-medium">
+            <li>
+              <a
+                href="/"
+                className="flex items-center gap-3 hover:text-yellow-500 transition"
+                onClick={() => setMenuOpen(false)}
+              >
+                <IoHome className="text-2xl" />
+                Home
+              </a>
+            </li>
             {navLinks.map((item) => (
               <li key={item.label}>
                 <a
@@ -123,7 +142,6 @@ function Header() {
               className="w-28 h-14 mx-auto mb-3"
             />
           </div>
-
         </div>
       )}
     </header>
@@ -131,4 +149,3 @@ function Header() {
 }
 
 export default Header;
-
