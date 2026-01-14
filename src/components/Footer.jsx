@@ -113,7 +113,7 @@ const Footer = () => {
           ></iframe>
         </div> */}
         <img 
-          src="/PSGWS.png"
+          src="/map.jpg"
           alt="PSG World School Location"
           className="w-full h-[250px] object-cover rounded-2xl shadow-md"
           loading="lazy"

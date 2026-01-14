@@ -81,9 +81,9 @@ const ContactUs = () => {
 
         <div className="w-full h-[400px] rounded-2xl shadow-xl overflow-hidden bg-gray-100">
           <img
-            src="/PSGWS.png"
+            src="/map.jpg"
             alt="PSG World School Location"
-            className="w-full h-full object-contain"
+            className="w-full h-full object-cover"
             loading="lazy"
           />
         </div>
