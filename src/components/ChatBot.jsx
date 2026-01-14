@@ -6,7 +6,7 @@ const ChatBot = () => {
   const [messages, setMessages] = useState([
     { 
       sender: "bot", 
-      text: "Hello! 👋 Welcome to our institution. How can I assist you today?",
+      text: "Hello! 👋 Welcome to our School. How can I assist you today?",
       timestamp: new Date()
     },
   ]);
@@ -42,7 +42,7 @@ const ChatBot = () => {
       details: [
         "🌱 Primary Years Programme (PYP)",
         "   Nurturing inquiry, creativity, and confidence in young learners",
-        "   Ages 3–12",
+        "   Ages 3– 12",
         "",
         "🎯 Middle Years Programme (MYP)",
         "   Developing analytical skills, intercultural understanding, and personal responsibility",
