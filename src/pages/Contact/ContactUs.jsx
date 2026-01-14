@@ -41,7 +41,7 @@ const ContactUs = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center"
+          className="grid grid-cols-1 md:grid-cols-1 gap-8 text-center"
         >
           <div className="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
             <FaMapMarkerAlt className="text-blue-800 text-3xl mx-auto mb-3" />
@@ -51,7 +51,7 @@ const ContactUs = () => {
               641014.
             </p>
           </div>
-          <div className="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+          {/* <div className="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
             <FaEnvelope className="text-blue-800 text-3xl mx-auto mb-3" />
             <h3 className="text-lg font-semibold">Email Us</h3>
             <p className="text-gray-600 mt-2">
@@ -62,7 +62,7 @@ const ContactUs = () => {
             <FaPhoneAlt className="text-blue-800 text-3xl mx-auto mb-3" />
             <h3 className="text-lg font-semibold">Call Us</h3>
             <p className="text-gray-600 mt-2">+91 XXXXX XXXXX</p>
-          </div>
+          </div> */}
         </motion.div>
       </section>
 
