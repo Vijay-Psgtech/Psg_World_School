@@ -21,7 +21,9 @@ const Footer = () => {
           <h3 className="text-xl font-semibold text-gold mb-4">Contact Us</h3>
           <p className="flex items-start gap-3 mb-3 text-gray-300">
             <MapPin className="w-5 h-5 text-gold mt-1" />
-            PSG World School, S.F. No. 472, Civil Aerodrome Post,
+            PSG World School, 
+            <br />
+            S.F. No. 472, Civil Aerodrome Post,
             <br />
             Coimbatore, Tamil Nadu – 641014
           </p>
@@ -101,7 +103,7 @@ const Footer = () => {
         </div> */}
 
         {/*Map location*/}
-        <div className="w-full h-[250px] rounded-2xl overflow-hidden shadow-md">
+        {/* <div className="w-full h-[250px] rounded-2xl overflow-hidden shadow-md">
           <iframe
             title="school-location"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.0537513396685!2d77.03128737498162!3d11.034594154378855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba858526b5c0591%3A0x6c452206816788d4!2sPSG%20College%20of%20Arts%20and%20Science!5e0!3m2!1sen!2sin!4v1756792652876!5m2!1sen!2sin"
@@ -109,7 +111,13 @@ const Footer = () => {
             allowFullScreen=""
             loading="lazy"
           ></iframe>
-        </div>
+        </div> */}
+        <img 
+          src="/PSGWS.png"
+          alt="PSG World School Location"
+          className="w-full h-[250px] object-cover rounded-2xl shadow-md"
+          loading="lazy"
+        />
       </div>
 
       {/* Bottom Note */}

@@ -69,14 +69,23 @@ const ContactUs = () => {
       {/* Google Maps + Form */}
       <section className="px-6 md:px-20 py-16 grid grid-cols-1 lg:grid-cols-2 gap-12">
         {/* Google Map */}
-        <div className="h-[400px] w-full rounded-2xl overflow-hidden shadow">
+        {/* <div className="h-[400px] w-full rounded-2xl overflow-hidden shadow">
           <iframe
             title="school-location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.0537513396685!2d77.03128737498162!3d11.034594154378855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba858526b5c0591%3A0x6c452206816788d4!2sPSG%20College%20of%20Arts%20and%20Science!5e0!3m2!1sen!2sin!4v1756792652876!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d723.1839519043874!2d77.03636583148037!3d11.032349065951538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1768370930891!5m2!1sen!2sin"
             className="w-full h-full border-0"
             allowFullScreen=""
             loading="lazy"
           ></iframe>
+        </div> */}
+
+        <div className="w-full h-[400px] rounded-2xl shadow-xl overflow-hidden bg-gray-100">
+          <img
+            src="/PSGWS.png"
+            alt="PSG World School Location"
+            className="w-full h-full object-contain"
+            loading="lazy"
+          />
         </div>
 
         {/* Inquiry Form */}
