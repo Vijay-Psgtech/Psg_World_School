@@ -25,14 +25,14 @@ const Footer = () => {
             <br />
             Coimbatore, Tamil Nadu – 641014
           </p>
-          <p className="flex items-center gap-3 mb-2 text-gray-300">
+          {/* <p className="flex items-center gap-3 mb-2 text-gray-300">
             <Mail className="w-5 h-5 text-gold" />
             info@psgworldschool.edu.in
           </p>
           <p className="flex items-center gap-3 text-gray-300">
             <Phone className="w-5 h-5 text-gold" />
             +91 XXXXX XXXXX
-          </p>
+          </p> */}
         </div>
 
         {/* Social Media */}
