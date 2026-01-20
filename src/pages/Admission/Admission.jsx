@@ -280,10 +280,10 @@ const Admission = () => {
                 <br className="sm:hidden" />
                 send us an email at{" "}
                 <a
-                  href="mailto:admissions@psgworldschool.edu.in"
+                  href="mailto:admission@psgworldschool.edu.in"
                   className="text-blue-700 font-medium hover:text-blue-900 underline underline-offset-2 transition-colors"
                 >
-                  admissions@psgworldschool.edu.in
+                  admission@psgworldschool.edu.in
                 </a>
               </p>
 
