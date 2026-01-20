@@ -28,7 +28,7 @@ function Header() {
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         headerBg && !menuOpen
-          ? "bg-white/95 backdrop-blur-md shadow-md"
+          ? "bg-white/95 shadow-md"
           : "bg-gradient-to-r from-[#f0f8ff]/80 via-[#f0f8ff]/90 to-[#e6f0ff]/80"
       }`}
       style={{ fontFamily: "Inter, sans-serif" }}
@@ -115,7 +115,7 @@ function Header() {
             <li>
               <a
                 href="/"
-                className="flex items-center gap-3 hover:text-yellow-500 transition"
+                className="flex items-center gap-3 font-bold text-lg text-blue-950 hover:text-white hover:bg-[#B18141] transition"
                 onClick={() => setMenuOpen(false)}
               >
                 <IoHome className="text-2xl" />
@@ -127,7 +127,7 @@ function Header() {
                 <a
                   href={item.href}
                   target={item.label === "Careers" ? "_blank" : "_self"}
-                  className="hover:text-yellow-500 transition"
+                  className="font-bold text-lg text-blue-950 hover:text-white hover:bg-[#B18141] transition"
                   onClick={() => setMenuOpen(false)}
                 >
                   {item.label}
