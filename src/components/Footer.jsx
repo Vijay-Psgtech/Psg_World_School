@@ -29,18 +29,20 @@ const Footer = () => {
           </p>
           <div className="flex items-start gap-3 text-gray-300">
             <div className="flex-shrink-0 mt-1">
-              <Mail className="w-5 h-5 " />
+              <Mail className="w-5 h-5" />
             </div>
-            <div className="text-md">
+
+            {/* Force column layout for links */}
+            <div className="flex flex-col text-md leading-relaxed">
               <a
-                href="mailto:admissions@psgworldschool.edu.in"
-                className="block hover:text-[#B18141] transition-colors"
+                href="mailto:admission@psgworldschool.edu.in"
+                className="hover:text-[#B18141] transition-colors"
               >
-                admissions@psgworldschool.edu.in
+                admission@psgworldschool.edu.in
               </a>
               <a
                 href="mailto:info@psgworldschool.edu.in"
-                className="block hover:text-[#B18141] transition-colors"
+                className="hover:text-[#B18141] transition-colors"
               >
                 info@psgworldschool.edu.in
               </a>

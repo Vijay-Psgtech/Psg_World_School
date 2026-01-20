@@ -11,6 +11,7 @@ import {
 import Image1 from "../../assets/images/campus/campus17.png";
 import { motion } from "framer-motion";
 import { fadeInUp } from "../../utils/Variants";
+import { Contact } from "lucide-react";
 
 const ContactUs = () => {
   return (
@@ -41,54 +42,66 @@ const ContactUs = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-10 text-center"
+          className="max-w-4xl mx-auto text-center"
         >
-          {/* --- Address Card --- */}
-          <div className="relative bg-white/80 backdrop-blur-md border border-blue-100 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 p-8 hover:-translate-y-1 overflow-hidden">
-            {/* Hover gradient */}
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-100/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
+          {/* --- Single Unified Card --- */}
+          <div className="relative bg-white/80 backdrop-blur-md border border-blue-100 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 p-10 sm:p-14 hover:-translate-y-1 overflow-hidden">
+            {/* Hover gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-100/25 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
 
-            {/* Icon */}
-            <div className="relative w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-blue-100 text-blue-700 text-3xl mb-5 shadow-inner">
-              <FaMapMarkerAlt />
+            {/* Header Icon */}
+            <div className="relative w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-blue-100 text-blue-700 text-3xl mb-6 shadow-inner">
+              <Contact />
             </div>
 
-            <h3 className="text-xl font-semibold text-slate-800 mb-3">
-              Our Address
+            <h3 className="text-2xl font-semibold text-slate-800 mb-8">
+              Contact Information
             </h3>
-            <p className="text-gray-600 leading-relaxed text-md">
-              S.F. No. 472, Civil Aerodrome Post, <br />
-              Coimbatore, Tamil Nadu – 641014.
-            </p>
-          </div>
 
-          {/* --- Email Card --- */}
-          <div className="relative bg-white/80 backdrop-blur-md border border-blue-100 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 p-8 hover:-translate-y-1 overflow-hidden">
-            {/* Hover gradient */}
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-100/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
+            {/* Grid layout for Address + Email */}
+            <div className="grid sm:grid-cols-2 gap-10 text-left sm:text-center">
+              {/* Address */}
+              <div className="flex flex-col items-center sm:items-center">
+                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-50 text-blue-600 text-xl mb-3">
+                  <FaMapMarkerAlt />
+                </div>
+                <h4 className="text-lg font-semibold text-slate-800 mb-2">
+                  Our Address
+                </h4>
+                <p className="text-gray-600 text-md leading-relaxed text-center">
+                  S.F. No. 472, Civil Aerodrome Post,
+                  <br />
+                  Coimbatore, Tamil Nadu – 641014.
+                </p>
+              </div>
 
-            {/* Icon */}
-            <div className="relative w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-blue-100 text-blue-700 text-3xl mb-5 shadow-inner">
-              <FaEnvelope />
+              {/* Email */}
+              <div className="flex flex-col items-center sm:items-center">
+                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-50 text-blue-600 text-xl mb-3">
+                  <FaEnvelope />
+                </div>
+                <h4 className="text-lg font-semibold text-slate-800 mb-2">
+                  Email Us
+                </h4>
+                <div className="flex flex-col text-gray-600 text-md leading-relaxed">
+                  <a
+                    href="mailto:admission@psgworldschool.edu.in"
+                    className="hover:text-[#B18141] transition-colors"
+                  >
+                    admission@psgworldschool.edu.in
+                  </a>
+                  <a
+                    href="mailto:info@psgworldschool.edu.in"
+                    className="hover:text-[#B18141] transition-colors"
+                  >
+                    info@psgworldschool.edu.in
+                  </a>
+                </div>
+              </div>
             </div>
 
-            <h3 className="text-xl font-semibold text-slate-800 mb-3">
-              Email Us
-            </h3>
-            <p className="text-gray-600 leading-relaxed text-md">
-              <a
-                href="mailto:admissions@psgworldschool.edu.in"
-                className="block hover:text-blue-600 transition-colors"
-              >
-                admissions@psgworldschool.edu.in
-              </a>
-              <a
-                href="mailto:info@psgworldschool.edu.in"
-                className="block hover:text-blue-600 transition-colors"
-              >
-                info@psgworldschool.edu.in
-              </a>
-            </p>
+            {/* Decorative accent line */}
+            <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-400 via-[#B18141] to-blue-400 rounded-b-2xl"></div>
           </div>
         </motion.div>
       </section>
