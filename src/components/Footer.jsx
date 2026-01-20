@@ -21,17 +21,32 @@ const Footer = () => {
           <h3 className="text-xl font-semibold text-gold mb-4">Contact Us</h3>
           <p className="flex items-start gap-3 mb-3 text-gray-300">
             <MapPin className="w-5 h-5 text-gold mt-1" />
-            PSG World School, 
+            PSG World School,
             <br />
             S.F. No. 472, Civil Aerodrome Post,
             <br />
             Coimbatore, Tamil Nadu – 641014
           </p>
-          {/* <p className="flex items-center gap-3 mb-2 text-gray-300">
-            <Mail className="w-5 h-5 text-gold" />
-            info@psgworldschool.edu.in
-          </p>
-          <p className="flex items-center gap-3 text-gray-300">
+          <div className="flex items-start gap-3 text-gray-300">
+            <div className="flex-shrink-0 mt-1">
+              <Mail className="w-5 h-5 " />
+            </div>
+            <div className="text-md">
+              <a
+                href="mailto:admissions@psgworldschool.edu.in"
+                className="block hover:text-[#B18141] transition-colors"
+              >
+                admissions@psgworldschool.edu.in
+              </a>
+              <a
+                href="mailto:info@psgworldschool.edu.in"
+                className="block hover:text-[#B18141] transition-colors"
+              >
+                info@psgworldschool.edu.in
+              </a>
+            </div>
+          </div>
+          {/*<p className="flex items-center gap-3 text-gray-300">
             <Phone className="w-5 h-5 text-gold" />
             +91 XXXXX XXXXX
           </p> */}
@@ -74,16 +89,36 @@ const Footer = () => {
             </h3>
             <ul className="space-y-2 text-gray-300">
               <li>
-                <a href="/admissions" className="hover:underline hover:text-[#B18141]">Admissions</a>
+                <a
+                  href="/admissions"
+                  className="hover:underline hover:text-[#B18141]"
+                >
+                  Admissions
+                </a>
               </li>
               <li>
-                <a href="/academics" className="hover:underline hover:text-[#B18141]">Academics</a>
+                <a
+                  href="/academics"
+                  className="hover:underline hover:text-[#B18141]"
+                >
+                  Academics
+                </a>
               </li>
               <li>
-                <a href="/facilities" className="hover:underline hover:text-[#B18141]">Facilities</a>
+                <a
+                  href="/facilities"
+                  className="hover:underline hover:text-[#B18141]"
+                >
+                  Facilities
+                </a>
               </li>
               <li>
-                <a href="/contact" className="hover:underline hover:text-[#B18141]">Contact</a>
+                <a
+                  href="/contact"
+                  className="hover:underline hover:text-[#B18141]"
+                >
+                  Contact
+                </a>
               </li>
             </ul>
           </div>
@@ -112,7 +147,7 @@ const Footer = () => {
             loading="lazy"
           ></iframe>
         </div> */}
-        <img 
+        <img
           src="/map.jpg"
           alt="PSG World School Location"
           className="w-full h-[250px] object-cover rounded-2xl shadow-md"
@@ -123,7 +158,7 @@ const Footer = () => {
       {/* Bottom Note */}
       <div className="text-center text-gray-400 mt-6 text-sm">
         © {new Date().getFullYear()} PSG World School. All rights reserved.
-        <br/>
+        <br />
         Powered By IT Services Team, PSG Institutions.
       </div>
     </footer>

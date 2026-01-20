@@ -242,7 +242,7 @@ const Admission = () => {
                       >
                         {col}
                       </motion.th>
-                    )
+                    ),
                   )}
                 </tr>
               </thead>
@@ -272,6 +272,24 @@ const Admission = () => {
                 ))}
               </tbody>
             </motion.table>
+            <div className="relative mt-8 rounded-2xl bg-gradient-to-br from-blue-50 via-white to-blue-50 p-6 sm:p-8 border border-blue-100 shadow-sm">
+              <p className="text-base sm:text-lg text-slate-700 leading-relaxed text-center">
+                <span className="italic text-slate-500">
+                  For more information,
+                </span>{" "}
+                <br className="sm:hidden" />
+                send us an email at{" "}
+                <a
+                  href="mailto:admissions@psgworldschool.edu.in"
+                  className="text-blue-700 font-medium hover:text-blue-900 underline underline-offset-2 transition-colors"
+                >
+                  admissions@psgworldschool.edu.in
+                </a>
+              </p>
+
+              {/* subtle accent bar */}
+              <div className="absolute left-0 bottom-0 w-full h-1 rounded-b-2xl bg-gradient-to-r from-blue-400 via-[#B18141] to-blue-400"></div>
+            </div>
           </div>
         </div>
       </section>

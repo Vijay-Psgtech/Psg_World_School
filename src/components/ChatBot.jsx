@@ -63,7 +63,9 @@ const ChatBot = () => {
         "📍 PSG World School",
         "   S.F. No. 472, Civil Aerodrome Post",
         "   Coimbatore, Tamil Nadu – 641014",
-        "",
+        "  📧 Email",
+        " admissions@psgworldschool.edu.in",
+        " info@psgworldschool.edu.in",
         "🕐 Visit us for more information",
         "💬 We're here to help with your queries"
       ]
