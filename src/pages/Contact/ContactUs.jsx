@@ -35,37 +35,63 @@ const ContactUs = () => {
       </section>
 
       {/* Contact Info */}
-      <section className="py-16 px-6 md:px-20 bg-gray-50">
+      <section className="py-20 px-6 md:px-20 bg-gradient-to-b from-white via-slate-50 to-blue-50">
         <motion.div
           variants={fadeInUp}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-1 gap-8 text-center"
+          className="grid grid-cols-1 md:grid-cols-2 gap-10 text-center"
         >
-          <div className="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
-            <FaMapMarkerAlt className="text-blue-800 text-3xl mx-auto mb-3" />
-            <h3 className="text-lg font-semibold">Our Address</h3>
-            <p className="text-gray-600 mt-2">
-              S.F. No. 472, Civil Aerodrome Post, Coimbatore, Tamil Nadu –
-              641014.
+          {/* --- Address Card --- */}
+          <div className="relative bg-white/80 backdrop-blur-md border border-blue-100 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 p-8 hover:-translate-y-1 overflow-hidden">
+            {/* Hover gradient */}
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-100/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
+
+            {/* Icon */}
+            <div className="relative w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-blue-100 text-blue-700 text-3xl mb-5 shadow-inner">
+              <FaMapMarkerAlt />
+            </div>
+
+            <h3 className="text-xl font-semibold text-slate-800 mb-3">
+              Our Address
+            </h3>
+            <p className="text-gray-600 leading-relaxed text-md">
+              S.F. No. 472, Civil Aerodrome Post, <br />
+              Coimbatore, Tamil Nadu – 641014.
             </p>
           </div>
-          {/* <div className="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
-            <FaEnvelope className="text-blue-800 text-3xl mx-auto mb-3" />
-            <h3 className="text-lg font-semibold">Email Us</h3>
-            <p className="text-gray-600 mt-2">
-              info@psgworldschool.edu.in
+
+          {/* --- Email Card --- */}
+          <div className="relative bg-white/80 backdrop-blur-md border border-blue-100 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 p-8 hover:-translate-y-1 overflow-hidden">
+            {/* Hover gradient */}
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-100/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
+
+            {/* Icon */}
+            <div className="relative w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-blue-100 text-blue-700 text-3xl mb-5 shadow-inner">
+              <FaEnvelope />
+            </div>
+
+            <h3 className="text-xl font-semibold text-slate-800 mb-3">
+              Email Us
+            </h3>
+            <p className="text-gray-600 leading-relaxed text-md">
+              <a
+                href="mailto:admissions@psgworldschool.edu.in"
+                className="block hover:text-blue-600 transition-colors"
+              >
+                admissions@psgworldschool.edu.in
+              </a>
+              <a
+                href="mailto:info@psgworldschool.edu.in"
+                className="block hover:text-blue-600 transition-colors"
+              >
+                info@psgworldschool.edu.in
+              </a>
             </p>
           </div>
-          <div className="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
-            <FaPhoneAlt className="text-blue-800 text-3xl mx-auto mb-3" />
-            <h3 className="text-lg font-semibold">Call Us</h3>
-            <p className="text-gray-600 mt-2">+91 XXXXX XXXXX</p>
-          </div> */}
         </motion.div>
       </section>
-
       {/* Google Maps + Form */}
       <section className="px-6 md:px-20 py-16 grid grid-cols-1 lg:grid-cols-2 gap-12">
         {/* Google Map */}
