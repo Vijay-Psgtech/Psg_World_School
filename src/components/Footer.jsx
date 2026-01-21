@@ -27,6 +27,13 @@ const Footer = () => {
             <br />
             Coimbatore, Tamil Nadu – 641014
           </p>
+
+          <p className="flex items-center gap-3 text-gray-300 mb-3">
+            <Phone className="w-5 h-5 text-gold" />
+            +91 62925 25252
+          </p>
+
+
           <div className="flex items-start gap-3 text-gray-300">
             <div className="flex-shrink-0 mt-1">
               <Mail className="w-5 h-5" />
@@ -48,10 +55,7 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          {/*<p className="flex items-center gap-3 text-gray-300">
-            <Phone className="w-5 h-5 text-gold" />
-            +91 XXXXX XXXXX
-          </p> */}
+         
         </div>
 
         {/* Social Media */}
