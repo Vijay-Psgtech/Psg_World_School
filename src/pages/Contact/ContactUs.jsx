@@ -59,7 +59,7 @@ const ContactUs = () => {
             </h3>
 
             {/* Grid layout for Address + Email */}
-            <div className="grid sm:grid-cols-2 gap-10 text-left sm:text-center">
+            <div className="grid sm:grid-cols-3 gap-10 text-left sm:text-center">
               {/* Address */}
               <div className="flex flex-col items-center sm:items-center">
                 <div className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-50 text-blue-600 text-xl mb-3">
@@ -72,6 +72,19 @@ const ContactUs = () => {
                   S.F. No. 472, Civil Aerodrome Post,
                   <br />
                   Coimbatore, Tamil Nadu – 641014.
+                </p>
+              </div>
+
+              {/* Phone */}
+              <div className="flex flex-col items-center sm:items-center">
+                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-50 text-blue-600 text-xl mb-3">
+                  <FaPhoneAlt className="w-5 h-5 text-blue-600" />
+                </div>
+                <h4 className="text-lg font-semibold text-slate-800 mb-2">
+                  Call Us
+                </h4>
+                <p className="text-gray-600 text-md leading-relaxed">
+                  +91 62925 25252
                 </p>
               </div>
 
