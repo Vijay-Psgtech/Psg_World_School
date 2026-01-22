@@ -25,12 +25,14 @@ const Footer = () => {
             <br />
             S.F. No. 472, Civil Aerodrome Post,
             <br />
-            Coimbatore, Tamil Nadu – 641014
+            Coimbatore – 641014,
+            <br />
+            Tamil Nadu.
           </p>
 
           <p className="flex items-center gap-3 text-gray-300 mb-3">
             <Phone className="w-5 h-5 text-gold" />
-            +91 62925 25252
+            +91 6292 525252
           </p>
 
 
