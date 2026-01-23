@@ -68,10 +68,12 @@ const ContactUs = () => {
                 <h4 className="text-lg font-semibold text-slate-800 mb-2">
                   Our Address
                 </h4>
-                <p className="text-gray-600 text-md leading-relaxed text-center">
-                  S.F. No. 472, Civil Aerodrome Post,
+                <p className="flex items-start gap-3 mb-3 text-gray-600 text-md leading-relaxed">
+                  S.F.No.472, Civil Aerodrome Post,
                   <br />
-                  Coimbatore, Tamil Nadu – 641014.
+                  Coimbatore – 641014,
+                  <br />
+                  Tamil Nadu.
                 </p>
               </div>
 
@@ -84,7 +86,7 @@ const ContactUs = () => {
                   Call Us
                 </h4>
                 <p className="text-gray-600 text-md leading-relaxed">
-                  +91 62925 25252
+                  +91 6292 525252
                 </p>
               </div>
 
