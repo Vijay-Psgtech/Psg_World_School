@@ -120,6 +120,23 @@ const ContactUs = () => {
           </div>
         </motion.div>
       </section>
+
+      {/* Careeres  */}
+      <section class="py-12 bg-gradient-to-r from-[#B18141]/20 to-[#B18141]/40">
+        <div class="container mx-auto text-center">
+          <h2 class="text-3xl font-semibold mb-4">Join Our Team</h2>
+          <p class="text-lg mb-6">
+            We’re always looking for passionate educators and staff members who share our commitment to excellence.
+          </p>
+          <p>
+            Send your resume to {""}
+            <a href="mailto:career@psgworldschool.edu.in" className="text-blue-600 underline">
+              career@psgworldschool.edu.in
+            </a>
+          </p>
+        </div>
+      </section>
+
       {/* Google Maps + Form */}
       <section className="px-6 md:px-20 py-16 grid grid-cols-1 lg:grid-cols-2 gap-12">
         {/* Google Map */}

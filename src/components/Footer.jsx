@@ -132,6 +132,29 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Careers + Map */}
+        <div>
+          <h3 className="text-xl font-semibold text-gold mb-4">
+            Careers
+          </h3>
+          <p className="text-gray-300 mb-4">
+            Join our team of passionate educators and staff dedicated to shaping the future of education. Explore current openings and become a part of the PSG World School family.
+          </p>
+           <p>
+            Send your resume to {""}
+            <a href="mailto:career@psgworldschool.edu.in" className="text-[#B18141] underline">
+              career@psgworldschool.edu.in
+            </a>
+          </p>
+
+           <img
+          src="/map.jpg"
+          alt="PSG World School Location"
+          className="w-full h-[250px] object-cover rounded-2xl shadow-md mb-6 mt-6"
+          loading="lazy"
+        />
+        </div>
+
         {/* Accreditation Logos */}
         {/* <div>
           <h3 className="text-xl font-semibold text-gold mb-4">
@@ -155,12 +178,7 @@ const Footer = () => {
             loading="lazy"
           ></iframe>
         </div> */}
-        <img
-          src="/map.jpg"
-          alt="PSG World School Location"
-          className="w-full h-[250px] object-cover rounded-2xl shadow-md"
-          loading="lazy"
-        />
+       
       </div>
 
       {/* Bottom Note */}
