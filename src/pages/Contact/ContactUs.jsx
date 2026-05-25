@@ -1,0 +1,220 @@
+import React from "react";
+import {
+  FaPhoneAlt,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+} from "react-icons/fa";
+import Image1 from "../../assets/images/campus/campus17.png";
+import { motion } from "framer-motion";
+import { fadeInUp } from "../../utils/Variants";
+import { Contact } from "lucide-react";
+
+const ContactUs = () => {
+  return (
+    <div className="w-full font-sans bg-white">
+      {/* Hero Section */}
+      <section
+        className="relative h-[60vh] flex items-center justify-center bg-fixed bg-cover bg-center"
+        style={{ backgroundImage: `url(${Image1})` }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+        <motion.h1
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="text-4xl md:text-6xl font-['Playfair_Display'] font-bold tracking-tight drop-shadow-lg"
+        >
+          <span className="text-black">Contact</span>{" "}
+          <span className="text-[#B18141]">Us</span>
+          <div className="w-32 h-[3px] bg-gradient-to-r from-[#B18141]/50 via-[#B18141]/40 to-[#B18141] mx-auto mt-6 rounded-full"></div>
+        </motion.h1>
+      </section>
+
+      {/* Contact Info */}
+      <section className="py-20 px-6 md:px-20 bg-gradient-to-b from-white via-slate-50 to-blue-50">
+        <motion.div
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="max-w-4xl mx-auto text-center"
+        >
+          {/* --- Single Unified Card --- */}
+          <div className="relative bg-white/80 backdrop-blur-md border border-blue-100 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 p-10 sm:p-14 hover:-translate-y-1 overflow-hidden">
+            {/* Hover gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-100/25 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
+
+            {/* Header Icon */}
+            <div className="relative w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-blue-100 text-blue-700 text-3xl mb-6 shadow-inner">
+              <Contact />
+            </div>
+
+            <h3 className="text-2xl font-semibold text-slate-800 mb-8">
+              Contact Information
+            </h3>
+
+            {/* Grid layout for Address + Email */}
+            <div className="grid sm:grid-cols-3 gap-10 text-left sm:text-center">
+              {/* Address */}
+              <div className="flex flex-col items-center sm:items-center">
+                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-50 text-blue-600 text-xl mb-3">
+                  <FaMapMarkerAlt />
+                </div>
+                <h4 className="text-lg font-semibold text-slate-800 mb-2">
+                  Our Address
+                </h4>
+                <p className="flex items-start gap-3 mb-3 text-gray-600 text-md leading-relaxed">
+                  S.F.No.472, Civil Aerodrome Post,
+                  <br />
+                  Coimbatore – 641014,
+                  <br />
+                  Tamil Nadu.
+                </p>
+              </div>
+
+              {/* Phone */}
+              <div className="flex flex-col items-center sm:items-center">
+                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-50 text-blue-600 text-xl mb-3">
+                  <FaPhoneAlt className="w-5 h-5 text-blue-600" />
+                </div>
+                <h4 className="text-lg font-semibold text-slate-800 mb-2">
+                  Call Us
+                </h4>
+                <p className="text-gray-600 text-md leading-relaxed">
+                  +91 6292 525252
+                </p>
+              </div>
+
+              {/* Email */}
+              <div className="flex flex-col items-center sm:items-center">
+                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-50 text-blue-600 text-xl mb-3">
+                  <FaEnvelope />
+                </div>
+                <h4 className="text-lg font-semibold text-slate-800 mb-2">
+                  Email Us
+                </h4>
+                <div className="flex flex-col text-gray-600 text-md leading-relaxed">
+                  <a
+                    href="mailto:admission@psgworldschool.edu.in"
+                    className="hover:text-[#B18141] transition-colors"
+                  >
+                    admission@psgworldschool.edu.in
+                  </a>
+                  <a
+                    href="mailto:info@psgworldschool.edu.in"
+                    className="hover:text-[#B18141] transition-colors"
+                  >
+                    info@psgworldschool.edu.in
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Decorative accent line */}
+            <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-400 via-[#B18141] to-blue-400 rounded-b-2xl"></div>
+          </div>
+        </motion.div>
+      </section>
+
+      {/* Careeres  */}
+      <section class="py-12 bg-gradient-to-r from-[#B18141]/20 to-[#B18141]/40">
+        <div class="container mx-auto text-center">
+          <h2 class="text-3xl font-semibold mb-4">Join Our Team</h2>
+          <p class="text-lg mb-6">
+            We’re always looking for passionate educators and staff members who share our commitment to excellence.
+          </p>
+          <p>
+            Send your resume to {""}
+            <a href="mailto:career@psgworldschool.edu.in" className="text-blue-600 underline">
+              career@psgworldschool.edu.in
+            </a>
+          </p>
+        </div>
+      </section>
+
+      {/* Google Maps + Form */}
+      <section className="px-6 md:px-20 py-16 grid grid-cols-1 lg:grid-cols-2 gap-12">
+        {/* Google Map */}
+        {/* <div className="h-[400px] w-full rounded-2xl overflow-hidden shadow">
+          <iframe
+            title="school-location"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d723.1839519043874!2d77.03636583148037!3d11.032349065951538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1768370930891!5m2!1sen!2sin"
+            className="w-full h-full border-0"
+            allowFullScreen=""
+            loading="lazy"
+          ></iframe>
+        </div> */}
+
+        <div className="w-full h-[400px] rounded-2xl shadow-xl overflow-hidden bg-gray-100">
+          <img
+            src="/map.jpg"
+            alt="PSG World School Location"
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+
+        {/* Inquiry Form */}
+        <div className="bg-white shadow rounded-2xl p-8">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-6">
+            Book a Tour / Request Info
+          </h2>
+          <form className="space-y-5">
+            <input
+              type="text"
+              placeholder="Your Name"
+              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-600 outline-none"
+            />
+            <input
+              type="email"
+              placeholder="Your Email"
+              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-600 outline-none"
+            />
+            <input
+              type="text"
+              placeholder="Your Phone"
+              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-600 outline-none"
+            />
+            <textarea
+              placeholder="Your Message"
+              rows="4"
+              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-600 outline-none"
+            ></textarea>
+            <button
+              type="submit"
+              className="w-full bg-blue-800 text-white py-3 rounded-lg hover:bg-blue-900 transition"
+            >
+              Submit Inquiry
+            </button>
+          </form>
+        </div>
+      </section>
+
+      {/* Social Media */}
+      <section className="py-10 bg-blue-900 text-white text-center">
+        <h3 className="text-lg font-medium mb-4">Connect With Us</h3>
+        <div className="flex justify-center gap-6 text-2xl">
+          <a href="#" className="hover:text-[#B18141] transition">
+            <FaFacebook />
+          </a>
+          <a href="#" className="hover:text-[#B18141] transition">
+            <FaInstagram />
+          </a>
+          <a href="#" className="hover:text-[#B18141] transition">
+            <FaLinkedin />
+          </a>
+          <a href="#" className="hover:text-[#B18141] transition">
+            <FaTwitter />
+          </a>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default ContactUs;
