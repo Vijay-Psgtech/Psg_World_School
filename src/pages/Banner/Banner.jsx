@@ -63,11 +63,11 @@ function Banner() {
          {displayedText}
         </h2>
 
-        <p className="text-sm text-white mb-6 text-center md:text-left"> <span className="inline-block bg-black/30 px-3 py-1 rounded-full text-xs md:text-lg" style={{ fontFamily: "Inter, sans-serif" }}> ✦ We are in the process of IB authorization and will soon become a candidacy school ✦</span></p>
+        {/* <p className="text-sm text-white mb-6 text-center md:text-left"> <span className="inline-block bg-black/30 px-3 py-1 rounded-full text-xs md:text-lg" style={{ fontFamily: "Inter, sans-serif" }}> ✦ We are in the process of IB authorization and will soon become a candidacy school ✦</span></p> */}
 
         {/* Main Text */}
         <p className="text-sm md:text-lg lg:text-xl text-white/90 font-bold drop-shadow-[0_2px_3px_rgba(0,0,0,0.8)] leading-relaxed max-w-2xl font-light mb-10 text-center md:text-left" style={{ fontFamily: "Inter, sans-serif" }}>
-          At <span className="text-[#B18141] font-bold">PSG World School</span>, we believe education is not just about learning — it’s about becoming. As an IB World School, we nurture curiosity, creativity, and compassion, preparing every learner to thrive in the world’s best universities and, more importantly, to shape a better tomorrow.
+          At <span className="text-[#B18141] font-bold">PSG World School</span>, we believe education is not just about learning — it’s about becoming. As a World School, we nurture curiosity, creativity, and compassion, preparing every learner to thrive in the world’s best universities and, more importantly, to shape a better tomorrow.
         </p>
 
         {/* Buttons */}
@@ -77,7 +77,7 @@ function Banner() {
             href="#"
             className="bg-[#1E3A8A] text-white px-6 py-3 rounded-xl font-small md:font-medium shadow-md hover:bg-[#1D4ED8] transition"
           >
-            Explore IB Journey <span className="ml-2">➔</span>
+            Explore our Journey <span className="ml-2">➔</span>
           </a>
 
           {/* Secondary */}

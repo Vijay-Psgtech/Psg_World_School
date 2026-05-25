@@ -73,7 +73,7 @@ const AdmissionProcess = () => {
         <p className="text-lg text-gray-600">
           Our admissions process is transparent, inclusive, and
           student-centered. We seek learners who are curious, open-minded, and
-          ready to embrace the challenge of IB learning.
+          ready to embrace the challenge of  learning.
         </p>
       </div>
 

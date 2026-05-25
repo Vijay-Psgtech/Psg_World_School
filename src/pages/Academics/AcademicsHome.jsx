@@ -24,7 +24,7 @@ const EducationData = [
     subtitle: "Ages 3–12",
     tagline: "NURTURE",
     description:
-      "The IB Primary Years Programme (PYP) is designed for students aged 3–12 years and focuses on the development of the whole child. Learning is structured around inquiry, conceptual understanding, and transdisciplinary themes, enabling students to make connections between learning and real-life contexts.",
+      "The Primary Years Programme (PYP) is designed for students aged 3–12 years and focuses on the development of the whole child. Learning is structured around inquiry, conceptual understanding, and transdisciplinary themes, enabling students to make connections between learning and real-life contexts.",
     image: pypImg,
   },
   {
@@ -33,7 +33,7 @@ const EducationData = [
     subtitle: "Ages 11–16",
     tagline: "DEVELOP",
     description:
-      "The International Baccalaureate (IB) Middle Years Programme (MYP) is designed for students aged 11–16 years. It provides a challenging and balanced education that encourages students to make practical connections between their studies and the real world. The MYP supports students in developing intellectual discipline, personal responsibility, and a strong sense of identity during a critical stage of adolescence.",
+      "The Middle Years Programme (MYP) is designed for students aged 11–16 years. It provides a challenging and balanced education that encourages students to make practical connections between their studies and the real world. The MYP supports students in developing intellectual discipline, personal responsibility, and a strong sense of identity during a critical stage of adolescence.",
     image: mypImg,
   },
   {
@@ -42,7 +42,7 @@ const EducationData = [
     subtitle: "Ages 16–19",
     tagline: "ACHIEVE",
     description:
-      "The IB Diploma Programme (DP) is a two-year pre-university programme designed for students aged 16–19 years. It aims to develop students who have excellent breadth and depth of knowledge, alongside strong critical thinking and reflective skills. The DP provides a rigorous academic framework while supporting students’ intellectual, personal, emotional, and social development.",
+      "The  Diploma Programme (DP) is a two-year pre-university programme designed for students aged 16–19 years. It aims to develop students who have excellent breadth and depth of knowledge, alongside strong critical thinking and reflective skills. The DP provides a rigorous academic framework while supporting students’ intellectual, personal, emotional, and social development.",
     image: dpImg,
   },
   {
@@ -51,7 +51,7 @@ const EducationData = [
     subtitle: "Ages 16–19",
     tagline: "LEAD",
     description:
-      "The IB Career-related Programme (CP) is designed for students aged 16–19 years who wish to engage in career-related learning alongside academic studies. The CP supports students in developing transferable skills needed for further education, training, and employment. The CP enables students to develop confidence, responsibility, and an understanding of ethical and global perspectives related to their chosen pathways. ",
+      "The  Career-related Programme (CP) is designed for students aged 16–19 years who wish to engage in career-related learning alongside academic studies. The CP supports students in developing transferable skills needed for further education, training, and employment. The CP enables students to develop confidence, responsibility, and an understanding of ethical and global perspectives related to their chosen pathways. ",
     image: cpImg,
   },
 ];
@@ -73,8 +73,8 @@ function AcademicsHome() {
         <h4 className="text-[#B18141] font-semibold mb-3 tracking-widest uppercase text-sm">
           <Typewriter
             words={[
-              "The IB Continuum",
-              "The IB Advantage at PSG",
+              // "The IB Continuum",
+              // "The IB Advantage at PSG",
               "Academic Outcomes",
             ]}
             loop={true}
@@ -86,7 +86,7 @@ function AcademicsHome() {
           />
         </h4>
         <h1 className="text-4xl md:text-5xl font-serif font-bold text-blue-900 drop-shadow-sm">
-          IB Programme 
+           Programme 
         </h1>
       </div>
 

@@ -85,7 +85,7 @@ const Contact = () => {
             <p>
               Our admissions process is transparent, inclusive, and
               student-centered. We seek learners who are curious, open-minded,
-              and ready to embrace the challenge of IB learning.
+              and ready to embrace the challenge of learning.
             </p>
             <p>
               Our educators are lifelong learners, continuously upskilled to
