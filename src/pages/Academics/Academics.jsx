@@ -68,7 +68,7 @@ export default function Academics() {
     {
       id: 1,
       icon: <GraduationCap className="w-8 h-8 text-yellow-600" />,
-      text: "Aspire for IB Diploma scores above the global benchmark (33–34).",
+      text: "Aspire for  Diploma scores above the global benchmark (33–34).",
     },
     {
       id: 2,
@@ -117,7 +117,7 @@ export default function Academics() {
       icon: Award,
       title: "Continuous professional development",
       description:
-        "Ensuring educators stay aligned with IB standards through ongoing training and best practices.",
+        "Ensuring educators stay aligned with world standards through ongoing training and best practices.",
     },
   ];
 
@@ -157,7 +157,7 @@ export default function Academics() {
         >
           <h1 className="text-5xl md:text-6xl font-['Playfair_Display'] font-bold drop-shadow-lg">
             <span className="text-black">Academics</span>{" "}
-            <span className="text-[#B18141]">– The IB Advantage at PSG</span>
+            <span className="text-[#B18141]">– The  Advantage at PSG</span>
           </h1>
           <p className="mt-4 text-lg md:text-xl text-blue-200">
             Excellence • Global Perspective • Lifelong Learning
@@ -195,12 +195,12 @@ export default function Academics() {
           data-aos="fade-up"
         >
           <h2 className="text-4xl md:text-5xl font-['Playfair_Display'] font-bold">
-            <span className="text-black">The</span> <br />
-            <span className="text-[#B18141]">IB Continuum </span>
+            {/* <span className="text-black">The</span> <br />
+            <span className="text-[#B18141]">IB Continuum </span> */}
           </h2>
           <div className="w-24 h-[4px] bg-gradient-to-r from-[#B18141]/50 via-[#B18141]/40 to-[#B18141] mx-auto mt-4 rounded-full shadow-md"></div>
           <p className="mt-6 text-gray-700 max-w-3xl mx-auto text-lg leading-relaxed">
-            PSG World School offers the full IB Continuum, ensuring every stage
+            PSG World School offers the full Continuum, ensuring every stage
             of learning is internationally benchmarked and future-focused.
           </p>
         </div>
@@ -215,22 +215,22 @@ export default function Academics() {
             },
             {
               title: "Primary Years Programme (PYP)",
-              desc: "The IB Primary Years Programme (PYP) is designed for students aged 3–12 years and focuses on the development of the whole child. Learning is structured around inquiry, conceptual understanding, and transdisciplinary themes, enabling students to make connections between learning and real-life contexts.",
+              desc: "The  Primary Years Programme (PYP) is designed for students aged 3–12 years and focuses on the development of the whole child. Learning is structured around inquiry, conceptual understanding, and transdisciplinary themes, enabling students to make connections between learning and real-life contexts.",
               images: pypImg,
             },
             {
               title: "Middle Years Programme (MYP)",
-              desc: "The International Baccalaureate (IB) Middle Years Programme (MYP) is designed for students aged 11–16 years. It provides a challenging and balanced education that encourages students to make practical connections between their studies and the real world. The MYP supports students in developing intellectual discipline, personal responsibility, and a strong sense of identity during a critical stage of adolescence.",
+              desc: "The  Middle Years Programme (MYP) is designed for students aged 11–16 years. It provides a challenging and balanced education that encourages students to make practical connections between their studies and the real world. The MYP supports students in developing intellectual discipline, personal responsibility, and a strong sense of identity during a critical stage of adolescence.",
               images: mypImg,
             },
             {
               title: "Diploma Programme (DP)",
-              desc: "The IB Diploma Programme (DP) is a two-year pre-university programme designed for students aged 16–19 years. It aims to develop students who have excellent breadth and depth of knowledge, alongside strong critical thinking and reflective skills. The DP provides a rigorous academic framework while supporting students’ intellectual, personal, emotional, and social development.",
+              desc: "The Diploma Programme (DP) is a two-year pre-university programme designed for students aged 16–19 years. It aims to develop students who have excellent breadth and depth of knowledge, alongside strong critical thinking and reflective skills. The DP provides a rigorous academic framework while supporting students’ intellectual, personal, emotional, and social development.",
               images: dpImg,
             },
             {
               title: "Career-related Programme (CP)",
-              desc: "The IB Career-related Programme (CP) is designed for students aged 16–19 years who wish to engage in career-related learning alongside academic studies. The CP supports students in developing transferable skills needed for further education, training, and employment. The CP enables students to develop confidence, responsibility, and an understanding of ethical and global perspectives related to their chosen pathways.",
+              desc: "The Career-related Programme (CP) is designed for students aged 16–19 years who wish to engage in career-related learning alongside academic studies. The CP supports students in developing transferable skills needed for further education, training, and employment. The CP enables students to develop confidence, responsibility, and an understanding of ethical and global perspectives related to their chosen pathways.",
               images: cpImg,
             },
           ].map((p, i) => (
@@ -296,24 +296,24 @@ export default function Academics() {
           <div className="space-y-8">
             <h2 className="text-4xl md:text-5xl font-['Playfair_Display'] font-bold">
               <span className="text-black">International</span>{" "}
-              <span className="text-[#B18141]">Baccalaureate</span>{" "}
+              {/* <span className="text-[#B18141]">Baccalaureate</span>{" "} */}
               <span className="text-black">Philosophy</span>
             </h2>
 
             <div className="w-20 h-[3px] bg-gradient-to-r from-[#B18141]/50 via-[#B18141]/40 to-[#B18141]"></div>
 
-            <p className="text-lg text-gray-700 leading-relaxed text-justify">
-              The International Baccalaureate (IB) is an internationally
+            { <p className="text-lg text-gray-700 leading-relaxed text-justify">
+              The  is an internationally
               recognized educational foundation that develops students who are
-              motivated to learn, think critically, and act with integrity. IB
+              motivated to learn, think critically, and act with integrity. 
               programmes encourage learners to understand multiple perspectives,
               respect cultural diversity, and take responsibility for their own
               learning.
-            </p>
+            </p> }
 
             <p className="text-lg text-gray-900 leading-relaxed text-text-center">
               At PSG World School, our educational practices are aligned with
-              the IB philosophy, emphasizing inquiry, reflection, and meaningful
+              the philosophy, emphasizing inquiry, reflection, and meaningful
               learning experiences that prepare students for a complex and
               interconnected world.
             </p>
@@ -330,7 +330,7 @@ export default function Academics() {
             {/* Image */}
             <img
               src={IBImage} // replace with your preferred image
-              alt="International Baccalaureate Philosophy"
+              alt=" Philosophy"
               className="w-full h-[420px] md:h-[420px] object-cover rounded-x2"
             />
 
@@ -367,10 +367,10 @@ export default function Academics() {
             variants={fadeInUp}
             className="mt-6 text-gray-700 max-w-4xl mx-auto text-lg leading-relaxed"
           >
-            Teaching and learning practices are guided by IB principles,
+            Teaching and learning practices are guided by principles,
             fostering inquiry, reflection, and meaningful engagement. Our
             educators engage in continuous professional development to ensure
-            alignment with IB standards and practices.
+            alignment with world standards and practices.
           </motion.p>
         </motion.div>
 
@@ -431,7 +431,7 @@ export default function Academics() {
               </h4>
               <p className="text-gray-700 leading-relaxed">
                 Our educators engage in continuous professional development to
-                ensure alignment with IB standards and practices, bringing the
+                ensure alignment with world standards and practices, bringing the
                 latest pedagogical innovations to every classroom.
               </p>
             </div>

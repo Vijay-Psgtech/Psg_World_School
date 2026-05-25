@@ -48,16 +48,16 @@ const Admission = () => {
   ];
 
   const scholarships = [
-    {
-      icon: <Star className="w-6 h-6 text-yellow-500" />,
-      title: "Merit-Based Scholarships",
-      desc: "For high achievers across academics, sports, and arts.",
-    },
-    {
-      icon: <HandCoins className="w-6 h-6 text-yellow-500" />,
-      title: "Need-Based Financial Aid",
-      desc: "Ensuring inclusivity and equal opportunity for every learner.",
-    },
+    // {
+    //   icon: <Star className="w-6 h-6 text-yellow-500" />,
+    //   title: "Merit-Based Scholarships",
+    //   desc: "For high achievers across academics, sports, and arts.",
+    // },
+    // {
+    //   icon: <HandCoins className="w-6 h-6 text-yellow-500" />,
+    //   title: "Need-Based Financial Aid",
+    //   desc: "Ensuring inclusivity and equal opportunity for every learner.",
+    // },
   ];
 
   const ageCriteria = [
@@ -162,7 +162,7 @@ const Admission = () => {
           <p className="text-lg text-gray-700 leading-relaxed">
             Our admissions process is transparent, inclusive, and
             student-centered. We seek learners who are curious, open-minded, and
-            ready to embrace the challenge of IB learning.
+            ready to embrace the challenge of learning.
           </p>
         </div>
       </section>
@@ -187,7 +187,7 @@ const Admission = () => {
       </section>
 
       {/* Scholarships */}
-      <section className="py-16 bg-white">
+      {/* <section className="py-16 bg-white">
         <div className="max-w-5xl mx-auto px-6 text-center" data-aos="fade-up">
           <Heading black="Scholarships &" yellow="Financial Aid" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
@@ -205,7 +205,7 @@ const Admission = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Age Criteria Table */}
       <section className="py-20 bg-gradient-to-br from-emerald-50 via-white to-indigo-50">

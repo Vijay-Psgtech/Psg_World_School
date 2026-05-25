@@ -50,7 +50,7 @@ const FacilitiesPage = () => {
     {
       icon: <Palette className="w-10 h-10 text-pink-500" />,
       title: "Learning Spaces",
-      desc: "Smart classrooms, flexible learning zones, and IB studios designed for inquiry.",
+      desc: "Smart classrooms, flexible learning zones, and studios designed for inquiry.",
       images: [LearningSpaces, LearningSpaces, LearningSpaces, LearningSpaces],
     },
     {

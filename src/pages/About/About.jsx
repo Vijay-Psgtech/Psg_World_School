@@ -35,7 +35,7 @@ const About = () => {
   const features = [
     {
       icon: <FaUniversity />,
-      text: "Education aligned with IB standards and practices.",
+      text: "Education aligned with world standards and practices.",
       color: "from-[#B18141] to-orange-500",
     },
     {
@@ -109,9 +109,8 @@ const About = () => {
             <p className="text-lg text-blue-950 leading-relaxed text-justify">
               Rooted in the 100-year heritage of PSG Institutions, PSG World
               School stands as a beacon of tradition and innovation. With
-              authorization as an IB World School, we ensure our learners
-              experience education aligned with globally benchmarked
-              International Baccalaureate philosophy.
+              authorization as a World School, we ensure our learners
+              experience education aligned with globally benchmarked philosophy.
             </p>
           </div>
 
@@ -155,7 +154,7 @@ const About = () => {
 
             <div className="text-gray-800 font-medium relative z-10 leading-relaxed space-y-4">
               <p>
-                At PSG IB World School, our educational vision is rooted in six
+                At PSG  World School, our educational vision is rooted in six
                 core themes that shape a transformative learning experience.
                 Global Citizenship and International-Mindedness are central to
                 nurturing students who are aware, empathetic, and responsible
@@ -211,7 +210,7 @@ const About = () => {
                 "Our school provides a safe, inclusive environment where students are encouraged to ask questions, embrace challenges, and pursue excellence.",
                 "To foster intellectual, emotional, and social growth through inquiry-based learning and collaborative partnerships.",
                 "We strive to nurture each child's unique potential by cultivating academic integrity, creativity, and resilience.",
-                "To offer transformative learning experiences that connect knowledge with real-world action, guided by the IB learner profile.",
+                "To offer transformative learning experiences that connect knowledge with real-world action, guided by the  learner profile.",
               ].map((m, i) => (
                 <li
                   key={i}
@@ -234,7 +233,7 @@ const About = () => {
             </h2>
             <div className="md:ml-auto w-20 h-[3px] bg-gradient-to-r from-[#B18141]/50 via-[#B18141]/40 to-[#B18141]"></div>
             <p className="text-gray-600 text-lg leading-relaxed md:ml-auto md:max-w-md">
-              PSG IB World School commits to academic rigor balanced with
+              PSG  World School commits to academic rigor balanced with
               compassion, creativity, and intercultural understanding, and
               personal growth.
             </p>
@@ -292,8 +291,8 @@ const About = () => {
             <div className="w-20 h-[3px] bg-gradient-to-r from-[#B18141]/50 via-[#B18141]/40 to-[#B18141]"></div>
             <p className="text-lg text-gray-900 leading-relaxed text-justify">
               PSG World School is committed to delivering a high-quality
-              international education guided by the principles of the
-              International Baccalaureate (IB). Our school aims to develop
+              international education guided by the principles 
+              .Our school aims to develop
               students who are inquisitive, knowledgeable, and caring, and who
               are prepared to contribute positively to a complex and
               interconnected world.
@@ -515,7 +514,7 @@ const About = () => {
             <span className="text-black">PSG</span>{" "}
             <span className="text-[#B18141]">World</span>{" "}
             <span className="text-black">School</span>{" "}
-            <span className="text-[#B18141]">IB?</span>
+            <span className="text-[#B18141]">?</span>
           </h2>
           <div className="w-20 h-[3px] bg-gradient-to-r from-[#B18141]/50 via-[#B18141]/40 to-[#B18141] mx-auto mt-4"></div>
         </div>

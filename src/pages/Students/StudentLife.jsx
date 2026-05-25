@@ -150,7 +150,7 @@ const StudentLife = () => {
             </div>
             <ul className="space-y-3 text-gray-700 font-medium">
               <p>
-                Teaching and learning practices are guided by IB principles and
+                Teaching and learning practices are guided by principles and
                 include:
               </p>
               <li>• Inquiry-based and student-centred learning.</li>
@@ -161,7 +161,7 @@ const StudentLife = () => {
 
               <p>
                 Our educators engage in continuous professional development to
-                ensure alignment with IB standards and practices.
+                ensure alignment with world standards and practices.
               </p>
             </ul>
           </motion.div>

@@ -13,7 +13,7 @@ const highlights = [
   {
     title: "Learning Spaces",
     img: LearningSpaces,
-    desc: "Smart classrooms, flexible learning zones, and IB studios designed for inquiry.",
+    desc: "Smart classrooms, flexible learning zones, and studios designed for inquiry.",
   },
   {
     title: "Innovation Labs",
@@ -33,7 +33,7 @@ const highlights = [
   {
     title: "Library & Research Hub",
     img: LibraryandResearch,
-    desc: "Print, digital, and global resources integrated with IB learner projects.",
+    desc: "Print, digital, and global resources integrated with  learner projects.",
   },
   {
     title: "Sustainability Campus",

@@ -54,9 +54,9 @@ const Abouthome = () => {
               {" "}
               PSG World School{" "}
             </span>
-            blends tradition with innovation. Our authorization as an IB World
+            blends tradition with innovation. Our authorization as a World
             School ensures every learner experiences globally benchmarked
-            education aligned with the International Baccalaureate philosophy.
+            education aligned with the philosophy.
           </p>
 
           {/* Buttons */}

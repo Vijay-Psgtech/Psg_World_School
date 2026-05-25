@@ -38,7 +38,7 @@ const ChatBot = () => {
       ]
     },
     programmes: {
-      title: "The IB Continuum",
+      title: "The Continuum",
       details: [
         "🌱 Primary Years Programme (PYP)",
         "   Nurturing inquiry, creativity, and confidence in young learners",
