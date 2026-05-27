@@ -6,1463 +6,787 @@
 <title>PSG World School — Ignite · Innovate · Inspire</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  :root {
-    --navy:   #1F4E79;
-    --navy2:  #1F3864;
-    --blue:   #2E75B6;
-    --gold:   #C07C22;
-    --gold2:  #D4922A;
-    --teal:   #1A7A8A;
-    --cream:  #FAF7F2;
-    --pale:   #F0F7FD;
-    --white:  #FFFFFF;
-    --grey:   #595959;
-    --ltgrey: #E8E8E8;
-    --text:   #1a1a1a;
-  }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 400;
-    color: var(--text);
-    background: var(--white);
-    overflow-x: hidden;
-  }
-
-  /* ── UTILITY ─────────────────────────────────── */
-  .serif { font-family: 'Cormorant Garamond', Georgia, serif; }
-  .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
-  .gold { color: var(--gold); }
-  .navy { color: var(--navy); }
-
-  /* ── NAV ─────────────────────────────────────── */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    background: rgba(31,78,121,0.97);
-    backdrop-filter: blur(8px);
-    padding: 0 40px;
-    display: flex; align-items: center; justify-content: space-between;
-    height: 72px;
-    border-bottom: 1px solid rgba(192,124,34,0.3);
-  }
-
-  .nav-brand {
-    display: flex; align-items: center; gap: 14px;
-    text-decoration: none;
-  }
-
-  .nav-logo-mark {
-    width: 42px; height: 42px;
-    background: var(--gold);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 700; font-size: 18px;
-    color: var(--white);
-    flex-shrink: 0;
-  }
-
-  .nav-school-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 600; font-size: 18px;
-    color: var(--white);
-    line-height: 1.2;
-  }
-
-  .nav-school-name span {
-    display: block;
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 300; font-size: 10px;
-    color: rgba(255,255,255,0.65);
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-  }
-
-  .nav-links {
-    display: flex; align-items: center; gap: 32px;
-    list-style: none;
-  }
-
-  .nav-links a {
-    color: rgba(255,255,255,0.8);
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 400;
-    letter-spacing: 0.04em;
-    transition: color 0.2s;
-  }
-  .nav-links a:hover { color: var(--gold2); }
-
-  .nav-cta {
-    background: var(--gold) !important;
-    color: var(--white) !important;
-    padding: 9px 20px;
-    border-radius: 2px;
-    font-weight: 500 !important;
-    transition: background 0.2s !important;
-  }
-  .nav-cta:hover { background: var(--gold2) !important; }
-
-  /* ── HERO ─────────────────────────────────────── */
-  .hero {
-    min-height: 100vh;
-    background: var(--navy);
-    display: flex; align-items: center;
-    position: relative;
-    overflow: hidden;
-    padding-top: 72px;
-  }
-
-  .hero-bg-pattern {
-    position: absolute; inset: 0;
-    background-image:
-      radial-gradient(circle at 20% 50%, rgba(192,124,34,0.08) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, rgba(46,117,182,0.12) 0%, transparent 40%),
-      radial-gradient(circle at 60% 80%, rgba(26,122,138,0.08) 0%, transparent 40%);
-  }
-
-  .hero-grid-overlay {
-    position: absolute; inset: 0;
-    background-image:
-      linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-    background-size: 60px 60px;
-  }
-
-  .hero-content {
-    position: relative; z-index: 2;
-    max-width: 1200px; margin: 0 auto;
-    padding: 80px 40px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: center;
-  }
-
-  .hero-eyebrow {
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 20px;
-    display: flex; align-items: center; gap: 12px;
-  }
-  .hero-eyebrow::before {
-    content: '';
-    display: block; width: 32px; height: 1px;
-    background: var(--gold);
-  }
-
-  .hero h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 600;
-    font-size: clamp(44px, 5vw, 68px);
-    line-height: 1.05;
-    color: var(--white);
-    margin-bottom: 28px;
-  }
-
-  .hero h1 em {
-    font-style: italic;
-    color: var(--gold);
-  }
-
-  .hero-body {
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 1.8;
-    color: rgba(255,255,255,0.72);
-    max-width: 480px;
-    margin-bottom: 40px;
-  }
-
-  .hero-actions {
-    display: flex; align-items: center; gap: 20px;
-    flex-wrap: wrap;
-  }
-
-  .btn-primary {
-    background: var(--gold);
-    color: var(--white);
-    padding: 14px 32px;
-    border-radius: 2px;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: background 0.2s, transform 0.1s;
-    display: inline-block;
-  }
-  .btn-primary:hover { background: var(--gold2); transform: translateY(-1px); }
-
-  .btn-ghost {
-    color: rgba(255,255,255,0.8);
-    font-size: 13px;
-    font-weight: 400;
-    text-decoration: none;
-    display: inline-flex; align-items: center; gap: 8px;
-    border-bottom: 1px solid rgba(255,255,255,0.3);
-    padding-bottom: 2px;
-    transition: color 0.2s, border-color 0.2s;
-  }
-  .btn-ghost:hover { color: var(--gold); border-color: var(--gold); }
-
-  .hero-right {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 16px;
-  }
-
-  .hero-stat {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 4px;
-    padding: 28px 24px;
-    transition: background 0.2s;
-  }
-  .hero-stat:hover { background: rgba(255,255,255,0.08); }
-  .hero-stat:first-child {
-    grid-column: span 2;
-    background: rgba(192,124,34,0.12);
-    border-color: rgba(192,124,34,0.25);
-  }
-
-  .stat-number {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 48px;
-    font-weight: 600;
-    color: var(--gold);
-    line-height: 1;
-    margin-bottom: 6px;
-  }
-
-  .stat-label {
-    font-size: 12px;
-    font-weight: 400;
-    color: rgba(255,255,255,0.6);
-    letter-spacing: 0.05em;
-    line-height: 1.5;
-  }
-
-  .hero-tagline {
-    grid-column: span 2;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    padding-top: 20px;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 22px;
-    font-style: italic;
-    color: rgba(255,255,255,0.5);
-    letter-spacing: 0.05em;
-    text-align: center;
-  }
-
-  /* ── MISSION BAND ────────────────────────────── */
-  .mission-band {
-    background: var(--gold);
-    padding: 32px 40px;
-    text-align: center;
-  }
-
-  .mission-band p {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(18px, 2.5vw, 26px);
-    font-weight: 500;
-    font-style: italic;
-    color: var(--white);
-    max-width: 900px;
-    margin: 0 auto;
-    line-height: 1.5;
-  }
-
-  /* ── PILLARS ─────────────────────────────────── */
-  .pillars {
-    padding: 120px 0;
-    background: var(--cream);
-  }
-
-  .section-header {
-    text-align: center;
-    margin-bottom: 64px;
-  }
-
-  .section-eyebrow {
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 16px;
-  }
-
-  .section-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(32px, 4vw, 52px);
-    font-weight: 600;
-    color: var(--navy);
-    line-height: 1.1;
-  }
-
-  .section-subtitle {
-    margin-top: 16px;
-    font-size: 16px;
-    font-weight: 300;
-    color: var(--grey);
-    max-width: 560px;
-    margin-left: auto; margin-right: auto;
-    line-height: 1.7;
-  }
-
-  .pillars-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-  }
-
-  .pillar-card {
-    background: var(--white);
-    border: 1px solid var(--ltgrey);
-    border-top: 3px solid var(--navy);
-    padding: 40px 32px;
-    position: relative;
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-  .pillar-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 16px 40px rgba(31,78,121,0.1);
-  }
-  .pillar-card:nth-child(2) { border-top-color: var(--gold); }
-  .pillar-card:nth-child(3) { border-top-color: var(--teal); }
-
-  .pillar-icon {
-    width: 52px; height: 52px;
-    background: var(--pale);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    margin-bottom: 24px;
-    font-size: 24px;
-  }
-
-  .pillar-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 26px;
-    font-weight: 600;
-    color: var(--navy);
-    margin-bottom: 14px;
-  }
-
-  .pillar-body {
-    font-size: 14px;
-    font-weight: 300;
-    color: var(--grey);
-    line-height: 1.75;
-  }
-
-  /* ── APPROACH ────────────────────────────────── */
-  .approach {
-    padding: 120px 0;
-    background: var(--white);
-  }
-
-  .approach-inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: start;
-  }
-
-  .approach-left {}
-
-  .approach-body {
-    font-size: 15px;
-    font-weight: 300;
-    line-height: 1.85;
-    color: var(--grey);
-    margin-top: 24px;
-    margin-bottom: 40px;
-  }
-
-  .approach-list {
-    list-style: none;
-    display: flex; flex-direction: column; gap: 16px;
-  }
-
-  .approach-list li {
-    display: flex; align-items: flex-start; gap: 16px;
-    font-size: 14px;
-    font-weight: 400;
-    color: var(--grey);
-    line-height: 1.6;
-  }
-
-  .approach-list li::before {
-    content: '';
-    width: 20px; height: 20px;
-    background: var(--navy);
-    border-radius: 50%;
-    flex-shrink: 0;
-    margin-top: 2px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  .approach-right {
-    display: flex; flex-direction: column; gap: 16px;
-  }
-
-  .approach-card {
-    background: var(--cream);
-    border-left: 3px solid var(--gold);
-    padding: 24px 28px;
-  }
-
-  .approach-card-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--navy);
-    margin-bottom: 8px;
-  }
-
-  .approach-card-body {
-    font-size: 13px;
-    font-weight: 300;
-    color: var(--grey);
-    line-height: 1.7;
-  }
-
-  /* ── PBL ─────────────────────────────────────── */
-  .pbl {
-    padding: 120px 0;
-    background: var(--navy);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .pbl::before {
-    content: '';
-    position: absolute; inset: 0;
-    background-image:
-      radial-gradient(circle at 90% 10%, rgba(192,124,34,0.07) 0%, transparent 45%),
-      radial-gradient(circle at 10% 80%, rgba(26,122,138,0.07) 0%, transparent 40%);
-  }
-
-  .pbl-inner { position: relative; z-index: 2; }
-
-  .pbl .section-eyebrow { color: var(--gold); }
-  .pbl .section-title { color: var(--white); }
-  .pbl .section-subtitle { color: rgba(255,255,255,0.6); }
-
-  .pbl-principle {
-    margin: 48px 0;
-    background: rgba(192,124,34,0.1);
-    border: 1px solid rgba(192,124,34,0.25);
-    border-left: 3px solid var(--gold);
-    padding: 32px 40px;
-  }
-
-  .pbl-principle-label {
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 14px;
-  }
-
-  .pbl-principle p {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(18px, 2.2vw, 24px);
-    font-style: italic;
-    font-weight: 400;
-    color: rgba(255,255,255,0.88);
-    line-height: 1.55;
-  }
-
-  .pbl-projects {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 16px;
-    margin-bottom: 72px;
-  }
-
-  .pbl-project {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.08);
-    padding: 28px 22px;
-    transition: background 0.2s, border-color 0.2s;
-    position: relative;
-  }
-  .pbl-project:hover {
-    background: rgba(255,255,255,0.07);
-    border-color: rgba(192,124,34,0.3);
-  }
-
-  .pbl-grade {
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 12px;
-  }
-
-  .pbl-project-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 17px;
-    font-weight: 600;
-    color: var(--white);
-    line-height: 1.3;
-    margin-bottom: 12px;
-  }
-
-  .pbl-project-body {
-    font-size: 12px;
-    font-weight: 300;
-    color: rgba(255,255,255,0.55);
-    line-height: 1.65;
-    margin-bottom: 16px;
-  }
-
-  .pbl-partner {
-    display: flex; align-items: flex-start; gap: 8px;
-    border-top: 1px solid rgba(255,255,255,0.08);
-    padding-top: 14px;
-  }
-
-  .pbl-partner-dot {
-    width: 6px; height: 6px;
-    background: var(--gold);
-    border-radius: 50%;
-    flex-shrink: 0;
-    margin-top: 5px;
-  }
-
-  .pbl-partner-name {
-    font-size: 11px;
-    font-weight: 400;
-    color: rgba(255,255,255,0.4);
-    line-height: 1.5;
-    font-style: italic;
-  }
-
-  .pbl-bottom {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 48px;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    padding-top: 56px;
-  }
-
-  .pbl-bottom-left {}
-
-  .pbl-bottom-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 26px;
-    font-weight: 600;
-    color: var(--white);
-    margin-bottom: 16px;
-    line-height: 1.25;
-  }
-
-  .pbl-bottom-body {
-    font-size: 14px;
-    font-weight: 300;
-    color: rgba(255,255,255,0.6);
-    line-height: 1.8;
-  }
-
-  .pbl-bottom-right {
-    display: flex; flex-direction: column; gap: 20px;
-  }
-
-  .pbl-expectation {
-    display: flex; gap: 16px; align-items: flex-start;
-  }
-
-  .pbl-exp-icon {
-    width: 36px; height: 36px;
-    background: rgba(192,124,34,0.15);
-    border: 1px solid rgba(192,124,34,0.25);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 16px;
-    flex-shrink: 0;
-  }
-
-  .pbl-exp-content {}
-  .pbl-exp-title {
-    font-size: 14px;
-    font-weight: 500;
-    color: rgba(255,255,255,0.85);
-    margin-bottom: 4px;
-  }
-  .pbl-exp-body {
-    font-size: 12px;
-    font-weight: 300;
-    color: rgba(255,255,255,0.5);
-    line-height: 1.6;
-  }
-
-  /* ── HERITAGE ────────────────────────────────── */
-  .heritage {
-    padding: 100px 0;
-    background: var(--navy);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .heritage::before {
-    content: '';
-    position: absolute; inset: 0;
-    background-image:
-      radial-gradient(circle at 70% 50%, rgba(192,124,34,0.07) 0%, transparent 50%);
-  }
-
-  .heritage-inner {
-    position: relative; z-index: 2;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: center;
-  }
-
-  .heritage-left {}
-
-  .heritage-left .section-eyebrow { color: var(--gold); }
-  .heritage-left .section-title { color: var(--white); text-align: left; }
-  .heritage-left .section-subtitle {
-    color: rgba(255,255,255,0.6);
-    text-align: left;
-    margin-left: 0;
-    font-size: 15px;
-    margin-top: 20px;
-  }
-
-  .heritage-numbers {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-    margin-top: 48px;
-  }
-
-  .heritage-num {
-    border-top: 1px solid rgba(255,255,255,0.15);
-    padding-top: 20px;
-  }
-
-  .heritage-num .n {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 40px;
-    font-weight: 600;
-    color: var(--gold);
-    line-height: 1;
-  }
-
-  .heritage-num .l {
-    font-size: 12px;
-    color: rgba(255,255,255,0.5);
-    margin-top: 6px;
-    font-weight: 300;
-    line-height: 1.4;
-  }
-
-  .heritage-right {}
-
-  .heritage-quote {
-    border-left: 2px solid var(--gold);
-    padding-left: 32px;
-    margin-bottom: 40px;
-  }
-
-  .heritage-quote blockquote {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 26px;
-    font-style: italic;
-    font-weight: 400;
-    color: rgba(255,255,255,0.85);
-    line-height: 1.5;
-    margin-bottom: 16px;
-  }
-
-  .heritage-quote cite {
-    font-size: 12px;
-    color: rgba(255,255,255,0.45);
-    font-style: normal;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
-
-  .heritage-values {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 12px;
-  }
-
-  .heritage-value {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.08);
-    padding: 16px;
-    text-align: center;
-    border-radius: 2px;
-  }
-
-  .heritage-value .v-icon { font-size: 22px; margin-bottom: 8px; }
-
-  .heritage-value .v-label {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 16px;
-    font-weight: 600;
-    color: rgba(255,255,255,0.85);
-  }
-
-  /* ── LEARNING STAGES ─────────────────────────── */
-  .stages {
-    padding: 120px 0;
-    background: var(--cream);
-  }
-
-  .stages-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 0;
-    border: 1px solid var(--ltgrey);
-    margin-top: 64px;
-  }
-
-  .stage-col {
-    border-right: 1px solid var(--ltgrey);
-    overflow: hidden;
-  }
-  .stage-col:last-child { border-right: none; }
-
-  .stage-header {
-    background: var(--navy);
-    padding: 20px 16px;
-    text-align: center;
-  }
-  .stage-col:nth-child(1) .stage-header { background: #1a5276; }
-  .stage-col:nth-child(2) .stage-header { background: #1f618d; }
-  .stage-col:nth-child(3) .stage-header { background: #2471a3; }
-  .stage-col:nth-child(4) .stage-header { background: var(--blue); }
-  .stage-col:nth-child(5) .stage-header { background: #1f4e79; }
-
-  .stage-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--white);
-    line-height: 1.2;
-  }
-
-  .stage-age {
-    font-size: 11px;
-    color: rgba(255,255,255,0.6);
-    margin-top: 4px;
-  }
-
-  .stage-body {
-    background: var(--white);
-    padding: 24px 16px;
-  }
-
-  .stage-focus {
-    font-size: 11px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--gold);
-    margin-bottom: 10px;
-  }
-
-  .stage-points {
-    list-style: none;
-    display: flex; flex-direction: column; gap: 8px;
-  }
-
-  .stage-points li {
-    font-size: 12px;
-    font-weight: 300;
-    color: var(--grey);
-    line-height: 1.5;
-    padding-left: 12px;
-    border-left: 2px solid var(--ltgrey);
-  }
-
-  /* ── ADMISSIONS CTA ──────────────────────────── */
-  .admissions {
-    padding: 100px 0;
-    background: var(--white);
-  }
-
-  .admissions-inner {
-    background: var(--navy);
-    border-radius: 4px;
-    padding: 72px 80px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .admissions-inner::before {
-    content: '';
-    position: absolute;
-    top: -40px; right: -40px;
-    width: 300px; height: 300px;
-    border: 1px solid rgba(192,124,34,0.15);
-    border-radius: 50%;
-  }
-
-  .admissions-inner::after {
-    content: '';
-    position: absolute;
-    top: 20px; right: 20px;
-    width: 200px; height: 200px;
-    border: 1px solid rgba(192,124,34,0.1);
-    border-radius: 50%;
-  }
-
-  .admissions-left { position: relative; z-index: 2; }
-  .admissions-left .section-eyebrow { color: var(--gold); }
-
-  .admissions-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(30px, 3.5vw, 48px);
-    font-weight: 600;
-    color: var(--white);
-    line-height: 1.1;
-    margin: 12px 0 20px;
-  }
-
-  .admissions-body {
-    font-size: 14px;
-    font-weight: 300;
-    color: rgba(255,255,255,0.65);
-    line-height: 1.75;
-  }
-
-  .admissions-right {
-    position: relative; z-index: 2;
-    display: flex; flex-direction: column; gap: 16px;
-  }
-
-  .adm-step {
-    display: flex; align-items: flex-start; gap: 16px;
-  }
-
-  .adm-step-num {
-    width: 36px; height: 36px;
-    background: var(--gold);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--white);
-    flex-shrink: 0;
-  }
-
-  .adm-step-content {}
-  .adm-step-title {
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--white);
-    margin-bottom: 3px;
-  }
-  .adm-step-desc {
-    font-size: 12px;
-    font-weight: 300;
-    color: rgba(255,255,255,0.55);
-    line-height: 1.5;
-  }
-
-  .admissions-cta-group {
-    margin-top: 8px;
-    display: flex; gap: 12px; flex-wrap: wrap;
-  }
-
-  /* ── CONTACT ─────────────────────────────────── */
-  .contact {
-    padding: 80px 0;
-    background: var(--cream);
-  }
-
-  .contact-inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 32px;
-  }
-
-  .contact-card {
-    background: var(--white);
-    border: 1px solid var(--ltgrey);
-    padding: 32px;
-  }
-
-  .contact-icon {
-    font-size: 28px;
-    margin-bottom: 16px;
-  }
-
-  .contact-label {
-    font-size: 11px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--gold);
-    margin-bottom: 8px;
-  }
-
-  .contact-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--navy);
-    margin-bottom: 10px;
-  }
-
-  .contact-detail {
-    font-size: 13px;
-    font-weight: 300;
-    color: var(--grey);
-    line-height: 1.7;
-  }
-
-  .contact-detail a {
-    color: var(--blue);
-    text-decoration: none;
-  }
-  .contact-detail a:hover { text-decoration: underline; }
-
-  /* ── FOOTER ──────────────────────────────────── */
-  footer {
-    background: var(--navy2);
-    padding: 48px 40px 32px;
-    border-top: 2px solid var(--gold);
-  }
-
-  .footer-inner {
-    max-width: 1200px; margin: 0 auto;
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 48px;
-    margin-bottom: 48px;
-  }
-
-  .footer-brand-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 22px;
-    font-weight: 600;
-    color: var(--white);
-    margin-bottom: 8px;
-  }
-
-  .footer-motto {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 14px;
-    font-style: italic;
-    color: var(--gold);
-    margin-bottom: 16px;
-    letter-spacing: 0.08em;
-  }
-
-  .footer-desc {
-    font-size: 13px;
-    font-weight: 300;
-    color: rgba(255,255,255,0.5);
-    line-height: 1.7;
-  }
-
-  .footer-col-title {
-    font-size: 11px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    color: rgba(255,255,255,0.4);
-    margin-bottom: 16px;
-  }
-
-  .footer-links {
-    list-style: none;
-    display: flex; flex-direction: column; gap: 10px;
-  }
-
-  .footer-links a {
-    font-size: 13px;
-    font-weight: 300;
-    color: rgba(255,255,255,0.6);
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-  .footer-links a:hover { color: var(--gold); }
-
-  .footer-bottom {
-    max-width: 1200px; margin: 0 auto;
-    border-top: 1px solid rgba(255,255,255,0.08);
-    padding-top: 24px;
-    display: flex; justify-content: space-between; align-items: center;
-  }
-
-  .footer-bottom p {
-    font-size: 12px;
-    color: rgba(255,255,255,0.3);
-    font-weight: 300;
-  }
-
-  .footer-psg {
-    font-size: 12px;
-    color: rgba(255,255,255,0.3);
-    font-weight: 300;
-  }
-
-  .footer-psg span {
-    color: var(--gold);
-  }
-
-  /* ── SCROLL ANIMATIONS ───────────────────────── */
-  .fade-up {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  }
-  .fade-up.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  .fade-up:nth-child(2) { transition-delay: 0.1s; }
-  .fade-up:nth-child(3) { transition-delay: 0.2s; }
-  .fade-up:nth-child(4) { transition-delay: 0.3s; }
-  .fade-up:nth-child(5) { transition-delay: 0.4s; }
-
-  /* ── RESPONSIVE ──────────────────────────────── */
-  @media (max-width: 900px) {
-    .hero-content { grid-template-columns: 1fr; gap: 48px; }
-    .hero-right { grid-template-columns: 1fr 1fr; }
-    .pillars-grid { grid-template-columns: 1fr; }
-    .approach-inner { grid-template-columns: 1fr; }
-    .heritage-inner { grid-template-columns: 1fr; }
-    .stages-grid { grid-template-columns: 1fr; }
-    .admissions-inner { grid-template-columns: 1fr; padding: 48px 40px; }
-    .contact-inner { grid-template-columns: 1fr; }
-    .footer-inner { grid-template-columns: 1fr 1fr; }
-    nav { padding: 0 20px; }
-    .nav-links { display: none; }
-    .container { padding: 0 20px; }
-  }
-
-  /* ── PBL REDESIGNED ─────────────────────────── */
-  .pbl {
-    padding: 120px 0 100px;
-    background: var(--navy);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .pbl-bg-texture {
-    position: absolute; inset: 0;
-    background-image:
-      radial-gradient(ellipse at 10% 20%, rgba(192,124,34,0.06) 0%, transparent 55%),
-      radial-gradient(ellipse at 90% 80%, rgba(26,122,138,0.07) 0%, transparent 50%),
-      radial-gradient(ellipse at 50% 50%, rgba(46,117,182,0.04) 0%, transparent 60%);
-    pointer-events: none;
-  }
-
-  .pbl-inner { position: relative; z-index: 2; }
-
-  /* Header split */
-  .pbl-header {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: end;
-    margin-bottom: 64px;
-    padding-bottom: 48px;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-  }
-
-  .pbl-title { color: var(--white); text-align: left; }
-  .pbl-title-em { color: var(--gold); font-style: italic; }
-
-  .pbl-header-body {
-    font-size: 15px;
-    font-weight: 300;
-    color: rgba(255,255,255,0.62);
-    line-height: 1.8;
-    margin-bottom: 28px;
-  }
-
-  .pbl-rule-line {
-    display: flex; align-items: center; gap: 12px;
-    margin-bottom: 14px;
-  }
-  .pbl-rule-line::before {
-    content: '';
-    width: 28px; height: 1px;
-    background: var(--gold);
-    flex-shrink: 0;
-  }
-  .pbl-rule-line span {
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--gold);
-  }
-
-  .pbl-rule-text {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 20px;
-    font-style: italic;
-    color: rgba(255,255,255,0.75);
-    line-height: 1.5;
-    padding-left: 40px;
-    border-left: 2px solid rgba(192,124,34,0.4);
-  }
-
-  /* Featured project */
-  .pbl-featured {
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-top: 2px solid var(--gold);
-    padding: 40px 44px;
-    margin-bottom: 20px;
-  }
-
-  .pbl-featured-label {
-    display: flex; align-items: center; gap: 16px;
-    margin-bottom: 24px;
-  }
-
-  .pbl-feat-grade {
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--gold);
-    background: rgba(192,124,34,0.12);
-    border: 1px solid rgba(192,124,34,0.25);
-    padding: 4px 12px;
-  }
-
-  .pbl-feat-theme {
-    font-size: 11px;
-    font-weight: 300;
-    color: rgba(255,255,255,0.4);
-    letter-spacing: 0.06em;
-    font-style: italic;
-  }
-
-  .pbl-featured-content {
-    display: grid;
-    grid-template-columns: 1fr 340px;
-    gap: 60px;
-    align-items: start;
-  }
-
-  .pbl-featured-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(30px, 3.5vw, 44px);
-    font-weight: 600;
-    color: var(--white);
-    line-height: 1.1;
-    margin-bottom: 6px;
-  }
-
-  .pbl-featured-sub {
-    font-size: 12px;
-    font-weight: 400;
-    color: var(--gold);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-  }
-
-  .pbl-featured-body {
-    font-size: 14px;
-    font-weight: 300;
-    color: rgba(255,255,255,0.65);
-    line-height: 1.8;
-    margin-bottom: 14px;
-  }
-
-  .pbl-featured-partner {
-    display: flex; align-items: center; gap: 10px;
-    margin-top: 24px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.07);
-  }
-
-  .pbl-feat-dot {
-    width: 7px; height: 7px;
-    background: var(--gold);
-    border-radius: 50%;
-    flex-shrink: 0;
-  }
-
-  .pbl-featured-partner span {
-    font-size: 11px;
-    font-weight: 400;
-    color: rgba(255,255,255,0.38);
-    font-style: italic;
-  }
-
-  .pbl-featured-stat-block {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .pbl-feat-stat {
-    padding: 22px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.07);
-  }
-  .pbl-feat-stat:first-child { border-top: 1px solid rgba(255,255,255,0.07); }
-
-  .pbl-feat-stat-n {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 44px;
-    font-weight: 600;
-    color: var(--gold);
-    line-height: 1;
-    margin-bottom: 4px;
-  }
-
-  .pbl-feat-stat-l {
-    font-size: 12px;
-    font-weight: 300;
-    color: rgba(255,255,255,0.45);
-    line-height: 1.5;
-  }
-
-  /* ── PROJECT GRID ───── */
-  .pbl-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 16px;
-    margin-bottom: 72px;
-  }
-
-  .pbl-card {
-    padding: 28px 28px 24px;
-    border: 1px solid rgba(255,255,255,0.07);
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    transition: transform 0.2s, border-color 0.2s;
-  }
-  .pbl-card:hover {
-    transform: translateY(-3px);
-    border-color: rgba(255,255,255,0.15);
-  }
-
-  /* colour variants */
-  .pbl-card--blue  { background: rgba(46,117,182,0.08); border-top: 2px solid #2E75B6; }
-  .pbl-card--green { background: rgba(26,122,138,0.08); border-top: 2px solid var(--teal); }
-  .pbl-card--amber { background: rgba(192,124,34,0.07); border-top: 2px solid var(--gold); }
-  .pbl-card--dark  { background: rgba(255,255,255,0.03); border-top: 2px solid rgba(255,255,255,0.2); }
-  .pbl-card--teal  { background: rgba(26,122,138,0.1); border-top: 2px solid var(--teal); }
-  .pbl-card--navy  { background: rgba(31,78,121,0.15); border-top: 2px solid var(--blue); }
-
-  /* layout variants */
-  .pbl-card--tall { grid-row: span 2; }
-  .pbl-card--wide { grid-column: span 2; }
-  .pbl-card--wide .pbl-card-wide-inner {
-    display: flex; flex-direction: column; flex: 1;
-  }
-
-  .pbl-card-grade {
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 4px;
-  }
-
-  .pbl-card-theme {
-    font-size: 10px;
-    font-weight: 300;
-    color: rgba(255,255,255,0.35);
-    font-style: italic;
-    letter-spacing: 0.04em;
-    margin-bottom: 14px;
-  }
-
-  .pbl-card-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 22px;
-    font-weight: 600;
-    color: var(--white);
-    line-height: 1.2;
-    margin-bottom: 14px;
-  }
-
-  .pbl-card--tall .pbl-card-title { font-size: 26px; }
-  .pbl-card--wide .pbl-card-title { font-size: 24px; }
-
-  .pbl-card-body {
-    font-size: 12.5px;
-    font-weight: 300;
-    color: rgba(255,255,255,0.58);
-    line-height: 1.7;
-    margin-bottom: 12px;
-    flex: 1;
-  }
-
-  .pbl-card--tall .pbl-card-body { font-size: 13.5px; }
-  .pbl-card--wide .pbl-card-body { font-size: 13px; }
-
-  .pbl-card-footer {
-    display: flex; align-items: center; gap: 8px;
-    margin-top: auto;
-    padding-top: 16px;
-    border-top: 1px solid rgba(255,255,255,0.06);
-  }
-
-  .pbl-card-dot {
-    width: 6px; height: 6px;
-    background: var(--teal);
-    border-radius: 50%;
-    flex-shrink: 0;
-  }
-
-  .pbl-card-footer span {
-    font-size: 10.5px;
-    font-weight: 400;
-    color: rgba(255,255,255,0.32);
-    font-style: italic;
-    line-height: 1.4;
-  }
-
-  /* ── PBL BOTTOM ──────── */
-  .pbl-bottom {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 72px;
-    border-top: 1px solid rgba(255,255,255,0.08);
-    padding-top: 60px;
-  }
-
-  .pbl-bottom-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 34px;
-    font-weight: 600;
-    color: var(--white);
-    margin-bottom: 20px;
-    line-height: 1.15;
-  }
-
-  .pbl-bottom-body {
-    font-size: 14px;
-    font-weight: 300;
-    color: rgba(255,255,255,0.58);
-    line-height: 1.82;
-  }
-
-  .pbl-heritage-row {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    margin-top: 36px;
-    padding-top: 32px;
-    border-top: 1px solid rgba(255,255,255,0.07);
-  }
-
-  .pbl-her-n {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 36px;
-    font-weight: 600;
-    color: var(--gold);
-    line-height: 1;
-    margin-bottom: 6px;
-  }
-
-  .pbl-her-l {
-    font-size: 11px;
-    font-weight: 300;
-    color: rgba(255,255,255,0.4);
-    line-height: 1.5;
-  }
-
-  .pbl-exp-heading {
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 28px;
-  }
-
-  .pbl-expectation {
-    display: flex; gap: 20px; align-items: flex-start;
-    margin-bottom: 24px;
-    padding-bottom: 24px;
-    border-bottom: 1px solid rgba(255,255,255,0.06);
-  }
-  .pbl-expectation:last-child {
-    border-bottom: none; margin-bottom: 0; padding-bottom: 0;
-  }
-
-  .pbl-exp-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 28px;
-    font-weight: 400;
-    color: rgba(192,124,34,0.35);
-    line-height: 1;
-    flex-shrink: 0;
-    min-width: 36px;
-  }
-
-  .pbl-exp-title {
-    font-size: 13px;
-    font-weight: 500;
-    color: rgba(255,255,255,0.85);
-    margin-bottom: 5px;
-  }
-
-  .pbl-exp-body {
-    font-size: 12.5px;
-    font-weight: 300;
-    color: rgba(255,255,255,0.48);
-    line-height: 1.65;
-  }
-
-  /* Responsive override for PBL */
-  @media (max-width: 900px) {
-    .pbl-header { grid-template-columns: 1fr; gap: 32px; }
-    .pbl-featured-content { grid-template-columns: 1fr; gap: 32px; }
-    .pbl-featured-stat-block { display: grid; grid-template-columns: repeat(3,1fr); gap: 0; }
-    .pbl-feat-stat:first-child { border-top: none; }
-    .pbl-grid { grid-template-columns: 1fr; }
-    .pbl-card--tall, .pbl-card--wide { grid-row: span 1; grid-column: span 1; }
-    .pbl-bottom { grid-template-columns: 1fr; gap: 48px; }
-    .pbl-heritage-row { grid-template-columns: repeat(3,1fr); }
-  }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  /* PSG brand colours — matched from actual logo */
+  --navy:   #1E3D6E;
+  --navy2:  #152D54;
+  --purple: #2B2B7E;
+  --blue:   #2E75B6;
+  --gold:   #B8860B;
+  --gold2:  #C9960F;
+  --gold3:  #E8B84B;
+  --teal:   #1A7A8A;
+  --cream:  #FAF8F3;
+  --pale:   #F0F4FA;
+  --white:  #FFFFFF;
+  --grey:   #5C5C6A;
+  --ltgrey: #E4E4EC;
+  --text:   #1a1a2e;
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;font-weight:400;color:var(--text);background:var(--white);overflow-x:hidden}
+.serif{font-family:'Cormorant Garamond',Georgia,serif}
+.container{max-width:1180px;margin:0 auto;padding:0 40px}
+
+/* Why parents — text layout */
+.why-grid-text{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid var(--ltgrey);margin-top:48px}
+.why-item-full{padding:28px 20px;border-right:1px solid var(--ltgrey)}
+.why-item-full:last-child{border-right:none}
+.why-num{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:600;color:var(--gold);line-height:1;margin-bottom:10px}
+.why-item-title{font-size:13px;font-weight:500;color:var(--navy);line-height:1.4;margin-bottom:10px}
+.why-item-body{font-size:12px;font-weight:300;color:var(--grey);line-height:1.65}
+/* Heritage founding line */
+.heritage-founding-line{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);padding:20px 24px;margin-top:0}
+.heritage-founding-line p{font-size:13px;font-weight:300;color:rgba(255,255,255,0.6);line-height:1.75}
+/* Admissions who */
+.adm-who{background:rgba(184,134,11,0.12);border:1px solid rgba(184,134,11,0.25);border-left:3px solid var(--gold3);padding:20px 24px;margin-bottom:20px}
+.adm-who-label{font-size:9.5px;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold3);margin-bottom:10px}
+.adm-who-body{font-size:13px;font-weight:300;color:rgba(255,255,255,0.75);line-height:1.75}
+
+
+/* WhatsApp sticky */
+.wa-sticky{position:fixed;bottom:28px;right:28px;z-index:200;display:flex;flex-direction:column;align-items:flex-end;gap:8px}
+.wa-btn{
+  width:56px;height:56px;border-radius:50%;background:#25D366;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 20px rgba(37,211,102,0.45);
+  text-decoration:none;transition:transform 0.2s,box-shadow 0.2s;
+}
+.wa-btn:hover{transform:scale(1.08);box-shadow:0 6px 28px rgba(37,211,102,0.55)}
+.wa-btn svg{width:28px;height:28px}
+.wa-label{
+  background:var(--navy2);color:var(--white);
+  font-size:11px;font-weight:500;padding:6px 12px;border-radius:20px;
+  white-space:nowrap;box-shadow:0 2px 10px rgba(0,0,0,0.2);
+  animation:wa-pulse 3s ease-in-out infinite;
+}
+@keyframes wa-pulse{0%,100%{opacity:1}50%{opacity:0.75}}
+
+/* Top announcement bar */
+.announce-bar{
+  background:linear-gradient(135deg,var(--navy2) 0%,var(--purple) 100%);
+  padding:10px 40px;
+  display:flex;align-items:center;justify-content:space-between;
+  border-bottom:1px solid rgba(184,134,11,0.3);
+}
+.announce-text{font-size:12px;font-weight:400;color:rgba(255,255,255,0.85);display:flex;align-items:center;gap:8px}
+.announce-pill{
+  background:var(--gold);color:var(--white);
+  font-size:10px;font-weight:600;padding:3px 10px;border-radius:20px;
+  letter-spacing:0.06em;text-transform:uppercase;
+}
+.announce-cta{font-size:12px;font-weight:500;color:var(--gold3);text-decoration:none;letter-spacing:0.04em}
+.announce-cta:hover{text-decoration:underline}
+
+/* Open house strip */
+.open-house-strip{
+  background:linear-gradient(135deg,var(--gold) 0%,var(--gold2) 100%);
+  padding:28px 40px;
+  display:flex;align-items:center;justify-content:space-between;gap:24px;
+}
+.oh-left{}
+.oh-eyebrow{font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.75);margin-bottom:6px}
+.oh-title{font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.5vw,30px);font-weight:600;color:var(--white);line-height:1.2}
+.oh-dates{display:flex;gap:24px;margin-top:12px;flex-wrap:wrap}
+.oh-date{background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);padding:8px 16px;border-radius:2px}
+.oh-date-label{font-size:9px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-bottom:2px}
+.oh-date-val{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:600;color:var(--white)}
+.oh-right{display:flex;flex-direction:column;gap:10px;align-items:flex-end}
+.oh-cta{background:var(--white);color:var(--gold);padding:12px 28px;border-radius:2px;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;white-space:nowrap;transition:all 0.2s}
+.oh-cta:hover{background:var(--navy2);color:var(--white)}
+.oh-note{font-size:11px;color:rgba(255,255,255,0.7);text-align:right}
+
+/* Trust bar */
+.trust-bar{background:var(--pale);border-top:1px solid var(--ltgrey);border-bottom:1px solid var(--ltgrey);padding:16px 40px}
+.trust-bar-inner{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:400;color:var(--grey)}
+.trust-item strong{color:var(--navy);font-weight:600}
+.trust-divider{width:1px;height:20px;background:var(--ltgrey)}
+
+/* Founding Family Ambassador section */
+.ambassador{padding:80px 0;background:var(--navy2);position:relative;overflow:hidden}
+.ambassador::before{content:'';position:absolute;top:-80px;right:-80px;width:400px;height:400px;border:1px solid rgba(184,134,11,0.1);border-radius:50%}
+.amb-inner{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;position:relative;z-index:2}
+.amb-eyebrow{color:var(--gold3)}
+.amb-title{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,3.5vw,44px);font-weight:600;color:var(--white);line-height:1.1;margin-top:10px}
+.amb-body{font-size:14px;font-weight:300;color:rgba(255,255,255,0.62);line-height:1.8;margin-top:16px}
+.amb-benefits{display:flex;flex-direction:column;gap:12px;margin-top:28px}
+.amb-benefit{display:flex;align-items:flex-start;gap:14px}
+.amb-benefit-dot{width:6px;height:6px;background:var(--gold3);border-radius:50%;margin-top:6px;flex-shrink:0}
+.amb-benefit-text{font-size:13.5px;font-weight:300;color:rgba(255,255,255,0.78);line-height:1.5}
+.amb-benefit-text strong{color:var(--white);font-weight:500}
+.amb-right{display:flex;flex-direction:column;gap:16px}
+.amb-quote{
+  background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);
+  border-left:3px solid var(--gold3);
+  padding:28px 24px;
+}
+.amb-quote p{font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;color:rgba(255,255,255,0.88);line-height:1.55;margin-bottom:12px}
+.amb-quote cite{font-size:11px;color:rgba(255,255,255,0.4);font-style:normal;letter-spacing:0.08em;text-transform:uppercase}
+.amb-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.amb-stat{border-top:1px solid rgba(255,255,255,0.15);padding-top:16px}
+.amb-stat .n{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:600;color:var(--gold3);line-height:1}
+.amb-stat .l{font-size:11px;font-weight:300;color:rgba(255,255,255,0.48);margin-top:5px;line-height:1.4}
+.amb-cta-group{display:flex;gap:12px;margin-top:20px}
+
+/* Enquiry form strip */
+.enquiry-strip{background:var(--cream);border-top:1px solid var(--ltgrey);padding:48px 40px}
+.enquiry-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1.4fr;gap:56px;align-items:start}
+.enq-left{}
+.enq-left h3{font-family:'Cormorant Garamond',serif;font-size:clamp(24px,3vw,38px);font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:12px}
+.enq-left p{font-size:14px;font-weight:300;color:var(--grey);line-height:1.75}
+.enq-form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.enq-field{display:flex;flex-direction:column;gap:6px}
+.enq-field.full{grid-column:span 2}
+.enq-field label{font-size:10.5px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--navy)}
+.enq-field input,.enq-field select{
+  padding:11px 14px;
+  border:1px solid var(--ltgrey);
+  background:var(--white);
+  font-size:13px;font-family:'DM Sans',sans-serif;
+  color:var(--text);outline:none;
+  transition:border-color 0.2s;border-radius:2px;
+}
+.enq-field input:focus,.enq-field select:focus{border-color:var(--navy)}
+.enq-submit{
+  grid-column:span 2;
+  background:var(--navy);color:var(--white);
+  border:none;padding:13px 28px;
+  font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;
+  cursor:pointer;border-radius:2px;transition:background 0.2s;width:100%;
+}
+.enq-submit:hover{background:var(--navy2)}
+.enq-privacy{grid-column:span 2;font-size:10.5px;font-weight:300;color:var(--grey)}
+
+/* Segment callout */
+.segments{padding:80px 0;background:var(--white)}
+.segments-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid var(--ltgrey);margin-top:48px}
+.seg-card{padding:32px 24px;border-right:1px solid var(--ltgrey);border-top:2px solid transparent;text-align:left;transition:border-top-color 0.2s}
+.seg-card:last-child{border-right:none}
+.seg-card:hover{border-top-color:var(--navy)}
+.seg-icon{font-size:20px;margin-bottom:16px;display:block}
+.seg-title{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;color:var(--navy);margin-bottom:10px;line-height:1.25}
+.seg-body{font-family:'DM Sans',sans-serif;font-size:12px;font-weight:300;color:var(--grey);line-height:1.65}
+
+/* Why choose improved layout fix */
+.why-grid-text{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid var(--ltgrey);margin-top:48px}
+.why-item-full{padding:28px 20px;border-right:1px solid var(--ltgrey)}
+.why-item-full:last-child{border-right:none}
+.why-num{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:600;color:var(--gold);line-height:1;margin-bottom:10px}
+.why-item-title{font-size:13px;font-weight:500;color:var(--navy);line-height:1.4;margin-bottom:10px}
+.why-item-body{font-size:12px;font-weight:300;color:var(--grey);line-height:1.65}
+
+/* ── NAV ─────────────────────────────────────── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(21,45,84,0.97);
+  backdrop-filter:blur(12px);
+  padding:0 40px;
+  display:flex;align-items:center;justify-content:space-between;
+  height:68px;
+  border-bottom:2px solid rgba(184,134,11,0.4);
+}
+.nav-brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.nav-logo-circle{
+  width:44px;height:44px;
+  border-radius:50%;
+  background:linear-gradient(135deg,var(--purple),var(--navy));
+  border:2px solid var(--gold3);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+.nav-logo-circle svg{width:24px;height:24px}
+.nav-wordmark{line-height:1.15}
+.nav-wordmark strong{
+  display:block;
+  font-family:'Cormorant Garamond',serif;
+  font-weight:700;font-size:17px;
+  color:var(--white);
+  letter-spacing:0.02em;
+}
+.nav-wordmark span{
+  font-size:9px;font-weight:400;
+  color:rgba(255,255,255,0.55);
+  letter-spacing:0.18em;text-transform:uppercase;
+}
+.nav-links{display:flex;align-items:center;gap:26px;list-style:none}
+.nav-links a{color:rgba(255,255,255,0.78);text-decoration:none;font-size:12.5px;font-weight:400;letter-spacing:0.03em;transition:color 0.2s}
+.nav-links a:hover{color:var(--gold3)}
+.nav-cta{
+  background:var(--gold)!important;color:var(--white)!important;
+  padding:8px 18px;border-radius:2px;font-weight:500!important;
+  transition:background 0.2s!important;letter-spacing:0.04em;
+}
+.nav-cta:hover{background:var(--gold2)!important}
+
+/* ── HERO ─────────────────────────────────────── */
+.hero{
+  min-height:100vh;
+  background:linear-gradient(165deg,#0d1f3d 0%,#1a2d5a 40%,#152948 100%);
+  display:flex;align-items:center;
+  position:relative;overflow:hidden;
+  padding-top:68px;
+}
+.hero-decor-1{position:absolute;top:-100px;right:-100px;width:600px;height:600px;border:1px solid rgba(184,134,11,0.12);border-radius:50%}
+.hero-decor-2{position:absolute;top:50px;right:50px;width:400px;height:400px;border:1px solid rgba(184,134,11,0.08);border-radius:50%}
+.hero-decor-3{position:absolute;bottom:-150px;left:-100px;width:500px;height:500px;border:1px solid rgba(46,117,182,0.1);border-radius:50%}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.025) 1px,transparent 1px);background-size:72px 72px}
+.hero-content{position:relative;z-index:2;max-width:1180px;margin:0 auto;padding:80px 40px;display:grid;grid-template-columns:1.1fr 0.9fr;gap:72px;align-items:center}
+
+.hero-tag{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:10px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;
+  color:var(--gold3);margin-bottom:24px;
+}
+.hero-tag::before{content:'';width:28px;height:1px;background:var(--gold3)}
+
+.hero h1{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:600;font-size:clamp(42px,5.5vw,72px);
+  line-height:1.02;color:var(--white);margin-bottom:24px;
+}
+.hero h1 em{font-style:italic;color:var(--gold3)}
+.hero-sub{
+  font-size:15.5px;font-weight:300;line-height:1.8;
+  color:rgba(255,255,255,0.68);max-width:480px;margin-bottom:40px;
+}
+.hero-actions{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.btn{
+  display:inline-block;text-decoration:none;
+  font-size:12px;font-weight:500;letter-spacing:0.08em;
+  text-transform:uppercase;border-radius:2px;
+  transition:all 0.2s;padding:13px 28px;
+}
+.btn-gold{background:var(--gold);color:var(--white)}
+.btn-gold:hover{background:var(--gold2);transform:translateY(-1px)}
+.btn-outline{
+  color:rgba(255,255,255,0.75);
+  border-bottom:1px solid rgba(255,255,255,0.35);
+  padding:2px 0;border-radius:0;font-size:13px;font-weight:300;
+  letter-spacing:0.04em;text-transform:none;
+}
+.btn-outline:hover{color:var(--gold3);border-color:var(--gold3)}
+
+.hero-right{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.hero-card{
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.09);
+  padding:28px 22px;border-radius:2px;
+  transition:background 0.2s;
+}
+.hero-card:hover{background:rgba(255,255,255,0.07)}
+.hero-card.featured{
+  grid-column:span 2;
+  background:rgba(184,134,11,0.1);
+  border-color:rgba(184,134,11,0.28);
+}
+.hero-card .n{
+  font-family:'Cormorant Garamond',serif;
+  font-size:46px;font-weight:600;color:var(--gold3);
+  line-height:1;margin-bottom:8px;
+}
+.hero-card .l{font-size:12px;font-weight:300;color:rgba(255,255,255,0.55);line-height:1.5}
+.hero-motto{
+  grid-column:span 2;
+  border-top:1px solid rgba(255,255,255,0.1);padding-top:18px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:20px;font-style:italic;
+  color:rgba(255,255,255,0.4);text-align:center;letter-spacing:0.08em;
+}
+
+/* ── MISSION BAND ─────────────────────────────── */
+.mission-band{
+  background:linear-gradient(135deg,var(--gold) 0%,var(--gold2) 100%);
+  padding:28px 40px;text-align:center;
+}
+.mission-band p{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(17px,2.4vw,25px);
+  font-weight:500;font-style:italic;
+  color:var(--white);max-width:880px;margin:0 auto;line-height:1.55;
+}
+
+/* ── WHY PARENTS CHOOSE ───────────────────────── */
+.why-choose{padding:72px 0;background:var(--cream)}
+.why-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid var(--ltgrey);margin-top:48px}
+.why-item{padding:32px 20px;border-right:1px solid var(--ltgrey);text-align:center}
+.why-item:last-child{border-right:none}
+.why-icon{font-size:26px;margin-bottom:14px}
+.why-label{font-size:12px;font-weight:500;color:var(--navy);line-height:1.4}
+
+/* ── SHARED SECTION UTILITIES ─────────────────── */
+.section-eyebrow{font-size:10.5px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,3.8vw,50px);font-weight:600;color:var(--navy);line-height:1.1}
+.section-subtitle{margin-top:14px;font-size:15px;font-weight:300;color:var(--grey);line-height:1.75}
+.section-header{text-align:center;margin-bottom:60px}
+.section-header .section-subtitle{max-width:540px;margin-left:auto;margin-right:auto}
+
+/* ── VISION ───────────────────────────────────── */
+.vision{padding:80px 0;background:var(--navy2)}
+.vision-inner{display:grid;grid-template-columns:1fr 1.6fr;gap:80px;align-items:center}
+.vision-left .section-eyebrow{color:var(--gold3)}
+.vision-statement{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(24px,3vw,38px);font-style:italic;
+  font-weight:400;color:var(--white);line-height:1.4;margin-top:14px;
+}
+.vision-sub{font-size:14px;font-weight:300;color:rgba(255,255,255,0.55);line-height:1.75;margin-top:18px;font-style:italic}
+.vision-pillars{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.vision-pillar{border-left:2px solid rgba(184,134,11,0.5);padding-left:18px}
+.vision-num{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:600;color:var(--gold3);line-height:1}
+.vision-title{font-size:13px;font-weight:500;color:var(--white);margin:6px 0 6px}
+.vision-body{font-size:12px;font-weight:300;color:rgba(255,255,255,0.5);line-height:1.6}
+
+/* ── PILLARS ──────────────────────────────────── */
+.pillars{padding:110px 0;background:var(--white)}
+.pillars-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.pillar{
+  border:1px solid var(--ltgrey);
+  border-top:3px solid var(--navy);
+  padding:40px 30px;
+  transition:transform 0.2s,box-shadow 0.2s;
+}
+.pillar:hover{transform:translateY(-4px);box-shadow:0 20px 48px rgba(30,61,110,0.1)}
+.pillar:nth-child(2){border-top-color:var(--gold)}
+.pillar:nth-child(3){border-top-color:var(--teal)}
+.pillar-icon{width:50px;height:50px;background:var(--pale);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:22px}
+.pillar-title{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;color:var(--navy);margin-bottom:14px}
+.pillar-body{font-size:14px;font-weight:300;color:var(--grey);line-height:1.75}
+
+/* ── DAY IN THE LIFE ──────────────────────────── */
+.daylife{padding:100px 0;background:var(--cream)}
+.daylife-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:0;border:1px solid var(--ltgrey);margin-top:56px}
+.daylife-step{border-right:1px solid var(--ltgrey)}
+.daylife-step:last-child{border-right:none}
+.daylife-hd{padding:22px 14px;text-align:center}
+.daylife-step:nth-child(1) .daylife-hd{background:#0f2a52}
+.daylife-step:nth-child(2) .daylife-hd{background:#1a3d72}
+.daylife-step:nth-child(3) .daylife-hd{background:#1f4e79}
+.daylife-step:nth-child(4) .daylife-hd{background:#24629a}
+.daylife-step:nth-child(5) .daylife-hd{background:var(--teal)}
+.daylife-step:nth-child(6) .daylife-hd{background:#1A6B3C}
+.daylife-num{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;color:rgba(255,255,255,0.25);line-height:1}
+.daylife-name{font-family:'Cormorant Garamond',serif;font-size:13px;font-weight:600;color:var(--white);line-height:1.25;margin-top:6px}
+.daylife-bd{background:var(--white);padding:20px 14px}
+.daylife-tag{font-size:9.5px;font-weight:500;text-transform:uppercase;letter-spacing:0.12em;color:var(--gold);margin-bottom:8px}
+.daylife-desc{font-size:12px;font-weight:300;color:var(--grey);line-height:1.6}
+
+/* ── APPROACH ─────────────────────────────────── */
+.approach{padding:110px 0;background:var(--white)}
+.approach-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.approach-body{font-size:15px;font-weight:300;line-height:1.85;color:var(--grey);margin-top:20px;margin-bottom:36px}
+.approach-list{list-style:none;display:flex;flex-direction:column;gap:14px}
+.approach-list li{display:flex;align-items:flex-start;gap:14px;font-size:13.5px;font-weight:400;color:var(--grey);line-height:1.6}
+.approach-list li::before{
+  content:'';width:18px;height:18px;
+  background:var(--navy);border-radius:50%;flex-shrink:0;margin-top:3px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:center;
+}
+.approach-cards{display:flex;flex-direction:column;gap:14px}
+.approach-card{background:var(--cream);border-left:3px solid var(--gold);padding:22px 26px}
+.approach-card-title{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:600;color:var(--navy);margin-bottom:7px}
+.approach-card-body{font-size:13px;font-weight:300;color:var(--grey);line-height:1.7}
+
+/* ── INQUIRY ──────────────────────────────────── */
+.inquiry{padding:96px 0;background:var(--navy2);position:relative;overflow:hidden}
+.inquiry::after{content:'';position:absolute;top:-120px;right:-120px;width:500px;height:500px;border:1px solid rgba(184,134,11,0.08);border-radius:50%}
+.inquiry .section-eyebrow{color:var(--gold3)}
+.inquiry .section-title{color:var(--white)}
+.inquiry .section-subtitle{color:rgba(255,255,255,0.58)}
+.inq-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:52px;position:relative}
+.inq-steps::before{content:'';position:absolute;top:28px;left:10%;right:10%;height:2px;background:rgba(255,255,255,0.1)}
+.inq-step{padding:0 10px;text-align:center;position:relative;z-index:1}
+.inq-circle{
+  width:56px;height:56px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 18px;
+  font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:var(--white);
+}
+.inq-step:nth-child(1) .inq-circle{background:var(--gold)}
+.inq-step:nth-child(2) .inq-circle{background:var(--teal)}
+.inq-step:nth-child(3) .inq-circle{background:#2471a3}
+.inq-step:nth-child(4) .inq-circle{background:#b04020}
+.inq-step:nth-child(5) .inq-circle{background:#4a4a6a}
+.inq-title{font-size:13px;font-weight:500;color:var(--white);margin-bottom:10px}
+.inq-body{font-size:11.5px;font-weight:300;color:rgba(255,255,255,0.5);line-height:1.6}
+.inq-note{
+  margin-top:48px;background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.1);border-left:3px solid var(--gold3);
+  padding:22px 32px;text-align:center;
+}
+.inq-note p{font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic;color:rgba(255,255,255,0.82);line-height:1.5}
+
+/* ── PBL ──────────────────────────────────────── */
+.pbl{padding:110px 0;background:var(--cream)}
+.pbl-principle{
+  margin:44px 0;background:var(--white);
+  border:1px solid var(--ltgrey);border-left:3px solid var(--gold);
+  padding:28px 36px;
+}
+.pbl-principle-label{font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.pbl-principle p{font-family:'Cormorant Garamond',serif;font-size:clamp(17px,2vw,22px);font-style:italic;font-weight:400;color:var(--navy);line-height:1.55}
+
+/* Grade blocks */
+.pbl-grade-block{margin-bottom:44px}
+.pbl-grade-label{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:'DM Sans',sans-serif;font-size:11px;font-weight:600;
+  letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--navy);background:transparent;
+  border-bottom:2px solid var(--navy);
+  padding:0 0 8px 0;margin-bottom:16px;
+}
+
+/* Project cards — unified */
+.pbl-projects{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:64px}
+.pbl-grade-projects{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.pbl-card{
+  background:var(--white);
+  border:1px solid var(--ltgrey);
+  border-top:2px solid var(--navy);
+  padding:22px 20px;
+  display:flex;flex-direction:column;
+  transition:transform 0.2s,box-shadow 0.2s;
+}
+.pbl-card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(30,61,110,0.07)}
+
+/* Theme label — single colour, no per-card variation */
+.pbl-grade-theme{
+  font-family:'DM Sans',sans-serif;
+  font-size:9.5px;font-weight:500;
+  letter-spacing:0.13em;text-transform:uppercase;
+  color:var(--teal);
+  margin-bottom:10px;
+}
+
+/* Card title — serif, navy only */
+.pbl-card-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:18px;font-weight:600;
+  color:var(--navy);line-height:1.25;
+  margin-bottom:10px;
+}
+
+/* Card body — DM Sans, single weight */
+.pbl-card-body{
+  font-family:'DM Sans',sans-serif;
+  font-size:12.5px;font-weight:300;
+  color:var(--grey);line-height:1.7;
+  margin-bottom:16px;flex:1;
+}
+
+/* Stats — plain, no decorative font switching */
+.pbl-card-stats{
+  display:flex;flex-direction:column;gap:5px;
+  border-top:1px solid var(--ltgrey);padding-top:12px;
+  margin-top:auto;
+}
+.pbl-stat{display:flex;gap:8px;align-items:baseline}
+.pbl-stat-n{
+  font-family:'DM Sans',sans-serif;
+  font-size:13px;font-weight:600;
+  color:var(--navy);white-space:nowrap;
+}
+.pbl-stat-l{
+  font-family:'DM Sans',sans-serif;
+  font-size:11px;font-weight:300;
+  color:var(--grey);line-height:1.4;
+}
+
+/* Partner row */
+.pbl-partner-row{
+  display:flex;align-items:flex-start;gap:6px;
+  padding-top:10px;border-top:1px solid var(--ltgrey);
+  margin-top:10px;
+}
+.pbl-dot{width:4px;height:4px;background:var(--gold);border-radius:50%;flex-shrink:0;margin-top:5px}
+.pbl-partner{
+  font-family:'DM Sans',sans-serif;
+  font-size:10.5px;font-weight:400;
+  color:#999;line-height:1.45;
+}
+
+/* Bottom section */
+.pbl-bottom{display:grid;grid-template-columns:1fr 1fr;gap:56px;border-top:1px solid var(--ltgrey);padding-top:56px}
+.pbl-bottom-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:28px;font-weight:600;
+  color:var(--navy);margin-bottom:16px;line-height:1.2;
+}
+.pbl-bottom-body{
+  font-family:'DM Sans',sans-serif;
+  font-size:14px;font-weight:300;
+  color:var(--grey);line-height:1.8;
+}
+.pbl-bottom-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+.pbl-bstat{border-top:2px solid var(--navy);padding-top:14px}
+.pbl-bstat .n{
+  font-family:'Cormorant Garamond',serif;
+  font-size:30px;font-weight:600;color:var(--navy);
+}
+.pbl-bstat .l{
+  font-family:'DM Sans',sans-serif;
+  font-size:11px;font-weight:300;
+  color:var(--grey);margin-top:4px;line-height:1.4;
+}
+
+/* What parents can expect */
+.pbl-expectations{display:flex;flex-direction:column;gap:20px}
+.pbl-exp-label{
+  font-family:'DM Sans',sans-serif;
+  font-size:10px;font-weight:600;
+  letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--navy);margin-bottom:4px;
+}
+.pbl-exp{display:flex;gap:14px;align-items:flex-start}
+.pbl-exp-icon{
+  width:30px;height:30px;border-radius:2px;
+  background:var(--pale);border:1px solid var(--ltgrey);
+  display:flex;align-items:center;justify-content:center;
+  font-size:13px;flex-shrink:0;margin-top:1px;
+}
+.pbl-exp-title{
+  font-family:'DM Sans',sans-serif;
+  font-size:13px;font-weight:500;
+  color:var(--navy);margin-bottom:3px;
+}
+.pbl-exp-body{
+  font-family:'DM Sans',sans-serif;
+  font-size:12px;font-weight:300;
+  color:var(--grey);line-height:1.65;
+}
+
+/* ── ASSESSMENT ───────────────────────────────── */
+.assessment{padding:100px 0;background:var(--white)}
+.assessment-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:52px}
+.assessment-card{background:var(--cream);border:1px solid var(--ltgrey);border-top:3px solid var(--navy);padding:28px 22px}
+.assessment-card:nth-child(2){border-top-color:var(--gold)}
+.assessment-card:nth-child(3){border-top-color:var(--teal)}
+.assessment-card:nth-child(4){border-top-color:#2471a3}
+.assessment-card:nth-child(5){border-top-color:#b04020}
+.assessment-card:nth-child(6){border-top-color:#1A6B3C}
+.assessment-icon{font-size:20px;margin-bottom:12px}
+.assessment-title{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:var(--navy);margin-bottom:9px}
+.assessment-body{font-size:12.5px;font-weight:300;color:var(--grey);line-height:1.65}
+.assessment-banner{
+  margin-top:36px;background:var(--navy);
+  padding:28px 40px;display:flex;align-items:center;justify-content:space-between;gap:28px;
+}
+.assessment-banner p{font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;color:rgba(255,255,255,0.85);line-height:1.5}
+.toddle-badge{flex-shrink:0;background:rgba(184,134,11,0.2);border:1px solid rgba(184,134,11,0.4);padding:14px 22px;text-align:center}
+.toddle-badge .n{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;color:var(--gold3);line-height:1}
+.toddle-badge .l{font-size:10px;color:rgba(255,255,255,0.55);margin-top:4px;letter-spacing:0.08em}
+
+/* ── HERITAGE ─────────────────────────────────── */
+.heritage{padding:96px 0;background:var(--navy2);position:relative;overflow:hidden}
+.heritage::before{content:'';position:absolute;top:-60px;right:-60px;width:400px;height:400px;border:1px solid rgba(184,134,11,0.08);border-radius:50%}
+.heritage-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.heritage-eyebrow{color:var(--gold3)}
+.heritage-title{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,3.5vw,46px);font-weight:600;color:var(--white);line-height:1.1;margin-top:10px}
+.heritage-sub{font-size:14px;font-weight:300;color:rgba(255,255,255,0.58);line-height:1.75;margin-top:18px}
+.heritage-nums{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:44px}
+.heritage-num{border-top:1px solid rgba(255,255,255,0.15);padding-top:18px}
+.heritage-num .n{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:600;color:var(--gold3);line-height:1}
+.heritage-num .l{font-size:11.5px;color:rgba(255,255,255,0.48);margin-top:5px;font-weight:300;line-height:1.4}
+.heritage-quote{border-left:2px solid var(--gold3);padding-left:28px;margin-bottom:36px}
+.heritage-quote blockquote{font-family:'Cormorant Garamond',serif;font-size:22px;font-style:italic;color:rgba(255,255,255,0.84);line-height:1.55;margin-bottom:14px}
+.heritage-quote cite{font-size:11px;color:rgba(255,255,255,0.4);font-style:normal;letter-spacing:0.09em;text-transform:uppercase}
+.heritage-values{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.hval{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);padding:14px;text-align:center;border-radius:2px}
+.hval .vi{font-size:20px;margin-bottom:6px}
+.hval .vl{font-family:'Cormorant Garamond',serif;font-size:14px;font-weight:600;color:rgba(255,255,255,0.84)}
+
+/* ── GRADUATE PROMISE ─────────────────────────── */
+.graduate{padding:100px 0;background:var(--cream)}
+.graduate-inner{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:56px}
+.grad-attrs{display:flex;flex-direction:column;border:1px solid var(--ltgrey)}
+.grad-attr{display:flex;border-bottom:1px solid var(--ltgrey)}
+.grad-attr:last-child{border-bottom:none}
+.grad-num{
+  width:52px;flex-shrink:0;background:var(--navy);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:var(--gold3);
+  align-self:stretch;
+}
+.grad-content{padding:18px 22px}
+.grad-title{font-size:13.5px;font-weight:500;color:var(--navy);margin-bottom:3px}
+.grad-body{font-size:12px;font-weight:300;color:var(--grey);line-height:1.5}
+.grad-right{}
+.promise-title{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,2.5vw,34px);font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:22px}
+.promise-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.promise-card{background:var(--white);border:1px solid var(--ltgrey);padding:18px 14px;text-align:center}
+.promise-word{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--navy);margin-bottom:7px}
+.promise-body{font-size:11px;font-weight:300;color:var(--grey);line-height:1.5}
+.promise-closing{margin-top:20px;background:var(--navy);padding:24px 28px}
+.promise-closing p{font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic;color:rgba(255,255,255,0.88);line-height:1.5;margin-bottom:6px}
+.promise-closing small{font-size:11px;font-weight:300;color:rgba(255,255,255,0.45);font-style:italic}
+
+/* ── STAGES ───────────────────────────────────── */
+.stages{padding:110px 0;background:var(--white)}
+.stages-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid var(--ltgrey);margin-top:60px}
+.stage{border-right:1px solid var(--ltgrey)}
+.stage:last-child{border-right:none}
+.stage-hd{padding:20px 14px;text-align:center}
+.stage:nth-child(1) .stage-hd{background:#0f2a52}
+.stage:nth-child(2) .stage-hd{background:#1a3d72}
+.stage:nth-child(3) .stage-hd{background:#24629a}
+.stage:nth-child(4) .stage-hd{background:var(--blue)}
+.stage:nth-child(5) .stage-hd{background:var(--navy)}
+.stage-name{font-family:'Cormorant Garamond',serif;font-size:14px;font-weight:600;color:var(--white);line-height:1.2}
+.stage-age{font-size:10.5px;color:rgba(255,255,255,0.55);margin-top:4px}
+.stage-bd{background:var(--cream);padding:22px 14px}
+.stage-focus{font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:0.1em;color:var(--gold);margin-bottom:10px}
+.stage-pts{list-style:none;display:flex;flex-direction:column;gap:7px}
+.stage-pts li{font-size:11.5px;font-weight:300;color:var(--grey);line-height:1.5;padding-left:10px;border-left:2px solid var(--ltgrey)}
+
+/* ── INCLUSION ────────────────────────────────── */
+.inclusion{padding:96px 0;background:var(--navy)}
+.inclusion .section-eyebrow{color:var(--gold3)}
+.inclusion .section-title{color:var(--white)}
+.inclusion .section-subtitle{color:rgba(255,255,255,0.58)}
+.inclusion-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:52px}
+.inc-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);padding:28px 20px;border-radius:2px}
+.inc-icon{font-size:26px;margin-bottom:14px}
+.inc-title{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:var(--white);margin-bottom:9px}
+.inc-body{font-size:12.5px;font-weight:300;color:rgba(255,255,255,0.53);line-height:1.65}
+
+/* ── PARENTS AT HOME ──────────────────────────── */
+.parents{padding:100px 0;background:var(--cream)}
+.parents-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:52px}
+.parent-card{background:var(--white);border:1px solid var(--ltgrey);border-top:2px solid var(--gold);padding:26px 18px}
+.parent-icon{font-size:22px;margin-bottom:12px}
+.parent-title{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:600;color:var(--navy);margin-bottom:8px}
+.parent-body{font-size:12px;font-weight:300;color:var(--grey);line-height:1.65}
+
+/* ── ADMISSIONS ───────────────────────────────── */
+.admissions{padding:96px 0;background:var(--white)}
+.adm-inner{
+  background:linear-gradient(165deg,#0d1f3d 0%,#1a2d5a 100%);
+  padding:64px 72px;display:grid;grid-template-columns:1fr 1fr;gap:60px;
+  align-items:start;position:relative;overflow:hidden;border-radius:2px;
+}
+.adm-inner::before{content:'';position:absolute;top:-60px;right:-60px;width:300px;height:300px;border:1px solid rgba(184,134,11,0.12);border-radius:50%}
+.adm-inner::after{content:'';position:absolute;bottom:-80px;left:-40px;width:240px;height:240px;border:1px solid rgba(46,117,182,0.1);border-radius:50%}
+.adm-left{position:relative;z-index:2}
+.adm-eyebrow{color:var(--gold3)}
+.adm-title{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,3.5vw,46px);font-weight:600;color:var(--white);line-height:1.1;margin:10px 0 18px}
+.adm-body{font-size:13.5px;font-weight:300;color:rgba(255,255,255,0.62);line-height:1.75;margin-bottom:28px}
+.adm-contacts{display:flex;flex-direction:column;gap:8px;margin-bottom:24px}
+.adm-contact{display:flex;align-items:center;gap:10px;font-size:13px;font-weight:300;color:rgba(255,255,255,0.72)}
+.adm-contact strong{color:var(--white);font-weight:500}
+.adm-right{position:relative;z-index:2;display:flex;flex-direction:column;gap:14px}
+.adm-step{display:flex;align-items:flex-start;gap:14px}
+.adm-step-num{
+  width:34px;height:34px;background:var(--gold);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:700;color:var(--white);flex-shrink:0;
+}
+.adm-step-title{font-size:13px;font-weight:500;color:var(--white);margin-bottom:3px}
+.adm-step-desc{font-size:11.5px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.55}
+
+/* ── CONTACT ──────────────────────────────────── */
+.contact{padding:80px 0;background:var(--cream)}
+.contact-inner{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.contact-card{background:var(--white);border:1px solid var(--ltgrey);padding:30px}
+.contact-icon{font-size:26px;margin-bottom:14px}
+.contact-label{font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:0.14em;color:var(--gold);margin-bottom:7px}
+.contact-title{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:600;color:var(--navy);margin-bottom:9px}
+.contact-detail{font-size:12.5px;font-weight:300;color:var(--grey);line-height:1.75}
+.contact-detail a{color:var(--blue);text-decoration:none}
+.contact-detail a:hover{text-decoration:underline}
+
+/* ── CLOSING ──────────────────────────────────── */
+.closing{
+  padding:96px 40px;
+  background:linear-gradient(165deg,#0d1f3d 0%,#152948 100%);
+  text-align:center;position:relative;overflow:hidden;
+}
+.closing::before{content:'';position:absolute;bottom:-100px;left:-80px;width:400px;height:400px;border:1px solid rgba(184,134,11,0.08);border-radius:50%}
+.closing::after{content:'';position:absolute;top:-80px;right:-60px;width:320px;height:320px;border:1px solid rgba(255,255,255,0.05);border-radius:50%}
+.closing-tag{font-size:10px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold3);margin-bottom:20px}
+.closing-h{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(32px,5vw,64px);font-weight:600;
+  color:var(--white);line-height:1.05;max-width:840px;
+  margin:0 auto 24px;position:relative;z-index:2;
+}
+.closing-sub{
+  font-family:'Cormorant Garamond',serif;
+  font-size:20px;font-style:italic;color:rgba(255,255,255,0.55);
+  max-width:600px;margin:0 auto 16px;position:relative;z-index:2;
+}
+.closing-foot{font-size:12px;font-weight:300;color:rgba(255,255,255,0.35);letter-spacing:0.05em;position:relative;z-index:2}
+
+/* ── FOOTER ───────────────────────────────────── */
+footer{background:var(--navy2);padding:48px 40px 28px;border-top:2px solid var(--gold)}
+.footer-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:44px}
+.footer-brand-name{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--white);margin-bottom:6px}
+.footer-motto{font-family:'Cormorant Garamond',serif;font-size:13px;font-style:italic;color:var(--gold3);margin-bottom:14px;letter-spacing:0.07em}
+.footer-desc{font-size:12.5px;font-weight:300;color:rgba(255,255,255,0.48);line-height:1.7}
+.footer-col-title{font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:0.16em;color:rgba(255,255,255,0.38);margin-bottom:14px}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:9px}
+.footer-links a{font-size:12.5px;font-weight:300;color:rgba(255,255,255,0.58);text-decoration:none;transition:color 0.2s}
+.footer-links a:hover{color:var(--gold3)}
+.footer-bottom{max-width:1180px;margin:0 auto;border-top:1px solid rgba(255,255,255,0.07);padding-top:22px;display:flex;justify-content:space-between;align-items:center}
+.footer-bottom p{font-size:11.5px;color:rgba(255,255,255,0.28);font-weight:300}
+.footer-psg span{color:var(--gold3)}
+
+/* ── ANIMATIONS ───────────────────────────────── */
+.fade-up{opacity:1;transform:none;transition:opacity 0.5s ease,transform 0.5s ease}
+.fade-up:nth-child(2){transition-delay:0.1s}
+.fade-up:nth-child(3){transition-delay:0.2s}
+.fade-up:nth-child(4){transition-delay:0.3s}
+.fade-up:nth-child(5){transition-delay:0.4s}
+
+@media(max-width:960px){
+  .hero-content,.approach-inner,.heritage-inner,.adm-inner,.graduate-inner,.vision-inner{grid-template-columns:1fr;gap:40px}
+  .hero-right,.pillars-grid,.why-grid,.assessment-grid,.inclusion-grid,.parents-grid,.pbl-projects,.inq-steps,.promise-grid,.heritage-values{grid-template-columns:1fr 1fr}
+  .daylife-grid,.stages-grid{grid-template-columns:1fr}
+  .contact-inner,.footer-inner{grid-template-columns:1fr 1fr}
+  .pbl-bottom{grid-template-columns:1fr}
+  .amb-inner,.enquiry-inner,.oh-dates{grid-template-columns:1fr;gap:24px}
+  .amb-stats,.segments-grid{grid-template-columns:1fr 1fr}
+  .announce-bar{flex-direction:column;gap:8px;text-align:center}
+  .open-house-strip{flex-direction:column}
+  .oh-right{align-items:flex-start}
+  nav{padding:0 20px}
+  .nav-links{display:none}
+  .container{padding:0 20px}
+  .adm-inner{padding:44px 32px}
+}
+
+@media(max-width:960px){.pbl-grade-projects{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.pbl-grade-projects{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 
-<!-- ── NAV ─────────────────────────────────────── -->
+<!-- ANNOUNCEMENT BAR -->
+<div class="announce-bar">
+  <div class="announce-text">
+    <span class="announce-pill">Now Open</span>
+    Admissions 2026–27 are open &nbsp;·&nbsp; Early Years 1 through Grade 12 &nbsp;·&nbsp; Classes capped at 20 students
+  </div>
+  <a href="#admissions" class="announce-cta">Enquire Now →</a>
+</div>
+
+<!-- NAV -->
 <nav>
   <a href="#" class="nav-brand">
-    <div class="nav-logo-mark">PSG</div>
-    <div class="nav-school-name">
-      PSG World School
-      <span>Coimbatore, India</span>
+    <div class="nav-logo-circle">
+      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18 4L6 10v8c0 7 5 13 12 15 7-2 12-8 12-15v-8L18 4z" stroke="#B8860B" stroke-width="1.5" fill="none"/>
+        <path d="M12 18h12M18 12v12" stroke="#E8B84B" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="18" cy="18" r="3" fill="#B8860B" opacity="0.6"/>
+      </svg>
+    </div>
+    <div class="nav-wordmark">
+      <strong>PSG World School</strong>
+      <span>Ignite · Innovate · Inspire</span>
     </div>
   </a>
   <ul class="nav-links">
@@ -1472,568 +796,724 @@
     <li><a href="#stages">Learning Stages</a></li>
     <li><a href="#admissions">Admissions</a></li>
     <li><a href="#contact">Contact</a></li>
+    <li><a href="https://wa.me/916292525252" style="color:#25D366!important" target="_blank">💬 WhatsApp</a></li>
     <li><a href="#admissions" class="nav-cta">Apply Now</a></li>
   </ul>
 </nav>
 
-<!-- ── HERO ─────────────────────────────────────── -->
+<!-- HERO -->
 <section class="hero">
-  <div class="hero-bg-pattern"></div>
-  <div class="hero-grid-overlay"></div>
+  <div class="hero-decor-1"></div><div class="hero-decor-2"></div>
+  <div class="hero-decor-3"></div><div class="hero-grid"></div>
   <div class="hero-content">
-    <div class="hero-left">
-      <p class="hero-eyebrow">PSG World School · Coimbatore</p>
-      <h1>Where <em>character</em> leads and <em>curiosity</em> drives</h1>
-      <p class="hero-body">
-        A school built on a century of educational excellence, committed to developing principled, compassionate, and future-ready learners from Early Years through Grade 12.
-      </p>
+    <div>
+      <p class="hero-tag">PSG World School · Coimbatore · Opening 2026</p>
+      <h1>Locally Rooted.<br><em>Globally Minded.</em></h1>
+      <p class="hero-sub">PSG World School brings together the rigour of international education and the resources of one of South India's most connected institutions — PSG & Sons' Charities. Small classes. Real projects. A city as your classroom.</p>
       <div class="hero-actions">
-        <a href="#admissions" class="btn-primary">Begin Your Journey</a>
-        <a href="#approach" class="btn-ghost">Discover our approach →</a>
+        <a href="#admissions" class="btn btn-gold">Enquire for 2026–27</a>
+        <a href="#pbl" class="btn btn-outline">See learning in action →</a>
       </div>
     </div>
     <div class="hero-right">
-      <div class="hero-stat">
-        <div class="stat-number">100+</div>
-        <div class="stat-label">Years of PSG educational excellence — one of South India's most trusted institutions</div>
+      <div class="hero-card featured">
+        <div class="n">EY1–G12</div>
+        <div class="l">A complete, purposeful continuum from Early Years through Grade 12 — inquiry-based, character-led, and rooted in Coimbatore</div>
       </div>
-      <div class="hero-stat">
-        <div class="stat-number">EY–12</div>
-        <div class="stat-label">Full continuum of learning from Early Years through Senior School</div>
+      <div class="hero-card">
+        <div class="n">20</div>
+        <div class="l">Hard cap on class size — every child known, every day, by every teacher</div>
       </div>
-      <div class="hero-stat">
-        <div class="stat-number">20</div>
-        <div class="stat-label">Maximum class size — every child known and supported</div>
+      <div class="hero-card">
+        <div class="n">30+</div>
+        <div class="l">PSG partner institutions — hospitals, health centres, colleges, and NGOs — as live learning partners</div>
       </div>
-      <div class="hero-tagline">Ignite · Innovate · Inspire</div>
+      <div class="hero-motto">Ignite · Innovate · Inspire</div>
     </div>
   </div>
 </section>
 
-<!-- ── MISSION BAND ────────────────────────────── -->
+<!-- MISSION BAND -->
 <div class="mission-band">
-  <p>"PSG World School commits to academic rigour balanced with compassion, creativity, intercultural understanding, and personal growth."</p>
+  <p>"At PSG World School, students do not read about hospitals, rivers, or communities in textbooks. They work inside them — with named people, on real problems, producing outcomes that continue after the unit ends."</p>
 </div>
 
-<!-- ── PILLARS ─────────────────────────────────── -->
+<!-- WHY PARENTS CHOOSE -->
+<section class="why-choose" id="why">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">Five Things That Are Specifically, Verifiably True of PSG World School</p>
+      <h2 class="section-title serif">Why families choose<br>this school</h2>
+    </div>
+    <div class="why-grid why-grid-text">
+      <div class="why-item-full fade-up">
+        <div class="why-num">01</div>
+        <div class="why-item-title">One of India's most connected school ecosystems</div>
+        <div class="why-item-body">PSG World School sits inside a century-old charitable trust operating 30+ institutions — hospitals, colleges, rural health centres, environmental NGOs. Students don't visit these partners on field trips. They work inside them on real problems with real outcomes.</div>
+      </div>
+      <div class="why-item-full fade-up">
+        <div class="why-num">02</div>
+        <div class="why-item-title">Every class capped at 20 students. Hard cap. No exceptions.</div>
+        <div class="why-item-body">Not a target. A hard cap. Every child is known by every teacher. No child disappears into the middle. The class cap of 20 is the structural mechanism behind every belonging claim we make.</div>
+      </div>
+      <div class="why-item-full fade-up">
+        <div class="why-num">03</div>
+        <div class="why-item-title">Work that continues after the unit ends</div>
+        <div class="why-item-body">Grade 1 students designed tactile storybooks permanently adopted by Vishnugranthi Day Care Centre. Grade 3 students implemented a physical change inside PSG Hospitals. Learning does not disappear when the term does.</div>
+      </div>
+      <div class="why-item-full fade-up">
+        <div class="why-num">04</div>
+        <div class="why-item-title">Founded as an answer to exclusion</div>
+        <div class="why-item-body">In 1926, the Naidu family was refused admission to a British school and built their own. They named it Sarvajana — for all people. That founding question shapes how we think about every admissions decision we make.</div>
+      </div>
+      <div class="why-item-full fade-up">
+        <div class="why-num">05</div>
+        <div class="why-item-title">You see your child's learning in real time</div>
+        <div class="why-item-body">Through Toddle, parents see portfolios, written feedback, and growth across every unit — not end-of-year reports. Progress is never a mystery. You are a partner in your child's education, not an audience for it.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEGMENTS -->
+<section class="segments" id="families">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">Who Chooses PSG World School</p>
+      <h2 class="section-title serif">Families who are done waiting<br>for a school like this</h2>
+      <p class="section-subtitle">Coimbatore's globally minded families have always known what great education looks like — they just haven't always found it here. PSG World School brings together international standards, future-ready learning, and the trust of the PSG legacy in one place.</p>
+    </div>
+    <div class="segments-grid">
+      <div class="seg-card fade-up">
+        <div class="seg-icon">🏭</div>
+        <div class="seg-title">Industrial &amp; Business Families</div>
+        <div class="seg-body">Textile, manufacturing, and entrepreneurial families who want more than academic scores alone — they want confident communicators, ethical leaders, and globally capable children prepared for the future.</div>
+      </div>
+      <div class="seg-card fade-up">
+        <div class="seg-icon">🩺</div>
+        <div class="seg-title">Healthcare Professionals</div>
+        <div class="seg-body">Doctors, specialists, and healthcare leaders who value balanced child development, inquiry-based learning, and a school culture that supports both wellbeing and high expectations.</div>
+      </div>
+      <div class="seg-card fade-up">
+        <div class="seg-icon">💻</div>
+        <div class="seg-title">IT &amp; Startup Professionals</div>
+        <div class="seg-body">Tech founders, innovators, and senior professionals seeking a modern education that develops creativity, problem-solving, collaboration, and real-world future skills — not outdated rote learning.</div>
+      </div>
+      <div class="seg-card fade-up">
+        <div class="seg-icon">🌍</div>
+        <div class="seg-title">International Families</div>
+        <div class="seg-body">Families relocating from abroad or moving between countries who want continuity, international standards, and a welcoming school community that understands global transitions.</div>
+      </div>
+      <div class="seg-card fade-up">
+        <div class="seg-icon">🔄</div>
+        <div class="seg-title">Families Seeking a Fresh Start</div>
+        <div class="seg-body">Parents looking beyond traditional rote-learning schools and searching for a more engaging, future-focused educational experience with strong transition support and individual attention.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISION -->
+<section class="vision">
+  <div class="container">
+    <div class="vision-inner">
+      <div>
+        <p class="section-eyebrow vision-eyebrow">Our Vision &amp; Mission</p>
+        <p class="vision-statement">Shaping young people of character, curiosity, and consequence.</p>
+        <p class="vision-sub">Globally minded learners who lead with purpose, integrity, and compassion.</p>
+      </div>
+      <div class="vision-pillars">
+        <div class="vision-pillar">
+          <div class="vision-num">01</div>
+          <div class="vision-title">Inspire Inquiry</div>
+          <div class="vision-body">Curiosity-led learning from EY1 through Grade 12 — questions first, always.</div>
+        </div>
+        <div class="vision-pillar">
+          <div class="vision-num">02</div>
+          <div class="vision-title">Build Character</div>
+          <div class="vision-body">Integrity, empathy, and principled action in everything we do and teach.</div>
+        </div>
+        <div class="vision-pillar">
+          <div class="vision-num">03</div>
+          <div class="vision-title">Develop Global Perspectives</div>
+          <div class="vision-body">Understanding the world through local and global lenses — rooted in Coimbatore, ready for everywhere.</div>
+        </div>
+        <div class="vision-pillar">
+          <div class="vision-num">04</div>
+          <div class="vision-title">Prepare for Meaningful Futures</div>
+          <div class="vision-body">Skills, confidence, and purpose for life beyond school — not just for examinations.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PILLARS -->
 <section class="pillars" id="approach">
   <div class="container">
     <div class="section-header">
       <p class="section-eyebrow">What We Stand For</p>
       <h2 class="section-title serif">Three commitments that<br>shape every day</h2>
-      <p class="section-subtitle">Our three founding values are not aspirations. They are the architecture of how we teach, lead, and build community.</p>
+      <p class="section-subtitle">Our founding values are not aspirations. They are the architecture of how we teach, lead, and build community.</p>
     </div>
     <div class="pillars-grid">
-      <div class="pillar-card fade-up">
+      <div class="pillar fade-up">
         <div class="pillar-icon">🔥</div>
         <h3 class="pillar-title">Ignite</h3>
-        <p class="pillar-body">We awaken in every child the desire to learn — not through pressure, but through wonder. Curiosity is not a by-product of great teaching. It is the goal.</p>
+        <p class="pillar-body">We awaken curiosity through wonder, challenge, and reflection. Learning becomes meaningful when students discover purpose within themselves.</p>
       </div>
-      <div class="pillar-card fade-up">
+      <div class="pillar fade-up">
         <div class="pillar-icon">💡</div>
         <h3 class="pillar-title">Innovate</h3>
-        <p class="pillar-body">We build creative, adaptive thinkers who can navigate complexity, collaborate across difference, and find new solutions to real problems.</p>
+        <p class="pillar-body">Real innovation begins with experience. Students learn through experimentation, reflection, and purposeful action.</p>
       </div>
-      <div class="pillar-card fade-up">
+      <div class="pillar fade-up">
         <div class="pillar-icon">✦</div>
         <h3 class="pillar-title">Inspire</h3>
-        <p class="pillar-body">We hold a high standard — not of test scores, but of character. Students leave PSG World School ready to lead with integrity and act with compassion.</p>
+        <p class="pillar-body">We believe education is fundamentally human. Students grow through connection, belonging, and meaningful encouragement.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── APPROACH ────────────────────────────────── -->
+<!-- DAY IN THE LIFE -->
+<section class="daylife">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">A Day in the Life</p>
+      <h2 class="section-title serif">What your child's day looks like</h2>
+      <p class="section-subtitle">Every day is structured for depth, not coverage — with time for thinking, creating, reflecting, and belonging.</p>
+    </div>
+    <div class="daylife-grid">
+      <div class="daylife-step fade-up">
+        <div class="daylife-hd"><div class="daylife-num">1</div><div class="daylife-name">Arrival &amp; Settling</div></div>
+        <div class="daylife-bd"><div class="daylife-tag">Every morning</div><div class="daylife-desc">Teachers stand at the classroom door for every arrival. Children check the day's provocation on the board and choose their morning activity before the bell. The transition is designed — not managed.</div></div>
+      </div>
+      <div class="daylife-step fade-up">
+        <div class="daylife-hd"><div class="daylife-num">2</div><div class="daylife-name">Circle Time</div></div>
+        <div class="daylife-bd"><div class="daylife-tag">Community building</div><div class="daylife-desc">Sharing ideas, emotions, and open discussion. Every voice matters here.</div></div>
+      </div>
+      <div class="daylife-step fade-up">
+        <div class="daylife-hd"><div class="daylife-num">3</div><div class="daylife-name">Unit of Inquiry</div></div>
+        <div class="daylife-bd"><div class="daylife-tag">Deep learning</div><div class="daylife-desc">Purposeful, concept-led inquiry — the heart of our curriculum each day.</div></div>
+      </div>
+      <div class="daylife-step fade-up">
+        <div class="daylife-hd"><div class="daylife-num">4</div><div class="daylife-name">Literacy &amp; Numeracy</div></div>
+        <div class="daylife-bd"><div class="daylife-tag">Core skills</div><div class="daylife-desc">Guided and independent practice — strong foundations alongside deep thinking.</div></div>
+      </div>
+      <div class="daylife-step fade-up">
+        <div class="daylife-hd"><div class="daylife-num">5</div><div class="daylife-name">Holistic Experiences</div></div>
+        <div class="daylife-bd"><div class="daylife-tag">Whole child</div><div class="daylife-desc">Art, Music and Movement, PSPE, Language, and specialist subjects every week.</div></div>
+      </div>
+      <div class="daylife-step fade-up">
+        <div class="daylife-hd"><div class="daylife-num">6</div><div class="daylife-name">Reflection Time</div></div>
+        <div class="daylife-bd"><div class="daylife-tag">Every afternoon</div><div class="daylife-desc">The last fifteen minutes belong to the child. They add to their Toddle portfolio, choose one thing they understood and one they want to revisit. Parents will see it before dinner.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPROACH -->
 <section class="approach">
   <div class="container">
     <div class="approach-inner">
-      <div class="approach-left">
+      <div>
         <p class="section-eyebrow">How We Teach</p>
-        <h2 class="section-title serif" style="text-align:left;">Learning that goes<br>deeper than content</h2>
+        <h2 class="section-title serif" style="text-align:left">Learning that goes<br>deeper than content</h2>
         <p class="approach-body">At PSG World School, learning is not the delivery of information. It is the gradual construction of understanding — through inquiry, reflection, collaboration, and real-world connection. Every lesson is an opportunity to build not just knowledge, but the ability to use it.</p>
         <ul class="approach-list">
           <li>Inquiry-based learning that puts questions before answers</li>
           <li>Transdisciplinary units that connect knowledge across subjects</li>
           <li>Student agency at the centre of every learning experience</li>
           <li>Assessment that serves growth, not just measurement</li>
-          <li>A bilingual and multilingual environment that values every language</li>
+          <li>A multilingual environment that values every home language</li>
+          <li>Every child taught to their level — not to the middle</li>
         </ul>
       </div>
-      <div class="approach-right">
+      <div class="approach-cards">
         <div class="approach-card fade-up">
           <div class="approach-card-title">The Whole Child</div>
-          <div class="approach-card-body">Academic excellence and personal development are not in competition. We give equal attention to intellectual growth, emotional wellbeing, social development, and physical health.</div>
+          <div class="approach-card-body">Academic excellence and personal development are not in competition. Equal attention goes to intellectual growth, emotional wellbeing, social development, and physical health.</div>
         </div>
         <div class="approach-card fade-up">
           <div class="approach-card-title">Inclusion by Design</div>
-          <div class="approach-card-body">Every classroom is designed for every learner. Differentiation is not a remedial strategy — it is standard practice. All children deserve access to challenge, support, and belonging.</div>
+          <div class="approach-card-body">No child is left behind. No child is held back. Differentiation is not a remedial strategy — it is standard practice, every day, in every classroom.</div>
         </div>
         <div class="approach-card fade-up">
           <div class="approach-card-title">Purposeful Technology</div>
-          <div class="approach-card-body">Technology amplifies great teaching. We use digital tools thoughtfully — to extend inquiry, enhance creativity, and develop the digital citizenship skills children will need for life.</div>
+          <div class="approach-card-body">Technology amplifies great teaching. We use digital tools thoughtfully — extending inquiry, enhancing creativity, building digital citizenship skills for life.</div>
         </div>
         <div class="approach-card fade-up">
           <div class="approach-card-title">Home–School Partnership</div>
-          <div class="approach-card-body">Parents are partners, not customers. We communicate openly, involve families meaningfully, and build the kind of trust that makes a real difference in a child's development.</div>
+          <div class="approach-card-body">Parents are partners, not customers. We communicate openly through Toddle, involve families meaningfully, and build trust that makes a genuine difference.</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── PROJECT-BASED LEARNING — REDESIGNED SECTION ─────────────────────────── -->
-<!-- Replace the entire <section class="pbl" id="pbl">...</section> with this -->
-
-<section class="pbl" id="pbl">
-  <div class="pbl-bg-texture"></div>
-  <div class="container">
-    <div class="pbl-inner">
-
-      <!-- Header -->
-      <div class="pbl-header">
-        <div class="pbl-header-left">
-          <p class="section-eyebrow">Learning in Action</p>
-          <h2 class="section-title serif pbl-title">Real problems.<br><em class="pbl-title-em">Real people.</em><br>Real work.</h2>
-        </div>
-        <div class="pbl-header-right">
-          <p class="pbl-header-body">At PSG World School, learning starts with a genuine problem, a real person who needs it solved, and students who are trusted to do something about it.</p>
-          <div class="pbl-rule-line">
-            <span>The one rule every project must pass</span>
-          </div>
-          <p class="pbl-rule-text">"If the real user disappeared, would this task still make sense? If the answer is no — the user stays."</p>
-        </div>
-      </div>
-
-      <!-- ── FEATURED PROJECT — LARGE CARD ──────────────────────────────────── -->
-      <div class="pbl-featured">
-        <div class="pbl-featured-label">
-          <span class="pbl-feat-grade">Grade 5</span>
-          <span class="pbl-feat-theme">Where We Are in Place and Time</span>
-        </div>
-        <div class="pbl-featured-content">
-          <div class="pbl-featured-left">
-            <h3 class="pbl-featured-title">100 Voices of PSG</h3>
-            <p class="pbl-featured-sub">A centenary documentary</p>
-            <p class="pbl-featured-body">Grade 5 students produce a documentary film marking PSG&nbsp;&amp;&nbsp;Sons' Charities' hundred years in Coimbatore — told through eight people whose lives were directly changed by PSG institutions. Sarvajana alumni. Rural health clinic patients. Vishnugranthi families. Long-serving hospital staff who remember the institution's earliest years.</p>
-            <p class="pbl-featured-body">The Communications Office must approve the film before it can be screened. The interviewees give final consent. The film is archived as part of the trust's own institutional record. This is not a school project that gets displayed on a wall for a week.</p>
-            <div class="pbl-featured-partner">
-              <div class="pbl-feat-dot"></div>
-              <span>PSG&nbsp;&amp;&nbsp;Sons' Charities Communications Office + 8 community members</span>
-            </div>
-          </div>
-          <div class="pbl-featured-right">
-            <div class="pbl-featured-stat-block">
-              <div class="pbl-feat-stat">
-                <div class="pbl-feat-stat-n">100</div>
-                <div class="pbl-feat-stat-l">Years of Coimbatore community service being documented</div>
-              </div>
-              <div class="pbl-feat-stat">
-                <div class="pbl-feat-stat-n">8</div>
-                <div class="pbl-feat-stat-l">Real people interviewed, each giving final consent before publication</div>
-              </div>
-              <div class="pbl-feat-stat">
-                <div class="pbl-feat-stat-n">2</div>
-                <div class="pbl-feat-stat-l">Full revision cycles before the Communications Office approves the final cut</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ── PROJECT GRID — 6 VARIED CARDS ──────────────────────────────────── -->
-      <div class="pbl-grid">
-
-        <!-- TALL LEFT — Grade 1 -->
-        <div class="pbl-card pbl-card--tall pbl-card--blue">
-          <div class="pbl-card-grade">Grade 1</div>
-          <div class="pbl-card-theme">Who We Are</div>
-          <h3 class="pbl-card-title">Sensory Stories for Vishnugranthi</h3>
-          <p class="pbl-card-body">Grade 1 students design tactile storybooks for children with Autism and Cerebral Palsy at PSG Vishnugranthi Day Care Centre. The books are tested across three live sessions. The care team gives honest feedback on what actually engages the children and what doesn't. Students revise. The final books are adopted permanently for daily therapeutic use.</p>
-          <p class="pbl-card-body">Children at Vishnugranthi are the same age as Grade 1 students. The empathy is immediate. The stakes are real.</p>
-          <div class="pbl-card-footer">
-            <div class="pbl-card-dot"></div>
-            <span>PSG Vishnugranthi Day Care Centre · Peelamedu</span>
-          </div>
-        </div>
-
-        <!-- RIGHT COLUMN — stacked 2 -->
-        <div class="pbl-card pbl-card--green">
-          <div class="pbl-card-grade">Grade 2</div>
-          <div class="pbl-card-theme">Sharing the Planet</div>
-          <h3 class="pbl-card-title">Segregation Champions</h3>
-          <p class="pbl-card-body">Students design a Tamil-English household waste segregation guide tested with 15 families on three Peelamedu streets. The CCMC Sanitation Supervisor for the zone reviews the final version. If it works, he distributes it across the entire zone. Mixed waste collection in Coimbatore has already fallen 40% since 2024 — public participation is the remaining gap.</p>
-          <div class="pbl-card-footer">
-            <div class="pbl-card-dot"></div>
-            <span>Coimbatore City Municipal Corporation · Peelamedu Zone</span>
-          </div>
-        </div>
-
-        <div class="pbl-card pbl-card--amber">
-          <div class="pbl-card-grade">Grade 3</div>
-          <div class="pbl-card-theme">Where We Are in Place and Time</div>
-          <h3 class="pbl-card-title">Coimbatore's Living Memories</h3>
-          <p class="pbl-card-body">Grade 3 students interview five elders at Peelamedu care homes who remember Coimbatore from fifty to eighty years ago. The memories are mapped to real city locations — the Noyyal River as a swimming destination, the industrial transformation of Peelamedu, the first generation of PSG students. Each elder confirms their memory before it goes on the map.</p>
-          <div class="pbl-card-footer">
-            <div class="pbl-card-dot"></div>
-            <span>Grace Welfare Trust · Shanthi Nilayam · Peelamedu</span>
-          </div>
-        </div>
-
-        <!-- WIDE BOTTOM LEFT — Grade 4 -->
-        <div class="pbl-card pbl-card--wide pbl-card--dark">
-          <div class="pbl-card-grade">Grade 4</div>
-          <div class="pbl-card-theme">How We Organise Ourselves</div>
-          <h3 class="pbl-card-title">Safe School Zone — Avinashi Road</h3>
-          <div class="pbl-card-wide-inner">
-            <p class="pbl-card-body">Grade 4 students redesign the drop-off zone outside PSG World School on Avinashi Road. They collect observation data across five school mornings. Inspector Kavitha of Peelamedu Traffic Police reviews the proposed protocol and provides AI surveillance incident data — Coimbatore installed smart surveillance at 40+ junctions in 2024, which reduced accidents by 12% in monitored zones. The revised system is piloted for two weeks. Before-and-after data is submitted to school leadership for a permanent adoption decision.</p>
-            <div class="pbl-card-footer" style="margin-top:auto;">
-              <div class="pbl-card-dot" style="background:var(--gold);"></div>
-              <span>Inspector Kavitha · Peelamedu Traffic Police Station</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- BOTTOM RIGHT — Grade 3 and Grade 4 stacked -->
-        <div class="pbl-card pbl-card--teal">
-          <div class="pbl-card-grade">Grade 3</div>
-          <div class="pbl-card-theme">How We Organise Ourselves</div>
-          <h3 class="pbl-card-title">Millet for Morning</h3>
-          <p class="pbl-card-body">Students prototype a millet breakfast item for the PSG World School canteen. Recipe tested with 30 students. Reviewed by the dietitian at PSG Hospitals' Dietary Department. Revised. Introduced to the menu. Sales tracked. Energy levels surveyed before and after.</p>
-          <div class="pbl-card-footer">
-            <div class="pbl-card-dot"></div>
-            <span>PSG Hospitals Dietary Department · School Canteen</span>
-          </div>
-        </div>
-
-        <div class="pbl-card pbl-card--navy">
-          <div class="pbl-card-grade">Grade 4</div>
-          <div class="pbl-card-theme">Sharing the Planet</div>
-          <h3 class="pbl-card-title">The Noyyal Documentary</h3>
-          <p class="pbl-card-body">A documentary about Coimbatore's most significant river, reduced from 34 tributaries to four since 2003. Students interview elders who swam in it as children. The film is screened at a Siruthuli community event. Audience surveyed before and after.</p>
-          <div class="pbl-card-footer">
-            <div class="pbl-card-dot"></div>
-            <span>Siruthuli Environmental NGO · Coimbatore</span>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- ── BOTTOM: WHY COIMBATORE + WHAT PARENTS SEE ──────────────────────── -->
-      <div class="pbl-bottom">
-        <div class="pbl-bottom-left">
-          <h3 class="pbl-bottom-title">Why Coimbatore.<br>Why PSG.</h3>
-          <p class="pbl-bottom-body">PSG&nbsp;&amp;&nbsp;Sons' Charities — founded in 1926, now operating more than thirty institutions across the city — means PSG World School sits inside one of the most connected philanthropic ecosystems in South India. PSG Hospitals. The Rural Health Training Centre at Vedapatti, serving nearly 26,000 people across fourteen villages. PSG College of Technology. Siruthuli.</p>
-          <p class="pbl-bottom-body" style="margin-top:16px;">These are not field trip destinations. They are partners. The PSG name carries a century of community trust — and when a student walks into a rural health clinic or an environmental NGO office, that trust opens doors.</p>
-          <div class="pbl-heritage-row">
-            <div class="pbl-her-item">
-              <div class="pbl-her-n">30+</div>
-              <div class="pbl-her-l">PSG institutions across Coimbatore</div>
-            </div>
-            <div class="pbl-her-item">
-              <div class="pbl-her-n">1926</div>
-              <div class="pbl-her-l">Year the trust was founded</div>
-            </div>
-            <div class="pbl-her-item">
-              <div class="pbl-her-n">26K</div>
-              <div class="pbl-her-l">Patients served by Vedapatti Rural Health Centre alone</div>
-            </div>
-          </div>
-        </div>
-        <div class="pbl-bottom-right">
-          <p class="pbl-exp-heading">What parents can expect</p>
-          <div class="pbl-expectation">
-            <div class="pbl-exp-num">01</div>
-            <div class="pbl-exp-content">
-              <div class="pbl-exp-title">Questions before answers</div>
-              <div class="pbl-exp-body">Your child will come home talking about the person they interviewed, the constraint they hadn't anticipated, the feedback that required starting a section again.</div>
-            </div>
-          </div>
-          <div class="pbl-expectation">
-            <div class="pbl-exp-num">02</div>
-            <div class="pbl-exp-content">
-              <div class="pbl-exp-title">Revision as evidence of learning</div>
-              <div class="pbl-exp-body">Every unit requires at least two full revision cycles. Revision is not a sign that something went wrong — it is the evidence that learning is happening.</div>
-            </div>
-          </div>
-          <div class="pbl-expectation">
-            <div class="pbl-exp-num">03</div>
-            <div class="pbl-exp-content">
-              <div class="pbl-exp-title">A real audience at the showcase</div>
-              <div class="pbl-exp-body">Once a year your child presents to an audience that includes the community members who shaped the work — not just the final product, but the drafts that led there.</div>
-            </div>
-          </div>
-          <div class="pbl-expectation">
-            <div class="pbl-exp-num">04</div>
-            <div class="pbl-exp-content">
-              <div class="pbl-exp-title">Work that continues after the unit ends</div>
-              <div class="pbl-exp-body">Sensory books adopted by Vishnugranthi. A millet recipe on the canteen menu. A conservation system running in the school. The work does not disappear when the term does.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div><!-- /.pbl-inner -->
-  </div><!-- /.container -->
+<!-- INQUIRY JOURNEY -->
+<section class="inquiry">
+  <div class="container" style="position:relative;z-index:2">
+    <div class="section-header">
+      <p class="section-eyebrow">How Learning Happens</p>
+      <h2 class="section-title serif">The Inquiry Journey —<br>from question to real-world impact</h2>
+      <p class="section-subtitle">Learning at PSG World School begins with a question — and ends with action.</p>
+    </div>
+    <div class="inq-steps">
+      <div class="inq-step"><div class="inq-circle">01</div><div class="inq-title">Question</div><div class="inq-body">What do we want to find out? Students generate genuine questions rooted in real curiosity.</div></div>
+      <div class="inq-step"><div class="inq-circle">02</div><div class="inq-title">Investigate</div><div class="inq-body">Research, explore, and gather evidence. Deep learning by doing, not by being told.</div></div>
+      <div class="inq-step"><div class="inq-circle">03</div><div class="inq-title">Create</div><div class="inq-body">Design and build a solution or product — real outputs with real purpose and a real audience.</div></div>
+      <div class="inq-step"><div class="inq-circle">04</div><div class="inq-title">Feedback</div><div class="inq-body">Share with peers, experts, and a real audience. Structured, honest, actionable feedback.</div></div>
+      <div class="inq-step"><div class="inq-circle">05</div><div class="inq-title">Improve</div><div class="inq-body">Refine and present the final work. Revision is not failure — it is the evidence of learning.</div></div>
+    </div>
+    <div class="inq-note">
+      <p>Every unit ends with a <strong style="color:var(--gold3)">Public Product</strong> — students share their learning with a real audience outside the classroom.</p>
+    </div>
+  </div>
 </section>
 
+<!-- PBL -->
+<section class="pbl" id="pbl">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">Learning in Action</p>
+      <h2 class="section-title serif">Real problems.<br>Real people. Real work.</h2>
+      <p class="section-subtitle">Every grade at PSG World School works on a project with a named partner from the PSG ecosystem — a hospital, a health centre, an NGO, a college. The work does not disappear when the unit ends.</p>
+    </div>
+    <div class="pbl-principle">
+      <div class="pbl-principle-label">The one rule every project must pass</div>
+      <p>"If the real user disappeared, would this task still make sense? If the answer is no — the user stays. Their constraints shape the design. Their community receives the final work."</p>
+    </div>
 
-<!-- ── HERITAGE ────────────────────────────────── -->
+    <!-- Grade 1 -->
+    <div class="pbl-grade-block">
+      <div class="pbl-grade-label">Grade 1</div>
+      <div class="pbl-grade-projects">
+        <div class="pbl-card">
+          <div class="pbl-grade-theme">Who We Are · PSG Vishnugranthi</div>
+          <div class="pbl-card-title">Sensory Stories</div>
+          <div class="pbl-card-body">Students design tactile storybooks for children with Autism and Cerebral Palsy. Tested in three live sessions with care staff recording what works. Revised twice. The books are permanently adopted for daily therapeutic use.</div>
+          <div class="pbl-card-stats">
+            <div class="pbl-stat"><span class="pbl-stat-n">3</span><span class="pbl-stat-l">live test sessions before adoption</span></div>
+            <div class="pbl-stat"><span class="pbl-stat-n">5</span><span class="pbl-stat-l">laminated books kept permanently</span></div>
+          </div>
+          <div class="pbl-partner-row"><div class="pbl-dot"></div><div class="pbl-partner">Ms. Rekha, Lead Care Worker · PSG Vishnugranthi Day Care Centre</div></div>
+        </div>
+        <div class="pbl-card">
+          <div class="pbl-grade-theme">Sharing the Planet · PSG Rural Health Centre</div>
+          <div class="pbl-card-title">School Kitchen Garden</div>
+          <div class="pbl-card-body">Students grow moringa and curry leaf over 8 weeks. The harvest is delivered to the Balwadi nutrition programme at PSG's Rural Health Centre in Vedapatti — feeding children across 14 villages.</div>
+          <div class="pbl-card-stats">
+            <div class="pbl-stat"><span class="pbl-stat-n">8</span><span class="pbl-stat-l">weeks of growing and recording yield</span></div>
+            <div class="pbl-stat"><span class="pbl-stat-n">14</span><span class="pbl-stat-l">villages reached by the Balwadi programme</span></div>
+          </div>
+          <div class="pbl-partner-row"><div class="pbl-dot"></div><div class="pbl-partner">Sister Anandhi · PSG Rural Health Training Centre, Vedapatti</div></div>
+        </div>
+        <div class="pbl-card">
+          <div class="pbl-grade-theme">How We Organise Ourselves · School Campus</div>
+          <div class="pbl-card-title">Waste Sorting Guide</div>
+          <div class="pbl-card-body">Three sorting panels — one per bin — designed for the school canteen. Tested across two live lunch sittings with the canteen manager watching. Revised. Fixed permanently above the bins.</div>
+          <div class="pbl-card-stats">
+            <div class="pbl-stat"><span class="pbl-stat-n">2</span><span class="pbl-stat-l">live lunch sittings used to test panels</span></div>
+            <div class="pbl-stat"><span class="pbl-stat-n">Permanent</span><span class="pbl-stat-l">installation, not a classroom display</span></div>
+          </div>
+          <div class="pbl-partner-row"><div class="pbl-dot"></div><div class="pbl-partner">PSG World School Canteen Manager</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grade 2 -->
+    <div class="pbl-grade-block">
+      <div class="pbl-grade-label">Grade 2</div>
+      <div class="pbl-grade-projects">
+        <div class="pbl-card">
+          <div class="pbl-grade-theme">Who We Are · PSG Vishnugranthi</div>
+          <div class="pbl-card-title">Companion Programme</div>
+          <div class="pbl-card-body">Students design and run a 6-week weekly companion activity programme for Vishnugranthi children. The care team observes and gives specific feedback. Students revise activities mid-programme. Social engagement is measured before and after.</div>
+          <div class="pbl-card-stats">
+            <div class="pbl-stat"><span class="pbl-stat-n">6</span><span class="pbl-stat-l">weeks of structured weekly sessions</span></div>
+            <div class="pbl-stat"><span class="pbl-stat-n">Before/After</span><span class="pbl-stat-l">engagement measured by care team</span></div>
+          </div>
+          <div class="pbl-partner-row"><div class="pbl-dot"></div><div class="pbl-partner">Ms. Rekha, Lead Care Worker · PSG Vishnugranthi Day Care Centre</div></div>
+        </div>
+        <div class="pbl-card">
+          <div class="pbl-grade-theme">How We Organise Ourselves · Kongu Nadu Heritage</div>
+          <div class="pbl-card-title">Kongu Kitchen Cookbook</div>
+          <div class="pbl-card-body">15 traditional Kongu Nadu recipes collected from elders in Peelamedu and Vedapatti. Students cook and photograph each dish. PSG Hospitals' dietitian validates nutritional content. Sold at the school fair — proceeds fund the Balwadi programme.</div>
+          <div class="pbl-card-stats">
+            <div class="pbl-stat"><span class="pbl-stat-n">15</span><span class="pbl-stat-l">recipes collected from real elders</span></div>
+            <div class="pbl-stat"><span class="pbl-stat-n">2</span><span class="pbl-stat-l">expert validators — elder cooks and dietitian</span></div>
+          </div>
+          <div class="pbl-partner-row"><div class="pbl-dot"></div><div class="pbl-partner">Ms. Deepa, Dietitian · PSG Hospitals Dietary Department</div></div>
+        </div>
+        <div class="pbl-card">
+          <div class="pbl-grade-theme">Sharing the Planet · CCMC Peelamedu</div>
+          <div class="pbl-card-title">Segregation Champions</div>
+          <div class="pbl-card-body">Students design a Tamil-English household waste guide and test it with 15 families on three Peelamedu streets. The CCMC Sanitation Supervisor reviews the final version. If it works, he distributes it across his entire zone.</div>
+          <div class="pbl-card-stats">
+            <div class="pbl-stat"><span class="pbl-stat-n">15</span><span class="pbl-stat-l">real families test the guide</span></div>
+            <div class="pbl-stat"><span class="pbl-stat-n">Zone-wide</span><span class="pbl-stat-l">distribution if supervisor approves</span></div>
+          </div>
+          <div class="pbl-partner-row"><div class="pbl-dot"></div><div class="pbl-partner">Mr. Murugan · CCMC Sanitation Supervisor, Peelamedu Zone</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grade 3 -->
+    <div class="pbl-grade-block">
+      <div class="pbl-grade-label">Grade 3</div>
+      <div class="pbl-grade-projects">
+        <div class="pbl-card">
+          <div class="pbl-grade-theme">How the World Works · PSG Hospitals</div>
+          <div class="pbl-card-title">Hydration Audit</div>
+          <div class="pbl-card-body">Students observe outpatient waiting areas at PSG Hospitals, map where patients walk to find water, and interview 20 patients. They design one physical improvement. Mr. Velu reviews — and the change is implemented.</div>
+          <div class="pbl-card-stats">
+            <div class="pbl-stat"><span class="pbl-stat-n">20</span><span class="pbl-stat-l">patients interviewed in real waiting areas</span></div>
+            <div class="pbl-stat"><span class="pbl-stat-n">1</span><span class="pbl-stat-l">physical change implemented inside PSG Hospitals</span></div>
+          </div>
+          <div class="pbl-partner-row"><div class="pbl-dot"></div><div class="pbl-partner">Mr. Velu, Facilities Manager · PSG Hospitals</div></div>
+        </div>
+        <div class="pbl-card">
+          <div class="pbl-grade-theme">How We Organise Ourselves · School Canteen</div>
+          <div class="pbl-card-title">Millet for Morning</div>
+          <div class="pbl-card-body">Students prototype a millet breakfast item for the school canteen. Taste-tested with 30 students. Reviewed by PSG Hospitals' dietitian. Revised. Introduced to the canteen menu for a trial with sales data and before/after energy surveys.</div>
+          <div class="pbl-card-stats">
+            <div class="pbl-stat"><span class="pbl-stat-n">30</span><span class="pbl-stat-l">students taste-test before it hits the menu</span></div>
+            <div class="pbl-stat"><span class="pbl-stat-n">Before/After</span><span class="pbl-stat-l">energy-level survey with real data</span></div>
+          </div>
+          <div class="pbl-partner-row"><div class="pbl-dot"></div><div class="pbl-partner">Ms. Deepa, Dietitian · PSG Hospitals Dietary Department</div></div>
+        </div>
+        <div class="pbl-card">
+          <div class="pbl-grade-theme">Where We Are · Peelamedu Elders</div>
+          <div class="pbl-card-title">Coimbatore's Living Memories</div>
+          <div class="pbl-card-body">Students interview five elders at Peelamedu care homes who remember Coimbatore from 50–80 years ago — the Noyyal as a swimming destination, the first PSG students. Each elder confirms their memory before it goes on the map.</div>
+          <div class="pbl-card-stats">
+            <div class="pbl-stat"><span class="pbl-stat-n">5</span><span class="pbl-stat-l">elders each confirming accuracy before publication</span></div>
+            <div class="pbl-stat"><span class="pbl-stat-n">Permanent</span><span class="pbl-stat-l">map displayed in school and donated to library</span></div>
+          </div>
+          <div class="pbl-partner-row"><div class="pbl-dot"></div><div class="pbl-partner">Elders at Grace Welfare Trust · Shanthi Nilayam, Peelamedu</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grade 4 -->
+    <div class="pbl-grade-block">
+      <div class="pbl-grade-label">Grade 4</div>
+      <div class="pbl-grade-projects">
+        <div class="pbl-card">
+          <div class="pbl-grade-theme">Sharing the Planet · Siruthuli NGO</div>
+          <div class="pbl-card-title">Noyyal Storytellers</div>
+          <div class="pbl-card-body">Students produce a documentary about the Noyyal River — reduced from 34 tributaries to 4. Elders who swam in it as children are interviewed. Screened publicly at a Siruthuli event with a before-and-after audience awareness survey.</div>
+          <div class="pbl-card-stats">
+            <div class="pbl-stat"><span class="pbl-stat-n">34→4</span><span class="pbl-stat-l">tributaries — the story the film tells</span></div>
+            <div class="pbl-stat"><span class="pbl-stat-n">Public</span><span class="pbl-stat-l">screening with measured audience impact</span></div>
+          </div>
+          <div class="pbl-partner-row"><div class="pbl-dot"></div><div class="pbl-partner">Ms. Shruthi Suresh · Siruthuli Environmental NGO</div></div>
+        </div>
+        <div class="pbl-card">
+          <div class="pbl-grade-theme">How We Organise Ourselves · Peelamedu Traffic Police</div>
+          <div class="pbl-card-title">Safe School Zone</div>
+          <div class="pbl-card-body">Students redesign the drop-off zone outside PSG World School on Avinashi Road. They observe arrival for five mornings, design a revised safety protocol, get it reviewed by Inspector Kavitha, and pilot it for two weeks using Coimbatore's AI surveillance data.</div>
+          <div class="pbl-card-stats">
+            <div class="pbl-stat"><span class="pbl-stat-n">5</span><span class="pbl-stat-l">mornings of systematic observation data</span></div>
+            <div class="pbl-stat"><span class="pbl-stat-n">AI</span><span class="pbl-stat-l">surveillance used to measure before/after impact</span></div>
+          </div>
+          <div class="pbl-partner-row"><div class="pbl-dot"></div><div class="pbl-partner">Inspector Kavitha · Peelamedu Traffic Police Station</div></div>
+        </div>
+        <div class="pbl-card">
+          <div class="pbl-grade-theme">How the World Works · PSG Rural Health Centre</div>
+          <div class="pbl-card-title">Village Health Map</div>
+          <div class="pbl-card-body">Students map the three most significant child health risks across 14 villages served by PSG's Rural Health Centre. A Tamil-language family action guide is produced, tested with 3 village families, revised, and used by the clinic's mobile outreach team.</div>
+          <div class="pbl-card-stats">
+            <div class="pbl-stat"><span class="pbl-stat-n">14</span><span class="pbl-stat-l">villages served by PSG Rural Health Centre</span></div>
+            <div class="pbl-stat"><span class="pbl-stat-n">Used</span><span class="pbl-stat-l">by the mobile clinic team during real visits</span></div>
+          </div>
+          <div class="pbl-partner-row"><div class="pbl-dot"></div><div class="pbl-partner">Dr. Senthil Kumar · Medical Officer, PSG Rural Health Centre, Vedapatti</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grade 5 -->
+    <div class="pbl-grade-block">
+      <div class="pbl-grade-label">Grade 5</div>
+      <div class="pbl-grade-projects">
+        <div class="pbl-card">
+          <div class="pbl-grade-theme">Where We Are · PSG &amp; Sons' Charities</div>
+          <div class="pbl-card-title">100 Voices of PSG</div>
+          <div class="pbl-card-body">Grade 5 students produce a 12-minute centenary documentary told through 8 people whose lives were changed by PSG institutions. The Communications Office must approve before screening. Archived as part of the trust's permanent record.</div>
+          <div class="pbl-card-stats">
+            <div class="pbl-stat"><span class="pbl-stat-n">8</span><span class="pbl-stat-l">real people, each giving informed consent</span></div>
+            <div class="pbl-stat"><span class="pbl-stat-n">2</span><span class="pbl-stat-l">approval cycles before centenary screening</span></div>
+          </div>
+          <div class="pbl-partner-row"><div class="pbl-dot"></div><div class="pbl-partner">PSG &amp; Sons' Charities Communications Office</div></div>
+        </div>
+        <div class="pbl-card">
+          <div class="pbl-grade-theme">Sharing the Planet · School Campus + Siruthuli</div>
+          <div class="pbl-card-title">Water Detectives</div>
+          <div class="pbl-card-body">Students audit water consumption across every school zone, identify the two highest-waste areas, design a conservation system reviewed by Siruthuli, implement it for two weeks, and present before/after consumption data to school leadership for a permanent adoption decision.</div>
+          <div class="pbl-card-stats">
+            <div class="pbl-stat"><span class="pbl-stat-n">All</span><span class="pbl-stat-l">school zones audited with consistent methodology</span></div>
+            <div class="pbl-stat"><span class="pbl-stat-n">Real</span><span class="pbl-stat-l">adoption decision made by leadership on student data</span></div>
+          </div>
+          <div class="pbl-partner-row"><div class="pbl-dot"></div><div class="pbl-partner">Siruthuli Environmental NGO + PSG World School Facilities Manager</div></div>
+        </div>
+        <div class="pbl-card">
+          <div class="pbl-grade-theme">How We Organise Ourselves · CCMC Peelamedu</div>
+          <div class="pbl-card-title">Accessible Peelamedu</div>
+          <div class="pbl-card-body">Students audit three public spaces in Peelamedu using measurement data — path widths, ramp gradients, signage heights. They interview 15 elderly and differently-abled users. One prioritised improvement proposal is submitted to the CCMC Ward Officer for a formal response.</div>
+          <div class="pbl-card-stats">
+            <div class="pbl-stat"><span class="pbl-stat-n">3</span><span class="pbl-stat-l">public spaces audited — park, bus stand, market</span></div>
+            <div class="pbl-stat"><span class="pbl-stat-n">15</span><span class="pbl-stat-l">elderly and differently-abled users interviewed</span></div>
+          </div>
+          <div class="pbl-partner-row"><div class="pbl-dot"></div><div class="pbl-partner">Mr. Suresh · CCMC Ward Officer, Peelamedu</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pbl-bottom">
+      <div>
+        <h3 class="pbl-bottom-title">Why the PSG network<br>changes everything.</h3>
+        <p class="pbl-bottom-body">No other school in Coimbatore has a 900-bed hospital, a rural health centre serving 26,000 people, an environmental NGO with 600+ rainwater harvesting structures, and an arts college all as institutional partners — within 5 minutes of the school gate.<br><br>These are not sponsors or field trip destinations. They are the places where PSG World School students do their work. The PSG name opens every door. The problems are real. The outcomes last.</p>
+        <div class="pbl-bottom-stats">
+          <div class="pbl-bstat"><div class="n">30+</div><div class="l">PSG institutions across Coimbatore available as live learning partners</div></div>
+          <div class="pbl-bstat"><div class="n">26K</div><div class="l">Patients served by Vedapatti Rural Health Centre — one of many partners</div></div>
+          <div class="pbl-bstat"><div class="n">15</div><div class="l">Grade-specific projects each year — one named user per project, always</div></div>
+        </div>
+      </div>
+      <div class="pbl-expectations">
+        <p class="pbl-exp-label">What parents can expect</p>
+        <div class="pbl-exp"><div class="pbl-exp-icon">❓</div><div><div class="pbl-exp-title">Questions before answers</div><div class="pbl-exp-body">Your child will come home talking about the person they interviewed, the constraint they hadn't anticipated, the feedback that required starting a section again.</div></div></div>
+        <div class="pbl-exp"><div class="pbl-exp-icon">✏️</div><div><div class="pbl-exp-title">Revision as evidence of learning</div><div class="pbl-exp-body">Every project requires at least two full revision cycles. Revision is not a sign something went wrong — it is the evidence that learning is happening.</div></div></div>
+        <div class="pbl-exp"><div class="pbl-exp-icon">🎤</div><div><div class="pbl-exp-title">A real audience at the showcase</div><div class="pbl-exp-body">Once a year, your child presents to an audience that includes the community members who shaped the work — not just the final product, but the drafts that led there.</div></div></div>
+        <div class="pbl-exp"><div class="pbl-exp-icon">📍</div><div><div class="pbl-exp-title">Work that continues after the unit ends</div><div class="pbl-exp-body">Storybooks permanently at Vishnugranthi. A millet item on the canteen menu. A change inside PSG Hospitals. The projects do not disappear when the term does.</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ASSESSMENT -->
+<section class="assessment">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">How Learning is Assessed</p>
+      <h2 class="section-title serif">Assessment helps children grow —<br>not fear mistakes</h2>
+      <p class="section-subtitle">We assess progress continuously — not just through tests. Progress is never a mystery at PSG World School.</p>
+    </div>
+    <div class="assessment-grid">
+      <div class="assessment-card fade-up"><div class="assessment-icon">✎</div><div class="assessment-title">Teacher Feedback</div><div class="assessment-body">Specific, regular feedback linked to learning goals — honest, actionable, and day-to-day. No surprises.</div></div>
+      <div class="assessment-card fade-up"><div class="assessment-icon">↔</div><div class="assessment-title">Peer Feedback</div><div class="assessment-body">Students learn to give each other structured, kind, useful feedback — a skill that serves them for life.</div></div>
+      <div class="assessment-card fade-up"><div class="assessment-icon">◉</div><div class="assessment-title">Self-Reflection</div><div class="assessment-body">Children learn to evaluate their own work — building self-awareness and metacognitive skills they'll carry for life.</div></div>
+      <div class="assessment-card fade-up"><div class="assessment-icon">⊞</div><div class="assessment-title">Portfolios &amp; Evidence</div><div class="assessment-body">Every unit produces a portfolio entry — drafts, feedback received, the revision, and the final work. Families see the full arc of learning on Toddle, not just the result.</div></div>
+      <div class="assessment-card fade-up"><div class="assessment-icon">◈</div><div class="assessment-title">Ongoing Check-ins</div><div class="assessment-body">Teachers check understanding during learning — adjusting in real time, every single day. Assessment is integral to teaching.</div></div>
+      <div class="assessment-card fade-up"><div class="assessment-icon">★</div><div class="assessment-title">Unit Evaluations</div><div class="assessment-body">End-of-unit assessments show what students understand and can apply independently — clear standards, transparent expectations.</div></div>
+    </div>
+    <div class="assessment-banner">
+      <p>Progress is never a mystery at PSG World School. You will always know how your child is growing — not through end-of-year reports, but in real time, every week, through their Toddle portfolio.</p>
+      <div class="toddle-badge"><div class="n">Toddle</div><div class="l">Real-time portfolio visibility</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- HERITAGE -->
 <section class="heritage" id="heritage">
   <div class="container">
     <div class="heritage-inner">
-      <div class="heritage-left">
-        <p class="section-eyebrow">Our Foundation</p>
-        <h2 class="section-title serif" style="text-align:left; font-size: clamp(30px, 3.5vw, 48px);">A century of trust<br>behind every class</h2>
-        <p class="section-subtitle" style="text-align:left; margin-left:0;">PSG World School is the newest expression of PSG Institutions — a legacy of educational service rooted in Coimbatore for over 100 years, trusted by generations of families across South India.</p>
-        <div class="heritage-numbers">
-          <div class="heritage-num">
-            <div class="n">1926</div>
-            <div class="l">PSG Institutions founded</div>
-          </div>
-          <div class="heritage-num">
-            <div class="n">60K+</div>
-            <div class="l">Community residents served</div>
-          </div>
-          <div class="heritage-num">
-            <div class="n">100%</div>
-            <div class="l">Boarding facilities available</div>
-          </div>
-          <div class="heritage-num">
-            <div class="n">Co-ed</div>
-            <div class="l">Open to all students</div>
-          </div>
+      <div>
+        <p class="section-eyebrow heritage-eyebrow">Our Foundation</p>
+        <h2 class="heritage-title">A century of trust<br>behind every class</h2>
+        <p class="heritage-sub">PSG World School is the newest expression of PSG Institutions — a legacy of educational service rooted in Coimbatore for over 100 years, trusted by generations of families across South India.</p>
+        <div class="heritage-nums">
+          <div class="heritage-num"><div class="n">1926</div><div class="l">PSG Institutions founded — In Nation Building</div></div>
+          <div class="heritage-num"><div class="n">30+</div><div class="l">Institutions across Coimbatore city</div></div>
+          <div class="heritage-num"><div class="n">26K+</div><div class="l">Rural community members served annually</div></div>
+          <div class="heritage-num"><div class="n">Co-ed</div><div class="l">Boarding facilities available on campus</div></div>
         </div>
       </div>
-      <div class="heritage-right">
+      <div>
         <div class="heritage-quote">
-          <blockquote>"We combine the values of our historic foundation with the bold pedagogy of a school designed for the world our students will actually inhabit."</blockquote>
-          <cite>PSG World School — School Philosophy</cite>
+          <blockquote>"In 1926, a member of the Naidu family was refused admission to a British-run school in Coimbatore. Four brothers divided their ancestral property into five shares. The fifth share was declared a public trust — the fifth brother. The school they founded was named PSG Sarvajana School. <em>Sarvajana</em> means for all people."</blockquote>
+          <cite>The founding of PSG Institutions · Coimbatore · 1926</cite>
         </div>
-        <div class="heritage-values">
-          <div class="heritage-value">
-            <div class="v-icon">🌏</div>
-            <div class="v-label">Global Thinking</div>
-          </div>
-          <div class="heritage-value">
-            <div class="v-icon">⚖️</div>
-            <div class="v-label">Principled Action</div>
-          </div>
-          <div class="heritage-value">
-            <div class="v-icon">🤝</div>
-            <div class="v-label">Cultural Respect</div>
-          </div>
-          <div class="heritage-value">
-            <div class="v-icon">🔬</div>
-            <div class="v-label">Deep Inquiry</div>
-          </div>
-          <div class="heritage-value">
-            <div class="v-icon">💬</div>
-            <div class="v-label">Open Communication</div>
-          </div>
-          <div class="heritage-value">
-            <div class="v-icon">🌱</div>
-            <div class="v-label">Lifelong Growth</div>
-          </div>
+        <div class="heritage-founding-line">
+          <p>That refusal, carried forward across a century, became one of India's most significant charitable educational trusts: 33 institutions, 26,000 patients served at Vedapatti alone, the school you are reading about now. The founding question has not changed.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── LEARNING STAGES ─────────────────────────── -->
+<!-- GRADUATE PROMISE -->
+<section class="graduate">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">What Your Child Becomes</p>
+      <h2 class="section-title serif">A PSG World School graduate</h2>
+      <p class="section-subtitle">Our goal is not only successful students — but thoughtful, capable, compassionate human beings.</p>
+    </div>
+    <div class="graduate-inner">
+      <div class="grad-attrs">
+        <div class="grad-attr"><div class="grad-num">1</div><div class="grad-content"><div class="grad-title">Confident Communicator</div><div class="grad-body">Speaks, writes, and presents with clarity and conviction — in any room, for any audience.</div></div></div>
+        <div class="grad-attr"><div class="grad-num">2</div><div class="grad-content"><div class="grad-title">Independent Thinker</div><div class="grad-body">Questions deeply, reasons carefully, acts decisively — guided by evidence, not just instruction.</div></div></div>
+        <div class="grad-attr"><div class="grad-num">3</div><div class="grad-content"><div class="grad-title">Ethical Leader</div><div class="grad-body">Leads with integrity — guided by values, not just ambition. A person others choose to follow.</div></div></div>
+        <div class="grad-attr"><div class="grad-num">4</div><div class="grad-content"><div class="grad-title">Collaborative Problem-Solver</div><div class="grad-body">Works with others to tackle challenges that matter — across difference, with empathy and purpose.</div></div></div>
+        <div class="grad-attr"><div class="grad-num">5</div><div class="grad-content"><div class="grad-title">Globally Aware, Locally Grounded</div><div class="grad-body">Understands the world and their responsibility within it — rooted in Coimbatore, ready for everywhere.</div></div></div>
+      </div>
+      <div class="grad-right">
+        <h3 class="promise-title">Our promise to every child &amp; every family</h3>
+        <div class="promise-grid">
+          <div class="promise-card"><div class="promise-word">Safe</div><div class="promise-body">Every class is capped at 20. Every teacher knows every child's name, history, and how they are doing on a Tuesday afternoon in November. Belonging is structural here, not aspirational.</div></div>
+          <div class="promise-card"><div class="promise-word">Valued</div><div class="promise-body">Our Inquiry Journey begins with students' own questions. A Grade 1 student's observation about reaching a child with Cerebral Palsy became the design brief for a real storybook. We mean it.</div></div>
+          <div class="promise-card"><div class="promise-word">Supported</div><div class="promise-body">Pastoral care, learning support, and wellbeing are built into the week — not offered as add-ons. No child is left to find their way through a difficulty alone.</div></div>
+          <div class="promise-card"><div class="promise-word">Inspired</div><div class="promise-body">Students work on problems that matter to real people in this city. The motivation to do good work follows naturally from a problem that is genuinely worth solving.</div></div>
+          <div class="promise-card"><div class="promise-word">Curious</div><div class="promise-body">Every Unit of Inquiry begins with a driving question that has no single right answer. Students are taught that the question they ask is as important as the answer they produce.</div></div>
+          <div class="promise-card"><div class="promise-word">Confident</div><div class="promise-body">Confidence at PSG World School is built through iteration — through drafts revised, feedback received, and work that withstands scrutiny from a real audience outside the classroom.</div></div>
+        </div>
+        <div class="promise-closing">
+          <p>"Our class cap is 20. Not because we cannot accommodate more. Because knowing a child — really knowing them — requires it. Everything else we promise follows from that."</p>
+          <small>PSG World School — The mechanism behind the promise</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEARNING STAGES -->
 <section class="stages" id="stages">
   <div class="container">
     <div class="section-header">
       <p class="section-eyebrow">The Learning Continuum</p>
-      <h2 class="section-title serif">A complete journey from<br>Early Years to Grade 12</h2>
-      <p class="section-subtitle">Each stage is designed with developmental appropriateness at its core — building progressively on the stage before it.</p>
+      <h2 class="section-title serif">One seamless journey from<br>EY1 to Grade 12</h2>
+      <p class="section-subtitle">Every stage builds on the last — coherent, progressive, and purposeful. Designed with developmental appropriateness at its core.</p>
     </div>
     <div class="stages-grid">
-      <div class="stage-col">
-        <div class="stage-header">
-          <div class="stage-name">Early Years 1–3</div>
-          <div class="stage-age">Ages 3–6</div>
-        </div>
-        <div class="stage-body">
-          <div class="stage-focus">Play & Discovery</div>
-          <ul class="stage-points">
-            <li>Child-led play and exploration</li>
-            <li>Language and early literacy</li>
-            <li>Social and emotional foundations</li>
-            <li>Creative and sensory learning</li>
-          </ul>
-        </div>
+      <div class="stage">
+        <div class="stage-hd"><div class="stage-name">Early Years 1–3</div><div class="stage-age">Ages 3–6</div></div>
+        <div class="stage-bd"><div class="stage-focus">Play &amp; Discovery</div><ul class="stage-pts"><li>Child-led play and exploration</li><li>Language and early literacy</li><li>Social and emotional foundations</li><li>Creative and sensory learning</li></ul></div>
       </div>
-      <div class="stage-col">
-        <div class="stage-header">
-          <div class="stage-name">Lower Primary</div>
-          <div class="stage-age">Grades 1–3 · Ages 6–9</div>
-        </div>
-        <div class="stage-body">
-          <div class="stage-focus">Inquiry & Skills</div>
-          <ul class="stage-points">
-            <li>Transdisciplinary units of inquiry</li>
-            <li>English, Mathematics, Tamil</li>
-            <li>Arts, Music and Movement, PSPE</li>
-            <li>Building research and thinking skills</li>
-          </ul>
-        </div>
+      <div class="stage">
+        <div class="stage-hd"><div class="stage-name">Lower Primary</div><div class="stage-age">Grades 1–3 · Ages 6–9</div></div>
+        <div class="stage-bd"><div class="stage-focus">Inquiry &amp; Skills</div><ul class="stage-pts"><li>Transdisciplinary units of inquiry</li><li>English, Mathematics, Tamil</li><li>Arts, Music and Movement, PSPE</li><li>Building research and thinking skills</li></ul></div>
       </div>
-      <div class="stage-col">
-        <div class="stage-header">
-          <div class="stage-name">Upper Primary</div>
-          <div class="stage-age">Grades 4–5 · Ages 9–11</div>
-        </div>
-        <div class="stage-body">
-          <div class="stage-focus">Depth & Agency</div>
-          <ul class="stage-points">
-            <li>Deeper conceptual understanding</li>
-            <li>Student-led inquiry projects</li>
-            <li>Digital literacy and citizenship</li>
-            <li>Community and service learning</li>
-          </ul>
-        </div>
+      <div class="stage">
+        <div class="stage-hd"><div class="stage-name">Upper Primary</div><div class="stage-age">Grades 4–5 · Ages 9–11</div></div>
+        <div class="stage-bd"><div class="stage-focus">Depth &amp; Agency</div><ul class="stage-pts"><li>Deeper conceptual understanding</li><li>Student-led inquiry projects</li><li>Digital literacy and citizenship</li><li>Community and service learning</li></ul></div>
       </div>
-      <div class="stage-col">
-        <div class="stage-header">
-          <div class="stage-name">Middle School</div>
-          <div class="stage-age">Grades 6–10 · Ages 11–16</div>
-        </div>
-        <div class="stage-body">
-          <div class="stage-focus">Identity & Rigour</div>
-          <ul class="stage-points">
-            <li>Subject-specialist teaching</li>
-            <li>Personal project and service</li>
-            <li>Critical and analytical thinking</li>
-            <li>Leadership development</li>
-          </ul>
-        </div>
+      <div class="stage">
+        <div class="stage-hd"><div class="stage-name">Middle School</div><div class="stage-age">Grades 6–10 · Ages 11–16</div></div>
+        <div class="stage-bd"><div class="stage-focus">Identity &amp; Rigour</div><ul class="stage-pts"><li>Subject-specialist teaching</li><li>Personal project and service</li><li>Critical and analytical thinking</li><li>Leadership development</li></ul></div>
       </div>
-      <div class="stage-col">
-        <div class="stage-header">
-          <div class="stage-name">Senior School</div>
-          <div class="stage-age">Grades 11–12 · Ages 16–18</div>
-        </div>
-        <div class="stage-body">
-          <div class="stage-focus">Excellence & Purpose</div>
-          <ul class="stage-points">
-            <li>University preparation</li>
-            <li>Extended research and essay</li>
-            <li>Theory of knowledge</li>
-            <li>Creative, action, service</li>
-          </ul>
-        </div>
+      <div class="stage">
+        <div class="stage-hd"><div class="stage-name">Senior School</div><div class="stage-age">Grades 11–12 · Ages 16–18</div></div>
+        <div class="stage-bd"><div class="stage-focus">Excellence &amp; Purpose</div><ul class="stage-pts"><li>University preparation</li><li>Extended research and essay</li><li>Theory of knowledge</li><li>Creative, action, service</li></ul></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── ADMISSIONS ─────────────────────────────── -->
+<!-- INCLUSION -->
+<section class="inclusion">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">Inclusion, Wellbeing &amp; Support</p>
+      <h2 class="section-title serif" style="color:var(--white)">Every child is known,<br>valued, and supported</h2>
+      <p class="section-subtitle">We build an environment where every child belongs — not just academically, but emotionally and socially. Differences are strengths here.</p>
+    </div>
+    <div class="inclusion-grid">
+      <div class="inc-card fade-up"><div class="inc-icon">♡</div><div class="inc-title">A Safe, Inclusive Community</div><div class="inc-body">Class sizes are capped at 20. Every teacher carries a full picture of each child — academically, emotionally, and socially. Belonging is built into the structure of the school, not added on top of it.</div></div>
+      <div class="inc-card fade-up"><div class="inc-icon">⊕</div><div class="inc-title">Strong Support Systems</div><div class="inc-body">Dedicated pastoral care, learning support, and wellbeing guidance — because every learner's needs matter equally, every day.</div></div>
+      <div class="inc-card fade-up"><div class="inc-icon">◈</div><div class="inc-title">Differentiation for Every Learner</div><div class="inc-body">No child is left behind. No child is held back. Learning is tailored to each child's level, pace, and interests — not to the average of the class.</div></div>
+      <div class="inc-card fade-up"><div class="inc-icon">◉</div><div class="inc-title">Student Voice &amp; Agency</div><div class="inc-body">Learners are active participants in their own education — making choices, taking ownership, and building confidence at every single stage.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ADMISSIONS -->
 <section class="admissions" id="admissions">
   <div class="container">
-    <div class="admissions-inner">
-      <div class="admissions-left">
-        <p class="section-eyebrow">Admissions 2026–27</p>
-        <h2 class="admissions-title">Now welcoming<br>founding families</h2>
-        <p class="admissions-body">
-          PSG World School is currently accepting applications for the 2026–27 academic year. With a maximum class size of 20 students and two sections per year group, places are limited. We welcome families who share our commitment to purposeful, character-led education.
-        </p>
-        <div class="admissions-cta-group">
-          <a href="mailto:admissions@psgworldschool.edu.in" class="btn-primary">Enquire Now</a>
-          <a href="tel:+916299252522" class="btn-ghost" style="color:rgba(255,255,255,0.7); border-bottom-color:rgba(255,255,255,0.3);">+91 62992 52522 →</a>
+    <div class="adm-inner">
+      <div class="adm-left">
+        <p class="section-eyebrow adm-eyebrow">Admissions 2026–27</p>
+        <h2 class="adm-title">Now welcoming<br>founding families</h2>
+        <p class="adm-body">PSG World School is accepting applications for the 2026–27 academic year. With a maximum class size of 20 students, places are limited. We welcome families who share our commitment to purposeful, character-led education.</p>
+        <div class="adm-contacts">
+          <div class="adm-contact"><strong>Email</strong> admissions@psgworldschool.edu.in</div>
+          <div class="adm-contact"><strong>Phone</strong> +91 99 524 018 99</div>
+          <div class="adm-contact"><strong>Address</strong> PSG World School, Coimbatore, India 641 004</div>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px">
+          <a href="mailto:admissions@psgworldschool.edu.in" class="btn btn-gold">Enquire Now</a>
+          <a href="https://wa.me/919952401899" class="btn btn-outline" style="color:rgba(255,255,255,0.75);border-bottom-color:rgba(255,255,255,0.3)">WhatsApp →</a>
         </div>
       </div>
-      <div class="admissions-right">
+      <div class="adm-right">
         <div class="adm-step">
           <div class="adm-step-num">1</div>
-          <div class="adm-step-content">
-            <div class="adm-step-title">Initial Enquiry</div>
-            <div class="adm-step-desc">Contact our admissions team by email or phone. We will share the school prospectus and arrange a campus visit.</div>
-          </div>
+          <div><div class="adm-step-title">Initial Enquiry</div><div class="adm-step-desc">Contact our admissions team by email or phone. We will share the school prospectus and arrange a campus visit.</div></div>
         </div>
         <div class="adm-step">
           <div class="adm-step-num">2</div>
-          <div class="adm-step-content">
-            <div class="adm-step-title">Campus Visit &amp; Meeting</div>
-            <div class="adm-step-desc">Meet with the Principal and view our facilities. This is an opportunity for families to ask questions and assess fit.</div>
-          </div>
+          <div><div class="adm-step-title">Campus Visit &amp; Meeting</div><div class="adm-step-desc">Meet with the Principal and view our facilities. An opportunity for families to ask questions and assess fit.</div></div>
         </div>
         <div class="adm-step">
           <div class="adm-step-num">3</div>
-          <div class="adm-step-content">
-            <div class="adm-step-title">Application Submission</div>
-            <div class="adm-step-desc">Submit the completed application form with required documentation and the registration fee.</div>
-          </div>
+          <div><div class="adm-step-title">Application Submission</div><div class="adm-step-desc">Submit the completed application form with required documentation and the registration fee.</div></div>
         </div>
         <div class="adm-step">
           <div class="adm-step-num">4</div>
-          <div class="adm-step-content">
-            <div class="adm-step-title">Offer &amp; Enrolment</div>
-            <div class="adm-step-desc">Successful applicants receive a formal offer letter. Enrolment is confirmed on receipt of the acceptance and first term fees.</div>
-          </div>
+          <div><div class="adm-step-title">Offer &amp; Enrolment</div><div class="adm-step-desc">Successful applicants receive a formal offer letter. Enrolment confirmed on receipt of acceptance and first term fees.</div></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── CONTACT ─────────────────────────────────── -->
+<!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="container">
-    <div class="section-header" style="margin-bottom:48px;">
+    <div class="section-header" style="margin-bottom:40px">
       <p class="section-eyebrow">Get in Touch</p>
       <h2 class="section-title serif">We would love to hear from you</h2>
     </div>
     <div class="contact-inner">
-      <div class="contact-card fade-up">
+      <div class="contact-card">
         <div class="contact-icon">📍</div>
         <div class="contact-label">Visit Us</div>
         <div class="contact-title">Campus Address</div>
-        <div class="contact-detail">
-          SF 472, Civil Aerodrome Post<br>
-          Coimbatore, Tamil Nadu 641 014<br>
-          India
-        </div>
+        <div class="contact-detail">PSG World School<br>Coimbatore, Tamil Nadu<br>India 641 004</div>
       </div>
-      <div class="contact-card fade-up">
+      <div class="contact-card">
         <div class="contact-icon">📞</div>
         <div class="contact-label">Call or Write</div>
         <div class="contact-title">Direct Contact</div>
         <div class="contact-detail">
-          <a href="tel:+916299252522">+91 62992 52522</a><br><br>
+          <a href="tel:+919952401899">+91 99 524 018 99</a><br><br>
           <a href="mailto:admissions@psgworldschool.edu.in">admissions@psgworldschool.edu.in</a><br><br>
-          <a href="mailto:principal@psgworldschool.edu.in">principal@psgworldschool.edu.in</a>
+          <a href="mailto:david.sheehan.mot@gmail.com">principal@psgworldschool.edu.in</a>
         </div>
       </div>
-      <div class="contact-card fade-up">
+      <div class="contact-card">
         <div class="contact-icon">🕘</div>
         <div class="contact-label">School Hours</div>
         <div class="contact-title">Office &amp; School Times</div>
-        <div class="contact-detail">
-          Monday – Friday<br>
-          School: 9:15 AM – 3:30 PM<br>
-          Office: 8:00 AM – 5:00 PM<br><br>
-          Academic Year: June – April
-        </div>
+        <div class="contact-detail">Monday – Friday<br>School: 9:15 AM – 3:30 PM<br>Office: 8:00 AM – 5:00 PM<br><br>Academic Year: June – April</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── FOOTER ─────────────────────────────────── -->
 <footer>
   <div class="footer-inner">
     <div>
       <div class="footer-brand-name">PSG World School</div>
       <div class="footer-motto">Ignite · Innovate · Inspire</div>
-      <p class="footer-desc">A PSG Institutions initiative, building on over a century of educational heritage to deliver world-class international education in Coimbatore, India.</p>
+      <p class="footer-desc">A PSG Institutions initiative — bringing world-class international education to Coimbatore, rooted in a century of community service.</p>
     </div>
     <div>
       <div class="footer-col-title">School</div>
       <ul class="footer-links">
         <li><a href="#approach">Our Approach</a></li>
         <li><a href="#pbl">Learning in Action</a></li>
-        <li><a href="#heritage">Our Heritage</a></li>
         <li><a href="#stages">Learning Stages</a></li>
         <li><a href="#admissions">Admissions</a></li>
       </ul>
@@ -2041,7 +1521,7 @@
     <div>
       <div class="footer-col-title">Community</div>
       <ul class="footer-links">
-        <li><a href="#">Parent Portal</a></li>
+        <li><a href="#contact">Contact Us</a></li>
         <li><a href="#">School Calendar</a></li>
         <li><a href="#">News &amp; Events</a></li>
         <li><a href="#">Careers</a></li>
@@ -2063,27 +1543,35 @@
   </div>
 </footer>
 
+<!-- WhatsApp -->
+<div class="wa-sticky">
+  <div class="wa-label">Chat with us on WhatsApp</div>
+  <a href="https://wa.me/919952401899" class="wa-btn" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.096.542 4.065 1.488 5.775L0 24l6.225-1.488A11.956 11.956 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.005-1.37l-.36-.214-3.694.883.897-3.576-.235-.373A9.818 9.818 0 0112 2.182c5.422 0 9.818 4.396 9.818 9.818 0 5.423-4.396 9.818-9.818 9.818z"/></svg>
+  </a>
+</div>
+
 <script>
+  document.querySelectorAll('.fade-up').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(24px)';
+  });
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'none';
       }
     });
-  }, { threshold: 0.1 });
-
+  }, { threshold: 0.08 });
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
     });
   });
 </script>
-
 </body>
 </html>
