@@ -1,47 +1,2089 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/Logo.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PSG World School</title>
-    <meta name="description" content="PSG World School — nurturing global citizens with a balanced curriculum, modern campus facilities, and a focus on innovation, arts, and character development for students from preschool to secondary." />
-    <meta name="keywords" content="PSG World School, international school, preschool, primary school, secondary school, holistic education, admissions, campus, IB, boarding" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://psgworldschool.edu.in/" />
-    <meta property="og:site_name" content="PSG World School" />
-    <meta property="og:title" content="PSG World School — Excellence in Holistic Education" />
-    <meta property="og:description" content="Discover a student-centered learning environment with strong academics, co-curriculars, and modern facilities at PSG World School." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://psgworldschool.edu.in/" />
-    <meta property="og:image" content="/assets/images/banner/og-image.jpg" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="PSG World School — Excellence in Holistic Education" />
-    <meta name="twitter:description" content="Discover a student-centered learning environment with strong academics, co-curriculars, and modern facilities at PSG World School." />
-    <meta name="twitter:image" content="/assets/images/banner/og-image.jpg" />
-    <meta name="theme-color" content="#0b74de" />
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Organization",
-          "name": "PSG World School",
-          "url": "https://psgworldschool.edu.in/",
-          "logo": "https://psgworldschool.edu.in/Logo.png"
-        },
-        {
-          "@type": "WebSite",
-          "url": "https://psgworldschool.edu.in/",
-          "name": "PSG World School",
-          "description": "PSG World School — nurturing global citizens with a balanced curriculum and modern campus facilities."
-        }
-      ]
-    }
-    </script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PSG World School — Ignite · Innovate · Inspire</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy:   #1F4E79;
+    --navy2:  #1F3864;
+    --blue:   #2E75B6;
+    --gold:   #C07C22;
+    --gold2:  #D4922A;
+    --teal:   #1A7A8A;
+    --cream:  #FAF7F2;
+    --pale:   #F0F7FD;
+    --white:  #FFFFFF;
+    --grey:   #595959;
+    --ltgrey: #E8E8E8;
+    --text:   #1a1a1a;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    color: var(--text);
+    background: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* ── UTILITY ─────────────────────────────────── */
+  .serif { font-family: 'Cormorant Garamond', Georgia, serif; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+  .gold { color: var(--gold); }
+  .navy { color: var(--navy); }
+
+  /* ── NAV ─────────────────────────────────────── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(31,78,121,0.97);
+    backdrop-filter: blur(8px);
+    padding: 0 40px;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 72px;
+    border-bottom: 1px solid rgba(192,124,34,0.3);
+  }
+
+  .nav-brand {
+    display: flex; align-items: center; gap: 14px;
+    text-decoration: none;
+  }
+
+  .nav-logo-mark {
+    width: 42px; height: 42px;
+    background: var(--gold);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700; font-size: 18px;
+    color: var(--white);
+    flex-shrink: 0;
+  }
+
+  .nav-school-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600; font-size: 18px;
+    color: var(--white);
+    line-height: 1.2;
+  }
+
+  .nav-school-name span {
+    display: block;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300; font-size: 10px;
+    color: rgba(255,255,255,0.65);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  .nav-links {
+    display: flex; align-items: center; gap: 32px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--gold2); }
+
+  .nav-cta {
+    background: var(--gold) !important;
+    color: var(--white) !important;
+    padding: 9px 20px;
+    border-radius: 2px;
+    font-weight: 500 !important;
+    transition: background 0.2s !important;
+  }
+  .nav-cta:hover { background: var(--gold2) !important; }
+
+  /* ── HERO ─────────────────────────────────────── */
+  .hero {
+    min-height: 100vh;
+    background: var(--navy);
+    display: flex; align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 72px;
+  }
+
+  .hero-bg-pattern {
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(circle at 20% 50%, rgba(192,124,34,0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(46,117,182,0.12) 0%, transparent 40%),
+      radial-gradient(circle at 60% 80%, rgba(26,122,138,0.08) 0%, transparent 40%);
+  }
+
+  .hero-grid-overlay {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .hero-content {
+    position: relative; z-index: 2;
+    max-width: 1200px; margin: 0 auto;
+    padding: 80px 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .hero-eyebrow {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    display: block; width: 32px; height: 1px;
+    background: var(--gold);
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: clamp(44px, 5vw, 68px);
+    line-height: 1.05;
+    color: var(--white);
+    margin-bottom: 28px;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .hero-body {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.72);
+    max-width: 480px;
+    margin-bottom: 40px;
+  }
+
+  .hero-actions {
+    display: flex; align-items: center; gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--gold);
+    color: var(--white);
+    padding: 14px 32px;
+    border-radius: 2px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.1s;
+    display: inline-block;
+  }
+  .btn-primary:hover { background: var(--gold2); transform: translateY(-1px); }
+
+  .btn-ghost {
+    color: rgba(255,255,255,0.8);
+    font-size: 13px;
+    font-weight: 400;
+    text-decoration: none;
+    display: inline-flex; align-items: center; gap: 8px;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .btn-ghost:hover { color: var(--gold); border-color: var(--gold); }
+
+  .hero-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 16px;
+  }
+
+  .hero-stat {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 4px;
+    padding: 28px 24px;
+    transition: background 0.2s;
+  }
+  .hero-stat:hover { background: rgba(255,255,255,0.08); }
+  .hero-stat:first-child {
+    grid-column: span 2;
+    background: rgba(192,124,34,0.12);
+    border-color: rgba(192,124,34,0.25);
+  }
+
+  .stat-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 600;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .stat-label {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+  }
+
+  .hero-tagline {
+    grid-column: span 2;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-style: italic;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.05em;
+    text-align: center;
+  }
+
+  /* ── MISSION BAND ────────────────────────────── */
+  .mission-band {
+    background: var(--gold);
+    padding: 32px 40px;
+    text-align: center;
+  }
+
+  .mission-band p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(18px, 2.5vw, 26px);
+    font-weight: 500;
+    font-style: italic;
+    color: var(--white);
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+
+  /* ── PILLARS ─────────────────────────────────── */
+  .pillars {
+    padding: 120px 0;
+    background: var(--cream);
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 64px;
+  }
+
+  .section-eyebrow {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 600;
+    color: var(--navy);
+    line-height: 1.1;
+  }
+
+  .section-subtitle {
+    margin-top: 16px;
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--grey);
+    max-width: 560px;
+    margin-left: auto; margin-right: auto;
+    line-height: 1.7;
+  }
+
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .pillar-card {
+    background: var(--white);
+    border: 1px solid var(--ltgrey);
+    border-top: 3px solid var(--navy);
+    padding: 40px 32px;
+    position: relative;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .pillar-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(31,78,121,0.1);
+  }
+  .pillar-card:nth-child(2) { border-top-color: var(--gold); }
+  .pillar-card:nth-child(3) { border-top-color: var(--teal); }
+
+  .pillar-icon {
+    width: 52px; height: 52px;
+    background: var(--pale);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 24px;
+    font-size: 24px;
+  }
+
+  .pillar-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 14px;
+  }
+
+  .pillar-body {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--grey);
+    line-height: 1.75;
+  }
+
+  /* ── APPROACH ────────────────────────────────── */
+  .approach {
+    padding: 120px 0;
+    background: var(--white);
+  }
+
+  .approach-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .approach-left {}
+
+  .approach-body {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.85;
+    color: var(--grey);
+    margin-top: 24px;
+    margin-bottom: 40px;
+  }
+
+  .approach-list {
+    list-style: none;
+    display: flex; flex-direction: column; gap: 16px;
+  }
+
+  .approach-list li {
+    display: flex; align-items: flex-start; gap: 16px;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--grey);
+    line-height: 1.6;
+  }
+
+  .approach-list li::before {
+    content: '';
+    width: 20px; height: 20px;
+    background: var(--navy);
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 2px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .approach-right {
+    display: flex; flex-direction: column; gap: 16px;
+  }
+
+  .approach-card {
+    background: var(--cream);
+    border-left: 3px solid var(--gold);
+    padding: 24px 28px;
+  }
+
+  .approach-card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+
+  .approach-card-body {
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--grey);
+    line-height: 1.7;
+  }
+
+  /* ── PBL ─────────────────────────────────────── */
+  .pbl {
+    padding: 120px 0;
+    background: var(--navy);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .pbl::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(circle at 90% 10%, rgba(192,124,34,0.07) 0%, transparent 45%),
+      radial-gradient(circle at 10% 80%, rgba(26,122,138,0.07) 0%, transparent 40%);
+  }
+
+  .pbl-inner { position: relative; z-index: 2; }
+
+  .pbl .section-eyebrow { color: var(--gold); }
+  .pbl .section-title { color: var(--white); }
+  .pbl .section-subtitle { color: rgba(255,255,255,0.6); }
+
+  .pbl-principle {
+    margin: 48px 0;
+    background: rgba(192,124,34,0.1);
+    border: 1px solid rgba(192,124,34,0.25);
+    border-left: 3px solid var(--gold);
+    padding: 32px 40px;
+  }
+
+  .pbl-principle-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+  }
+
+  .pbl-principle p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(18px, 2.2vw, 24px);
+    font-style: italic;
+    font-weight: 400;
+    color: rgba(255,255,255,0.88);
+    line-height: 1.55;
+  }
+
+  .pbl-projects {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    margin-bottom: 72px;
+  }
+
+  .pbl-project {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 28px 22px;
+    transition: background 0.2s, border-color 0.2s;
+    position: relative;
+  }
+  .pbl-project:hover {
+    background: rgba(255,255,255,0.07);
+    border-color: rgba(192,124,34,0.3);
+  }
+
+  .pbl-grade {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+
+  .pbl-project-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.3;
+    margin-bottom: 12px;
+  }
+
+  .pbl-project-body {
+    font-size: 12px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.65;
+    margin-bottom: 16px;
+  }
+
+  .pbl-partner {
+    display: flex; align-items: flex-start; gap: 8px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 14px;
+  }
+
+  .pbl-partner-dot {
+    width: 6px; height: 6px;
+    background: var(--gold);
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 5px;
+  }
+
+  .pbl-partner-name {
+    font-size: 11px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.4);
+    line-height: 1.5;
+    font-style: italic;
+  }
+
+  .pbl-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 56px;
+  }
+
+  .pbl-bottom-left {}
+
+  .pbl-bottom-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 16px;
+    line-height: 1.25;
+  }
+
+  .pbl-bottom-body {
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.8;
+  }
+
+  .pbl-bottom-right {
+    display: flex; flex-direction: column; gap: 20px;
+  }
+
+  .pbl-expectation {
+    display: flex; gap: 16px; align-items: flex-start;
+  }
+
+  .pbl-exp-icon {
+    width: 36px; height: 36px;
+    background: rgba(192,124,34,0.15);
+    border: 1px solid rgba(192,124,34,0.25);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+
+  .pbl-exp-content {}
+  .pbl-exp-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 4px;
+  }
+  .pbl-exp-body {
+    font-size: 12px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.6;
+  }
+
+  /* ── HERITAGE ────────────────────────────────── */
+  .heritage {
+    padding: 100px 0;
+    background: var(--navy);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .heritage::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(circle at 70% 50%, rgba(192,124,34,0.07) 0%, transparent 50%);
+  }
+
+  .heritage-inner {
+    position: relative; z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .heritage-left {}
+
+  .heritage-left .section-eyebrow { color: var(--gold); }
+  .heritage-left .section-title { color: var(--white); text-align: left; }
+  .heritage-left .section-subtitle {
+    color: rgba(255,255,255,0.6);
+    text-align: left;
+    margin-left: 0;
+    font-size: 15px;
+    margin-top: 20px;
+  }
+
+  .heritage-numbers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 48px;
+  }
+
+  .heritage-num {
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding-top: 20px;
+  }
+
+  .heritage-num .n {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--gold);
+    line-height: 1;
+  }
+
+  .heritage-num .l {
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+    margin-top: 6px;
+    font-weight: 300;
+    line-height: 1.4;
+  }
+
+  .heritage-right {}
+
+  .heritage-quote {
+    border-left: 2px solid var(--gold);
+    padding-left: 32px;
+    margin-bottom: 40px;
+  }
+
+  .heritage-quote blockquote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-style: italic;
+    font-weight: 400;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+
+  .heritage-quote cite {
+    font-size: 12px;
+    color: rgba(255,255,255,0.45);
+    font-style: normal;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .heritage-values {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+  }
+
+  .heritage-value {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 16px;
+    text-align: center;
+    border-radius: 2px;
+  }
+
+  .heritage-value .v-icon { font-size: 22px; margin-bottom: 8px; }
+
+  .heritage-value .v-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.85);
+  }
+
+  /* ── LEARNING STAGES ─────────────────────────── */
+  .stages {
+    padding: 120px 0;
+    background: var(--cream);
+  }
+
+  .stages-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0;
+    border: 1px solid var(--ltgrey);
+    margin-top: 64px;
+  }
+
+  .stage-col {
+    border-right: 1px solid var(--ltgrey);
+    overflow: hidden;
+  }
+  .stage-col:last-child { border-right: none; }
+
+  .stage-header {
+    background: var(--navy);
+    padding: 20px 16px;
+    text-align: center;
+  }
+  .stage-col:nth-child(1) .stage-header { background: #1a5276; }
+  .stage-col:nth-child(2) .stage-header { background: #1f618d; }
+  .stage-col:nth-child(3) .stage-header { background: #2471a3; }
+  .stage-col:nth-child(4) .stage-header { background: var(--blue); }
+  .stage-col:nth-child(5) .stage-header { background: #1f4e79; }
+
+  .stage-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.2;
+  }
+
+  .stage-age {
+    font-size: 11px;
+    color: rgba(255,255,255,0.6);
+    margin-top: 4px;
+  }
+
+  .stage-body {
+    background: var(--white);
+    padding: 24px 16px;
+  }
+
+  .stage-focus {
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+
+  .stage-points {
+    list-style: none;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+
+  .stage-points li {
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--grey);
+    line-height: 1.5;
+    padding-left: 12px;
+    border-left: 2px solid var(--ltgrey);
+  }
+
+  /* ── ADMISSIONS CTA ──────────────────────────── */
+  .admissions {
+    padding: 100px 0;
+    background: var(--white);
+  }
+
+  .admissions-inner {
+    background: var(--navy);
+    border-radius: 4px;
+    padding: 72px 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .admissions-inner::before {
+    content: '';
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 300px; height: 300px;
+    border: 1px solid rgba(192,124,34,0.15);
+    border-radius: 50%;
+  }
+
+  .admissions-inner::after {
+    content: '';
+    position: absolute;
+    top: 20px; right: 20px;
+    width: 200px; height: 200px;
+    border: 1px solid rgba(192,124,34,0.1);
+    border-radius: 50%;
+  }
+
+  .admissions-left { position: relative; z-index: 2; }
+  .admissions-left .section-eyebrow { color: var(--gold); }
+
+  .admissions-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(30px, 3.5vw, 48px);
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.1;
+    margin: 12px 0 20px;
+  }
+
+  .admissions-body {
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.75;
+  }
+
+  .admissions-right {
+    position: relative; z-index: 2;
+    display: flex; flex-direction: column; gap: 16px;
+  }
+
+  .adm-step {
+    display: flex; align-items: flex-start; gap: 16px;
+  }
+
+  .adm-step-num {
+    width: 36px; height: 36px;
+    background: var(--gold);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--white);
+    flex-shrink: 0;
+  }
+
+  .adm-step-content {}
+  .adm-step-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--white);
+    margin-bottom: 3px;
+  }
+  .adm-step-desc {
+    font-size: 12px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.5;
+  }
+
+  .admissions-cta-group {
+    margin-top: 8px;
+    display: flex; gap: 12px; flex-wrap: wrap;
+  }
+
+  /* ── CONTACT ─────────────────────────────────── */
+  .contact {
+    padding: 80px 0;
+    background: var(--cream);
+  }
+
+  .contact-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 32px;
+  }
+
+  .contact-card {
+    background: var(--white);
+    border: 1px solid var(--ltgrey);
+    padding: 32px;
+  }
+
+  .contact-icon {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+
+  .contact-label {
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+
+  .contact-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 10px;
+  }
+
+  .contact-detail {
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--grey);
+    line-height: 1.7;
+  }
+
+  .contact-detail a {
+    color: var(--blue);
+    text-decoration: none;
+  }
+  .contact-detail a:hover { text-decoration: underline; }
+
+  /* ── FOOTER ──────────────────────────────────── */
+  footer {
+    background: var(--navy2);
+    padding: 48px 40px 32px;
+    border-top: 2px solid var(--gold);
+  }
+
+  .footer-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 48px;
+  }
+
+  .footer-brand-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+
+  .footer-motto {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    font-style: italic;
+    color: var(--gold);
+    margin-bottom: 16px;
+    letter-spacing: 0.08em;
+  }
+
+  .footer-desc {
+    font-size: 13px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.7;
+  }
+
+  .footer-col-title {
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 16px;
+  }
+
+  .footer-links {
+    list-style: none;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+
+  .footer-links a {
+    font-size: 13px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--gold); }
+
+  .footer-bottom {
+    max-width: 1200px; margin: 0 auto;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 24px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+
+  .footer-bottom p {
+    font-size: 12px;
+    color: rgba(255,255,255,0.3);
+    font-weight: 300;
+  }
+
+  .footer-psg {
+    font-size: 12px;
+    color: rgba(255,255,255,0.3);
+    font-weight: 300;
+  }
+
+  .footer-psg span {
+    color: var(--gold);
+  }
+
+  /* ── SCROLL ANIMATIONS ───────────────────────── */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .fade-up:nth-child(2) { transition-delay: 0.1s; }
+  .fade-up:nth-child(3) { transition-delay: 0.2s; }
+  .fade-up:nth-child(4) { transition-delay: 0.3s; }
+  .fade-up:nth-child(5) { transition-delay: 0.4s; }
+
+  /* ── RESPONSIVE ──────────────────────────────── */
+  @media (max-width: 900px) {
+    .hero-content { grid-template-columns: 1fr; gap: 48px; }
+    .hero-right { grid-template-columns: 1fr 1fr; }
+    .pillars-grid { grid-template-columns: 1fr; }
+    .approach-inner { grid-template-columns: 1fr; }
+    .heritage-inner { grid-template-columns: 1fr; }
+    .stages-grid { grid-template-columns: 1fr; }
+    .admissions-inner { grid-template-columns: 1fr; padding: 48px 40px; }
+    .contact-inner { grid-template-columns: 1fr; }
+    .footer-inner { grid-template-columns: 1fr 1fr; }
+    nav { padding: 0 20px; }
+    .nav-links { display: none; }
+    .container { padding: 0 20px; }
+  }
+
+  /* ── PBL REDESIGNED ─────────────────────────── */
+  .pbl {
+    padding: 120px 0 100px;
+    background: var(--navy);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .pbl-bg-texture {
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(ellipse at 10% 20%, rgba(192,124,34,0.06) 0%, transparent 55%),
+      radial-gradient(ellipse at 90% 80%, rgba(26,122,138,0.07) 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 50%, rgba(46,117,182,0.04) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .pbl-inner { position: relative; z-index: 2; }
+
+  /* Header split */
+  .pbl-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: end;
+    margin-bottom: 64px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .pbl-title { color: var(--white); text-align: left; }
+  .pbl-title-em { color: var(--gold); font-style: italic; }
+
+  .pbl-header-body {
+    font-size: 15px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.62);
+    line-height: 1.8;
+    margin-bottom: 28px;
+  }
+
+  .pbl-rule-line {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 14px;
+  }
+  .pbl-rule-line::before {
+    content: '';
+    width: 28px; height: 1px;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+  .pbl-rule-line span {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  .pbl-rule-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-style: italic;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.5;
+    padding-left: 40px;
+    border-left: 2px solid rgba(192,124,34,0.4);
+  }
+
+  /* Featured project */
+  .pbl-featured {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-top: 2px solid var(--gold);
+    padding: 40px 44px;
+    margin-bottom: 20px;
+  }
+
+  .pbl-featured-label {
+    display: flex; align-items: center; gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .pbl-feat-grade {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    background: rgba(192,124,34,0.12);
+    border: 1px solid rgba(192,124,34,0.25);
+    padding: 4px 12px;
+  }
+
+  .pbl-feat-theme {
+    font-size: 11px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 0.06em;
+    font-style: italic;
+  }
+
+  .pbl-featured-content {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 60px;
+    align-items: start;
+  }
+
+  .pbl-featured-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(30px, 3.5vw, 44px);
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 6px;
+  }
+
+  .pbl-featured-sub {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .pbl-featured-body {
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.8;
+    margin-bottom: 14px;
+  }
+
+  .pbl-featured-partner {
+    display: flex; align-items: center; gap: 10px;
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.07);
+  }
+
+  .pbl-feat-dot {
+    width: 7px; height: 7px;
+    background: var(--gold);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .pbl-featured-partner span {
+    font-size: 11px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.38);
+    font-style: italic;
+  }
+
+  .pbl-featured-stat-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .pbl-feat-stat {
+    padding: 22px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+  .pbl-feat-stat:first-child { border-top: 1px solid rgba(255,255,255,0.07); }
+
+  .pbl-feat-stat-n {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 44px;
+    font-weight: 600;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .pbl-feat-stat-l {
+    font-size: 12px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.45);
+    line-height: 1.5;
+  }
+
+  /* ── PROJECT GRID ───── */
+  .pbl-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 16px;
+    margin-bottom: 72px;
+  }
+
+  .pbl-card {
+    padding: 28px 28px 24px;
+    border: 1px solid rgba(255,255,255,0.07);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+  .pbl-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255,255,255,0.15);
+  }
+
+  /* colour variants */
+  .pbl-card--blue  { background: rgba(46,117,182,0.08); border-top: 2px solid #2E75B6; }
+  .pbl-card--green { background: rgba(26,122,138,0.08); border-top: 2px solid var(--teal); }
+  .pbl-card--amber { background: rgba(192,124,34,0.07); border-top: 2px solid var(--gold); }
+  .pbl-card--dark  { background: rgba(255,255,255,0.03); border-top: 2px solid rgba(255,255,255,0.2); }
+  .pbl-card--teal  { background: rgba(26,122,138,0.1); border-top: 2px solid var(--teal); }
+  .pbl-card--navy  { background: rgba(31,78,121,0.15); border-top: 2px solid var(--blue); }
+
+  /* layout variants */
+  .pbl-card--tall { grid-row: span 2; }
+  .pbl-card--wide { grid-column: span 2; }
+  .pbl-card--wide .pbl-card-wide-inner {
+    display: flex; flex-direction: column; flex: 1;
+  }
+
+  .pbl-card-grade {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 4px;
+  }
+
+  .pbl-card-theme {
+    font-size: 10px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.35);
+    font-style: italic;
+    letter-spacing: 0.04em;
+    margin-bottom: 14px;
+  }
+
+  .pbl-card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.2;
+    margin-bottom: 14px;
+  }
+
+  .pbl-card--tall .pbl-card-title { font-size: 26px; }
+  .pbl-card--wide .pbl-card-title { font-size: 24px; }
+
+  .pbl-card-body {
+    font-size: 12.5px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.58);
+    line-height: 1.7;
+    margin-bottom: 12px;
+    flex: 1;
+  }
+
+  .pbl-card--tall .pbl-card-body { font-size: 13.5px; }
+  .pbl-card--wide .pbl-card-body { font-size: 13px; }
+
+  .pbl-card-footer {
+    display: flex; align-items: center; gap: 8px;
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .pbl-card-dot {
+    width: 6px; height: 6px;
+    background: var(--teal);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .pbl-card-footer span {
+    font-size: 10.5px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.32);
+    font-style: italic;
+    line-height: 1.4;
+  }
+
+  /* ── PBL BOTTOM ──────── */
+  .pbl-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 72px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 60px;
+  }
+
+  .pbl-bottom-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 34px;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 20px;
+    line-height: 1.15;
+  }
+
+  .pbl-bottom-body {
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.58);
+    line-height: 1.82;
+  }
+
+  .pbl-heritage-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 36px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255,255,255,0.07);
+  }
+
+  .pbl-her-n {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .pbl-her-l {
+    font-size: 11px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.4);
+    line-height: 1.5;
+  }
+
+  .pbl-exp-heading {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 28px;
+  }
+
+  .pbl-expectation {
+    display: flex; gap: 20px; align-items: flex-start;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .pbl-expectation:last-child {
+    border-bottom: none; margin-bottom: 0; padding-bottom: 0;
+  }
+
+  .pbl-exp-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: rgba(192,124,34,0.35);
+    line-height: 1;
+    flex-shrink: 0;
+    min-width: 36px;
+  }
+
+  .pbl-exp-title {
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 5px;
+  }
+
+  .pbl-exp-body {
+    font-size: 12.5px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.48);
+    line-height: 1.65;
+  }
+
+  /* Responsive override for PBL */
+  @media (max-width: 900px) {
+    .pbl-header { grid-template-columns: 1fr; gap: 32px; }
+    .pbl-featured-content { grid-template-columns: 1fr; gap: 32px; }
+    .pbl-featured-stat-block { display: grid; grid-template-columns: repeat(3,1fr); gap: 0; }
+    .pbl-feat-stat:first-child { border-top: none; }
+    .pbl-grid { grid-template-columns: 1fr; }
+    .pbl-card--tall, .pbl-card--wide { grid-row: span 1; grid-column: span 1; }
+    .pbl-bottom { grid-template-columns: 1fr; gap: 48px; }
+    .pbl-heritage-row { grid-template-columns: repeat(3,1fr); }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── NAV ─────────────────────────────────────── -->
+<nav>
+  <a href="#" class="nav-brand">
+    <div class="nav-logo-mark">PSG</div>
+    <div class="nav-school-name">
+      PSG World School
+      <span>Coimbatore, India</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#approach">Our Approach</a></li>
+    <li><a href="#pbl">Learning in Action</a></li>
+    <li><a href="#heritage">Our Heritage</a></li>
+    <li><a href="#stages">Learning Stages</a></li>
+    <li><a href="#admissions">Admissions</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#admissions" class="nav-cta">Apply Now</a></li>
+  </ul>
+</nav>
+
+<!-- ── HERO ─────────────────────────────────────── -->
+<section class="hero">
+  <div class="hero-bg-pattern"></div>
+  <div class="hero-grid-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-left">
+      <p class="hero-eyebrow">PSG World School · Coimbatore</p>
+      <h1>Where <em>character</em> leads and <em>curiosity</em> drives</h1>
+      <p class="hero-body">
+        A school built on a century of educational excellence, committed to developing principled, compassionate, and future-ready learners from Early Years through Grade 12.
+      </p>
+      <div class="hero-actions">
+        <a href="#admissions" class="btn-primary">Begin Your Journey</a>
+        <a href="#approach" class="btn-ghost">Discover our approach →</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-stat">
+        <div class="stat-number">100+</div>
+        <div class="stat-label">Years of PSG educational excellence — one of South India's most trusted institutions</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-number">EY–12</div>
+        <div class="stat-label">Full continuum of learning from Early Years through Senior School</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-number">20</div>
+        <div class="stat-label">Maximum class size — every child known and supported</div>
+      </div>
+      <div class="hero-tagline">Ignite · Innovate · Inspire</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── MISSION BAND ────────────────────────────── -->
+<div class="mission-band">
+  <p>"PSG World School commits to academic rigour balanced with compassion, creativity, intercultural understanding, and personal growth."</p>
+</div>
+
+<!-- ── PILLARS ─────────────────────────────────── -->
+<section class="pillars" id="approach">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">What We Stand For</p>
+      <h2 class="section-title serif">Three commitments that<br>shape every day</h2>
+      <p class="section-subtitle">Our three founding values are not aspirations. They are the architecture of how we teach, lead, and build community.</p>
+    </div>
+    <div class="pillars-grid">
+      <div class="pillar-card fade-up">
+        <div class="pillar-icon">🔥</div>
+        <h3 class="pillar-title">Ignite</h3>
+        <p class="pillar-body">We awaken in every child the desire to learn — not through pressure, but through wonder. Curiosity is not a by-product of great teaching. It is the goal.</p>
+      </div>
+      <div class="pillar-card fade-up">
+        <div class="pillar-icon">💡</div>
+        <h3 class="pillar-title">Innovate</h3>
+        <p class="pillar-body">We build creative, adaptive thinkers who can navigate complexity, collaborate across difference, and find new solutions to real problems.</p>
+      </div>
+      <div class="pillar-card fade-up">
+        <div class="pillar-icon">✦</div>
+        <h3 class="pillar-title">Inspire</h3>
+        <p class="pillar-body">We hold a high standard — not of test scores, but of character. Students leave PSG World School ready to lead with integrity and act with compassion.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── APPROACH ────────────────────────────────── -->
+<section class="approach">
+  <div class="container">
+    <div class="approach-inner">
+      <div class="approach-left">
+        <p class="section-eyebrow">How We Teach</p>
+        <h2 class="section-title serif" style="text-align:left;">Learning that goes<br>deeper than content</h2>
+        <p class="approach-body">At PSG World School, learning is not the delivery of information. It is the gradual construction of understanding — through inquiry, reflection, collaboration, and real-world connection. Every lesson is an opportunity to build not just knowledge, but the ability to use it.</p>
+        <ul class="approach-list">
+          <li>Inquiry-based learning that puts questions before answers</li>
+          <li>Transdisciplinary units that connect knowledge across subjects</li>
+          <li>Student agency at the centre of every learning experience</li>
+          <li>Assessment that serves growth, not just measurement</li>
+          <li>A bilingual and multilingual environment that values every language</li>
+        </ul>
+      </div>
+      <div class="approach-right">
+        <div class="approach-card fade-up">
+          <div class="approach-card-title">The Whole Child</div>
+          <div class="approach-card-body">Academic excellence and personal development are not in competition. We give equal attention to intellectual growth, emotional wellbeing, social development, and physical health.</div>
+        </div>
+        <div class="approach-card fade-up">
+          <div class="approach-card-title">Inclusion by Design</div>
+          <div class="approach-card-body">Every classroom is designed for every learner. Differentiation is not a remedial strategy — it is standard practice. All children deserve access to challenge, support, and belonging.</div>
+        </div>
+        <div class="approach-card fade-up">
+          <div class="approach-card-title">Purposeful Technology</div>
+          <div class="approach-card-body">Technology amplifies great teaching. We use digital tools thoughtfully — to extend inquiry, enhance creativity, and develop the digital citizenship skills children will need for life.</div>
+        </div>
+        <div class="approach-card fade-up">
+          <div class="approach-card-title">Home–School Partnership</div>
+          <div class="approach-card-body">Parents are partners, not customers. We communicate openly, involve families meaningfully, and build the kind of trust that makes a real difference in a child's development.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROJECT-BASED LEARNING — REDESIGNED SECTION ─────────────────────────── -->
+<!-- Replace the entire <section class="pbl" id="pbl">...</section> with this -->
+
+<section class="pbl" id="pbl">
+  <div class="pbl-bg-texture"></div>
+  <div class="container">
+    <div class="pbl-inner">
+
+      <!-- Header -->
+      <div class="pbl-header">
+        <div class="pbl-header-left">
+          <p class="section-eyebrow">Learning in Action</p>
+          <h2 class="section-title serif pbl-title">Real problems.<br><em class="pbl-title-em">Real people.</em><br>Real work.</h2>
+        </div>
+        <div class="pbl-header-right">
+          <p class="pbl-header-body">At PSG World School, learning starts with a genuine problem, a real person who needs it solved, and students who are trusted to do something about it.</p>
+          <div class="pbl-rule-line">
+            <span>The one rule every project must pass</span>
+          </div>
+          <p class="pbl-rule-text">"If the real user disappeared, would this task still make sense? If the answer is no — the user stays."</p>
+        </div>
+      </div>
+
+      <!-- ── FEATURED PROJECT — LARGE CARD ──────────────────────────────────── -->
+      <div class="pbl-featured">
+        <div class="pbl-featured-label">
+          <span class="pbl-feat-grade">Grade 5</span>
+          <span class="pbl-feat-theme">Where We Are in Place and Time</span>
+        </div>
+        <div class="pbl-featured-content">
+          <div class="pbl-featured-left">
+            <h3 class="pbl-featured-title">100 Voices of PSG</h3>
+            <p class="pbl-featured-sub">A centenary documentary</p>
+            <p class="pbl-featured-body">Grade 5 students produce a documentary film marking PSG&nbsp;&amp;&nbsp;Sons' Charities' hundred years in Coimbatore — told through eight people whose lives were directly changed by PSG institutions. Sarvajana alumni. Rural health clinic patients. Vishnugranthi families. Long-serving hospital staff who remember the institution's earliest years.</p>
+            <p class="pbl-featured-body">The Communications Office must approve the film before it can be screened. The interviewees give final consent. The film is archived as part of the trust's own institutional record. This is not a school project that gets displayed on a wall for a week.</p>
+            <div class="pbl-featured-partner">
+              <div class="pbl-feat-dot"></div>
+              <span>PSG&nbsp;&amp;&nbsp;Sons' Charities Communications Office + 8 community members</span>
+            </div>
+          </div>
+          <div class="pbl-featured-right">
+            <div class="pbl-featured-stat-block">
+              <div class="pbl-feat-stat">
+                <div class="pbl-feat-stat-n">100</div>
+                <div class="pbl-feat-stat-l">Years of Coimbatore community service being documented</div>
+              </div>
+              <div class="pbl-feat-stat">
+                <div class="pbl-feat-stat-n">8</div>
+                <div class="pbl-feat-stat-l">Real people interviewed, each giving final consent before publication</div>
+              </div>
+              <div class="pbl-feat-stat">
+                <div class="pbl-feat-stat-n">2</div>
+                <div class="pbl-feat-stat-l">Full revision cycles before the Communications Office approves the final cut</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── PROJECT GRID — 6 VARIED CARDS ──────────────────────────────────── -->
+      <div class="pbl-grid">
+
+        <!-- TALL LEFT — Grade 1 -->
+        <div class="pbl-card pbl-card--tall pbl-card--blue">
+          <div class="pbl-card-grade">Grade 1</div>
+          <div class="pbl-card-theme">Who We Are</div>
+          <h3 class="pbl-card-title">Sensory Stories for Vishnugranthi</h3>
+          <p class="pbl-card-body">Grade 1 students design tactile storybooks for children with Autism and Cerebral Palsy at PSG Vishnugranthi Day Care Centre. The books are tested across three live sessions. The care team gives honest feedback on what actually engages the children and what doesn't. Students revise. The final books are adopted permanently for daily therapeutic use.</p>
+          <p class="pbl-card-body">Children at Vishnugranthi are the same age as Grade 1 students. The empathy is immediate. The stakes are real.</p>
+          <div class="pbl-card-footer">
+            <div class="pbl-card-dot"></div>
+            <span>PSG Vishnugranthi Day Care Centre · Peelamedu</span>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN — stacked 2 -->
+        <div class="pbl-card pbl-card--green">
+          <div class="pbl-card-grade">Grade 2</div>
+          <div class="pbl-card-theme">Sharing the Planet</div>
+          <h3 class="pbl-card-title">Segregation Champions</h3>
+          <p class="pbl-card-body">Students design a Tamil-English household waste segregation guide tested with 15 families on three Peelamedu streets. The CCMC Sanitation Supervisor for the zone reviews the final version. If it works, he distributes it across the entire zone. Mixed waste collection in Coimbatore has already fallen 40% since 2024 — public participation is the remaining gap.</p>
+          <div class="pbl-card-footer">
+            <div class="pbl-card-dot"></div>
+            <span>Coimbatore City Municipal Corporation · Peelamedu Zone</span>
+          </div>
+        </div>
+
+        <div class="pbl-card pbl-card--amber">
+          <div class="pbl-card-grade">Grade 3</div>
+          <div class="pbl-card-theme">Where We Are in Place and Time</div>
+          <h3 class="pbl-card-title">Coimbatore's Living Memories</h3>
+          <p class="pbl-card-body">Grade 3 students interview five elders at Peelamedu care homes who remember Coimbatore from fifty to eighty years ago. The memories are mapped to real city locations — the Noyyal River as a swimming destination, the industrial transformation of Peelamedu, the first generation of PSG students. Each elder confirms their memory before it goes on the map.</p>
+          <div class="pbl-card-footer">
+            <div class="pbl-card-dot"></div>
+            <span>Grace Welfare Trust · Shanthi Nilayam · Peelamedu</span>
+          </div>
+        </div>
+
+        <!-- WIDE BOTTOM LEFT — Grade 4 -->
+        <div class="pbl-card pbl-card--wide pbl-card--dark">
+          <div class="pbl-card-grade">Grade 4</div>
+          <div class="pbl-card-theme">How We Organise Ourselves</div>
+          <h3 class="pbl-card-title">Safe School Zone — Avinashi Road</h3>
+          <div class="pbl-card-wide-inner">
+            <p class="pbl-card-body">Grade 4 students redesign the drop-off zone outside PSG World School on Avinashi Road. They collect observation data across five school mornings. Inspector Kavitha of Peelamedu Traffic Police reviews the proposed protocol and provides AI surveillance incident data — Coimbatore installed smart surveillance at 40+ junctions in 2024, which reduced accidents by 12% in monitored zones. The revised system is piloted for two weeks. Before-and-after data is submitted to school leadership for a permanent adoption decision.</p>
+            <div class="pbl-card-footer" style="margin-top:auto;">
+              <div class="pbl-card-dot" style="background:var(--gold);"></div>
+              <span>Inspector Kavitha · Peelamedu Traffic Police Station</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- BOTTOM RIGHT — Grade 3 and Grade 4 stacked -->
+        <div class="pbl-card pbl-card--teal">
+          <div class="pbl-card-grade">Grade 3</div>
+          <div class="pbl-card-theme">How We Organise Ourselves</div>
+          <h3 class="pbl-card-title">Millet for Morning</h3>
+          <p class="pbl-card-body">Students prototype a millet breakfast item for the PSG World School canteen. Recipe tested with 30 students. Reviewed by the dietitian at PSG Hospitals' Dietary Department. Revised. Introduced to the menu. Sales tracked. Energy levels surveyed before and after.</p>
+          <div class="pbl-card-footer">
+            <div class="pbl-card-dot"></div>
+            <span>PSG Hospitals Dietary Department · School Canteen</span>
+          </div>
+        </div>
+
+        <div class="pbl-card pbl-card--navy">
+          <div class="pbl-card-grade">Grade 4</div>
+          <div class="pbl-card-theme">Sharing the Planet</div>
+          <h3 class="pbl-card-title">The Noyyal Documentary</h3>
+          <p class="pbl-card-body">A documentary about Coimbatore's most significant river, reduced from 34 tributaries to four since 2003. Students interview elders who swam in it as children. The film is screened at a Siruthuli community event. Audience surveyed before and after.</p>
+          <div class="pbl-card-footer">
+            <div class="pbl-card-dot"></div>
+            <span>Siruthuli Environmental NGO · Coimbatore</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ── BOTTOM: WHY COIMBATORE + WHAT PARENTS SEE ──────────────────────── -->
+      <div class="pbl-bottom">
+        <div class="pbl-bottom-left">
+          <h3 class="pbl-bottom-title">Why Coimbatore.<br>Why PSG.</h3>
+          <p class="pbl-bottom-body">PSG&nbsp;&amp;&nbsp;Sons' Charities — founded in 1926, now operating more than thirty institutions across the city — means PSG World School sits inside one of the most connected philanthropic ecosystems in South India. PSG Hospitals. The Rural Health Training Centre at Vedapatti, serving nearly 26,000 people across fourteen villages. PSG College of Technology. Siruthuli.</p>
+          <p class="pbl-bottom-body" style="margin-top:16px;">These are not field trip destinations. They are partners. The PSG name carries a century of community trust — and when a student walks into a rural health clinic or an environmental NGO office, that trust opens doors.</p>
+          <div class="pbl-heritage-row">
+            <div class="pbl-her-item">
+              <div class="pbl-her-n">30+</div>
+              <div class="pbl-her-l">PSG institutions across Coimbatore</div>
+            </div>
+            <div class="pbl-her-item">
+              <div class="pbl-her-n">1926</div>
+              <div class="pbl-her-l">Year the trust was founded</div>
+            </div>
+            <div class="pbl-her-item">
+              <div class="pbl-her-n">26K</div>
+              <div class="pbl-her-l">Patients served by Vedapatti Rural Health Centre alone</div>
+            </div>
+          </div>
+        </div>
+        <div class="pbl-bottom-right">
+          <p class="pbl-exp-heading">What parents can expect</p>
+          <div class="pbl-expectation">
+            <div class="pbl-exp-num">01</div>
+            <div class="pbl-exp-content">
+              <div class="pbl-exp-title">Questions before answers</div>
+              <div class="pbl-exp-body">Your child will come home talking about the person they interviewed, the constraint they hadn't anticipated, the feedback that required starting a section again.</div>
+            </div>
+          </div>
+          <div class="pbl-expectation">
+            <div class="pbl-exp-num">02</div>
+            <div class="pbl-exp-content">
+              <div class="pbl-exp-title">Revision as evidence of learning</div>
+              <div class="pbl-exp-body">Every unit requires at least two full revision cycles. Revision is not a sign that something went wrong — it is the evidence that learning is happening.</div>
+            </div>
+          </div>
+          <div class="pbl-expectation">
+            <div class="pbl-exp-num">03</div>
+            <div class="pbl-exp-content">
+              <div class="pbl-exp-title">A real audience at the showcase</div>
+              <div class="pbl-exp-body">Once a year your child presents to an audience that includes the community members who shaped the work — not just the final product, but the drafts that led there.</div>
+            </div>
+          </div>
+          <div class="pbl-expectation">
+            <div class="pbl-exp-num">04</div>
+            <div class="pbl-exp-content">
+              <div class="pbl-exp-title">Work that continues after the unit ends</div>
+              <div class="pbl-exp-body">Sensory books adopted by Vishnugranthi. A millet recipe on the canteen menu. A conservation system running in the school. The work does not disappear when the term does.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /.pbl-inner -->
+  </div><!-- /.container -->
+</section>
+
+
+<!-- ── HERITAGE ────────────────────────────────── -->
+<section class="heritage" id="heritage">
+  <div class="container">
+    <div class="heritage-inner">
+      <div class="heritage-left">
+        <p class="section-eyebrow">Our Foundation</p>
+        <h2 class="section-title serif" style="text-align:left; font-size: clamp(30px, 3.5vw, 48px);">A century of trust<br>behind every class</h2>
+        <p class="section-subtitle" style="text-align:left; margin-left:0;">PSG World School is the newest expression of PSG Institutions — a legacy of educational service rooted in Coimbatore for over 100 years, trusted by generations of families across South India.</p>
+        <div class="heritage-numbers">
+          <div class="heritage-num">
+            <div class="n">1926</div>
+            <div class="l">PSG Institutions founded</div>
+          </div>
+          <div class="heritage-num">
+            <div class="n">60K+</div>
+            <div class="l">Community residents served</div>
+          </div>
+          <div class="heritage-num">
+            <div class="n">100%</div>
+            <div class="l">Boarding facilities available</div>
+          </div>
+          <div class="heritage-num">
+            <div class="n">Co-ed</div>
+            <div class="l">Open to all students</div>
+          </div>
+        </div>
+      </div>
+      <div class="heritage-right">
+        <div class="heritage-quote">
+          <blockquote>"We combine the values of our historic foundation with the bold pedagogy of a school designed for the world our students will actually inhabit."</blockquote>
+          <cite>PSG World School — School Philosophy</cite>
+        </div>
+        <div class="heritage-values">
+          <div class="heritage-value">
+            <div class="v-icon">🌏</div>
+            <div class="v-label">Global Thinking</div>
+          </div>
+          <div class="heritage-value">
+            <div class="v-icon">⚖️</div>
+            <div class="v-label">Principled Action</div>
+          </div>
+          <div class="heritage-value">
+            <div class="v-icon">🤝</div>
+            <div class="v-label">Cultural Respect</div>
+          </div>
+          <div class="heritage-value">
+            <div class="v-icon">🔬</div>
+            <div class="v-label">Deep Inquiry</div>
+          </div>
+          <div class="heritage-value">
+            <div class="v-icon">💬</div>
+            <div class="v-label">Open Communication</div>
+          </div>
+          <div class="heritage-value">
+            <div class="v-icon">🌱</div>
+            <div class="v-label">Lifelong Growth</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── LEARNING STAGES ─────────────────────────── -->
+<section class="stages" id="stages">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">The Learning Continuum</p>
+      <h2 class="section-title serif">A complete journey from<br>Early Years to Grade 12</h2>
+      <p class="section-subtitle">Each stage is designed with developmental appropriateness at its core — building progressively on the stage before it.</p>
+    </div>
+    <div class="stages-grid">
+      <div class="stage-col">
+        <div class="stage-header">
+          <div class="stage-name">Early Years 1–3</div>
+          <div class="stage-age">Ages 3–6</div>
+        </div>
+        <div class="stage-body">
+          <div class="stage-focus">Play & Discovery</div>
+          <ul class="stage-points">
+            <li>Child-led play and exploration</li>
+            <li>Language and early literacy</li>
+            <li>Social and emotional foundations</li>
+            <li>Creative and sensory learning</li>
+          </ul>
+        </div>
+      </div>
+      <div class="stage-col">
+        <div class="stage-header">
+          <div class="stage-name">Lower Primary</div>
+          <div class="stage-age">Grades 1–3 · Ages 6–9</div>
+        </div>
+        <div class="stage-body">
+          <div class="stage-focus">Inquiry & Skills</div>
+          <ul class="stage-points">
+            <li>Transdisciplinary units of inquiry</li>
+            <li>English, Mathematics, Tamil</li>
+            <li>Arts, Music and Movement, PSPE</li>
+            <li>Building research and thinking skills</li>
+          </ul>
+        </div>
+      </div>
+      <div class="stage-col">
+        <div class="stage-header">
+          <div class="stage-name">Upper Primary</div>
+          <div class="stage-age">Grades 4–5 · Ages 9–11</div>
+        </div>
+        <div class="stage-body">
+          <div class="stage-focus">Depth & Agency</div>
+          <ul class="stage-points">
+            <li>Deeper conceptual understanding</li>
+            <li>Student-led inquiry projects</li>
+            <li>Digital literacy and citizenship</li>
+            <li>Community and service learning</li>
+          </ul>
+        </div>
+      </div>
+      <div class="stage-col">
+        <div class="stage-header">
+          <div class="stage-name">Middle School</div>
+          <div class="stage-age">Grades 6–10 · Ages 11–16</div>
+        </div>
+        <div class="stage-body">
+          <div class="stage-focus">Identity & Rigour</div>
+          <ul class="stage-points">
+            <li>Subject-specialist teaching</li>
+            <li>Personal project and service</li>
+            <li>Critical and analytical thinking</li>
+            <li>Leadership development</li>
+          </ul>
+        </div>
+      </div>
+      <div class="stage-col">
+        <div class="stage-header">
+          <div class="stage-name">Senior School</div>
+          <div class="stage-age">Grades 11–12 · Ages 16–18</div>
+        </div>
+        <div class="stage-body">
+          <div class="stage-focus">Excellence & Purpose</div>
+          <ul class="stage-points">
+            <li>University preparation</li>
+            <li>Extended research and essay</li>
+            <li>Theory of knowledge</li>
+            <li>Creative, action, service</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ADMISSIONS ─────────────────────────────── -->
+<section class="admissions" id="admissions">
+  <div class="container">
+    <div class="admissions-inner">
+      <div class="admissions-left">
+        <p class="section-eyebrow">Admissions 2026–27</p>
+        <h2 class="admissions-title">Now welcoming<br>founding families</h2>
+        <p class="admissions-body">
+          PSG World School is currently accepting applications for the 2026–27 academic year. With a maximum class size of 20 students and two sections per year group, places are limited. We welcome families who share our commitment to purposeful, character-led education.
+        </p>
+        <div class="admissions-cta-group">
+          <a href="mailto:admissions@psgworldschool.edu.in" class="btn-primary">Enquire Now</a>
+          <a href="tel:+916299252522" class="btn-ghost" style="color:rgba(255,255,255,0.7); border-bottom-color:rgba(255,255,255,0.3);">+91 62992 52522 →</a>
+        </div>
+      </div>
+      <div class="admissions-right">
+        <div class="adm-step">
+          <div class="adm-step-num">1</div>
+          <div class="adm-step-content">
+            <div class="adm-step-title">Initial Enquiry</div>
+            <div class="adm-step-desc">Contact our admissions team by email or phone. We will share the school prospectus and arrange a campus visit.</div>
+          </div>
+        </div>
+        <div class="adm-step">
+          <div class="adm-step-num">2</div>
+          <div class="adm-step-content">
+            <div class="adm-step-title">Campus Visit &amp; Meeting</div>
+            <div class="adm-step-desc">Meet with the Principal and view our facilities. This is an opportunity for families to ask questions and assess fit.</div>
+          </div>
+        </div>
+        <div class="adm-step">
+          <div class="adm-step-num">3</div>
+          <div class="adm-step-content">
+            <div class="adm-step-title">Application Submission</div>
+            <div class="adm-step-desc">Submit the completed application form with required documentation and the registration fee.</div>
+          </div>
+        </div>
+        <div class="adm-step">
+          <div class="adm-step-num">4</div>
+          <div class="adm-step-content">
+            <div class="adm-step-title">Offer &amp; Enrolment</div>
+            <div class="adm-step-desc">Successful applicants receive a formal offer letter. Enrolment is confirmed on receipt of the acceptance and first term fees.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ─────────────────────────────────── -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-header" style="margin-bottom:48px;">
+      <p class="section-eyebrow">Get in Touch</p>
+      <h2 class="section-title serif">We would love to hear from you</h2>
+    </div>
+    <div class="contact-inner">
+      <div class="contact-card fade-up">
+        <div class="contact-icon">📍</div>
+        <div class="contact-label">Visit Us</div>
+        <div class="contact-title">Campus Address</div>
+        <div class="contact-detail">
+          SF 472, Civil Aerodrome Post<br>
+          Coimbatore, Tamil Nadu 641 014<br>
+          India
+        </div>
+      </div>
+      <div class="contact-card fade-up">
+        <div class="contact-icon">📞</div>
+        <div class="contact-label">Call or Write</div>
+        <div class="contact-title">Direct Contact</div>
+        <div class="contact-detail">
+          <a href="tel:+916299252522">+91 62992 52522</a><br><br>
+          <a href="mailto:admissions@psgworldschool.edu.in">admissions@psgworldschool.edu.in</a><br><br>
+          <a href="mailto:principal@psgworldschool.edu.in">principal@psgworldschool.edu.in</a>
+        </div>
+      </div>
+      <div class="contact-card fade-up">
+        <div class="contact-icon">🕘</div>
+        <div class="contact-label">School Hours</div>
+        <div class="contact-title">Office &amp; School Times</div>
+        <div class="contact-detail">
+          Monday – Friday<br>
+          School: 9:15 AM – 3:30 PM<br>
+          Office: 8:00 AM – 5:00 PM<br><br>
+          Academic Year: June – April
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ─────────────────────────────────── -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand-name">PSG World School</div>
+      <div class="footer-motto">Ignite · Innovate · Inspire</div>
+      <p class="footer-desc">A PSG Institutions initiative, building on over a century of educational heritage to deliver world-class international education in Coimbatore, India.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">School</div>
+      <ul class="footer-links">
+        <li><a href="#approach">Our Approach</a></li>
+        <li><a href="#pbl">Learning in Action</a></li>
+        <li><a href="#heritage">Our Heritage</a></li>
+        <li><a href="#stages">Learning Stages</a></li>
+        <li><a href="#admissions">Admissions</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Community</div>
+      <ul class="footer-links">
+        <li><a href="#">Parent Portal</a></li>
+        <li><a href="#">School Calendar</a></li>
+        <li><a href="#">News &amp; Events</a></li>
+        <li><a href="#">Careers</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Policies</div>
+      <ul class="footer-links">
+        <li><a href="#">Safeguarding</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Admissions Policy</a></li>
+        <li><a href="#">Academic Integrity</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 PSG World School, Coimbatore. All rights reserved.</p>
+    <p class="footer-psg">Part of <span>PSG Institutions</span> — Est. 1926</p>
+  </div>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+
+</body>
 </html>
