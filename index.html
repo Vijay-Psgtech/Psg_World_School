@@ -576,6 +576,44 @@ nav{
   margin-top:36px;background:var(--navy);
   padding:28px 40px;display:flex;align-items:center;justify-content:space-between;gap:28px;
 }
+
+/* MAP Growth block */
+.map-block{
+  display:grid;grid-template-columns:1fr 1fr;gap:64px;
+  margin-top:56px;padding-top:56px;
+  border-top:1px solid var(--ltgrey);
+}
+.map-label{
+  font-size:10px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--teal);margin-bottom:10px;
+}
+.map-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(24px,3vw,36px);font-weight:600;
+  color:var(--navy);line-height:1.15;margin-bottom:20px;
+}
+.map-body{
+  font-size:13.5px;font-weight:300;color:var(--grey);
+  line-height:1.8;margin-bottom:14px;
+}
+.map-right{display:flex;flex-direction:column;gap:16px}
+.map-card{
+  background:var(--cream);border:1px solid var(--ltgrey);
+  border-left:3px solid var(--navy);
+  padding:20px 22px;display:flex;gap:16px;align-items:flex-start;
+}
+.map-card-icon{
+  font-size:16px;color:var(--navy);
+  flex-shrink:0;margin-top:2px;
+}
+.map-card-title{
+  font-family:'DM Sans',sans-serif;
+  font-size:13px;font-weight:500;color:var(--navy);margin-bottom:5px;
+}
+.map-card-body{
+  font-size:12px;font-weight:300;color:var(--grey);line-height:1.65;
+}
+@media(max-width:960px){.map-block{grid-template-columns:1fr}}
 .assessment-banner p{font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;color:rgba(255,255,255,0.85);line-height:1.5}
 .toddle-badge{flex-shrink:0;background:rgba(184,134,11,0.2);border:1px solid rgba(184,134,11,0.4);padding:14px 22px;text-align:center}
 .toddle-badge .n{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;color:var(--gold3);line-height:1}
@@ -769,7 +807,7 @@ footer{background:var(--navy2);padding:48px 40px 28px;border-top:2px solid var(-
 <div class="announce-bar">
   <div class="announce-text">
     <span class="announce-pill">Now Open</span>
-    Admissions 2026–27 are open &nbsp;·&nbsp; Early Years 1 through Grade 12 &nbsp;·&nbsp; Classes capped at 20 students
+    Admissions 2026–27 are open &nbsp;·&nbsp; Early Years 1 through Grade 12 &nbsp;·&nbsp; Small classes. Real learning. Real outcomes.
   </div>
   <a href="#admissions" class="announce-cta">Enquire Now →</a>
 </div>
@@ -821,8 +859,8 @@ footer{background:var(--navy2);padding:48px 40px 28px;border-top:2px solid var(-
         <div class="l">A complete, purposeful continuum from Early Years through Grade 12 — inquiry-based, character-led, and rooted in Coimbatore</div>
       </div>
       <div class="hero-card">
-        <div class="n">20</div>
-        <div class="l">Hard cap on class size — every child known, every day, by every teacher</div>
+        <div class="n">Small</div>
+        <div class="l">Intentionally small classes — every child known, every day, by every teacher</div>
       </div>
       <div class="hero-card">
         <div class="n">30+</div>
@@ -853,8 +891,8 @@ footer{background:var(--navy2);padding:48px 40px 28px;border-top:2px solid var(-
       </div>
       <div class="why-item-full fade-up">
         <div class="why-num">02</div>
-        <div class="why-item-title">Every class capped at 20 students. Hard cap. No exceptions.</div>
-        <div class="why-item-body">Not a target. A hard cap. Every child is known by every teacher. No child disappears into the middle. The class cap of 20 is the structural mechanism behind every belonging claim we make.</div>
+        <div class="why-item-title">Intentionally small classes. Hard cap. No exceptions.</div>
+        <div class="why-item-body">Not a target. A structural commitment. Every child is known by every teacher. No child disappears into the middle. The class cap is the mechanism behind every belonging claim we make.</div>
       </div>
       <div class="why-item-full fade-up">
         <div class="why-num">03</div>
@@ -926,7 +964,7 @@ footer{background:var(--navy2);padding:48px 40px 28px;border-top:2px solid var(-
         <div class="vision-pillar">
           <div class="vision-num">01</div>
           <div class="vision-title">Inspire Inquiry</div>
-          <div class="vision-body">Curiosity-led learning from EY1 through Grade 12 — questions first, always.</div>
+          <div class="vision-body">Learning driven by genuine questions — students engage with ideas because they want to understand them, not because they will be tested on them.</div>
         </div>
         <div class="vision-pillar">
           <div class="vision-num">02</div>
@@ -936,7 +974,7 @@ footer{background:var(--navy2);padding:48px 40px 28px;border-top:2px solid var(-
         <div class="vision-pillar">
           <div class="vision-num">03</div>
           <div class="vision-title">Develop Global Perspectives</div>
-          <div class="vision-body">Understanding the world through local and global lenses — rooted in Coimbatore, ready for everywhere.</div>
+          <div class="vision-body">Understanding the world through local and global lenses — aware of where they come from and where they are going.</div>
         </div>
         <div class="vision-pillar">
           <div class="vision-num">04</div>
@@ -1037,7 +1075,7 @@ footer{background:var(--navy2);padding:48px 40px 28px;border-top:2px solid var(-
         </div>
         <div class="approach-card fade-up">
           <div class="approach-card-title">Inclusion by Design</div>
-          <div class="approach-card-body">No child is left behind. No child is held back. Differentiation is not a remedial strategy — it is standard practice, every day, in every classroom.</div>
+          <div class="approach-card-body">Every learner is taught at their level. Differentiation is standard practice, every day, in every classroom — not a remedial strategy applied to some.</div>
         </div>
         <div class="approach-card fade-up">
           <div class="approach-card-title">Purposeful Technology</div>
@@ -1045,7 +1083,7 @@ footer{background:var(--navy2);padding:48px 40px 28px;border-top:2px solid var(-
         </div>
         <div class="approach-card fade-up">
           <div class="approach-card-title">Home–School Partnership</div>
-          <div class="approach-card-body">Parents are partners, not customers. We communicate openly through Toddle, involve families meaningfully, and build trust that makes a genuine difference.</div>
+          <div class="approach-card-body">Parents are partners, not customers. We communicate openly, involve families meaningfully, and build trust that makes a genuine difference to a child's experience.</div>
         </div>
       </div>
     </div>
@@ -1065,7 +1103,7 @@ footer{background:var(--navy2);padding:48px 40px 28px;border-top:2px solid var(-
       <div class="inq-step"><div class="inq-circle">02</div><div class="inq-title">Investigate</div><div class="inq-body">Research, explore, and gather evidence. Deep learning by doing, not by being told.</div></div>
       <div class="inq-step"><div class="inq-circle">03</div><div class="inq-title">Create</div><div class="inq-body">Design and build a solution or product — real outputs with real purpose and a real audience.</div></div>
       <div class="inq-step"><div class="inq-circle">04</div><div class="inq-title">Feedback</div><div class="inq-body">Share with peers, experts, and a real audience. Structured, honest, actionable feedback.</div></div>
-      <div class="inq-step"><div class="inq-circle">05</div><div class="inq-title">Improve</div><div class="inq-body">Refine and present the final work. Revision is not failure — it is the evidence of learning.</div></div>
+      <div class="inq-step"><div class="inq-circle">05</div><div class="inq-title">Improve</div><div class="inq-body">Refine and present the final work. Every project requires more than one draft.</div></div>
     </div>
     <div class="inq-note">
       <p>Every unit ends with a <strong style="color:var(--gold3)">Public Product</strong> — students share their learning with a real audience outside the classroom.</p>
@@ -1275,18 +1313,14 @@ footer{background:var(--navy2);padding:48px 40px 28px;border-top:2px solid var(-
       <div>
         <h3 class="pbl-bottom-title">Why the PSG network<br>changes everything.</h3>
         <p class="pbl-bottom-body">No other school in Coimbatore has a 900-bed hospital, a rural health centre serving 26,000 people, an environmental NGO with 600+ rainwater harvesting structures, and an arts college all as institutional partners — within 5 minutes of the school gate.<br><br>These are not sponsors or field trip destinations. They are the places where PSG World School students do their work. The PSG name opens every door. The problems are real. The outcomes last.</p>
-        <div class="pbl-bottom-stats">
-          <div class="pbl-bstat"><div class="n">30+</div><div class="l">PSG institutions across Coimbatore available as live learning partners</div></div>
-          <div class="pbl-bstat"><div class="n">26K</div><div class="l">Patients served by Vedapatti Rural Health Centre — one of many partners</div></div>
-          <div class="pbl-bstat"><div class="n">15</div><div class="l">Grade-specific projects each year — one named user per project, always</div></div>
-        </div>
+
       </div>
       <div class="pbl-expectations">
         <p class="pbl-exp-label">What parents can expect</p>
         <div class="pbl-exp"><div class="pbl-exp-icon">❓</div><div><div class="pbl-exp-title">Questions before answers</div><div class="pbl-exp-body">Your child will come home talking about the person they interviewed, the constraint they hadn't anticipated, the feedback that required starting a section again.</div></div></div>
         <div class="pbl-exp"><div class="pbl-exp-icon">✏️</div><div><div class="pbl-exp-title">Revision as evidence of learning</div><div class="pbl-exp-body">Every project requires at least two full revision cycles. Revision is not a sign something went wrong — it is the evidence that learning is happening.</div></div></div>
         <div class="pbl-exp"><div class="pbl-exp-icon">🎤</div><div><div class="pbl-exp-title">A real audience at the showcase</div><div class="pbl-exp-body">Once a year, your child presents to an audience that includes the community members who shaped the work — not just the final product, but the drafts that led there.</div></div></div>
-        <div class="pbl-exp"><div class="pbl-exp-icon">📍</div><div><div class="pbl-exp-title">Work that continues after the unit ends</div><div class="pbl-exp-body">Storybooks permanently at Vishnugranthi. A millet item on the canteen menu. A change inside PSG Hospitals. The projects do not disappear when the term does.</div></div></div>
+        <div class="pbl-exp"><div class="pbl-exp-icon">📍</div><div><div class="pbl-exp-title">Work that continues after the unit ends</div><div class="pbl-exp-body">The projects do not disappear when the term does. They stay — in care centres, on menus, inside hospitals, on city walls.</div></div></div>
       </div>
     </div>
   </div>
@@ -1298,7 +1332,7 @@ footer{background:var(--navy2);padding:48px 40px 28px;border-top:2px solid var(-
     <div class="section-header">
       <p class="section-eyebrow">How Learning is Assessed</p>
       <h2 class="section-title serif">Assessment helps children grow —<br>not fear mistakes</h2>
-      <p class="section-subtitle">We assess progress continuously — not just through tests. Progress is never a mystery at PSG World School.</p>
+      <p class="section-subtitle">We assess progress continuously — not just through tests.</p>
     </div>
     <div class="assessment-grid">
       <div class="assessment-card fade-up"><div class="assessment-icon">✎</div><div class="assessment-title">Teacher Feedback</div><div class="assessment-body">Specific, regular feedback linked to learning goals — honest, actionable, and day-to-day. No surprises.</div></div>
@@ -1308,6 +1342,39 @@ footer{background:var(--navy2);padding:48px 40px 28px;border-top:2px solid var(-
       <div class="assessment-card fade-up"><div class="assessment-icon">◈</div><div class="assessment-title">Ongoing Check-ins</div><div class="assessment-body">Teachers check understanding during learning — adjusting in real time, every single day. Assessment is integral to teaching.</div></div>
       <div class="assessment-card fade-up"><div class="assessment-icon">★</div><div class="assessment-title">Unit Evaluations</div><div class="assessment-body">End-of-unit assessments show what students understand and can apply independently — clear standards, transparent expectations.</div></div>
     </div>
+    <!-- MAP Growth -->
+    <div class="map-block">
+      <div class="map-left">
+        <p class="map-label">Standardised Growth Tracking</p>
+        <h3 class="map-title">NWEA MAP Growth</h3>
+        <p class="map-body">Most schools test what students have been taught. MAP Growth measures something different — it measures where a child is right now, and how far they have travelled since the last assessment.</p>
+        <p class="map-body">Developed by NWEA and used by over 13 million students worldwide, MAP Growth adapts in real time as a child answers. If a question is too easy, the next is harder. If it is too hard, the next adjusts accordingly. The result is a precise picture of each child's actual level — not a score relative to a curriculum, but a position on a continuous scale that spans from Early Years to Grade 12.</p>
+        <p class="map-body">At PSG World School, students sit MAP Growth assessments three times a year. Teachers use the data not to rank children, but to understand exactly what each child needs next — and to identify growth that a single end-of-year exam would never reveal.</p>
+      </div>
+      <div class="map-right">
+        <div class="map-card">
+          <div class="map-card-icon">⊞</div>
+          <div class="map-card-title">Adaptive by design</div>
+          <div class="map-card-body">Every question adjusts to the child's responses. The assessment meets each student at their level — not the class average.</div>
+        </div>
+        <div class="map-card">
+          <div class="map-card-icon">↑</div>
+          <div class="map-card-title">Growth, not just attainment</div>
+          <div class="map-card-body">MAP tracks progress over time. A child who starts behind can show exceptional growth — and that growth is visible, measurable, and celebrated.</div>
+        </div>
+        <div class="map-card">
+          <div class="map-card-icon">◉</div>
+          <div class="map-card-title">Three times a year</div>
+          <div class="map-card-body">Autumn, spring, and summer. Each sitting produces a fresh data point — so teachers always have a current picture, not a year-old one.</div>
+        </div>
+        <div class="map-card">
+          <div class="map-card-icon">✎</div>
+          <div class="map-card-title">Informs teaching directly</div>
+          <div class="map-card-body">Results are not filed away. Teachers use MAP data to differentiate instruction — adjusting what they teach, to whom, and at what pace.</div>
+        </div>
+      </div>
+    </div>
+
     <div class="assessment-banner">
       <p>Progress is never a mystery at PSG World School. You will always know how your child is growing — not through end-of-year reports, but in real time, every week, through their Toddle portfolio.</p>
       <div class="toddle-badge"><div class="n">Toddle</div><div class="l">Real-time portfolio visibility</div></div>
@@ -1362,7 +1429,7 @@ footer{background:var(--navy2);padding:48px 40px 28px;border-top:2px solid var(-
       <div class="grad-right">
         <h3 class="promise-title">Our promise to every child &amp; every family</h3>
         <div class="promise-grid">
-          <div class="promise-card"><div class="promise-word">Safe</div><div class="promise-body">Every class is capped at 20. Every teacher knows every child's name, history, and how they are doing on a Tuesday afternoon in November. Belonging is structural here, not aspirational.</div></div>
+          <div class="promise-card"><div class="promise-word">Safe</div><div class="promise-body">Every teacher knows every child's name, history, and how they are doing on a Tuesday afternoon in November. Belonging is structural here, not aspirational.</div></div>
           <div class="promise-card"><div class="promise-word">Valued</div><div class="promise-body">Our Inquiry Journey begins with students' own questions. A Grade 1 student's observation about reaching a child with Cerebral Palsy became the design brief for a real storybook. We mean it.</div></div>
           <div class="promise-card"><div class="promise-word">Supported</div><div class="promise-body">Pastoral care, learning support, and wellbeing are built into the week — not offered as add-ons. No child is left to find their way through a difficulty alone.</div></div>
           <div class="promise-card"><div class="promise-word">Inspired</div><div class="promise-body">Students work on problems that matter to real people in this city. The motivation to do good work follows naturally from a problem that is genuinely worth solving.</div></div>
@@ -1370,7 +1437,7 @@ footer{background:var(--navy2);padding:48px 40px 28px;border-top:2px solid var(-
           <div class="promise-card"><div class="promise-word">Confident</div><div class="promise-body">Confidence at PSG World School is built through iteration — through drafts revised, feedback received, and work that withstands scrutiny from a real audience outside the classroom.</div></div>
         </div>
         <div class="promise-closing">
-          <p>"Our class cap is 20. Not because we cannot accommodate more. Because knowing a child — really knowing them — requires it. Everything else we promise follows from that."</p>
+          <p>"Knowing a child — really knowing them — requires intentional constraint. Everything else we promise follows from that."</p>
           <small>PSG World School — The mechanism behind the promise</small>
         </div>
       </div>
@@ -1420,7 +1487,7 @@ footer{background:var(--navy2);padding:48px 40px 28px;border-top:2px solid var(-
       <p class="section-subtitle">We build an environment where every child belongs — not just academically, but emotionally and socially. Differences are strengths here.</p>
     </div>
     <div class="inclusion-grid">
-      <div class="inc-card fade-up"><div class="inc-icon">♡</div><div class="inc-title">A Safe, Inclusive Community</div><div class="inc-body">Class sizes are capped at 20. Every teacher carries a full picture of each child — academically, emotionally, and socially. Belonging is built into the structure of the school, not added on top of it.</div></div>
+      <div class="inc-card fade-up"><div class="inc-icon">♡</div><div class="inc-title">A Safe, Inclusive Community</div><div class="inc-body">Small classes by design. Every teacher carries a full picture of each child — academically, emotionally, and socially. Belonging is built into the structure of the school, not added on top of it.</div></div>
       <div class="inc-card fade-up"><div class="inc-icon">⊕</div><div class="inc-title">Strong Support Systems</div><div class="inc-body">Dedicated pastoral care, learning support, and wellbeing guidance — because every learner's needs matter equally, every day.</div></div>
       <div class="inc-card fade-up"><div class="inc-icon">◈</div><div class="inc-title">Differentiation for Every Learner</div><div class="inc-body">No child is left behind. No child is held back. Learning is tailored to each child's level, pace, and interests — not to the average of the class.</div></div>
       <div class="inc-card fade-up"><div class="inc-icon">◉</div><div class="inc-title">Student Voice &amp; Agency</div><div class="inc-body">Learners are active participants in their own education — making choices, taking ownership, and building confidence at every single stage.</div></div>
@@ -1438,12 +1505,12 @@ footer{background:var(--navy2);padding:48px 40px 28px;border-top:2px solid var(-
         <p class="adm-body">PSG World School is accepting applications for the 2026–27 academic year. With a maximum class size of 20 students, places are limited. We welcome families who share our commitment to purposeful, character-led education.</p>
         <div class="adm-contacts">
           <div class="adm-contact"><strong>Email</strong> admissions@psgworldschool.edu.in</div>
-          <div class="adm-contact"><strong>Phone</strong> +91 99 524 018 99</div>
+          <div class="adm-contact"><strong>Phone</strong> +91 62992 52522</div>
           <div class="adm-contact"><strong>Address</strong> PSG World School, Coimbatore, India 641 004</div>
         </div>
         <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px">
           <a href="mailto:admissions@psgworldschool.edu.in" class="btn btn-gold">Enquire Now</a>
-          <a href="https://wa.me/919952401899" class="btn btn-outline" style="color:rgba(255,255,255,0.75);border-bottom-color:rgba(255,255,255,0.3)">WhatsApp →</a>
+          <a href="https://wa.me/916299252522" class="btn btn-outline" style="color:rgba(255,255,255,0.75);border-bottom-color:rgba(255,255,255,0.3)">WhatsApp →</a>
         </div>
       </div>
       <div class="adm-right">
@@ -1487,9 +1554,8 @@ footer{background:var(--navy2);padding:48px 40px 28px;border-top:2px solid var(-
         <div class="contact-label">Call or Write</div>
         <div class="contact-title">Direct Contact</div>
         <div class="contact-detail">
-          <a href="tel:+919952401899">+91 99 524 018 99</a><br><br>
-          <a href="mailto:admissions@psgworldschool.edu.in">admissions@psgworldschool.edu.in</a><br><br>
-          <a href="mailto:david.sheehan.mot@gmail.com">principal@psgworldschool.edu.in</a>
+          <a href="tel:+916299252522">+91 62992 52522</a><br><br>
+          <a href="mailto:admissions@psgworldschool.edu.in">admissions@psgworldschool.edu.in</a>
         </div>
       </div>
       <div class="contact-card">
@@ -1546,7 +1612,7 @@ footer{background:var(--navy2);padding:48px 40px 28px;border-top:2px solid var(-
 <!-- WhatsApp -->
 <div class="wa-sticky">
   <div class="wa-label">Chat with us on WhatsApp</div>
-  <a href="https://wa.me/919952401899" class="wa-btn" target="_blank" rel="noopener">
+  <a href="https://wa.me/916299252522" class="wa-btn" target="_blank" rel="noopener">
     <svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.096.542 4.065 1.488 5.775L0 24l6.225-1.488A11.956 11.956 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.005-1.37l-.36-.214-3.694.883.897-3.576-.235-.373A9.818 9.818 0 0112 2.182c5.422 0 9.818 4.396 9.818 9.818 0 5.423-4.396 9.818-9.818 9.818z"/></svg>
   </a>
 </div>
