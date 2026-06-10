@@ -43,10 +43,10 @@
   "email": "admissions@psgworldschool.edu.in",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "PSG World School",
+    "streetAddress": "S.F.No.472, Civil Aerodrome Post",
     "addressLocality": "Coimbatore",
     "addressRegion": "Tamil Nadu",
-    "postalCode": "641004",
+    "postalCode": "641014",
     "addressCountry": "IN"
   },
   "parentOrganization": {
@@ -852,6 +852,18 @@ footer{background:var(--navy2);padding:48px 40px 28px;border-top:2px solid var(-
 
 @media(max-width:960px){.pbl-grade-projects{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.pbl-grade-projects{grid-template-columns:1fr}}
+
+.mission-vision-inner {
+    display: grid !important;
+    grid-template-columns: 0.9fr 1.1fr !important;
+    gap: 32px !important;
+}
+@media (max-width: 768px) {
+    .mission-vision-inner {
+        grid-template-columns: 1fr !important;
+    }
+}
+
 </style>
 <style>
 /* PSG brand theme */
@@ -2818,8 +2830,8 @@ nav.site-header{
 .values-symbol svg{width:38px!important;height:38px!important;display:block!important;}
 .values-clean-card h3{font-family:'Cormorant Garamond',Georgia,serif!important;color:#332B76!important;font-size:32px!important;line-height:1.1!important;margin:0 0 18px!important;}
 .values-clean-card p{font-size:16px!important;line-height:1.75!important;color:#5F5870!important;margin:0!important;}
-.ib-candidacy-note{background:rgba(255,255,255,.08);border:1px solid rgba(217,190,114,.25);border-left:4px solid #D9BE72;border-radius:var(--r-md);padding:16px 18px;margin:0 0 22px;color:rgba(255,255,255,.82);font-size:13.5px;line-height:1.6;}
-.ib-candidacy-note strong{color:#fff;}
+
+
 .adm-contact a{color:#fff!important;text-decoration:none!important;border-bottom:1px solid rgba(217,190,114,.55)!important;}
 .hero h1{font-size:clamp(32px,5.5vw,74px)!important;}
 .hero-motto{font-size:clamp(25px,3vw,36px)!important;letter-spacing:.02em!important;}
@@ -2855,8 +2867,6 @@ nav.site-header{
 @media(max-width:1100px){.families-fit-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:640px){.families-fit{padding:72px 0}.families-fit-grid{grid-template-columns:1fr}.families-fit-card{min-height:auto}}
 </style>
-
-
 <style>
 /* Restored learning, project and assessment sections */
 .restored-inquiry{padding:104px 0;background:var(--psg-cream-2,#FFF9EF)}
@@ -2908,8 +2918,6 @@ nav.site-header{
 @media(max-width:1050px){.inquiry-journey,.project-grid,.assess-grid{grid-template-columns:1fr 1fr}.expect-grid,.map-mini-grid{grid-template-columns:1fr 1fr}.map-restored-grid{grid-template-columns:1fr}}
 @media(max-width:680px){.inquiry-journey,.project-grid,.assess-grid,.expect-grid,.map-mini-grid{grid-template-columns:1fr}.project-card{min-height:0}.network-callout,.map-restored{padding:30px 24px}}
 </style>
-
-
 <style>
 /* Hero campus image update */
 .hero h1 br{display:block;}
@@ -2935,8 +2943,6 @@ nav.site-header{
   .hero-building-image{width:100%;max-width:640px;border-radius:24px;}
 }
 </style>
-
-
 <style>
 /* Hero building image: blended into PSG cream background */
 .hero-building-panel{
@@ -2989,8 +2995,6 @@ nav.site-header{
   .hero-building-image{width:100%!important;max-width:640px!important;mix-blend-mode:normal;}
 }
 </style>
-
-
 <style id="psg-final-hero-building-image-real">
 /* Final hero update: high-quality blended campus image with no purple overlay */
 .hero{
@@ -3076,8 +3080,6 @@ nav.site-header{
   .hero-sub{font-size:16px!important;}
 }
 </style>
-
-
 <style id="psg-banner-fix-final">
 /* Final navigation/banner fix: prevent logo/title overlap, remove cramped spacing */
 .site-header, nav.site-header{
@@ -3162,8 +3164,6 @@ nav.site-header{
   .site-header .nav-logo-img{width:42px!important;height:42px!important;flex-basis:42px!important;}
 }
 </style>
-
-
 <style>
 /* Premium project-card refinements */
 .projects-restored{
@@ -3308,8 +3308,6 @@ nav.site-header{
   .project-stat{min-height:0!important;}
 }
 </style>
-
-
 <style>
 /* Refined footer with working external links */
 .site-footer{
@@ -3403,7 +3401,6 @@ nav.site-header{
   .footer-inner-refined{grid-template-columns:1fr!important;}
 }
 </style>
-
 <style id="mobile-blank-fix">
 /* Fix for mobile blank area after the Toddle portfolio note.
    Some mobile browsers were not applying the reveal-on-scroll class to later sections,
@@ -3442,6 +3439,197 @@ nav.site-header{
   }
 }
 </style>
+<style id="psg-admissions-full-repair">
+#admissions.admissions{
+  background:linear-gradient(165deg,#20164F 0%,#332B76 52%,#20164F 100%)!important;
+  padding:96px 0!important;
+  color:#fff!important;
+  overflow:hidden!important;
+  position:relative!important;
+}
+#admissions .adm-inner{
+  background:transparent!important;
+  padding:0!important;
+  display:grid!important;
+  grid-template-columns:1fr 1fr!important;
+  gap:64px!important;
+  align-items:start!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+}
+#admissions .adm-inner::before,
+#admissions .adm-inner::after{display:none!important;}
+#admissions .adm-left,#admissions .adm-right{position:relative!important;z-index:2!important;}
+#admissions .adm-eyebrow{
+  color:#D9BE72!important;
+  letter-spacing:.22em!important;
+  text-transform:uppercase!important;
+  font-weight:700!important;
+}
+#admissions .adm-title{
+  color:#fff!important;
+  font-family:'Cormorant Garamond',Georgia,serif!important;
+  font-size:clamp(42px,5vw,68px)!important;
+  line-height:1.05!important;
+  margin:18px 0 28px!important;
+}
+#admissions .adm-body{
+  color:rgba(255,255,255,.80)!important;
+  font-size:16px!important;
+  line-height:1.85!important;
+  max-width:580px!important;
+  margin:0 0 34px!important;
+}
+#admissions .adm-contacts{
+  background:rgba(255,255,255,.07)!important;
+  border:1px solid rgba(255,255,255,.14)!important;
+  border-radius:24px!important;
+  padding:26px 28px!important;
+  gap:14px!important;
+  margin-bottom:30px!important;
+}
+#admissions .adm-contact{
+  color:#fff!important;
+  font-size:15px!important;
+  line-height:1.7!important;
+  display:flex!important;
+  gap:16px!important;
+  align-items:flex-start!important;
+}
+#admissions .adm-contact strong{
+  color:#fff!important;
+  min-width:66px!important;
+  font-weight:700!important;
+}
+#admissions .adm-contact a{
+  color:#fff!important;
+  text-decoration:none!important;
+}
+#admissions .adm-actions{
+  display:flex!important;
+  gap:16px!important;
+  flex-wrap:wrap!important;
+}
+#admissions .btn{
+  border-radius:999px!important;
+  padding:15px 32px!important;
+  min-width:178px!important;
+  text-align:center!important;
+  font-weight:800!important;
+  letter-spacing:.08em!important;
+}
+#admissions .btn-gold{
+  background:#332B76!important;
+  color:#fff!important;
+  border:1px solid #B89345!important;
+}
+#admissions .btn-whatsapp{
+  background:rgba(255,255,255,.72)!important;
+  color:#fff!important;
+  border:1px solid #B89345!important;
+  text-decoration:none!important;
+}
+#admissions .adm-right{
+  display:flex!important;
+  flex-direction:column!important;
+  gap:22px!important;
+}
+#admissions .adm-step{
+  background:rgba(255,255,255,.07)!important;
+  border:1px solid rgba(255,255,255,.14)!important;
+  border-radius:22px!important;
+  padding:24px 28px!important;
+  display:flex!important;
+  align-items:flex-start!important;
+  gap:18px!important;
+  color:#fff!important;
+}
+#admissions .adm-step-num{
+  width:44px!important;
+  height:44px!important;
+  border-radius:50%!important;
+  background:#B89345!important;
+  color:#fff!important;
+  flex:0 0 44px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  font-weight:800!important;
+}
+#admissions .adm-step-title{
+  color:#fff!important;
+  font-size:18px!important;
+  font-weight:800!important;
+  margin-bottom:6px!important;
+}
+#admissions .adm-step-desc{
+  color:rgba(255,255,255,.82)!important;
+  line-height:1.65!important;
+  font-size:14px!important;
+}
+#admissions .admissions-form-card,
+#admissions .ib-note,
+#admissions .ib-candidacy,
+#admissions .candidacy-note,
+#admissions .candidate-note,
+#admissions .admissions-notice,
+#admissions .adm-who,
+#admissions div:empty,
+#admissions p:empty,
+#admissions a:empty{
+  display:none!important;
+}
+@media(max-width:900px){
+  #admissions .adm-inner{grid-template-columns:1fr!important;gap:38px!important;}
+  #admissions .adm-contact{flex-direction:column!important;gap:4px!important;}
+}
+</style>
+
+<style id="psg-mission-vision-final-override">
+/* FINAL OVERRIDE: Vision left on desktop, above Mission on mobile */
+.mission-vision-inner,
+.mission-vision-grid,
+.mv-inner {
+    display: grid !important;
+    grid-template-columns: 0.9fr 1.1fr !important;
+    gap: 32px !important;
+    align-items: stretch !important;
+}
+
+.vision-card {
+    order: 1 !important;
+    grid-column: 1 !important;
+}
+
+.mission-card {
+    order: 2 !important;
+    grid-column: 2 !important;
+}
+
+/* Ensure the vision card remains the left/purple card */
+.vision-card {
+    background: var(--psg-purple, #332B76) !important;
+    color: #fff !important;
+}
+
+@media (max-width: 768px) {
+    .mission-vision-inner,
+    .mission-vision-grid,
+    .mv-inner {
+        grid-template-columns: 1fr !important;
+    }
+
+    .vision-card {
+        order: 1 !important;
+        grid-column: 1 !important;
+    }
+
+    .mission-card {
+        order: 2 !important;
+        grid-column: 1 !important;
+    }
+}
+</style>
 </head>
 <body data-new-gr-c-s-check-loaded="14.1299.0" data-new-gr-c-s-loaded="14.1299.0"><a class="skip-link" href="#main">Skip to main content</a>
 <!-- NAV -->
@@ -3456,22 +3644,20 @@ nav.site-header{
 <li><a href="#approach">Values</a></li>
 <li><a href="#pbl">Learning</a></li>
 <li><a href="#stages">Stages</a></li>
-<li><a href="#admissions">Admissions</a></li>
-<li><a class="nav-cta" href="#admissions-enquiry">Book a School Tour</a></li>
+<li><a href="https://wa.me/916292525252" target="_blank" rel="noopener">Admissions</a></li>
+<li><a class="nav-cta" href="https://wa.me/916292525252" target="_blank" rel="noopener">Book a School Tour</a></li>
 </ul>
 <button aria-controls="primary-navigation" aria-expanded="false" class="mobile-menu-toggle" type="button">Menu</button>
 </nav>
 <!-- HERO -->
 <section class="hero" id="main">
-<div class="hero-decor-1"></div><div class="hero-decor-2"></div>
-<div class="hero-decor-3"></div><div class="hero-grid"></div>
 <div class="hero-content">
 <div class="hero-left-panel">
 <p class="hero-tag">PSG World School · Admissions Open 2026–27</p>
-<h1>Locally Rooted.<br><em>Globally Minded.</em></h1>
+<h1>Locally Rooted.<br/><em>Globally Minded.</em></h1>
 <p class="hero-sub">Rooted in the values of the PSG legacy and inspired by international best practice, PSG World School nurtures curious thinkers, compassionate leaders, and confident learners prepared to contribute meaningfully to the world around them.</p>
 <div class="hero-actions">
-<a aria-label="Enquire about admissions for 2026 to 2027" class="btn btn-gold" href="#admissions">Visit the Campus</a>
+<a aria-label="Enquire about admissions for 2026 to 2027" class="btn btn-gold" href="https://wa.me/916292525252" target="_blank" rel="noopener">Visit the Campus</a>
 <a class="btn btn-outline" href="#pbl" style="--mx: 64.40989657439314%; --my: 67.70831021395597%;">See learning in action →</a>
 </div>
 </div>
@@ -3518,7 +3704,6 @@ nav.site-header{
 </div>
 </div>
 </div>
-
 </section>
 <!-- WHO CHOOSES PSG WORLD SCHOOL -->
 <section class="families-fit" id="who-chooses">
@@ -3538,7 +3723,6 @@ nav.site-header{
 </div>
 </section>
 <section class="head-clean" id="head-of-school">
-
 <div class="container">
 <div class="head-clean-card">
 <div class="head-clean-photo-panel">
@@ -3565,7 +3749,6 @@ nav.site-header{
 </div>
 </div></div>
 </div>
-</div>
 </section>
 <section class="segments" id="designed-school">
 <div class="container">
@@ -3585,7 +3768,6 @@ nav.site-header{
 </section>
 <!-- HEAD OF SCHOOL MESSAGE -->
 <!-- SEGMENTS -->
-
 <!-- MISSION -->
 <!-- PILLARS -->
 <!-- MISSION & VISION -->
@@ -3611,7 +3793,7 @@ nav.site-header{
 <blockquote>We aim to empower learners to become architects of a better world, grounded in integrity, enriched by diverse perspectives and driven to create sustainable solutions for the challenges of the future.</blockquote>
 </aside>
 </div>
-<div class="section-mini-cta"><a class="btn btn-gold" href="#admissions-enquiry">Discuss the PSG World School vision</a></div>
+<div class="section-mini-cta"><a class="btn btn-gold" href="https://wa.me/916292525252" target="_blank" rel="noopener">Discuss the PSG World School vision</a></div>
 </div>
 </section>
 <section class="values-clean" id="approach">
@@ -3640,9 +3822,7 @@ nav.site-header{
 </div>
 </section>
 <!-- DAY IN THE LIFE -->
-
 <!-- APPROACH -->
-
 <!-- RESTORED INQUIRY JOURNEY -->
 <section class="restored-inquiry" id="learning-happens">
 <div class="container">
@@ -3661,7 +3841,6 @@ nav.site-header{
 <div class="public-product">Every unit ends with a Public Product — students share their learning with a real audience outside the classroom.</div>
 </div>
 </section>
-
 <!-- RESTORED LEARNING IN ACTION -->
 <section class="projects-restored" id="pbl">
 <div class="container">
@@ -3670,37 +3849,31 @@ nav.site-header{
 <h2 class="section-title serif">Real problems.<br/>Real people. Real work.</h2>
 <p class="section-subtitle">Every grade at PSG World School works on a project with a named partner from the PSG ecosystem — a hospital, a health centre, an NGO, a college. The work does not disappear when the unit ends.</p>
 </div>
-
 <div class="project-grade"><h3 class="project-grade-title">Grade 1</h3><div class="project-grid">
 <article class="project-card"><div class="project-unit">Who We Are · PSG Vishnugranthi</div><h4>Sensory Stories</h4><p>Students design tactile storybooks for children with Autism and Cerebral Palsy. Tested in three live sessions with care staff recording what works. Revised twice. The books are permanently adopted for daily therapeutic use.</p><div class="project-stats"><div class="project-stat"><strong>3</strong><span>live test sessions before adoption</span></div><div class="project-stat"><strong>5</strong><span>laminated books kept permanently</span></div></div><div class="project-partner">Lead Care Worker · PSG Vishnugranthi Day Care Centre</div></article>
 <article class="project-card"><div class="project-unit">Sharing the Planet · PSG Rural Health Centre</div><h4>School Kitchen Garden</h4><p>Students grow moringa and curry leaf over 8 weeks. The harvest is delivered to the Balwadi nutrition programme at PSG's Rural Health Centre in Vedapatti — feeding children across 14 villages.</p><div class="project-stats"><div class="project-stat"><strong>8</strong><span>weeks of growing and recording yield</span></div><div class="project-stat"><strong>14</strong><span>villages reached by the Balwadi programme</span></div></div><div class="project-partner">PSG Rural Health Training Centre, Vedapatti</div></article>
 <article class="project-card"><div class="project-unit">How We Organise Ourselves · School Campus</div><h4>Waste Sorting Guide</h4><p>Three sorting panels — one per bin — designed for the school canteen. Tested across two live lunch sittings with the canteen manager watching. Revised. Fixed permanently above the bins.</p><div class="project-stats"><div class="project-stat"><strong>2</strong><span>live lunch sittings used to test panels</span></div><div class="project-stat"><strong>Permanent</strong><span>installation, not a classroom display</span></div></div><div class="project-partner">PSG World School Canteen Manager</div></article>
 </div></div>
-
 <div class="project-grade"><h3 class="project-grade-title">Grade 2</h3><div class="project-grid">
 <article class="project-card"><div class="project-unit">Who We Are · PSG Vishnugranthi</div><h4>Companion Programme</h4><p>Students design and run a 6-week weekly companion activity programme for Vishnugranthi children. The care team observes and gives specific feedback. Students revise activities mid-programme.</p><div class="project-stats"><div class="project-stat"><strong>6</strong><span>weeks of structured weekly sessions</span></div><div class="project-stat"><strong>Before/After</strong><span>engagement measured by care team</span></div></div><div class="project-partner">Lead Care Worker · PSG Vishnugranthi Day Care Centre</div></article>
 <article class="project-card"><div class="project-unit">How We Organise Ourselves · Kongu Nadu Heritage</div><h4>Kongu Kitchen Cookbook</h4><p>15 traditional Kongu Nadu recipes collected from elders in Peelamedu and Vedapatti. Students cook and photograph each dish. PSG Hospitals' dietitian validates nutritional content. Sold at the school fair — proceeds fund the Balwadi programme.</p><div class="project-stats"><div class="project-stat"><strong>15</strong><span>recipes collected from real elders</span></div><div class="project-stat"><strong>2</strong><span>expert validators — elder cooks and dietitian</span></div></div><div class="project-partner">Dietitian · PSG Hospitals Dietary Department</div></article>
 <article class="project-card"><div class="project-unit">Sharing the Planet · CCMC Peelamedu</div><h4>Segregation Champions</h4><p>Students design a Tamil-English household waste guide and test it with 15 families on three Peelamedu streets. The CCMC Sanitation Supervisor reviews the final version for possible zone-wide distribution.</p><div class="project-stats"><div class="project-stat"><strong>15</strong><span>real families test the guide</span></div><div class="project-stat"><strong>Zone-wide</strong><span>distribution if supervisor approves</span></div></div><div class="project-partner">CCMC Sanitation Supervisor, Peelamedu Zone</div></article>
 </div></div>
-
 <div class="project-grade"><h3 class="project-grade-title">Grade 3</h3><div class="project-grid">
 <article class="project-card"><div class="project-unit">How the World Works · PSG Hospitals</div><h4>Hydration Audit</h4><p>Students observe outpatient waiting areas at PSG Hospitals, map where patients walk to find water, and interview 20 patients. They design one physical improvement for Facilities Manager review and implementation.</p><div class="project-stats"><div class="project-stat"><strong>20</strong><span>patients interviewed in real waiting areas</span></div><div class="project-stat"><strong>1</strong><span>physical change implemented inside PSG Hospitals</span></div></div><div class="project-partner">Facilities Manager · PSG Hospitals</div></article>
 <article class="project-card"><div class="project-unit">How We Organise Ourselves · School Canteen</div><h4>Millet for Morning</h4><p>Students prototype a millet breakfast item for the school canteen. Taste-tested with 30 students, reviewed by a dietitian, revised, and introduced to the menu for a trial using sales data and energy surveys.</p><div class="project-stats"><div class="project-stat"><strong>30</strong><span>students taste-test before it hits the menu</span></div><div class="project-stat"><strong>Before/After</strong><span>energy-level survey with real data</span></div></div><div class="project-partner">Dietitian · PSG Hospitals Dietary Department</div></article>
 <article class="project-card"><div class="project-unit">Where We Are · Peelamedu Elders</div><h4>Coimbatore's Living Memories</h4><p>Students interview five elders at Peelamedu care homes who remember Coimbatore from 50–80 years ago. Each elder confirms their memory before it goes on the map.</p><div class="project-stats"><div class="project-stat"><strong>5</strong><span>elders confirming accuracy before publication</span></div><div class="project-stat"><strong>Permanent</strong><span>map displayed in school and donated to library</span></div></div><div class="project-partner">Grace Welfare Trust · Shanthi Nilayam, Peelamedu</div></article>
 </div></div>
-
 <div class="project-grade"><h3 class="project-grade-title">Grade 4</h3><div class="project-grid">
 <article class="project-card"><div class="project-unit">Sharing the Planet · Siruthuli NGO</div><h4>Noyyal Storytellers</h4><p>Students produce a documentary about the Noyyal River — reduced from 34 tributaries to 4. Elders who swam in it as children are interviewed and the film is screened publicly at a Siruthuli event.</p><div class="project-stats"><div class="project-stat"><strong>34→4</strong><span>tributaries — the story the film tells</span></div><div class="project-stat"><strong>Public</strong><span>screening with measured audience impact</span></div></div><div class="project-partner">Siruthuli Environmental NGO</div></article>
 <article class="project-card"><div class="project-unit">How We Organise Ourselves · Peelamedu Traffic Police</div><h4>Safe School Zone</h4><p>Students redesign the drop-off zone outside PSG World School on Avinashi Road. They observe arrival for five mornings, design a safety protocol and pilot it for two weeks using Coimbatore's AI surveillance data.</p><div class="project-stats"><div class="project-stat"><strong>5</strong><span>mornings of systematic observation data</span></div><div class="project-stat"><strong>AI</strong><span>surveillance used to measure before/after impact</span></div></div><div class="project-partner">Peelamedu Traffic Police Station</div></article>
 <article class="project-card"><div class="project-unit">How the World Works · PSG Rural Health Centre</div><h4>Village Health Map</h4><p>Students map the three most significant child health risks across 14 villages served by PSG's Rural Health Centre. A Tamil-language family action guide is tested, revised and used by the mobile outreach team.</p><div class="project-stats"><div class="project-stat"><strong>14</strong><span>villages served by PSG Rural Health Centre</span></div><div class="project-stat"><strong>Used</strong><span>by the mobile clinic team during real visits</span></div></div><div class="project-partner">Medical Officer · PSG Rural Health Centre, Vedapatti</div></article>
 </div></div>
-
 <div class="project-grade"><h3 class="project-grade-title">Grade 5</h3><div class="project-grid">
 <article class="project-card"><div class="project-unit">Where We Are · PSG &amp; Sons' Charities</div><h4>100 Voices of PSG</h4><p>Grade 5 students produce a 12-minute centenary documentary told through 8 people whose lives were changed by PSG institutions. The Communications Office approves before screening and archival.</p><div class="project-stats"><div class="project-stat"><strong>8</strong><span>real people, each giving informed consent</span></div><div class="project-stat"><strong>2</strong><span>approval cycles before centenary screening</span></div></div><div class="project-partner">PSG &amp; Sons' Charities Communications Office</div></article>
 <article class="project-card"><div class="project-unit">Sharing the Planet · School Campus + Siruthuli</div><h4>Water Detectives</h4><p>Students audit water consumption across every school zone, identify the two highest-waste areas, design a conservation system reviewed by Siruthuli, implement it for two weeks and present data to leadership.</p><div class="project-stats"><div class="project-stat"><strong>All</strong><span>school zones audited with consistent methodology</span></div><div class="project-stat"><strong>Real</strong><span>adoption decision made by leadership on student data</span></div></div><div class="project-partner">Siruthuli Environmental NGO + PSG World School Facilities Manager</div></article>
 <article class="project-card"><div class="project-unit">How We Organise Ourselves · CCMC Peelamedu</div><h4>Accessible Peelamedu</h4><p>Students audit three public spaces in Peelamedu using measurement data — path widths, ramp gradients, signage heights. A prioritised improvement proposal is submitted to the CCMC Ward Officer.</p><div class="project-stats"><div class="project-stat"><strong>3</strong><span>public spaces audited — park, bus stand, market</span></div><div class="project-stat"><strong>15</strong><span>elderly and differently-abled users interviewed</span></div></div><div class="project-partner">CCMC Ward Officer, Peelamedu</div></article>
 </div></div>
-
 <div class="network-callout"><h3>Why the PSG network<br/>changes everything.</h3><p>No other school in Coimbatore has a 900-bed hospital, a rural health centre serving 26,000 people, an environmental NGO with 600+ rainwater harvesting structures, and an arts college all as institutional partners — within 5 minutes of the school gate.</p><p>These are not sponsors or field trip destinations. They are the places where PSG World School students do their work. The PSG name opens every door. The problems are real. The outcomes last.</p>
 <div class="expect-grid">
 <div class="expect-card"><div class="icon">❓</div><h4>Questions before answers</h4><p>Your child will come home talking about the person they interviewed, the constraint they had not anticipated, and the feedback that required starting again.</p></div>
@@ -3710,7 +3883,6 @@ nav.site-header{
 </div></div>
 </div>
 </section>
-
 <!-- RESTORED ASSESSMENT -->
 <section class="assessment-restored" id="assessment">
 <div class="container">
@@ -3738,10 +3910,8 @@ nav.site-header{
 </div><div class="toddle-note">Progress is never a mystery at PSG World School. Families see the full arc of learning in real time through each child's Toddle portfolio.</div></div>
 </div>
 </section>
-
 <!-- HERITAGE -->
 <!-- GRADUATE PROMISE -->
-
 <!-- LEARNING STAGES -->
 <section class="stages" id="stages">
 <div class="container">
@@ -3772,108 +3942,100 @@ nav.site-header{
 <div class="stage-bd"><div class="stage-focus">Excellence &amp; Purpose</div><ul class="stage-pts"><li>University preparation</li><li>Extended research and essay</li><li>Theory of knowledge</li><li>Creative, action, service</li></ul></div>
 </div>
 </div>
-<div class="section-mini-cta"><a class="btn btn-gold" href="#admissions-enquiry">Find the right stage for your child</a></div></div>
+<div class="section-mini-cta"><a class="btn btn-gold" href="https://wa.me/916292525252" target="_blank" rel="noopener">Find the right stage for your child</a></div></div>
 </section>
 <!-- INCLUSION -->
-
 <!-- ADMISSIONS -->
-
 <section class="admissions" id="admissions">
 <div class="container">
-<div class="adm-inner reveal is-visible">
+<div class="adm-inner">
 <div class="adm-left">
-<p class="section-eyebrow adm-eyebrow">Admissions Open for 2026–27</p>
+<div class="section-eyebrow adm-eyebrow">Admissions Open for 2026–27</div>
 <h2 class="adm-title">Begin the Conversation</h2>
-<div class="ib-candidacy-note"><strong>IB candidacy update:</strong> PSG World School is currently pursuing IB candidacy. Programme status and authorisation milestones will be communicated clearly with families as they are confirmed.</div>
 <p class="adm-body">Choosing a school is an important decision. Our admissions process is designed to help families understand PSG World School clearly, ask thoughtful questions and decide whether our community is the right fit for their child.</p>
 <div class="adm-contacts">
-<div class="adm-contact"><strong>Email</strong> admissions@psgworldschool.edu.in</div>
-<div class="adm-contact"><strong>Phone</strong> +91 6292 525252  ·  +91 6292 424242</div>
-<div class="adm-contact"><strong>Address</strong> PSG World School, Coimbatore, India 641 004</div>
+<div class="adm-contact"><strong>Email</strong> <a href="mailto:admissions@psgworldschool.edu.in">admissions@psgworldschool.edu.in</a></div>
+<div class="adm-contact"><strong>Phone</strong> <a href="tel:+916292525252">+91 6292 525252</a> <span>·</span> <a href="tel:+916292424242">+91 6292 424242</a></div>
+<div class="adm-contact"><strong>Address</strong> <span>PSG World School, S.F.No.472, Civil Aerodrome Post,<br/>Coimbatore, Tamil Nadu 641014</span></div>
 </div>
-<div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px">
+<div class="adm-actions">
 <a class="btn btn-gold" href="mailto:admissions@psgworldschool.edu.in">Enquire Now</a>
-<a class="btn btn-outline" href="https://wa.me/916292525252" rel="noopener noreferrer" style="color:rgba(255,255,255,0.75);border-bottom-color:rgba(255,255,255,0.3)" target="_blank">WhatsApp →</a>
+<a class="btn btn-whatsapp" href="https://wa.me/916292525252" rel="noopener" target="_blank">WhatsApp →</a>
 </div>
 </div>
 <div class="adm-right">
 <div class="adm-step">
 <div class="adm-step-num">1</div>
-<div><div class="adm-step-title">Connect With Us</div><div class="adm-step-desc">Speak with our admissions team and share what matters most for your child's learning journey.</div></div>
+<div>
+<div class="adm-step-title">Connect With Us</div>
+<div class="adm-step-desc">Speak with our admissions team and share what matters most for your child's learning journey.</div>
+</div>
 </div>
 <div class="adm-step">
 <div class="adm-step-num">2</div>
-<div><div class="adm-step-title">Experience the School</div><div class="adm-step-desc">Visit the campus, meet our team and learn how PSG World School approaches learning, care and community.</div></div>
+<div>
+<div class="adm-step-title">Experience the School</div>
+<div class="adm-step-desc">Visit the campus, meet our team and learn how PSG World School approaches learning, care and community.</div>
+</div>
 </div>
 <div class="adm-step">
 <div class="adm-step-num">3</div>
-<div><div class="adm-step-title">Understand the Fit</div><div class="adm-step-desc">We discuss your child's strengths, needs and transition so the family and school can make an informed decision.</div></div>
+<div>
+<div class="adm-step-title">Understand the Fit</div>
+<div class="adm-step-desc">We discuss your child's strengths, needs and transition so the family and school can make an informed decision.</div>
+</div>
 </div>
 <div class="adm-step">
 <div class="adm-step-num">4</div>
-<div><div class="adm-step-title">Apply and Join</div><div class="adm-step-desc">Complete the application process with support from our admissions team and become part of the founding PSG World School community.</div></div>
+<div>
+<div class="adm-step-title">Apply and Join</div>
+<div class="adm-step-desc">Complete the application process with support from our admissions team and become part of the founding PSG World School community.</div>
 </div>
 </div>
-<div class="admissions-form-card">
-<h3>Start an Admissions Enquiry</h3>
-<p>Share your details and our admissions team will contact you to arrange a conversation or school tour.</p>
-<form action="mailto:admissions@psgworldschool.edu.in" class="enq-form" enctype="text/plain" id="admissions-enquiry" method="post">
-<div class="enq-field"><label for="parentName">Parent Name</label><input id="parentName" name="Parent Name" required="" type="text"/></div>
-<div class="enq-field"><label for="phone">Phone</label><input id="phone" name="Phone" required="" type="tel"/></div>
-<div class="enq-field"><label for="email">Email</label><input id="email" name="Email" required="" type="email"/></div>
-<div class="enq-field"><label for="grade">Child's Grade</label><select id="grade" name="Child Grade" required=""><option value="">Select grade</option><option>Early Years</option><option>Lower Primary</option><option>Upper Primary</option><option>Middle School</option><option>High School</option></select></div>
-<div class="enq-field"><label for="visitDate">Preferred Visit Date</label><input id="visitDate" name="Preferred Visit Date" type="date"/></div>
-<div class="enq-field"><label for="message">Message</label><input id="message" name="Message" placeholder="Tell us what you would like to know" type="text"/></div>
-<button class="enq-submit" type="submit">Submit Enquiry</button>
-<p class="enq-privacy">By submitting this enquiry, you agree that PSG World School may contact you about admissions.</p>
-</form>
-</div></div>
+</div>
+</div>
 </div>
 </section>
 <!-- CONTACT SECTION REMOVED: contact details now handled through Admissions and footer -->
 <footer class="site-footer">
-  <div class="footer-inner footer-inner-refined">
-    <div class="footer-brand-block">
-      <div class="footer-brand-name">PSG World School</div>
-      <div class="footer-motto">Locally Rooted. Globally Minded.</div>
-      <p class="footer-desc">A PSG learning community in Coimbatore bringing together trusted educational heritage, inquiry-led learning and meaningful real-world experiences.</p>
-    </div>
-
-    <div>
-      <div class="footer-col-title">School</div>
-      <ul class="footer-links">
-        <li><a href="#head">Head of School</a></li>
-        <li><a href="#values">Values</a></li>
-        <li><a href="#learning">Learning</a></li>
-        <li><a href="#stages">Learning Stages</a></li>
-        <li><a href="#admissions">Admissions</a></li>
-      </ul>
-    </div>
-
-    <div>
-      <div class="footer-col-title">Connect</div>
-      <ul class="footer-links">
-        <li><a href="https://www.instagram.com/psgworldschool/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-        <li><a href="https://in.linkedin.com/company/psg-world-school" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-        <li><a href="#admissions">Admissions Enquiry</a></li>
-        <li><a href="https://psgsonscharities.freshteam.com/jobs" target="_blank" rel="noopener noreferrer">Careers</a></li>
-      </ul>
-    </div>
-
-    <div>
-      <div class="footer-col-title">PSG Network</div>
-      <ul class="footer-links">
-        <li><a href="https://www.psgsonscharities.org/" target="_blank" rel="noopener noreferrer">PSG &amp; Sons' Charities</a></li>
-        <li><a href="https://psgsonscharities.freshteam.com/jobs" target="_blank" rel="noopener noreferrer">PSG Careers</a></li>
-        <li><a href="#admissions">Book a School Tour</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="footer-bottom footer-bottom-refined">
-    <p>© 2026 PSG World School, Coimbatore. All rights reserved.</p>
-    <p class="footer-psg">Part of <a href="https://www.psgsonscharities.org/" target="_blank" rel="noopener noreferrer">PSG Institutions</a> — Est. 1926</p>
-  </div>
+<div class="footer-inner footer-inner-refined">
+<div class="footer-brand-block">
+<div class="footer-brand-name">PSG World School</div>
+<div class="footer-motto">Locally Rooted. Globally Minded.</div>
+<p class="footer-desc">A PSG learning community in Coimbatore bringing together trusted educational heritage, inquiry-led learning and meaningful real-world experiences.</p>
+</div>
+<div>
+<div class="footer-col-title">School</div>
+<ul class="footer-links">
+<li><a href="#head">Head of School</a></li>
+<li><a href="#values">Values</a></li>
+<li><a href="#learning">Learning</a></li>
+<li><a href="#stages">Learning Stages</a></li>
+<li><a href="https://wa.me/916292525252" target="_blank" rel="noopener">Admissions</a></li>
+</ul>
+</div>
+<div>
+<div class="footer-col-title">Connect</div>
+<ul class="footer-links">
+<li><a href="https://www.instagram.com/psgworldschool/" rel="noopener noreferrer" target="_blank">Instagram</a></li>
+<li><a href="https://in.linkedin.com/company/psg-world-school" rel="noopener noreferrer" target="_blank">LinkedIn</a></li>
+<li><a href="https://wa.me/916292525252" target="_blank" rel="noopener">Admissions Enquiry</a></li>
+<li><a href="https://psgsonscharities.freshteam.com/jobs" rel="noopener noreferrer" target="_blank">Careers</a></li>
+</ul>
+</div>
+<div>
+<div class="footer-col-title">PSG Network</div>
+<ul class="footer-links">
+<li><a href="https://www.psgsonscharities.org/" rel="noopener noreferrer" target="_blank">PSG &amp; Sons' Charities</a></li>
+<li><a href="https://psgsonscharities.freshteam.com/jobs" rel="noopener noreferrer" target="_blank">PSG Careers</a></li>
+<li><a href="https://wa.me/916292525252" target="_blank" rel="noopener">Book a School Tour</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom footer-bottom-refined">
+<p>© 2026 PSG World School, Coimbatore. All rights reserved.</p>
+<p class="footer-psg">Part of <a href="https://www.psgsonscharities.org/" rel="noopener noreferrer" target="_blank">PSG Institutions</a> — Est. 1926</p>
+</div>
 </footer>
 <!-- WhatsApp -->
 <div class="wa-sticky">
@@ -4000,14 +4162,14 @@ a{color:inherit;}
 nav{background:rgba(255,255,255,.94)!important;border-bottom:1px solid rgba(184,147,69,.32)!important;box-shadow:0 14px 35px rgba(51,43,118,.08)!important;}
 .nav-links a:not(.nav-cta){color:var(--psg-purple)!important;}
 .nav-links a:not(.nav-cta):hover{color:var(--psg-gold)!important;}
-a.nav-cta,.nav-links a.nav-cta,a[href="#admissions"].nav-cta{
+a.nav-cta,.nav-links a.nav-cta,a[href="https://wa.me/916292525252" target="_blank" rel="noopener"].nav-cta{
   display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:8px!important;
   min-height:44px!important;padding:11px 24px!important;
   background:var(--psg-purple)!important;color:#fff!important;border:1px solid var(--psg-purple)!important;
   border-radius:999px!important;font-weight:800!important;line-height:1!important;text-decoration:none!important;
   letter-spacing:.045em!important;box-shadow:0 10px 24px rgba(51,43,118,.22)!important;white-space:nowrap!important;
 }
-a.nav-cta:hover,.nav-links a.nav-cta:hover,a[href="#admissions"].nav-cta:hover{background:var(--psg-gold)!important;border-color:var(--psg-gold)!important;color:#fff!important;transform:translateY(-1px)!important;}
+a.nav-cta:hover,.nav-links a.nav-cta:hover,a[href="https://wa.me/916292525252" target="_blank" rel="noopener"].nav-cta:hover{background:var(--psg-gold)!important;border-color:var(--psg-gold)!important;color:#fff!important;transform:translateY(-1px)!important;}
 .btn,.oh-cta,.enq-submit{border-radius:999px!important;font-weight:800!important;text-decoration:none!important;}
 .btn-gold,.enq-submit{background:var(--psg-purple)!important;color:#fff!important;border:1px solid var(--psg-purple)!important;box-shadow:0 12px 28px rgba(51,43,118,.18)!important;}
 .btn-gold:hover,.enq-submit:hover{background:var(--psg-gold)!important;border-color:var(--psg-gold)!important;color:#fff!important;}
@@ -4321,7 +4483,6 @@ document.addEventListener('DOMContentLoaded', function(){
   });
 });
 </script>
-
 <!-- Mobile stability patch: navigation, hero, grids, and overflow fixes -->
 <style id="psg-mobile-stability-patch">
   html, body { max-width:100%; overflow-x:hidden!important; }
@@ -4550,5 +4711,4 @@ document.addEventListener('DOMContentLoaded', function(){
   window.addEventListener('resize', () => { if (window.innerWidth > 1100) closeMenu(); }, {passive:true});
 })();
 </script>
-
 </body></html>
